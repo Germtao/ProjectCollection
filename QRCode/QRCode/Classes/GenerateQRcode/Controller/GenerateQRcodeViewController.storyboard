@@ -17,9 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="Uyc-4P-WYE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qap-6A-RFy">
+                                <rect key="frame" x="132" y="104" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Hu5-NF-J4d"/>
+                                    <constraint firstAttribute="width" constant="150" id="fes-Qj-BT2"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zws-kz-Jil">
+                                <rect key="frame" x="87" y="314" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.37254902719999999" blue="0.35686275360000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8Ft-AJ-uGQ"/>
+                                    <constraint firstAttribute="height" constant="128" id="zkK-DV-g3x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zws-kz-Jil" firstAttribute="centerX" secondItem="Uyc-4P-WYE" secondAttribute="centerX" id="4wn-Tg-OKV"/>
+                            <constraint firstItem="qap-6A-RFy" firstAttribute="top" secondItem="5Ch-xw-zTZ" secondAttribute="top" constant="60" id="PqM-tg-saK"/>
+                            <constraint firstItem="qap-6A-RFy" firstAttribute="centerX" secondItem="Uyc-4P-WYE" secondAttribute="centerX" id="lkB-Xj-lB3"/>
+                            <constraint firstItem="Zws-kz-Jil" firstAttribute="top" secondItem="qap-6A-RFy" secondAttribute="bottom" constant="60" id="xzd-J8-zDF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Ch-xw-zTZ"/>
                     </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="Zws-kz-Jil" id="9p9-i7-vOI"/>
+                        <outlet property="qrcodeIconView" destination="qap-6A-RFy" id="Eey-XA-wDq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7Z-RZ-4qX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
