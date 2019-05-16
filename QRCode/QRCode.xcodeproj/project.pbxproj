@@ -19,6 +19,7 @@
 		3B4948B9228D5F42001BFCAF /* DetectorQRcodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4948B8228D5F42001BFCAF /* DetectorQRcodeViewController.storyboard */; };
 		3B4948BB228D5F86001BFCAF /* ScanQRcodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4948BA228D5F86001BFCAF /* ScanQRcodeViewController.storyboard */; };
 		3B4948BD228D6AD0001BFCAF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B4948BC228D6AD0001BFCAF /* logo.png */; };
+		3B4948C1228D7206001BFCAF /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B4948C0228D7206001BFCAF /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3B4948B8228D5F42001BFCAF /* DetectorQRcodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetectorQRcodeViewController.storyboard; sourceTree = "<group>"; };
 		3B4948BA228D5F86001BFCAF /* ScanQRcodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScanQRcodeViewController.storyboard; sourceTree = "<group>"; };
 		3B4948BC228D6AD0001BFCAF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		3B4948C0228D7206001BFCAF /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				3B49489D228D5B7A001BFCAF /* LaunchScreen.storyboard */,
 				3B4948A0228D5B7A001BFCAF /* Info.plist */,
 				3B4948BC228D6AD0001BFCAF /* logo.png */,
+				3B4948C0228D7206001BFCAF /* timg.jpeg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				3B4948B7228D5F0D001BFCAF /* GenerateQRcodeViewController.storyboard in Resources */,
 				3B4948BD228D6AD0001BFCAF /* logo.png in Resources */,
 				3B49489A228D5B78001BFCAF /* Main.storyboard in Resources */,
+				3B4948C1228D7206001BFCAF /* timg.jpeg in Resources */,
 				3B4948B9228D5F42001BFCAF /* DetectorQRcodeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
