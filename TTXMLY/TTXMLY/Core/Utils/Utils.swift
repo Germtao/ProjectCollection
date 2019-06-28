@@ -25,4 +25,5 @@ struct Color {
     static let defaultTitle = UIColor.black
     static let defaultBackground = UIColor.white
     static let line = UIColor(red: (218.0/255.0), green: (218.0/255.0), blue: (218.0/255.0), alpha: 1.0)
+    static let navBarTint = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B14B19A22C5F57800FD9B28 /* TTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B19922C5F57800FD9B28 /* TTNavigationController.swift */; };
+		3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1A122C5FDCE00FD9B28 /* TTPageContentView.swift */; };
+		3B14B1A422C6038D00FD9B28 /* TTPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1A322C6038D00FD9B28 /* TTPageStyle.swift */; };
+		3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1A522C60C1600FD9B28 /* TTPageViewProtocol.swift */; };
+		3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1A722C613A700FD9B28 /* TTPageTitleView.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -37,6 +42,11 @@
 
 /* Begin PBXFileReference section */
 		10AE901FB3A2A4747D2F0959 /* Pods_TTXMLY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B14B19922C5F57800FD9B28 /* TTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNavigationController.swift; sourceTree = "<group>"; };
+		3B14B1A122C5FDCE00FD9B28 /* TTPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageContentView.swift; sourceTree = "<group>"; };
+		3B14B1A322C6038D00FD9B28 /* TTPageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageStyle.swift; sourceTree = "<group>"; };
+		3B14B1A522C60C1600FD9B28 /* TTPageViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageViewProtocol.swift; sourceTree = "<group>"; };
+		3B14B1A722C613A700FD9B28 /* TTPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageTitleView.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B14B19C22C5FC6900FD9B28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B19E22C5FC8F00FD9B28 /* PageView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3B14B19E22C5FC8F00FD9B28 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1A322C6038D00FD9B28 /* TTPageStyle.swift */,
+				3B14B1A522C60C1600FD9B28 /* TTPageViewProtocol.swift */,
+				3B14B1A122C5FDCE00FD9B28 /* TTPageContentView.swift */,
+				3B14B1A722C613A700FD9B28 /* TTPageTitleView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 		3B20FC5122C34F940026F0C8 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +191,7 @@
 			children = (
 				3B20FC8222C3609B0026F0C8 /* TTNavigationBar.swift */,
 				3B20FC9322C46C4D0026F0C8 /* TTCustomNavBar.swift */,
+				3B14B19922C5F57800FD9B28 /* TTNavigationController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -169,6 +199,7 @@
 		3B20FC8422C363CC0026F0C8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B19C22C5FC6900FD9B28 /* Common */,
 				3B20FC8C22C379940026F0C8 /* Utils */,
 				3B20FC8522C363DE0026F0C8 /* Category */,
 			);
@@ -385,7 +416,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B20FC8722C363F50026F0C8 /* UIApplication.swift in Sources */,
+				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
+				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
+				3B14B1A422C6038D00FD9B28 /* TTPageStyle.swift in Sources */,
 				3B20FC8922C364230026F0C8 /* UIViewController.swift in Sources */,
 				3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */,
 				3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */,
@@ -393,7 +427,9 @@
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
 				3B20FC8322C3609B0026F0C8 /* TTNavigationBar.swift in Sources */,
 				3B20FC8E22C379B40026F0C8 /* Utils.swift in Sources */,
+				3B14B19A22C5F57800FD9B28 /* TTNavigationController.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
+				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
