@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public protocol TTPageEventHandleable {
+@objc public protocol TTPageEventHandleable: NSObjectProtocol {
     /// pageContentView 的上一页消失时, 上一页对应的controller调用
     @objc optional func contentViewDidDisappear()
     

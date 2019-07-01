@@ -188,3 +188,17 @@ extension TTPageContentView {
         delegate?.pageContentView(self, scrollingWith: sourceIndex, targetIndex: targetIndex, progress: progress)
     }
 }
+
+extension TTPageContentView: TTPageTitleViewDelegate {
+    public func pageTitleView(_ titleView: TTPageTitleView, didSelectedAt index: Int) {
+        isForbidDelegate = true
+        
+        guard currentIndex < viewControllers.count else { return }
+        
+        currentIndex = index
+        
+        let indexPath = IndexPath(item: index, section: 0)
+        
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+    }
+}
