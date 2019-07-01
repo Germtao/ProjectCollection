@@ -142,6 +142,7 @@ extension TTPageTitleView {
                 x = i == 0 ? style.titleMargin * 0.5 : (titleLabels[i - 1].frame.maxX + style.titleMargin)
             } else {
                 width = bounds.width / CGFloat(count)
+                x = width * CGFloat(i)
             }
             
             titleLabel.frame = CGRect(x: x, y: y, width: width, height: height)

@@ -15,6 +15,15 @@
 		3B14B1AA22C9D63800FD9B28 /* TTPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1A922C9D63800FD9B28 /* TTPageView.swift */; };
 		3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1AB22C9DD9700FD9B28 /* TTPageViewUntils.swift */; };
 		3B14B1AE22C9E79700FD9B28 /* TTPageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1AD22C9E79700FD9B28 /* TTPageViewManager.swift */; };
+		3B14B1B422C9EA7300FD9B28 /* TTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1B322C9EA7300FD9B28 /* TTHomeViewController.swift */; };
+		3B14B1B822C9EC2200FD9B28 /* TTHomeRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1B722C9EC2200FD9B28 /* TTHomeRecommendViewController.swift */; };
+		3B14B1BB22C9FB0900FD9B28 /* TTFMBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1BA22C9FB0900FD9B28 /* TTFMBasicContentView.swift */; };
+		3B14B1BD22C9FC6900FD9B28 /* TTFMBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1BC22C9FC6900FD9B28 /* TTFMBouncesContentView.swift */; };
+		3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1BE22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift */; };
+		3B14B1C422CA0F4400FD9B28 /* TTListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1C322CA0F4400FD9B28 /* TTListenViewController.swift */; };
+		3B14B1C722CA0F8400FD9B28 /* TTFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1C622CA0F8400FD9B28 /* TTFindViewController.swift */; };
+		3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1CA22CA0FB300FD9B28 /* TTPlayViewController.swift */; };
+		3B14B1CD22CA0FC000FD9B28 /* TTMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1CC22CA0FC000FD9B28 /* TTMineViewController.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -53,6 +62,15 @@
 		3B14B1A922C9D63800FD9B28 /* TTPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageView.swift; sourceTree = "<group>"; };
 		3B14B1AB22C9DD9700FD9B28 /* TTPageViewUntils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageViewUntils.swift; sourceTree = "<group>"; };
 		3B14B1AD22C9E79700FD9B28 /* TTPageViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPageViewManager.swift; sourceTree = "<group>"; };
+		3B14B1B322C9EA7300FD9B28 /* TTHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHomeViewController.swift; sourceTree = "<group>"; };
+		3B14B1B722C9EC2200FD9B28 /* TTHomeRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHomeRecommendViewController.swift; sourceTree = "<group>"; };
+		3B14B1BA22C9FB0900FD9B28 /* TTFMBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMBasicContentView.swift; sourceTree = "<group>"; };
+		3B14B1BC22C9FC6900FD9B28 /* TTFMBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMBouncesContentView.swift; sourceTree = "<group>"; };
+		3B14B1BE22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMIrregularityBasicContentView.swift; sourceTree = "<group>"; };
+		3B14B1C322CA0F4400FD9B28 /* TTListenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTListenViewController.swift; sourceTree = "<group>"; };
+		3B14B1C622CA0F8400FD9B28 /* TTFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFindViewController.swift; sourceTree = "<group>"; };
+		3B14B1CA22CA0FB300FD9B28 /* TTPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPlayViewController.swift; sourceTree = "<group>"; };
+		3B14B1CC22CA0FC000FD9B28 /* TTMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMineViewController.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +138,97 @@
 			path = PageView;
 			sourceTree = "<group>";
 		};
+		3B14B1AF22C9E92A00FD9B28 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1B322C9EA7300FD9B28 /* TTHomeViewController.swift */,
+				3B14B1B622C9EBE300FD9B28 /* Recommend(推荐) */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		3B14B1B022C9E93500FD9B28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3B14B1B122C9E94300FD9B28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B14B1B222C9E94A00FD9B28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B14B1B522C9EA8200FD9B28 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1B722C9EC2200FD9B28 /* TTHomeRecommendViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B14B1B622C9EBE300FD9B28 /* Recommend(推荐) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1B222C9E94A00FD9B28 /* Model */,
+				3B14B1B122C9E94300FD9B28 /* View */,
+				3B14B1B522C9EA8200FD9B28 /* Controller */,
+				3B14B1B022C9E93500FD9B28 /* ViewModel */,
+			);
+			path = "Recommend(推荐)";
+			sourceTree = "<group>";
+		};
+		3B14B1B922C9FAD400FD9B28 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1BA22C9FB0900FD9B28 /* TTFMBasicContentView.swift */,
+				3B14B1BC22C9FC6900FD9B28 /* TTFMBouncesContentView.swift */,
+				3B14B1BE22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		3B14B1C222CA0F1000FD9B28 /* Listen(我听) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1C322CA0F4400FD9B28 /* TTListenViewController.swift */,
+			);
+			path = "Listen(我听)";
+			sourceTree = "<group>";
+		};
+		3B14B1C522CA0F5700FD9B28 /* Find(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1C622CA0F8400FD9B28 /* TTFindViewController.swift */,
+			);
+			path = "Find(发现)";
+			sourceTree = "<group>";
+		};
+		3B14B1C822CA0F8800FD9B28 /* Mine(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1CC22CA0FC000FD9B28 /* TTMineViewController.swift */,
+			);
+			path = "Mine(我的)";
+			sourceTree = "<group>";
+		};
+		3B14B1C922CA0F9700FD9B28 /* Play(播放) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1CA22CA0FB300FD9B28 /* TTPlayViewController.swift */,
+			);
+			path = "Play(播放)";
+			sourceTree = "<group>";
+		};
 		3B20FC5122C34F940026F0C8 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +291,11 @@
 		3B20FC7F22C360420026F0C8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B1C922CA0F9700FD9B28 /* Play(播放) */,
+				3B14B1C822CA0F8800FD9B28 /* Mine(我的) */,
+				3B14B1C522CA0F5700FD9B28 /* Find(发现) */,
+				3B14B1C222CA0F1000FD9B28 /* Listen(我听) */,
+				3B14B1AF22C9E92A00FD9B28 /* Home(首页) */,
 				3B20FC8022C3604C0026F0C8 /* Main */,
 			);
 			path = Classes;
@@ -190,6 +304,7 @@
 		3B20FC8022C3604C0026F0C8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B1B922C9FAD400FD9B28 /* TabBar */,
 				3B20FC8122C3606D0026F0C8 /* Navigation */,
 			);
 			path = Main;
@@ -428,20 +543,29 @@
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
 				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
 				3B14B1AE22C9E79700FD9B28 /* TTPageViewManager.swift in Sources */,
+				3B14B1B822C9EC2200FD9B28 /* TTHomeRecommendViewController.swift in Sources */,
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
 				3B14B1A422C6038D00FD9B28 /* TTPageStyle.swift in Sources */,
+				3B14B1C722CA0F8400FD9B28 /* TTFindViewController.swift in Sources */,
+				3B14B1BD22C9FC6900FD9B28 /* TTFMBouncesContentView.swift in Sources */,
 				3B20FC8922C364230026F0C8 /* UIViewController.swift in Sources */,
 				3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */,
 				3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */,
+				3B14B1BB22C9FB0900FD9B28 /* TTFMBasicContentView.swift in Sources */,
 				3B20FC9622C46E360026F0C8 /* UIButton.swift in Sources */,
+				3B14B1C422CA0F4400FD9B28 /* TTListenViewController.swift in Sources */,
 				3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */,
+				3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */,
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
 				3B20FC8322C3609B0026F0C8 /* TTNavigationBar.swift in Sources */,
 				3B14B1AA22C9D63800FD9B28 /* TTPageView.swift in Sources */,
 				3B20FC8E22C379B40026F0C8 /* Utils.swift in Sources */,
+				3B14B1CD22CA0FC000FD9B28 /* TTMineViewController.swift in Sources */,
 				3B14B19A22C5F57800FD9B28 /* TTNavigationController.swift in Sources */,
+				3B14B1B422C9EA7300FD9B28 /* TTHomeViewController.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
 				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,
+				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +732,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4UW8B3X7J9;
 				INFOPLIST_FILE = "$(SRCROOT)/TTXMLY/Support File/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -630,7 +754,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4UW8B3X7J9;
 				INFOPLIST_FILE = "$(SRCROOT)/TTXMLY/Support File/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -17,15 +17,15 @@ open class TTPageView: UIView {
     private var childViewControllers: [UIViewController]
     private var startIndex: Int
     
-    private lazy var titleView = TTPageTitleView(frame: .zero,
-                                                 style: style,
-                                                 titles: titles,
-                                                 currentIndex: startIndex)
+    private(set) public lazy var titleView = TTPageTitleView(frame: .zero,
+                                                             style: style,
+                                                             titles: titles,
+                                                             currentIndex: startIndex)
     
-    private lazy var contentView = TTPageContentView(frame: .zero,
-                                                     style: style,
-                                                     viewControllers: childViewControllers,
-                                                     currentIndex: startIndex)
+    private(set) public lazy var contentView = TTPageContentView(frame: .zero,
+                                                                 style: style,
+                                                                 viewControllers: childViewControllers,
+                                                                 currentIndex: startIndex)
     
     public init(frame: CGRect,
                 style: TTPageStyle,
