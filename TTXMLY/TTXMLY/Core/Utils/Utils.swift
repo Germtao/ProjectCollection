@@ -19,6 +19,9 @@ struct Size {
     static let specialScreen: Bool = Size.screenH >= 812.0 ? true : false
     
     static let defaultFontSize: CGFloat = 18.0
+    
+    // MARK: - 首页推荐
+    static let newsCellMargin: CGFloat = 150.0
 }
 
 struct Color {
@@ -26,4 +29,5 @@ struct Color {
     static let defaultBackground = UIColor.white
     static let line = UIColor(red: (218.0/255.0), green: (218.0/255.0), blue: (218.0/255.0), alpha: 1.0)
     static let navBarTint = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
+    static let button = UIColor(red: 242/255.0, green: 77/255.0, blue: 51/255.0, alpha: 1)
 }

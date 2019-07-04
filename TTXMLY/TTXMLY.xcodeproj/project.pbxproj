@@ -24,6 +24,21 @@
 		3B14B1C722CA0F8400FD9B28 /* TTFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1C622CA0F8400FD9B28 /* TTFindViewController.swift */; };
 		3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1CA22CA0FB300FD9B28 /* TTPlayViewController.swift */; };
 		3B14B1CD22CA0FC000FD9B28 /* TTMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1CC22CA0FC000FD9B28 /* TTMineViewController.swift */; };
+		3B14B1CF22CAFEBA00FD9B28 /* TTFMRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1CE22CAFEBA00FD9B28 /* TTFMRecommendModel.swift */; };
+		3B14B1D122CB0C7000FD9B28 /* TTFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D022CB0C7000FD9B28 /* TTFMRecommendAPI.swift */; };
+		3B14B1D322CB470000FD9B28 /* TTFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D222CB470000FD9B28 /* TTFMRecommendViewModel.swift */; };
+		3B14B1D522CB5A3600FD9B28 /* TTFMRecommendAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D422CB5A3600FD9B28 /* TTFMRecommendAdCell.swift */; };
+		3B14B1D722CB660700FD9B28 /* TTFMRecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D622CB660700FD9B28 /* TTFMRecommendHeaderCell.swift */; };
+		3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */; };
+		3B14B1DC22CC402F00FD9B28 /* TTFMRecommendGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */; };
+		3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1DE22CC4AB300FD9B28 /* TTCarouselViewCell.swift */; };
+		3B14B1E122CC7BAA00FD9B28 /* TTCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E022CC7BAA00FD9B28 /* TTCarouselCollectionView.swift */; };
+		3B14B1E322CC7DE900FD9B28 /* TTCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E222CC7DE900FD9B28 /* TTCarouselView.swift */; };
+		3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E422CC802D00FD9B28 /* TTCarouselViewProtocol.swift */; };
+		3B14B1E722CC8B1500FD9B28 /* TTCarouselViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E622CC8B1500FD9B28 /* TTCarouselViewTransformer.swift */; };
+		3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E822CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift */; };
+		3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1EA22CCA51000FD9B28 /* TTCarouselViewLayout.swift */; };
+		3B14B1EE22CE011A00FD9B28 /* TTRecommendGuessULikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1ED22CE011900FD9B28 /* TTRecommendGuessULikeCell.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -71,6 +86,21 @@
 		3B14B1C622CA0F8400FD9B28 /* TTFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFindViewController.swift; sourceTree = "<group>"; };
 		3B14B1CA22CA0FB300FD9B28 /* TTPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTPlayViewController.swift; sourceTree = "<group>"; };
 		3B14B1CC22CA0FC000FD9B28 /* TTMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMineViewController.swift; sourceTree = "<group>"; };
+		3B14B1CE22CAFEBA00FD9B28 /* TTFMRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendModel.swift; sourceTree = "<group>"; };
+		3B14B1D022CB0C7000FD9B28 /* TTFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendAPI.swift; sourceTree = "<group>"; };
+		3B14B1D222CB470000FD9B28 /* TTFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendViewModel.swift; sourceTree = "<group>"; };
+		3B14B1D422CB5A3600FD9B28 /* TTFMRecommendAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendAdCell.swift; sourceTree = "<group>"; };
+		3B14B1D622CB660700FD9B28 /* TTFMRecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendHeaderCell.swift; sourceTree = "<group>"; };
+		3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendNewsCell.swift; sourceTree = "<group>"; };
+		3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendGridCell.swift; sourceTree = "<group>"; };
+		3B14B1DE22CC4AB300FD9B28 /* TTCarouselViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewCell.swift; sourceTree = "<group>"; };
+		3B14B1E022CC7BAA00FD9B28 /* TTCarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselCollectionView.swift; sourceTree = "<group>"; };
+		3B14B1E222CC7DE900FD9B28 /* TTCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselView.swift; sourceTree = "<group>"; };
+		3B14B1E422CC802D00FD9B28 /* TTCarouselViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewProtocol.swift; sourceTree = "<group>"; };
+		3B14B1E622CC8B1500FD9B28 /* TTCarouselViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewTransformer.swift; sourceTree = "<group>"; };
+		3B14B1E822CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		3B14B1EA22CCA51000FD9B28 /* TTCarouselViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewLayout.swift; sourceTree = "<group>"; };
+		3B14B1ED22CE011900FD9B28 /* TTRecommendGuessULikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTRecommendGuessULikeCell.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +149,7 @@
 		3B14B19C22C5FC6900FD9B28 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B1DD22CC4A4900FD9B28 /* CarouselView */,
 				3B14B19E22C5FC8F00FD9B28 /* PageView */,
 			);
 			path = Common;
@@ -150,6 +181,8 @@
 		3B14B1B022C9E93500FD9B28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B1D022CB0C7000FD9B28 /* TTFMRecommendAPI.swift */,
+				3B14B1D222CB470000FD9B28 /* TTFMRecommendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +190,9 @@
 		3B14B1B122C9E94300FD9B28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B1DA22CC400100FD9B28 /* HeaderCell */,
+				3B14B1D422CB5A3600FD9B28 /* TTFMRecommendAdCell.swift */,
+				3B14B1EC22CDFFB900FD9B28 /* GuessULike */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +200,7 @@
 		3B14B1B222C9E94A00FD9B28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B1CE22CAFEBA00FD9B28 /* TTFMRecommendModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +264,38 @@
 				3B14B1CA22CA0FB300FD9B28 /* TTPlayViewController.swift */,
 			);
 			path = "Play(播放)";
+			sourceTree = "<group>";
+		};
+		3B14B1DA22CC400100FD9B28 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1D622CB660700FD9B28 /* TTFMRecommendHeaderCell.swift */,
+				3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */,
+				3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		3B14B1DD22CC4A4900FD9B28 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1DE22CC4AB300FD9B28 /* TTCarouselViewCell.swift */,
+				3B14B1E022CC7BAA00FD9B28 /* TTCarouselCollectionView.swift */,
+				3B14B1E422CC802D00FD9B28 /* TTCarouselViewProtocol.swift */,
+				3B14B1E222CC7DE900FD9B28 /* TTCarouselView.swift */,
+				3B14B1E622CC8B1500FD9B28 /* TTCarouselViewTransformer.swift */,
+				3B14B1E822CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift */,
+				3B14B1EA22CCA51000FD9B28 /* TTCarouselViewLayout.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		3B14B1EC22CDFFB900FD9B28 /* GuessULike */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1ED22CE011900FD9B28 /* TTRecommendGuessULikeCell.swift */,
+			);
+			path = GuessULike;
 			sourceTree = "<group>";
 		};
 		3B20FC5122C34F940026F0C8 = {
@@ -539,9 +608,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B14B1D322CB470000FD9B28 /* TTFMRecommendViewModel.swift in Sources */,
 				3B20FC8722C363F50026F0C8 /* UIApplication.swift in Sources */,
+				3B14B1CF22CAFEBA00FD9B28 /* TTFMRecommendModel.swift in Sources */,
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
 				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
+				3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */,
 				3B14B1AE22C9E79700FD9B28 /* TTPageViewManager.swift in Sources */,
 				3B14B1B822C9EC2200FD9B28 /* TTHomeRecommendViewController.swift in Sources */,
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
@@ -552,19 +624,31 @@
 				3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */,
 				3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */,
 				3B14B1BB22C9FB0900FD9B28 /* TTFMBasicContentView.swift in Sources */,
+				3B14B1E722CC8B1500FD9B28 /* TTCarouselViewTransformer.swift in Sources */,
 				3B20FC9622C46E360026F0C8 /* UIButton.swift in Sources */,
+				3B14B1E122CC7BAA00FD9B28 /* TTCarouselCollectionView.swift in Sources */,
 				3B14B1C422CA0F4400FD9B28 /* TTListenViewController.swift in Sources */,
+				3B14B1DC22CC402F00FD9B28 /* TTFMRecommendGridCell.swift in Sources */,
+				3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */,
+				3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */,
 				3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */,
 				3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */,
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
+				3B14B1D122CB0C7000FD9B28 /* TTFMRecommendAPI.swift in Sources */,
 				3B20FC8322C3609B0026F0C8 /* TTNavigationBar.swift in Sources */,
+				3B14B1D722CB660700FD9B28 /* TTFMRecommendHeaderCell.swift in Sources */,
 				3B14B1AA22C9D63800FD9B28 /* TTPageView.swift in Sources */,
+				3B14B1E322CC7DE900FD9B28 /* TTCarouselView.swift in Sources */,
+				3B14B1EE22CE011A00FD9B28 /* TTRecommendGuessULikeCell.swift in Sources */,
 				3B20FC8E22C379B40026F0C8 /* Utils.swift in Sources */,
 				3B14B1CD22CA0FC000FD9B28 /* TTMineViewController.swift in Sources */,
 				3B14B19A22C5F57800FD9B28 /* TTNavigationController.swift in Sources */,
+				3B14B1D522CB5A3600FD9B28 /* TTFMRecommendAdCell.swift in Sources */,
 				3B14B1B422C9EA7300FD9B28 /* TTHomeViewController.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
+				3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */,
 				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,
+				3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */,
 				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
