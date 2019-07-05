@@ -111,6 +111,38 @@ extension TTFMRecommendAPI: TargetType {
                      "scale":3,
                      "version":"6.5.3",
                      "xt": Int32(Date().timeIntervalSince1970)]
+        case .guessULikeMoreList:
+            paras = ["device": "iPhone",
+                     "appid": 0,
+                     "inreview": false,
+                     "network":"WIFI",
+                     "operator": 3,
+                     "pageId": 1,
+                     "pageSize": 20,
+                     "scale":3,
+                     "uid": 124057809,
+                     "version": "6.5.3",
+                     "xt": Int32(Date().timeIntervalSince1970),
+                     "deviceId": UIDevice.current.identifierForVendor!.uuidString]
+        case .changeGuessULikeList:
+            paras = ["device": "iPhone",
+                     "appid": 0,
+                     "excludedAdAlbumIds": "8258116%2C8601255%2C16514340",
+                     "excludedAlbumIds": "4169245%2C4156778%2C4078652%2C8601255%2C4177638%2C16514340%2C5993267%2C12201334%2C13089888%2C4310827%2C4792267%2C2912127%2C13403391%2C4193171%2C5411224%2C8258116%2C4323493%2C10829913",
+                     "excludedRoomIds": "",
+                     "excludedSpecialIds": "",
+                     "excludedOffset": 18,
+                     "inreview": false,
+                     "loopIndex": 3,
+                     "network":"WIFI",
+                     "operator": 3,
+                     "pageId": 1,
+                     "pageSize": 6,
+                     "scale":3,
+                     "uid": 0,
+                     "version": "6.5.3",
+                     "xt": Int32(Date().timeIntervalSince1970),
+                     "deviceId": UIDevice.current.identifierForVendor!.uuidString]
         default:
             break
         }

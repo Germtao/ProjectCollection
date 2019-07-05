@@ -109,10 +109,11 @@ extension TTFMRecommendViewModel {
         let itemNums = count / 3
         let moduleType = homeRecommendList?[indexPath.section].moduleType
         if moduleType == "focus" {
-            return CGSize(width: Size.screenW, height: 360)
-        } else if moduleType == "square" ||
-            moduleType == "topBuzz" {
-            return CGSize.zero
+            return CGSize(width: Size.screenW, height: 150)
+        } else if moduleType == "square" {
+            return CGSize(width: Size.screenW, height: 160)
+        } else if moduleType == "topBuzz" {
+            return CGSize(width: Size.screenW, height: 50)
         } else if moduleType == "guessYouLike" ||
             moduleType == "paidCategory" ||
             moduleType == "categoriesForLong" ||

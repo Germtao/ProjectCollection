@@ -28,7 +28,7 @@
 		3B14B1D122CB0C7000FD9B28 /* TTFMRecommendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D022CB0C7000FD9B28 /* TTFMRecommendAPI.swift */; };
 		3B14B1D322CB470000FD9B28 /* TTFMRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D222CB470000FD9B28 /* TTFMRecommendViewModel.swift */; };
 		3B14B1D522CB5A3600FD9B28 /* TTFMRecommendAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D422CB5A3600FD9B28 /* TTFMRecommendAdCell.swift */; };
-		3B14B1D722CB660700FD9B28 /* TTFMRecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D622CB660700FD9B28 /* TTFMRecommendHeaderCell.swift */; };
+		3B14B1D722CB660700FD9B28 /* TTFMRecommendCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D622CB660700FD9B28 /* TTFMRecommendCarouselCell.swift */; };
 		3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */; };
 		3B14B1DC22CC402F00FD9B28 /* TTFMRecommendGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */; };
 		3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1DE22CC4AB300FD9B28 /* TTCarouselViewCell.swift */; };
@@ -38,7 +38,14 @@
 		3B14B1E722CC8B1500FD9B28 /* TTCarouselViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E622CC8B1500FD9B28 /* TTCarouselViewTransformer.swift */; };
 		3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1E822CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift */; };
 		3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1EA22CCA51000FD9B28 /* TTCarouselViewLayout.swift */; };
-		3B14B1EE22CE011A00FD9B28 /* TTRecommendGuessULikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1ED22CE011900FD9B28 /* TTRecommendGuessULikeCell.swift */; };
+		3B14B1EE22CE011A00FD9B28 /* TTFMRecommendGuessULikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1ED22CE011900FD9B28 /* TTFMRecommendGuessULikeCell.swift */; };
+		3B14B1F022CEEB0F00FD9B28 /* TTFMGuessULikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1EF22CEEB0E00FD9B28 /* TTFMGuessULikeCell.swift */; };
+		3B14B1F322CF067E00FD9B28 /* TTFMRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1F222CF067E00FD9B28 /* TTFMRecommendHeaderView.swift */; };
+		3B14B1F522CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1F422CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift */; };
+		3B14B1F722CF454E00FD9B28 /* TTFMRecommendSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1F622CF454E00FD9B28 /* TTFMRecommendSquareCell.swift */; };
+		3B14B1FC22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1FB22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift */; };
+		3B14B1FE22CF58A100FD9B28 /* TTFMAudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1FD22CF58A100FD9B28 /* TTFMAudioBookCell.swift */; };
+		3B14B20022CF614000FD9B28 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1FF22CF614000FD9B28 /* String.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -90,7 +97,7 @@
 		3B14B1D022CB0C7000FD9B28 /* TTFMRecommendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendAPI.swift; sourceTree = "<group>"; };
 		3B14B1D222CB470000FD9B28 /* TTFMRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendViewModel.swift; sourceTree = "<group>"; };
 		3B14B1D422CB5A3600FD9B28 /* TTFMRecommendAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendAdCell.swift; sourceTree = "<group>"; };
-		3B14B1D622CB660700FD9B28 /* TTFMRecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendHeaderCell.swift; sourceTree = "<group>"; };
+		3B14B1D622CB660700FD9B28 /* TTFMRecommendCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendCarouselCell.swift; sourceTree = "<group>"; };
 		3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendNewsCell.swift; sourceTree = "<group>"; };
 		3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendGridCell.swift; sourceTree = "<group>"; };
 		3B14B1DE22CC4AB300FD9B28 /* TTCarouselViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewCell.swift; sourceTree = "<group>"; };
@@ -100,7 +107,14 @@
 		3B14B1E622CC8B1500FD9B28 /* TTCarouselViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewTransformer.swift; sourceTree = "<group>"; };
 		3B14B1E822CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		3B14B1EA22CCA51000FD9B28 /* TTCarouselViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCarouselViewLayout.swift; sourceTree = "<group>"; };
-		3B14B1ED22CE011900FD9B28 /* TTRecommendGuessULikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTRecommendGuessULikeCell.swift; sourceTree = "<group>"; };
+		3B14B1ED22CE011900FD9B28 /* TTFMRecommendGuessULikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendGuessULikeCell.swift; sourceTree = "<group>"; };
+		3B14B1EF22CEEB0E00FD9B28 /* TTFMGuessULikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMGuessULikeCell.swift; sourceTree = "<group>"; };
+		3B14B1F222CF067E00FD9B28 /* TTFMRecommendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendHeaderView.swift; sourceTree = "<group>"; };
+		3B14B1F422CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendFooterView.swift; sourceTree = "<group>"; };
+		3B14B1F622CF454E00FD9B28 /* TTFMRecommendSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendSquareCell.swift; sourceTree = "<group>"; };
+		3B14B1FB22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendAudioBookCell.swift; sourceTree = "<group>"; };
+		3B14B1FD22CF58A100FD9B28 /* TTFMAudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMAudioBookCell.swift; sourceTree = "<group>"; };
+		3B14B1FF22CF614000FD9B28 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,8 +204,12 @@
 		3B14B1B122C9E94300FD9B28 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3B14B1DA22CC400100FD9B28 /* HeaderCell */,
+				3B14B1FA22CF4F0A00FD9B28 /* AudioBook(有声书) */,
+				3B14B1F122CF065400FD9B28 /* Common */,
+				3B14B1DA22CC400100FD9B28 /* Carousel(轮播图) */,
 				3B14B1D422CB5A3600FD9B28 /* TTFMRecommendAdCell.swift */,
+				3B14B1F922CF4B2600FD9B28 /* News(听头条) */,
+				3B14B1F822CF46A900FD9B28 /* Square(九宫格) */,
 				3B14B1EC22CDFFB900FD9B28 /* GuessULike */,
 			);
 			path = View;
@@ -266,14 +284,12 @@
 			path = "Play(播放)";
 			sourceTree = "<group>";
 		};
-		3B14B1DA22CC400100FD9B28 /* HeaderCell */ = {
+		3B14B1DA22CC400100FD9B28 /* Carousel(轮播图) */ = {
 			isa = PBXGroup;
 			children = (
-				3B14B1D622CB660700FD9B28 /* TTFMRecommendHeaderCell.swift */,
-				3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */,
-				3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */,
+				3B14B1D622CB660700FD9B28 /* TTFMRecommendCarouselCell.swift */,
 			);
-			path = HeaderCell;
+			path = "Carousel(轮播图)";
 			sourceTree = "<group>";
 		};
 		3B14B1DD22CC4A4900FD9B28 /* CarouselView */ = {
@@ -293,9 +309,45 @@
 		3B14B1EC22CDFFB900FD9B28 /* GuessULike */ = {
 			isa = PBXGroup;
 			children = (
-				3B14B1ED22CE011900FD9B28 /* TTRecommendGuessULikeCell.swift */,
+				3B14B1ED22CE011900FD9B28 /* TTFMRecommendGuessULikeCell.swift */,
+				3B14B1EF22CEEB0E00FD9B28 /* TTFMGuessULikeCell.swift */,
 			);
 			path = GuessULike;
+			sourceTree = "<group>";
+		};
+		3B14B1F122CF065400FD9B28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1F222CF067E00FD9B28 /* TTFMRecommendHeaderView.swift */,
+				3B14B1F422CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3B14B1F822CF46A900FD9B28 /* Square(九宫格) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1F622CF454E00FD9B28 /* TTFMRecommendSquareCell.swift */,
+				3B14B1DB22CC402F00FD9B28 /* TTFMRecommendGridCell.swift */,
+			);
+			path = "Square(九宫格)";
+			sourceTree = "<group>";
+		};
+		3B14B1F922CF4B2600FD9B28 /* News(听头条) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1D822CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift */,
+			);
+			path = "News(听头条)";
+			sourceTree = "<group>";
+		};
+		3B14B1FA22CF4F0A00FD9B28 /* AudioBook(有声书) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B1FB22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift */,
+				3B14B1FD22CF58A100FD9B28 /* TTFMAudioBookCell.swift */,
+			);
+			path = "AudioBook(有声书)";
 			sourceTree = "<group>";
 		};
 		3B20FC5122C34F940026F0C8 = {
@@ -408,6 +460,7 @@
 				3B20FC8822C364230026F0C8 /* UIViewController.swift */,
 				3B20FC8A22C3769D0026F0C8 /* DispatchQueue.swift */,
 				3B20FC9522C46E360026F0C8 /* UIButton.swift */,
+				3B14B1FF22CF614000FD9B28 /* String.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -614,15 +667,19 @@
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
 				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
 				3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */,
+				3B14B1F722CF454E00FD9B28 /* TTFMRecommendSquareCell.swift in Sources */,
 				3B14B1AE22C9E79700FD9B28 /* TTPageViewManager.swift in Sources */,
 				3B14B1B822C9EC2200FD9B28 /* TTHomeRecommendViewController.swift in Sources */,
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
+				3B14B1FE22CF58A100FD9B28 /* TTFMAudioBookCell.swift in Sources */,
 				3B14B1A422C6038D00FD9B28 /* TTPageStyle.swift in Sources */,
 				3B14B1C722CA0F8400FD9B28 /* TTFindViewController.swift in Sources */,
 				3B14B1BD22C9FC6900FD9B28 /* TTFMBouncesContentView.swift in Sources */,
 				3B20FC8922C364230026F0C8 /* UIViewController.swift in Sources */,
+				3B14B1FC22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift in Sources */,
 				3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */,
 				3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */,
+				3B14B20022CF614000FD9B28 /* String.swift in Sources */,
 				3B14B1BB22C9FB0900FD9B28 /* TTFMBasicContentView.swift in Sources */,
 				3B14B1E722CC8B1500FD9B28 /* TTCarouselViewTransformer.swift in Sources */,
 				3B20FC9622C46E360026F0C8 /* UIButton.swift in Sources */,
@@ -636,18 +693,21 @@
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
 				3B14B1D122CB0C7000FD9B28 /* TTFMRecommendAPI.swift in Sources */,
 				3B20FC8322C3609B0026F0C8 /* TTNavigationBar.swift in Sources */,
-				3B14B1D722CB660700FD9B28 /* TTFMRecommendHeaderCell.swift in Sources */,
+				3B14B1D722CB660700FD9B28 /* TTFMRecommendCarouselCell.swift in Sources */,
 				3B14B1AA22C9D63800FD9B28 /* TTPageView.swift in Sources */,
 				3B14B1E322CC7DE900FD9B28 /* TTCarouselView.swift in Sources */,
-				3B14B1EE22CE011A00FD9B28 /* TTRecommendGuessULikeCell.swift in Sources */,
+				3B14B1EE22CE011A00FD9B28 /* TTFMRecommendGuessULikeCell.swift in Sources */,
 				3B20FC8E22C379B40026F0C8 /* Utils.swift in Sources */,
 				3B14B1CD22CA0FC000FD9B28 /* TTMineViewController.swift in Sources */,
 				3B14B19A22C5F57800FD9B28 /* TTNavigationController.swift in Sources */,
+				3B14B1F022CEEB0F00FD9B28 /* TTFMGuessULikeCell.swift in Sources */,
 				3B14B1D522CB5A3600FD9B28 /* TTFMRecommendAdCell.swift in Sources */,
+				3B14B1F322CF067E00FD9B28 /* TTFMRecommendHeaderView.swift in Sources */,
 				3B14B1B422C9EA7300FD9B28 /* TTHomeViewController.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
 				3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */,
 				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,
+				3B14B1F522CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift in Sources */,
 				3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */,
 				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
 			);
