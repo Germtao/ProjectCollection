@@ -43,6 +43,12 @@ class TTHomeRecommendViewController: UIViewController {
                       forCellWithReuseIdentifier: TTFMRecommendAudioBookCell.reuseIdentifier)
         view.register(TTFMRecommendAdCell.self,
                       forCellWithReuseIdentifier: TTFMRecommendAdCell.reuseIdentifier)
+        view.register(TTFMReCommendOneKeyListenCell.self,
+                      forCellWithReuseIdentifier: TTFMReCommendOneKeyListenCell.reuseIdentifier)
+        view.register(TTFMRecommendLiveCell.self,
+                      forCellWithReuseIdentifier: TTFMRecommendLiveCell.reuseIdentifier)
+        view.register(TTFMRecommendForUCell.self,
+                      forCellWithReuseIdentifier: TTFMRecommendForUCell.reuseIdentifier)
         
         view.register(TTFMRecommendHeaderView.self,
                       forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -110,18 +116,20 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
         } else if moduleType == "guessYouLike" ||
             moduleType == "paidCategory" ||
             moduleType == "categoriesForLong" ||
-            moduleType == "cityCategory" { // 猜你喜欢、精品、
+            moduleType == "cityCategory" ||
+            moduleType == "microLesson" { // 猜你喜欢、精品、亲子时光、音乐好时光、人文
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendGuessULikeCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendGuessULikeCell
             cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list)
             return cell
-        } else if moduleType == "categoriesForShort" { // 评书
+        } else if moduleType == "categoriesForShort" ||
+            moduleType == "playlist" ||
+            moduleType == "categoriesForExplore" { // 最热有声书、相声评书、精品听单
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendAudioBookCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendAudioBookCell
             cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list)
             return cell
-        }
-        else { // ad
+        } else if moduleType == "ad" { // ad
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendAdCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendAdCell
             if indexPath.section == 7 {
@@ -129,6 +137,20 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
             } else if indexPath.section == 13 {
                 cell.configure(with: viewModel.recommendAdList?[1])
             }
+            return cell
+        } else if moduleType == "oneKeyListen"  { // 懒人电台
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMReCommendOneKeyListenCell.reuseIdentifier,
+                                                          for: indexPath) as! TTFMReCommendOneKeyListenCell
+            cell.configure(with: viewModel.oneKeyListenList)
+            return cell
+        } else if moduleType == "live" { // 直播
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendLiveCell.reuseIdentifier,
+                                                          for: indexPath) as! TTFMRecommendLiveCell
+            cell.configure(with: viewModel.liveList)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendForUCell.reuseIdentifier,
+                                                          for: indexPath) as! TTFMRecommendForUCell
             return cell
         }
     }

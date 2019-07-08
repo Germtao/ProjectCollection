@@ -24,6 +24,12 @@ class TTFMRecommendViewModel: NSObject {
     
     var recommendAdList: [TTFMRecommendAdModel]?
     
+    /// 懒人电台
+    var oneKeyListenList: [TTFMOneKeyListenModel]?
+    
+    /// 直播
+    var liveList: [TTFMRecommendLiveModel]?
+    
     /// 更新数据回调
     var updateDataHandler: (() -> Void)?
 }
@@ -52,6 +58,14 @@ extension TTFMRecommendViewModel {
                     
                     if let recommendNewsList = JSONDeserializer<TTFMRecommendNewsModel>.deserializeModelArrayFrom(json: json["list"][2]["list"].description) {
                         self.recommendNewsList = recommendNewsList as? [TTFMRecommendNewsModel]
+                    }
+                    
+                    if let oneKeyListen = JSONDeserializer<TTFMOneKeyListenModel>.deserializeModelArrayFrom(json: json["list"][9]["list"].description) {
+                        self.oneKeyListenList = oneKeyListen as? [TTFMOneKeyListenModel]
+                    }
+                    
+                    if let liveList = JSONDeserializer<TTFMRecommendLiveModel>.deserializeModelArrayFrom(json: json["list"][14]["list"].description) {
+                        self.liveList = liveList as? [TTFMRecommendLiveModel]
                     }
                     
                     // 更新数据回调
@@ -122,10 +136,11 @@ extension TTFMRecommendViewModel {
             return CGSize(width: Size.screenW, height: headerAndFooterHeight + CGFloat(180 * itemNums))
         } else if moduleType == "categoriesForShort" ||
             moduleType == "playlist" ||
-            moduleType == "categoriesForExplore" {
-            return CGSize(width: Size.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
+            moduleType == "categoriesForExplore" ||
+            moduleType == "microLesson" {
+            return recommendList?.count == 0 ? CGSize.zero : CGSize(width: Size.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
         } else if moduleType == "ad" {
-            return CGSize(width: Size.screenW, height: 240)
+            return homeRecommendList?[indexPath.section].list?.count == 0 ? CGSize.zero : CGSize(width: Size.screenW, height: 240)
         } else if moduleType == "oneKeyListen" {
             return CGSize(width: Size.screenW, height: 180)
         } else {

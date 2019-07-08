@@ -88,6 +88,7 @@ extension TTFMRecommendAPI: TargetType {
                      "version": "6.5.3",
                      "xt": Int32(Date().timeIntervalSince1970),
                      "deviceId": UIDevice.current.identifierForVendor!.uuidString]
+            
         case .recommendListForU:
             paras = ["device": "iPhone",
                      "excludedAlbumIds": "3144231%2C3160816%2C5088879%2C3703879%2C9723091%2C12580785%2C12610571%2C13507836%2C11501536%2C12642314%2C4137349%2C10587045%2C6233693%2C4436043%2C16302530%2C15427120%2C13211141%2C61%2C220565%2C3475911%2C3179882%2C10596891%2C261506%2C7183288%2C203355%2C3493173%2C7054736%2C10728301%2C2688602%2C13048404",

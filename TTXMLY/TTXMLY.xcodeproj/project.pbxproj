@@ -46,6 +46,13 @@
 		3B14B1FC22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1FB22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift */; };
 		3B14B1FE22CF58A100FD9B28 /* TTFMAudioBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1FD22CF58A100FD9B28 /* TTFMAudioBookCell.swift */; };
 		3B14B20022CF614000FD9B28 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B1FF22CF614000FD9B28 /* String.swift */; };
+		3B14B20322D2D6E600FD9B28 /* TTFMReCommendOneKeyListenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B20222D2D6E600FD9B28 /* TTFMReCommendOneKeyListenCell.swift */; };
+		3B14B20522D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B20422D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift */; };
+		3B14B20822D2ED0B00FD9B28 /* TTFMRecommendLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B20722D2ED0B00FD9B28 /* TTFMRecommendLiveCell.swift */; };
+		3B14B20A22D2EE3C00FD9B28 /* TTFMLiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B20922D2EE3C00FD9B28 /* TTFMLiveCell.swift */; };
+		3B14B20D22D30E8C00FD9B28 /* TTReplicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B20C22D30E8C00FD9B28 /* TTReplicatorLayer.swift */; };
+		3B14B21022D317AE00FD9B28 /* TTFMRecommendForUCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B20F22D317AE00FD9B28 /* TTFMRecommendForUCell.swift */; };
+		3B14B21222D3188300FD9B28 /* TTFMForUCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B21122D3188300FD9B28 /* TTFMForUCell.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -115,6 +122,13 @@
 		3B14B1FB22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendAudioBookCell.swift; sourceTree = "<group>"; };
 		3B14B1FD22CF58A100FD9B28 /* TTFMAudioBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMAudioBookCell.swift; sourceTree = "<group>"; };
 		3B14B1FF22CF614000FD9B28 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3B14B20222D2D6E600FD9B28 /* TTFMReCommendOneKeyListenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMReCommendOneKeyListenCell.swift; sourceTree = "<group>"; };
+		3B14B20422D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMOneKeyListenCell.swift; sourceTree = "<group>"; };
+		3B14B20722D2ED0B00FD9B28 /* TTFMRecommendLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendLiveCell.swift; sourceTree = "<group>"; };
+		3B14B20922D2EE3C00FD9B28 /* TTFMLiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMLiveCell.swift; sourceTree = "<group>"; };
+		3B14B20C22D30E8C00FD9B28 /* TTReplicatorLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTReplicatorLayer.swift; sourceTree = "<group>"; };
+		3B14B20F22D317AE00FD9B28 /* TTFMRecommendForUCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendForUCell.swift; sourceTree = "<group>"; };
+		3B14B21122D3188300FD9B28 /* TTFMForUCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMForUCell.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +177,7 @@
 		3B14B19C22C5FC6900FD9B28 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B20B22D30E7A00FD9B28 /* ReplicatorLayer */,
 				3B14B1DD22CC4A4900FD9B28 /* CarouselView */,
 				3B14B19E22C5FC8F00FD9B28 /* PageView */,
 			);
@@ -204,6 +219,9 @@
 		3B14B1B122C9E94300FD9B28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B20E22D3172300FD9B28 /* ForYou(为你推荐) */,
+				3B14B20622D2EC7200FD9B28 /* Live(直播) */,
+				3B14B20122D2D69400FD9B28 /* OneKeyListen(懒人电台) */,
 				3B14B1FA22CF4F0A00FD9B28 /* AudioBook(有声书) */,
 				3B14B1F122CF065400FD9B28 /* Common */,
 				3B14B1DA22CC400100FD9B28 /* Carousel(轮播图) */,
@@ -348,6 +366,41 @@
 				3B14B1FD22CF58A100FD9B28 /* TTFMAudioBookCell.swift */,
 			);
 			path = "AudioBook(有声书)";
+			sourceTree = "<group>";
+		};
+		3B14B20122D2D69400FD9B28 /* OneKeyListen(懒人电台) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B20222D2D6E600FD9B28 /* TTFMReCommendOneKeyListenCell.swift */,
+				3B14B20422D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift */,
+			);
+			path = "OneKeyListen(懒人电台)";
+			sourceTree = "<group>";
+		};
+		3B14B20622D2EC7200FD9B28 /* Live(直播) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B20722D2ED0B00FD9B28 /* TTFMRecommendLiveCell.swift */,
+				3B14B20922D2EE3C00FD9B28 /* TTFMLiveCell.swift */,
+			);
+			path = "Live(直播)";
+			sourceTree = "<group>";
+		};
+		3B14B20B22D30E7A00FD9B28 /* ReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B20C22D30E8C00FD9B28 /* TTReplicatorLayer.swift */,
+			);
+			path = ReplicatorLayer;
+			sourceTree = "<group>";
+		};
+		3B14B20E22D3172300FD9B28 /* ForYou(为你推荐) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B20F22D317AE00FD9B28 /* TTFMRecommendForUCell.swift */,
+				3B14B21122D3188300FD9B28 /* TTFMForUCell.swift */,
+			);
+			path = "ForYou(为你推荐)";
 			sourceTree = "<group>";
 		};
 		3B20FC5122C34F940026F0C8 = {
@@ -665,15 +718,21 @@
 				3B20FC8722C363F50026F0C8 /* UIApplication.swift in Sources */,
 				3B14B1CF22CAFEBA00FD9B28 /* TTFMRecommendModel.swift in Sources */,
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
+				3B14B20522D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift in Sources */,
 				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
 				3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */,
 				3B14B1F722CF454E00FD9B28 /* TTFMRecommendSquareCell.swift in Sources */,
+				3B14B20D22D30E8C00FD9B28 /* TTReplicatorLayer.swift in Sources */,
 				3B14B1AE22C9E79700FD9B28 /* TTPageViewManager.swift in Sources */,
 				3B14B1B822C9EC2200FD9B28 /* TTHomeRecommendViewController.swift in Sources */,
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
+				3B14B21222D3188300FD9B28 /* TTFMForUCell.swift in Sources */,
+				3B14B21022D317AE00FD9B28 /* TTFMRecommendForUCell.swift in Sources */,
 				3B14B1FE22CF58A100FD9B28 /* TTFMAudioBookCell.swift in Sources */,
 				3B14B1A422C6038D00FD9B28 /* TTPageStyle.swift in Sources */,
 				3B14B1C722CA0F8400FD9B28 /* TTFindViewController.swift in Sources */,
+				3B14B20322D2D6E600FD9B28 /* TTFMReCommendOneKeyListenCell.swift in Sources */,
+				3B14B20822D2ED0B00FD9B28 /* TTFMRecommendLiveCell.swift in Sources */,
 				3B14B1BD22C9FC6900FD9B28 /* TTFMBouncesContentView.swift in Sources */,
 				3B20FC8922C364230026F0C8 /* UIViewController.swift in Sources */,
 				3B14B1FC22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift in Sources */,
@@ -688,6 +747,7 @@
 				3B14B1DC22CC402F00FD9B28 /* TTFMRecommendGridCell.swift in Sources */,
 				3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */,
 				3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */,
+				3B14B20A22D2EE3C00FD9B28 /* TTFMLiveCell.swift in Sources */,
 				3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */,
 				3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */,
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,

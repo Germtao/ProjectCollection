@@ -216,3 +216,41 @@ struct TTFMBannerModel: HandyJSON {
     var thirdClickStatUrls: [Any]?
     var thirdShowStatUrls: [Any]?
 }
+
+// MARK: - 懒人电台
+struct TTFMOneKeyListenModel: HandyJSON {
+    var channelId: Int = 0
+    var channelName: String?
+    var cover: String?
+    var coverRound: String?
+    var onLineNum: Int = 0
+    var recInfo: TTFMRectInfo?
+    
+    struct TTFMRectInfo: HandyJSON {
+        var recSrc: String?
+        var recTrack: String?
+    }
+}
+
+// MARK: - 直播
+struct TTFMRecommendLiveModel: HandyJSON {
+    var actualStartAt: Int = 0
+    var categoryId: Int = 0
+    var chatId: Int = 0
+    var categoryName: String?
+    var coverLarge: String?
+    var coverMiddle: String?
+    var coverSmall: String?
+    var description: String?
+    var endAt: Int = 0
+    var id: Int = 0
+    var name: String?
+    var nickname: String?
+    var playCount: Int = 0
+    var recSrc: String?
+    var recTrack: String?
+    var roomId: Int = 0
+    var startAt: Int = 0
+    var status: Int = 0
+    var uid: Int = 0
+}
