@@ -56,6 +56,10 @@
 		3B14B21922D3331500FD9B28 /* TTHomeCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B21822D3331500FD9B28 /* TTHomeCategoryViewController.swift */; };
 		3B14B21B22D33D6A00FD9B28 /* TTFMCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B21A22D33D6A00FD9B28 /* TTFMCategoryModel.swift */; };
 		3B14B21D22D33F0100FD9B28 /* TTFMCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B21C22D33F0100FD9B28 /* TTFMCategoryViewModel.swift */; };
+		3B14B21F22D42A3500FD9B28 /* TTFMCategoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B21E22D42A3400FD9B28 /* TTFMCategoryAPI.swift */; };
+		3B14B22122D4371E00FD9B28 /* TTFMCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B22022D4371E00FD9B28 /* TTFMCategoryCell.swift */; };
+		3B14B22322D43EAA00FD9B28 /* TTFMCategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B22222D43EAA00FD9B28 /* TTFMCategoryHeaderView.swift */; };
+		3B14B22522D43FE900FD9B28 /* TTFMCategoryFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B22422D43FE900FD9B28 /* TTFMCategoryFooterView.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -135,6 +139,10 @@
 		3B14B21822D3331500FD9B28 /* TTHomeCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHomeCategoryViewController.swift; sourceTree = "<group>"; };
 		3B14B21A22D33D6A00FD9B28 /* TTFMCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMCategoryModel.swift; sourceTree = "<group>"; };
 		3B14B21C22D33F0100FD9B28 /* TTFMCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMCategoryViewModel.swift; sourceTree = "<group>"; };
+		3B14B21E22D42A3400FD9B28 /* TTFMCategoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMCategoryAPI.swift; sourceTree = "<group>"; };
+		3B14B22022D4371E00FD9B28 /* TTFMCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMCategoryCell.swift; sourceTree = "<group>"; };
+		3B14B22222D43EAA00FD9B28 /* TTFMCategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMCategoryHeaderView.swift; sourceTree = "<group>"; };
+		3B14B22422D43FE900FD9B28 /* TTFMCategoryFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMCategoryFooterView.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -425,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				3B14B21C22D33F0100FD9B28 /* TTFMCategoryViewModel.swift */,
+				3B14B21E22D42A3400FD9B28 /* TTFMCategoryAPI.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -432,6 +441,9 @@
 		3B14B21522D332A900FD9B28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B22022D4371E00FD9B28 /* TTFMCategoryCell.swift */,
+				3B14B22222D43EAA00FD9B28 /* TTFMCategoryHeaderView.swift */,
+				3B14B22422D43FE900FD9B28 /* TTFMCategoryFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -766,6 +778,7 @@
 				3B14B20D22D30E8C00FD9B28 /* TTReplicatorLayer.swift in Sources */,
 				3B14B1AE22C9E79700FD9B28 /* TTPageViewManager.swift in Sources */,
 				3B14B1B822C9EC2200FD9B28 /* TTHomeRecommendViewController.swift in Sources */,
+				3B14B21F22D42A3500FD9B28 /* TTFMCategoryAPI.swift in Sources */,
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
 				3B14B21D22D33F0100FD9B28 /* TTFMCategoryViewModel.swift in Sources */,
 				3B14B21222D3188300FD9B28 /* TTFMForUCell.swift in Sources */,
@@ -778,6 +791,7 @@
 				3B14B1BD22C9FC6900FD9B28 /* TTFMBouncesContentView.swift in Sources */,
 				3B20FC8922C364230026F0C8 /* UIViewController.swift in Sources */,
 				3B14B1FC22CF4F3100FD9B28 /* TTFMRecommendAudioBookCell.swift in Sources */,
+				3B14B22522D43FE900FD9B28 /* TTFMCategoryFooterView.swift in Sources */,
 				3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */,
 				3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */,
 				3B14B20022CF614000FD9B28 /* String.swift in Sources */,
@@ -790,6 +804,7 @@
 				3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */,
 				3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */,
 				3B14B20A22D2EE3C00FD9B28 /* TTFMLiveCell.swift in Sources */,
+				3B14B22322D43EAA00FD9B28 /* TTFMCategoryHeaderView.swift in Sources */,
 				3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */,
 				3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */,
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
@@ -807,6 +822,7 @@
 				3B14B21922D3331500FD9B28 /* TTHomeCategoryViewController.swift in Sources */,
 				3B14B1F322CF067E00FD9B28 /* TTFMRecommendHeaderView.swift in Sources */,
 				3B14B1B422C9EA7300FD9B28 /* TTHomeViewController.swift in Sources */,
+				3B14B22122D4371E00FD9B28 /* TTFMCategoryCell.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
 				3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */,
 				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,

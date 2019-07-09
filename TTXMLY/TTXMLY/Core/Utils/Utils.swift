@@ -35,6 +35,8 @@ struct Color {
     static let sectionFooter = UIColor(red: 240/255.0, green: 241/255.0, blue: 244/255.0, alpha: 1)
     
     static let endLabel = UIColor(red: 248, green: 210, blue: 74, alpha: 1)
+    
+    static let categoryCell = UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1)
 }
 
 struct TTFont {
