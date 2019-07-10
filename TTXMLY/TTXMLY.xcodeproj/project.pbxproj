@@ -66,6 +66,14 @@
 		3B14B23122D4705200FD9B28 /* TTFMHomeVipAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23022D4705200FD9B28 /* TTFMHomeVipAPI.swift */; };
 		3B14B23322D4909000FD9B28 /* TTFMVipBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23222D4909000FD9B28 /* TTFMVipBannerCell.swift */; };
 		3B14B23522D4A46F00FD9B28 /* TTFMVipHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23422D4A46F00FD9B28 /* TTFMVipHeaderView.swift */; };
+		3B14B23722D57D1100FD9B28 /* TTFMVipFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23622D57D1100FD9B28 /* TTFMVipFooterView.swift */; };
+		3B14B23922D581B700FD9B28 /* TTFMVipCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23822D581B700FD9B28 /* TTFMVipCategoryCell.swift */; };
+		3B14B23C22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23B22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift */; };
+		3B14B23F22D590A900FD9B28 /* TTFMHomeVipHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B23E22D590A900FD9B28 /* TTFMHomeVipHotCell.swift */; };
+		3B14B24122D5B1C500FD9B28 /* TTFMVipHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B24022D5B1C500FD9B28 /* TTFMVipHotCell.swift */; };
+		3B14B24522D5B70900FD9B28 /* TTFMHomeVipEnjoyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B24422D5B70900FD9B28 /* TTFMHomeVipEnjoyCell.swift */; };
+		3B14B24722D5B71F00FD9B28 /* TTFMVipEnjoyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B24622D5B71F00FD9B28 /* TTFMVipEnjoyCell.swift */; };
+		3B14B24A22D5BDA200FD9B28 /* TTFMHomeVipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B24922D5BDA200FD9B28 /* TTFMHomeVipCell.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -155,6 +163,14 @@
 		3B14B23022D4705200FD9B28 /* TTFMHomeVipAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeVipAPI.swift; sourceTree = "<group>"; };
 		3B14B23222D4909000FD9B28 /* TTFMVipBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipBannerCell.swift; sourceTree = "<group>"; };
 		3B14B23422D4A46F00FD9B28 /* TTFMVipHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipHeaderView.swift; sourceTree = "<group>"; };
+		3B14B23622D57D1100FD9B28 /* TTFMVipFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipFooterView.swift; sourceTree = "<group>"; };
+		3B14B23822D581B700FD9B28 /* TTFMVipCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipCategoryCell.swift; sourceTree = "<group>"; };
+		3B14B23B22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipCategoryButtonCell.swift; sourceTree = "<group>"; };
+		3B14B23E22D590A900FD9B28 /* TTFMHomeVipHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeVipHotCell.swift; sourceTree = "<group>"; };
+		3B14B24022D5B1C500FD9B28 /* TTFMVipHotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipHotCell.swift; sourceTree = "<group>"; };
+		3B14B24422D5B70900FD9B28 /* TTFMHomeVipEnjoyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeVipEnjoyCell.swift; sourceTree = "<group>"; };
+		3B14B24622D5B71F00FD9B28 /* TTFMVipEnjoyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMVipEnjoyCell.swift; sourceTree = "<group>"; };
+		3B14B24922D5BDA200FD9B28 /* TTFMHomeVipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeVipCell.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -493,7 +509,11 @@
 			isa = PBXGroup;
 			children = (
 				3B14B23222D4909000FD9B28 /* TTFMVipBannerCell.swift */,
-				3B14B23422D4A46F00FD9B28 /* TTFMVipHeaderView.swift */,
+				3B14B23A22D5832700FD9B28 /* Category(分类) */,
+				3B14B23D22D5908200FD9B28 /* Hot(热播) */,
+				3B14B24322D5B6B700FD9B28 /* Enjoy(尊享) */,
+				3B14B24822D5BD6D00FD9B28 /* Vip(大师课) */,
+				3B14B24222D5B5E900FD9B28 /* HeaderFooter(头尾视图) */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +524,50 @@
 				3B14B22C22D4675D00FD9B28 /* TTFMHomeVipModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3B14B23A22D5832700FD9B28 /* Category(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B23822D581B700FD9B28 /* TTFMVipCategoryCell.swift */,
+				3B14B23B22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift */,
+			);
+			path = "Category(分类)";
+			sourceTree = "<group>";
+		};
+		3B14B23D22D5908200FD9B28 /* Hot(热播) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B23E22D590A900FD9B28 /* TTFMHomeVipHotCell.swift */,
+				3B14B24022D5B1C500FD9B28 /* TTFMVipHotCell.swift */,
+			);
+			path = "Hot(热播)";
+			sourceTree = "<group>";
+		};
+		3B14B24222D5B5E900FD9B28 /* HeaderFooter(头尾视图) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B23422D4A46F00FD9B28 /* TTFMVipHeaderView.swift */,
+				3B14B23622D57D1100FD9B28 /* TTFMVipFooterView.swift */,
+			);
+			path = "HeaderFooter(头尾视图)";
+			sourceTree = "<group>";
+		};
+		3B14B24322D5B6B700FD9B28 /* Enjoy(尊享) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B24422D5B70900FD9B28 /* TTFMHomeVipEnjoyCell.swift */,
+				3B14B24622D5B71F00FD9B28 /* TTFMVipEnjoyCell.swift */,
+			);
+			path = "Enjoy(尊享)";
+			sourceTree = "<group>";
+		};
+		3B14B24822D5BD6D00FD9B28 /* Vip(大师课) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B24922D5BDA200FD9B28 /* TTFMHomeVipCell.swift */,
+			);
+			path = "Vip(大师课)";
 			sourceTree = "<group>";
 		};
 		3B20FC5122C34F940026F0C8 = {
@@ -817,11 +881,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B14B23722D57D1100FD9B28 /* TTFMVipFooterView.swift in Sources */,
 				3B14B1D322CB470000FD9B28 /* TTFMRecommendViewModel.swift in Sources */,
 				3B20FC8722C363F50026F0C8 /* UIApplication.swift in Sources */,
 				3B14B1CF22CAFEBA00FD9B28 /* TTFMRecommendModel.swift in Sources */,
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
 				3B14B20522D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift in Sources */,
+				3B14B23C22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift in Sources */,
 				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
 				3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */,
 				3B14B1F722CF454E00FD9B28 /* TTFMRecommendSquareCell.swift in Sources */,
@@ -861,6 +927,7 @@
 				3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */,
 				3B14B23322D4909000FD9B28 /* TTFMVipBannerCell.swift in Sources */,
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
+				3B14B23F22D590A900FD9B28 /* TTFMHomeVipHotCell.swift in Sources */,
 				3B14B1D122CB0C7000FD9B28 /* TTFMRecommendAPI.swift in Sources */,
 				3B20FC8322C3609B0026F0C8 /* TTNavigationBar.swift in Sources */,
 				3B14B1D722CB660700FD9B28 /* TTFMRecommendCarouselCell.swift in Sources */,
@@ -870,6 +937,7 @@
 				3B14B1EE22CE011A00FD9B28 /* TTFMRecommendGuessULikeCell.swift in Sources */,
 				3B20FC8E22C379B40026F0C8 /* Utils.swift in Sources */,
 				3B14B1CD22CA0FC000FD9B28 /* TTMineViewController.swift in Sources */,
+				3B14B24722D5B71F00FD9B28 /* TTFMVipEnjoyCell.swift in Sources */,
 				3B14B19A22C5F57800FD9B28 /* TTNavigationController.swift in Sources */,
 				3B14B1F022CEEB0F00FD9B28 /* TTFMGuessULikeCell.swift in Sources */,
 				3B14B1D522CB5A3600FD9B28 /* TTFMRecommendAdCell.swift in Sources */,
@@ -878,13 +946,17 @@
 				3B14B1B422C9EA7300FD9B28 /* TTHomeViewController.swift in Sources */,
 				3B14B22122D4371E00FD9B28 /* TTFMCategoryCell.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
+				3B14B24122D5B1C500FD9B28 /* TTFMVipHotCell.swift in Sources */,
 				3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */,
+				3B14B24522D5B70900FD9B28 /* TTFMHomeVipEnjoyCell.swift in Sources */,
 				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,
 				3B14B21B22D33D6A00FD9B28 /* TTFMCategoryModel.swift in Sources */,
 				3B14B22F22D46D6A00FD9B28 /* TTFMHomeVipViewModel.swift in Sources */,
 				3B14B1F522CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift in Sources */,
 				3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */,
+				3B14B23922D581B700FD9B28 /* TTFMVipCategoryCell.swift in Sources */,
 				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
+				3B14B24A22D5BDA200FD9B28 /* TTFMHomeVipCell.swift in Sources */,
 				3B14B23122D4705200FD9B28 /* TTFMHomeVipAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

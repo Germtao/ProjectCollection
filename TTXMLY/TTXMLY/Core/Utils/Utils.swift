@@ -37,10 +37,43 @@ struct Color {
     static let endLabel = UIColor(red: 248, green: 210, blue: 74, alpha: 1)
     
     static let categoryCell = UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1)
+    
+    static let vipFreeBg = UIColor(red: 203/255.0, green: 148/255.0, blue: 95/255.0, alpha: 1)
 }
 
 struct TTFont {
     static func font(_ size: CGFloat) -> UIFont {
         return UIFont.systemFont(ofSize: size)
+    }
+}
+
+struct Utils {
+    /// 获取分类id
+    static func getCategoryId(from url: String, key: String) -> String {
+        // 判断是否有参数
+        if !url.contains("?") { return "" }
+        
+        var paras = [String: Any]()
+        // 截取参数
+        let parasStr = url.split(separator: "?")[1]
+        
+        // 判断参数是单个还是多个
+        if parasStr.contains("&") { // 多个
+            let urlCompontents = parasStr.split(separator: "&")
+            for keyValue in urlCompontents {
+                let compontents = keyValue.split(separator: "=")
+                let key = String(compontents[0])
+                let value = String(compontents[1])
+                paras[key] = value
+            }
+        } else { // 单个
+            let compontents = parasStr.split(separator: "=")
+            if compontents.count == 1 { return "nil" }
+            let key = String(compontents[0])
+            let value = String(compontents[1])
+            paras[key] = value
+        }
+        
+        return paras[key] as! String
     }
 }

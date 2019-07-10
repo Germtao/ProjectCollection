@@ -31,7 +31,7 @@ class TTHomeViewController: UIViewController {
         let titles = ["推荐", "分类", "VIP", "直播", "广播"]
         let viewControllers = [TTHomeRecommendViewController(),
                                TTHomeCategoryViewController(),
-                               TTHomeRecommendViewController(),
+                               TTHomeVIPViewController(),
                                TTHomeRecommendViewController(),
                                TTHomeRecommendViewController()]
         for vc in viewControllers {

@@ -42,7 +42,7 @@ class TTFMVipBannerCell: UITableViewCell {
         view.automaticSlidingInterval = 3
         view.isInfinite = true
         view.interitemSpacing = 15
-        view.transformer = TTCarouselViewTransformer(type: .coverFlow)
+        view.transformer = TTCarouselViewTransformer(type: .ferrisWheel)
         view.delegate = self
         view.dataSource = self
         view.register(TTCarouselViewCell.self, forCellWithReuseIdentifier: vipBannerCellID)
