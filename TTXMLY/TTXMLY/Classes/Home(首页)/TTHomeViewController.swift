@@ -32,7 +32,7 @@ class TTHomeViewController: UIViewController {
         let viewControllers = [TTHomeRecommendViewController(),
                                TTHomeCategoryViewController(),
                                TTHomeVIPViewController(),
-                               TTHomeRecommendViewController(),
+                               TTHomeLiveViewController(),
                                TTHomeRecommendViewController()]
         for vc in viewControllers {
             self.addChild(vc)
