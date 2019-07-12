@@ -86,6 +86,10 @@
 		3B14B26622D6D58C00FD9B28 /* TTFMLiveRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B26522D6D58C00FD9B28 /* TTFMLiveRankCell.swift */; };
 		3B14B26822D6E84F00FD9B28 /* TTFMHomeLiveFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B26722D6E84F00FD9B28 /* TTFMHomeLiveFooterView.swift */; };
 		3B14B26A22D7017A00FD9B28 /* TTFMHomeLiveRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B26922D7017A00FD9B28 /* TTFMHomeLiveRecommendCell.swift */; };
+		3B14B27022D70B2900FD9B28 /* TTHomeBroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B26F22D70B2900FD9B28 /* TTHomeBroadcastViewController.swift */; };
+		3B14B27222D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B27122D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift */; };
+		3B14B27422D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B27322D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift */; };
+		3B14B27622D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B27522D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -195,6 +199,10 @@
 		3B14B26522D6D58C00FD9B28 /* TTFMLiveRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMLiveRankCell.swift; sourceTree = "<group>"; };
 		3B14B26722D6E84F00FD9B28 /* TTFMHomeLiveFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeLiveFooterView.swift; sourceTree = "<group>"; };
 		3B14B26922D7017A00FD9B28 /* TTFMHomeLiveRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeLiveRecommendCell.swift; sourceTree = "<group>"; };
+		3B14B26F22D70B2900FD9B28 /* TTHomeBroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHomeBroadcastViewController.swift; sourceTree = "<group>"; };
+		3B14B27122D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastAPI.swift; sourceTree = "<group>"; };
+		3B14B27322D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastViewModel.swift; sourceTree = "<group>"; };
+		3B14B27522D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastModel.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -272,6 +280,7 @@
 				3B14B21322D3326200FD9B28 /* Category(分类) */,
 				3B14B22622D4446F00FD9B28 /* VIP */,
 				3B14B24B22D5C2FD00FD9B28 /* Live(直播) */,
+				3B14B26B22D70AE800FD9B28 /* Broadcast(广播) */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -652,6 +661,41 @@
 				3B14B26522D6D58C00FD9B28 /* TTFMLiveRankCell.swift */,
 			);
 			path = "Rank(排行榜)";
+			sourceTree = "<group>";
+		};
+		3B14B26B22D70AE800FD9B28 /* Broadcast(广播) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B26F22D70B2900FD9B28 /* TTHomeBroadcastViewController.swift */,
+				3B14B26E22D70B0E00FD9B28 /* Model */,
+				3B14B26D22D70B0900FD9B28 /* View */,
+				3B14B26C22D70B0100FD9B28 /* ViewModel */,
+			);
+			path = "Broadcast(广播)";
+			sourceTree = "<group>";
+		};
+		3B14B26C22D70B0100FD9B28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B27122D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift */,
+				3B14B27322D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3B14B26D22D70B0900FD9B28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B14B26E22D70B0E00FD9B28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B27522D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B20FC5122C34F940026F0C8 = {
@@ -1040,8 +1084,10 @@
 				3B14B22122D4371E00FD9B28 /* TTFMCategoryCell.swift in Sources */,
 				3B20FC9022C37D0B0026F0C8 /* UINavigationController.swift in Sources */,
 				3B14B25E22D6CEB700FD9B28 /* TTFMLiveCategoryCell.swift in Sources */,
+				3B14B27022D70B2900FD9B28 /* TTHomeBroadcastViewController.swift in Sources */,
 				3B14B24122D5B1C500FD9B28 /* TTFMVipHotCell.swift in Sources */,
 				3B14B1D922CC3FED00FD9B28 /* TTFMRecommendNewsCell.swift in Sources */,
+				3B14B27222D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift in Sources */,
 				3B14B24522D5B70900FD9B28 /* TTFMHomeVipEnjoyCell.swift in Sources */,
 				3B14B1A222C5FDCE00FD9B28 /* TTPageContentView.swift in Sources */,
 				3B14B21B22D33D6A00FD9B28 /* TTFMCategoryModel.swift in Sources */,
@@ -1051,8 +1097,10 @@
 				3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */,
 				3B14B26A22D7017A00FD9B28 /* TTFMHomeLiveRecommendCell.swift in Sources */,
 				3B14B23922D581B700FD9B28 /* TTFMVipCategoryCell.swift in Sources */,
+				3B14B27422D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift in Sources */,
 				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
 				3B14B24A22D5BDA200FD9B28 /* TTFMHomeVipCell.swift in Sources */,
+				3B14B27622D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift in Sources */,
 				3B14B23122D4705200FD9B28 /* TTFMHomeVipAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
