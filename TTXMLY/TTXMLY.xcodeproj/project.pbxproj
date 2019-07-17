@@ -90,6 +90,12 @@
 		3B14B27222D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B27122D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift */; };
 		3B14B27422D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B27322D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift */; };
 		3B14B27622D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B27522D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift */; };
+		3B14B33722DC1B3E00FD9B28 /* TTFMHomeBroadcastHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B33622DC1B3E00FD9B28 /* TTFMHomeBroadcastHeaderView.swift */; };
+		3B14B33922DC1D5B00FD9B28 /* TTFMHomeBroadcastFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B33822DC1D5B00FD9B28 /* TTFMHomeBroadcastFooterView.swift */; };
+		3B14B33B22DC1EFB00FD9B28 /* TTFMBroadcastRadioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B33A22DC1EFB00FD9B28 /* TTFMBroadcastRadioCell.swift */; };
+		3B14B33E22DC4C0E00FD9B28 /* TTFMRadioSquareResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B33D22DC4C0E00FD9B28 /* TTFMRadioSquareResultsCell.swift */; };
+		3B14B34022DC4C2700FD9B28 /* TTFMRadioSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B33F22DC4C2700FD9B28 /* TTFMRadioSquareCell.swift */; };
+		3B14B34322DC583700FD9B28 /* TTFMRadioExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14B34222DC583700FD9B28 /* TTFMRadioExpandableCell.swift */; };
 		3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */; };
 		3B20FC6322C34F940026F0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6122C34F940026F0C8 /* Main.storyboard */; };
 		3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20FC6422C34F980026F0C8 /* Assets.xcassets */; };
@@ -203,6 +209,12 @@
 		3B14B27122D70C5C00FD9B28 /* TTFMHomeBroadcastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastAPI.swift; sourceTree = "<group>"; };
 		3B14B27322D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastViewModel.swift; sourceTree = "<group>"; };
 		3B14B27522D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastModel.swift; sourceTree = "<group>"; };
+		3B14B33622DC1B3E00FD9B28 /* TTFMHomeBroadcastHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastHeaderView.swift; sourceTree = "<group>"; };
+		3B14B33822DC1D5B00FD9B28 /* TTFMHomeBroadcastFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMHomeBroadcastFooterView.swift; sourceTree = "<group>"; };
+		3B14B33A22DC1EFB00FD9B28 /* TTFMBroadcastRadioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMBroadcastRadioCell.swift; sourceTree = "<group>"; };
+		3B14B33D22DC4C0E00FD9B28 /* TTFMRadioSquareResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRadioSquareResultsCell.swift; sourceTree = "<group>"; };
+		3B14B33F22DC4C2700FD9B28 /* TTFMRadioSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRadioSquareCell.swift; sourceTree = "<group>"; };
+		3B14B34222DC583700FD9B28 /* TTFMRadioExpandableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRadioExpandableCell.swift; sourceTree = "<group>"; };
 		3B20FC5A22C34F940026F0C8 /* TTXMLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B20FC5D22C34F940026F0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B20FC6222C34F940026F0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -686,6 +698,10 @@
 		3B14B26D22D70B0900FD9B28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B14B34122DC57F300FD9B28 /* ExpandableRadio(可展开电台) */,
+				3B14B33C22DC4BC400FD9B28 /* TopRadio(顶部电台) */,
+				3B14B33522DC1B1600FD9B28 /* HeaderFooter */,
+				3B14B33A22DC1EFB00FD9B28 /* TTFMBroadcastRadioCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -696,6 +712,32 @@
 				3B14B27522D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3B14B33522DC1B1600FD9B28 /* HeaderFooter */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B33622DC1B3E00FD9B28 /* TTFMHomeBroadcastHeaderView.swift */,
+				3B14B33822DC1D5B00FD9B28 /* TTFMHomeBroadcastFooterView.swift */,
+			);
+			path = HeaderFooter;
+			sourceTree = "<group>";
+		};
+		3B14B33C22DC4BC400FD9B28 /* TopRadio(顶部电台) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B33D22DC4C0E00FD9B28 /* TTFMRadioSquareResultsCell.swift */,
+				3B14B33F22DC4C2700FD9B28 /* TTFMRadioSquareCell.swift */,
+			);
+			path = "TopRadio(顶部电台)";
+			sourceTree = "<group>";
+		};
+		3B14B34122DC57F300FD9B28 /* ExpandableRadio(可展开电台) */ = {
+			isa = PBXGroup;
+			children = (
+				3B14B34222DC583700FD9B28 /* TTFMRadioExpandableCell.swift */,
+			);
+			path = "ExpandableRadio(可展开电台)";
 			sourceTree = "<group>";
 		};
 		3B20FC5122C34F940026F0C8 = {
@@ -1016,6 +1058,7 @@
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
 				3B14B20522D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift in Sources */,
 				3B14B23C22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift in Sources */,
+				3B14B34022DC4C2700FD9B28 /* TTFMRadioSquareCell.swift in Sources */,
 				3B14B26422D6D57400FD9B28 /* TTFMHomeLiveRankCell.swift in Sources */,
 				3B14B1A822C613A700FD9B28 /* TTPageTitleView.swift in Sources */,
 				3B14B1E922CC993400FD9B28 /* TTCarouselViewLayoutAttributes.swift in Sources */,
@@ -1029,6 +1072,7 @@
 				3B20FC5E22C34F940026F0C8 /* AppDelegate.swift in Sources */,
 				3B14B21D22D33F0100FD9B28 /* TTFMCategoryViewModel.swift in Sources */,
 				3B14B21222D3188300FD9B28 /* TTFMForUCell.swift in Sources */,
+				3B14B33E22DC4C0E00FD9B28 /* TTFMRadioSquareResultsCell.swift in Sources */,
 				3B14B21022D317AE00FD9B28 /* TTFMRecommendForUCell.swift in Sources */,
 				3B14B1FE22CF58A100FD9B28 /* TTFMAudioBookCell.swift in Sources */,
 				3B14B1A422C6038D00FD9B28 /* TTPageStyle.swift in Sources */,
@@ -1052,6 +1096,7 @@
 				3B14B1E122CC7BAA00FD9B28 /* TTCarouselCollectionView.swift in Sources */,
 				3B14B1C422CA0F4400FD9B28 /* TTListenViewController.swift in Sources */,
 				3B14B25022D5C35800FD9B28 /* TTHomeLiveViewController.swift in Sources */,
+				3B14B33722DC1B3E00FD9B28 /* TTFMHomeBroadcastHeaderView.swift in Sources */,
 				3B14B1DC22CC402F00FD9B28 /* TTFMRecommendGridCell.swift in Sources */,
 				3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */,
 				3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */,
@@ -1060,11 +1105,13 @@
 				3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */,
 				3B14B1CB22CA0FB300FD9B28 /* TTPlayViewController.swift in Sources */,
 				3B14B23322D4909000FD9B28 /* TTFMVipBannerCell.swift in Sources */,
+				3B14B33B22DC1EFB00FD9B28 /* TTFMBroadcastRadioCell.swift in Sources */,
 				3B20FC8B22C3769D0026F0C8 /* DispatchQueue.swift in Sources */,
 				3B14B23F22D590A900FD9B28 /* TTFMHomeVipHotCell.swift in Sources */,
 				3B14B1D122CB0C7000FD9B28 /* TTFMRecommendAPI.swift in Sources */,
 				3B20FC8322C3609B0026F0C8 /* TTNavigationBar.swift in Sources */,
 				3B14B1D722CB660700FD9B28 /* TTFMRecommendCarouselCell.swift in Sources */,
+				3B14B34322DC583700FD9B28 /* TTFMRadioExpandableCell.swift in Sources */,
 				3B14B25A22D5EF4600FD9B28 /* TTFMHomeLiveHeaderView.swift in Sources */,
 				3B14B1AA22C9D63800FD9B28 /* TTPageView.swift in Sources */,
 				3B14B23522D4A46F00FD9B28 /* TTFMVipHeaderView.swift in Sources */,
@@ -1099,6 +1146,7 @@
 				3B14B23922D581B700FD9B28 /* TTFMVipCategoryCell.swift in Sources */,
 				3B14B27422D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift in Sources */,
 				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
+				3B14B33922DC1D5B00FD9B28 /* TTFMHomeBroadcastFooterView.swift in Sources */,
 				3B14B24A22D5BDA200FD9B28 /* TTFMHomeVipCell.swift in Sources */,
 				3B14B27622D70EE600FD9B28 /* TTFMHomeBroadcastModel.swift in Sources */,
 				3B14B23122D4705200FD9B28 /* TTFMHomeVipAPI.swift in Sources */,

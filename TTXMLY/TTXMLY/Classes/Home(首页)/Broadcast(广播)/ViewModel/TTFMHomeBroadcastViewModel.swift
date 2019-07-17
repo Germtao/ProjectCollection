@@ -34,6 +34,11 @@ class TTFMHomeBroadcastViewModel: NSObject {
     let coverModel = TTFMRadiosCategoriesModel(id: 10000, name: " ")
     
     var updateDataHandler: (() -> Void)?
+    
+    /// 是否可展开, 默认 false
+    var isExpand: Bool = false
+    
+    var titleArr = ["上海", "排行榜"]
 }
 
 extension TTFMHomeBroadcastViewModel {
@@ -63,12 +68,81 @@ extension TTFMHomeBroadcastViewModel {
 }
 
 extension TTFMHomeBroadcastViewModel {
+    
+    var numberOfSections: Int {
+        return 4
+    }
+    
     func numberOfItems(in section: Int) -> Int {
         switch section {
         case TTFMHomeBroadcastSectionType.radio.rawValue:
-            return 
+            return 1
+        case TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
+            if isExpand {
+                return categories?.count ?? 0
+            } else {
+                return (categories?.count ?? 0) / 2
+            }
+        case TTFMHomeBroadcastSectionType.local.rawValue:
+            return localRadios?.count ?? 0
+        case TTFMHomeBroadcastSectionType.rank.rawValue:
+            return topRadios?.count ?? 0
+        default: return 0
+        }
+    }
+    
+    func insetForSection(at section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    /// 最小 item 间距
+    func minimumInteritemSpacingForSection(at section: Int) -> CGFloat {
+        switch section {
+        case TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
+            return 1
         default:
-            <#code#>
+            return 0.0
+        }
+    }
+    
+    /// 最小行间距
+    func minimumLineSpacingForSection(at section: Int) -> CGFloat {
+        switch section {
+        case TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
+            return 1
+        default:
+            return 0.0
+        }
+    }
+    
+    func sizeForItem(at indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+        case TTFMHomeBroadcastSectionType.radio.rawValue:
+            return CGSize(width: Size.screenW, height: 90)
+        case TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
+            return CGSize(width: (Size.screenW - 5) / 4, height: 45)
+        default:
+            return CGSize(width: Size.screenW, height: 120)
+        }
+    }
+    
+    func sizeForHeader(in section: Int) -> CGSize {
+        switch section {
+        case TTFMHomeBroadcastSectionType.radio.rawValue,
+             TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
+            return .zero
+        default:
+            return CGSize(width: Size.screenW, height: 40)
+        }
+    }
+    
+    func sizeForFooter(in section: Int) -> CGSize {
+        switch section {
+        case TTFMHomeBroadcastSectionType.radio.rawValue,
+             TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
+            return .zero
+        default:
+            return CGSize(width: Size.screenW, height: 10)
         }
     }
 }
