@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Y4-k0-mIx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPd-pY-H2R">
+                                        <rect key="frame" x="299" y="20" width="100" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="AWC-G5-kKH"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="OMd-dR-b95"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="重置"/>
+                                        <state key="highlighted">
+                                            <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9RY-dZ-nc1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQg-qm-W46">
+                                        <rect key="frame" x="177" y="60" width="60" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="Yy7-O7-fJp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Ultralight" family="PingFang SC" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mPd-pY-H2R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Y4-k0-mIx" secondAttribute="leading" constant="20" symbolic="YES" id="4cf-0v-hZ3"/>
+                                    <constraint firstItem="nQg-qm-W46" firstAttribute="centerX" secondItem="3Y4-k0-mIx" secondAttribute="centerX" id="5U2-lc-v08"/>
+                                    <constraint firstAttribute="height" constant="260" id="LS9-k7-tdT"/>
+                                    <constraint firstItem="mPd-pY-H2R" firstAttribute="top" secondItem="3Y4-k0-mIx" secondAttribute="top" constant="20" id="QbA-9D-9wr"/>
+                                    <constraint firstAttribute="trailing" secondItem="mPd-pY-H2R" secondAttribute="trailing" constant="15" id="edn-BC-9pp"/>
+                                    <constraint firstItem="nQg-qm-W46" firstAttribute="centerY" secondItem="3Y4-k0-mIx" secondAttribute="centerY" id="vFZ-3T-vK1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kne-ox-uc4">
+                                <rect key="frame" x="0.0" y="304" width="207" height="558"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Xe-AG-l05"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EME-Tq-a2A">
+                                <rect key="frame" x="207" y="304" width="207" height="558"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEG-8V-IT1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EME-Tq-a2A" firstAttribute="top" secondItem="3Y4-k0-mIx" secondAttribute="bottom" id="69m-Jg-Tol"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EME-Tq-a2A" secondAttribute="bottom" id="7W6-fr-k97"/>
+                            <constraint firstItem="3Y4-k0-mIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7iv-y8-aJe"/>
+                            <constraint firstItem="Kne-ox-uc4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DNg-bM-iIt"/>
+                            <constraint firstItem="Kne-ox-uc4" firstAttribute="top" secondItem="3Y4-k0-mIx" secondAttribute="bottom" id="Gcs-ZD-k8N"/>
+                            <constraint firstAttribute="trailing" secondItem="EME-Tq-a2A" secondAttribute="trailing" id="JI6-sj-dar"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kne-ox-uc4" secondAttribute="bottom" id="SZj-AM-PN6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Y4-k0-mIx" secondAttribute="trailing" id="ZTU-wv-Otx"/>
+                            <constraint firstItem="EME-Tq-a2A" firstAttribute="width" secondItem="Kne-ox-uc4" secondAttribute="width" id="f0y-Em-IQj"/>
+                            <constraint firstItem="3Y4-k0-mIx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="msb-4k-jFb"/>
+                            <constraint firstItem="EME-Tq-a2A" firstAttribute="leading" secondItem="Kne-ox-uc4" secondAttribute="trailing" id="r1y-gi-Cxm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="EME-Tq-a2A" id="Ycm-sV-Ffh"/>
+                        <outlet property="playButton" destination="Kne-ox-uc4" id="2Ii-9u-ABX"/>
+                        <outlet property="timeLabel" destination="nQg-qm-W46" id="0CL-tY-Wzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="48" height="48"/>
+        <image name="play" width="48" height="48"/>
+    </resources>
+</document>
