@@ -15,7 +15,18 @@
 		3B4E21972341932500BD74A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4E21952341932500BD74A7 /* LaunchScreen.storyboard */; };
 		3B4E21A02341949A00BD74A7 /* emoji zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3B4E219F2341949A00BD74A7 /* emoji zone.mp4 */; };
 		3B4E21A223419BDC00BD74A7 /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E21A123419BDC00BD74A7 /* VideoViewCell.swift */; };
+		3B4E21F52341B17200BD74A7 /* VideoPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4E21F42341B17200BD74A7 /* VideoPathTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B4E21DE2341B02F00BD74A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4E217F2341932300BD74A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4E21862341932300BD74A7;
+			remoteInfo = PlayLocalVideo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B4E21872341932300BD74A7 /* PlayLocalVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayLocalVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +39,20 @@
 		3B4E21982341932500BD74A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B4E219F2341949A00BD74A7 /* emoji zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "emoji zone.mp4"; sourceTree = "<group>"; };
 		3B4E21A123419BDC00BD74A7 /* VideoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewCell.swift; sourceTree = "<group>"; };
+		3B4E21D92341B02F00BD74A7 /* PlayLocalVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayLocalVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4E21DD2341B02F00BD74A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4E21F42341B17200BD74A7 /* VideoPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPathTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3B4E21842341932300BD74A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4E21D62341B02F00BD74A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4E21892341932300BD74A7 /* PlayLocalVideo */,
+				3B4E21DA2341B02F00BD74A7 /* PlayLocalVideoTests */,
 				3B4E21882341932300BD74A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4E21872341932300BD74A7 /* PlayLocalVideo.app */,
+				3B4E21D92341B02F00BD74A7 /* PlayLocalVideoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +104,15 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		3B4E21DA2341B02F00BD74A7 /* PlayLocalVideoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B4E21DD2341B02F00BD74A7 /* Info.plist */,
+				3B4E21F42341B17200BD74A7 /* VideoPathTests.swift */,
+			);
+			path = PlayLocalVideoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +133,24 @@
 			productReference = 3B4E21872341932300BD74A7 /* PlayLocalVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3B4E21D82341B02F00BD74A7 /* PlayLocalVideoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4E21E02341B02F00BD74A7 /* Build configuration list for PBXNativeTarget "PlayLocalVideoTests" */;
+			buildPhases = (
+				3B4E21D52341B02F00BD74A7 /* Sources */,
+				3B4E21D62341B02F00BD74A7 /* Frameworks */,
+				3B4E21D72341B02F00BD74A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B4E21DF2341B02F00BD74A7 /* PBXTargetDependency */,
+			);
+			name = PlayLocalVideoTests;
+			productName = PlayLocalVideoTests;
+			productReference = 3B4E21D92341B02F00BD74A7 /* PlayLocalVideoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -113,6 +163,11 @@
 				TargetAttributes = {
 					3B4E21862341932300BD74A7 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					3B4E21D82341B02F00BD74A7 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+						TestTargetID = 3B4E21862341932300BD74A7;
 					};
 				};
 			};
@@ -130,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				3B4E21862341932300BD74A7 /* PlayLocalVideo */,
+				3B4E21D82341B02F00BD74A7 /* PlayLocalVideoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +199,13 @@
 				3B4E21A02341949A00BD74A7 /* emoji zone.mp4 in Resources */,
 				3B4E21942341932500BD74A7 /* Assets.xcassets in Resources */,
 				3B4E21922341932300BD74A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4E21D72341B02F00BD74A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B4E21D52341B02F00BD74A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4E21F52341B17200BD74A7 /* VideoPathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B4E21DF2341B02F00BD74A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4E21862341932300BD74A7 /* PlayLocalVideo */;
+			targetProxy = 3B4E21DE2341B02F00BD74A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B4E21902341932300BD74A7 /* Main.storyboard */ = {
@@ -330,6 +409,47 @@
 			};
 			name = Release;
 		};
+		3B4E21E12341B02F00BD74A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PlayLocalVideoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.unitTao.PlayLocalVideoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayLocalVideo.app/PlayLocalVideo";
+			};
+			name = Debug;
+		};
+		3B4E21E22341B02F00BD74A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PlayLocalVideoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.unitTao.PlayLocalVideoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayLocalVideo.app/PlayLocalVideo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +467,15 @@
 			buildConfigurations = (
 				3B4E219C2341932500BD74A7 /* Debug */,
 				3B4E219D2341932500BD74A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4E21E02341B02F00BD74A7 /* Build configuration list for PBXNativeTarget "PlayLocalVideoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4E21E12341B02F00BD74A7 /* Debug */,
+				3B4E21E22341B02F00BD74A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
