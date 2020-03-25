@@ -129,8 +129,8 @@
 				3B3DDC00242B250D00D68D87 /* IdcardImageViewController.xib */,
 				3B3DDBDD2429B64500D68D87 /* IdCardCameraController.swift */,
 				3B3DDBF3242AF3D200D68D87 /* IdCardFloatingView.swift */,
-				3B3DDBE52429E7D400D68D87 /* CameraResource.bundle */,
 				3B3DDBFD242B207400D68D87 /* UIImage+IdCardCamera.swift */,
+				3B3DDBE52429E7D400D68D87 /* CameraResource.bundle */,
 			);
 			path = IdCardCamera;
 			sourceTree = "<group>";

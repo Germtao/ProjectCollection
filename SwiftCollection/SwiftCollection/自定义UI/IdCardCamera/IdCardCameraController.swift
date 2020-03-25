@@ -239,7 +239,8 @@ extension IdCardCameraController: AVCapturePhotoCaptureDelegate {
                 guard let clipImg = img.idcard_clipImage(inRect: floatingView.idcardWindowLayer.frame) else { return }
                 image = clipImg
             } else {
-                image = img
+                guard let tempImg = img.fixImageOrientation() else { return }
+                image = tempImg
             }
             
             session.stopRunning()
