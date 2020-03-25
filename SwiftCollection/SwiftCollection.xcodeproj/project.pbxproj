@@ -16,6 +16,15 @@
 		3B3DDBCF2429A3A100D68D87 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBCE2429A3A100D68D87 /* StarRatingView.swift */; };
 		3B3DDBD22429A49A00D68D87 /* StarRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBD02429A49A00D68D87 /* StarRatingViewController.swift */; };
 		3B3DDBD32429A49A00D68D87 /* StarRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3DDBD12429A49A00D68D87 /* StarRatingViewController.xib */; };
+		3B3DDBD62429AED100D68D87 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBD52429AED100D68D87 /* UIButton.swift */; };
+		3B3DDBD92429B2E000D68D87 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBD72429B2E000D68D87 /* CategoryViewController.swift */; };
+		3B3DDBDA2429B2E000D68D87 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3DDBD82429B2E000D68D87 /* CategoryViewController.xib */; };
+		3B3DDBDE2429B64500D68D87 /* IdCardCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBDD2429B64500D68D87 /* IdCardCameraController.swift */; };
+		3B3DDBE62429E7D400D68D87 /* CameraResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3DDBE52429E7D400D68D87 /* CameraResource.bundle */; };
+		3B3DDBF4242AF3D200D68D87 /* IdCardFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBF3242AF3D200D68D87 /* IdCardFloatingView.swift */; };
+		3B3DDBFE242B207400D68D87 /* UIImage+IdCardCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBFD242B207400D68D87 /* UIImage+IdCardCamera.swift */; };
+		3B3DDC01242B250D00D68D87 /* IdcardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBFF242B250C00D68D87 /* IdcardImageViewController.swift */; };
+		3B3DDC02242B250D00D68D87 /* IdcardImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3DDC00242B250D00D68D87 /* IdcardImageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +39,15 @@
 		3B3DDBCE2429A3A100D68D87 /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		3B3DDBD02429A49A00D68D87 /* StarRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingViewController.swift; sourceTree = "<group>"; };
 		3B3DDBD12429A49A00D68D87 /* StarRatingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRatingViewController.xib; sourceTree = "<group>"; };
+		3B3DDBD52429AED100D68D87 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		3B3DDBD72429B2E000D68D87 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		3B3DDBD82429B2E000D68D87 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		3B3DDBDD2429B64500D68D87 /* IdCardCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCardCameraController.swift; sourceTree = "<group>"; };
+		3B3DDBE52429E7D400D68D87 /* CameraResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CameraResource.bundle; sourceTree = "<group>"; };
+		3B3DDBF3242AF3D200D68D87 /* IdCardFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCardFloatingView.swift; sourceTree = "<group>"; };
+		3B3DDBFD242B207400D68D87 /* UIImage+IdCardCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+IdCardCamera.swift"; sourceTree = "<group>"; };
+		3B3DDBFF242B250C00D68D87 /* IdcardImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdcardImageViewController.swift; sourceTree = "<group>"; };
+		3B3DDC00242B250D00D68D87 /* IdcardImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdcardImageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +83,8 @@
 				3B3DDBB924299EEB00D68D87 /* AppDelegate.swift */,
 				3B3DDBBB24299EEB00D68D87 /* SceneDelegate.swift */,
 				3B3DDBBD24299EEB00D68D87 /* ViewController.swift */,
-				3B3DDBCD2429A38700D68D87 /* StarRating */,
+				3B3DDBDB2429B5F800D68D87 /* 自定义UI */,
+				3B3DDBD42429AE5800D68D87 /* Category */,
 				3B3DDBBF24299EEB00D68D87 /* Main.storyboard */,
 				3B3DDBC224299EEF00D68D87 /* Assets.xcassets */,
 				3B3DDBC424299EEF00D68D87 /* LaunchScreen.storyboard */,
@@ -82,6 +101,38 @@
 				3B3DDBCE2429A3A100D68D87 /* StarRatingView.swift */,
 			);
 			path = StarRating;
+			sourceTree = "<group>";
+		};
+		3B3DDBD42429AE5800D68D87 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3B3DDBD72429B2E000D68D87 /* CategoryViewController.swift */,
+				3B3DDBD82429B2E000D68D87 /* CategoryViewController.xib */,
+				3B3DDBD52429AED100D68D87 /* UIButton.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3B3DDBDB2429B5F800D68D87 /* 自定义UI */ = {
+			isa = PBXGroup;
+			children = (
+				3B3DDBDC2429B60600D68D87 /* IdCardCamera */,
+				3B3DDBCD2429A38700D68D87 /* StarRating */,
+			);
+			path = "自定义UI";
+			sourceTree = "<group>";
+		};
+		3B3DDBDC2429B60600D68D87 /* IdCardCamera */ = {
+			isa = PBXGroup;
+			children = (
+				3B3DDBFF242B250C00D68D87 /* IdcardImageViewController.swift */,
+				3B3DDC00242B250D00D68D87 /* IdcardImageViewController.xib */,
+				3B3DDBDD2429B64500D68D87 /* IdCardCameraController.swift */,
+				3B3DDBF3242AF3D200D68D87 /* IdCardFloatingView.swift */,
+				3B3DDBE52429E7D400D68D87 /* CameraResource.bundle */,
+				3B3DDBFD242B207400D68D87 /* UIImage+IdCardCamera.swift */,
+			);
+			path = IdCardCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,10 +193,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3DDC02242B250D00D68D87 /* IdcardImageViewController.xib in Resources */,
 				3B3DDBC624299EEF00D68D87 /* LaunchScreen.storyboard in Resources */,
 				3B3DDBC324299EEF00D68D87 /* Assets.xcassets in Resources */,
 				3B3DDBC124299EEB00D68D87 /* Main.storyboard in Resources */,
+				3B3DDBDA2429B2E000D68D87 /* CategoryViewController.xib in Resources */,
 				3B3DDBD32429A49A00D68D87 /* StarRatingViewController.xib in Resources */,
+				3B3DDBE62429E7D400D68D87 /* CameraResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +212,15 @@
 			files = (
 				3B3DDBBE24299EEB00D68D87 /* ViewController.swift in Sources */,
 				3B3DDBCF2429A3A100D68D87 /* StarRatingView.swift in Sources */,
+				3B3DDBD92429B2E000D68D87 /* CategoryViewController.swift in Sources */,
+				3B3DDBDE2429B64500D68D87 /* IdCardCameraController.swift in Sources */,
+				3B3DDBF4242AF3D200D68D87 /* IdCardFloatingView.swift in Sources */,
 				3B3DDBBA24299EEB00D68D87 /* AppDelegate.swift in Sources */,
 				3B3DDBD22429A49A00D68D87 /* StarRatingViewController.swift in Sources */,
+				3B3DDC01242B250D00D68D87 /* IdcardImageViewController.swift in Sources */,
+				3B3DDBFE242B207400D68D87 /* UIImage+IdCardCamera.swift in Sources */,
 				3B3DDBBC24299EEB00D68D87 /* SceneDelegate.swift in Sources */,
+				3B3DDBD62429AED100D68D87 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +365,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UW8B3X7J9;
 				INFOPLIST_FILE = SwiftCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +384,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UW8B3X7J9;
 				INFOPLIST_FILE = SwiftCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

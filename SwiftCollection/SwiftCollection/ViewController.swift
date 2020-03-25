@@ -22,11 +22,13 @@ class ViewController: UIViewController {
     }
     
     private lazy var titles = [
-        ["星星评分"]
+        ["星星评分", "身份证相机"],
+        ["按钮重复点击"],
     ]
     
     private lazy var headerTitles = [
-        "Custom UI"
+        "自定义UI",
+        "分类"
     ]
 }
 
@@ -61,6 +63,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.section {
         case 0: firtSectionDidSelect(indexPath)
+        case 1: secondSectionDidSelect(indexPath)
         default: break
         }
     }
@@ -70,6 +73,7 @@ extension ViewController {
     private func firtSectionDidSelect(_ indexPath: IndexPath) {
         switch indexPath.row {
         case 0: pushStarRatingVc()
+        case 1: pushIdCardCameraVc()
         default: break
         }
     }
@@ -77,5 +81,24 @@ extension ViewController {
     private func pushStarRatingVc() {
         let starRatingVc = StarRatingViewController()
         navigationController?.pushViewController(starRatingVc, animated: true)
+    }
+    
+    private func pushIdCardCameraVc() {
+        let cameraVc = IdcardImageViewController()
+        navigationController?.pushViewController(cameraVc, animated: true)
+    }
+}
+
+extension ViewController {
+    private func secondSectionDidSelect(_ indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0: pushCategoryVc()
+        default: break
+        }
+    }
+    
+    private func pushCategoryVc() {
+        let categoryVc = CategoryViewController()
+        navigationController?.pushViewController(categoryVc, animated: true)
     }
 }
