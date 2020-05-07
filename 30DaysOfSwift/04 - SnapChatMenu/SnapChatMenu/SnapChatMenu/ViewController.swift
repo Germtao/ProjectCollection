@@ -51,7 +51,7 @@ extension ViewController {
     }
     
     private func setCenterView() {
-        let cameraVc = storyboard!.instantiateViewController(identifier: "cameraVcId") as! CameraViewController
+        let cameraVc = storyboard!.instantiateViewController(withIdentifier: "cameraVcId") as! CameraViewController
         cameraVc.view.frame = CGRect(x: width,
                                      y: 0,
                                      width: width,

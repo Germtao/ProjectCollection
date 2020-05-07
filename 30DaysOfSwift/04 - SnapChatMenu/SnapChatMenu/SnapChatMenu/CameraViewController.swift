@@ -51,7 +51,7 @@ extension CameraViewController {
         session?.sessionPreset = .hd1920x1080
         var backCamera: AVCaptureDevice
         if #available(iOS 10.0, *) {
-            backCamera = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back).devices.first!
+            backCamera = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first!
         } else {
             backCamera = AVCaptureDevice.devices().first!
         }
