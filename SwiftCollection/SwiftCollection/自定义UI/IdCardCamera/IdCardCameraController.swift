@@ -122,6 +122,14 @@ class IdCardCameraController: UIViewController {
         return view
     }()
     
+    private lazy var previewImgView: UIImageView = {
+        let imgView = UIImageView()
+        imgView.frame = CGRect(x: 0, y: 0, width: kScreenW, height: kScreenH - 64)
+        imgView.contentMode = .scaleAspectFill
+        imgView.isHidden = true
+        return imgView
+    }()
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -170,6 +178,7 @@ extension IdCardCameraController {
         view.addSubview(flashBtn)
         view.addSubview(switchBtn)
         view.addSubview(bottomView)
+        view.addSubview(previewImgView)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(focusGesture(_:)))
         view.addGestureRecognizer(tap)
@@ -242,6 +251,7 @@ extension IdCardCameraController: AVCapturePhotoCaptureDelegate {
                 guard let tempImg = img.fixImageOrientation() else { return }
                 image = tempImg
             }
+            previewImgView.image = image
             
             session.stopRunning()
             
@@ -249,6 +259,7 @@ extension IdCardCameraController: AVCapturePhotoCaptureDelegate {
             switchBtn.isHidden = true
             photoBtn.isHidden = true
             bottomView.isHidden = false
+            previewImgView.isHidden = false
         }
     }
 }
@@ -303,6 +314,7 @@ extension IdCardCameraController {
         switchBtn.isHidden = false
         photoBtn.isHidden = false
         bottomView.isHidden = true
+        previewImgView.isHidden = true
     }
     
     /// 使用照片

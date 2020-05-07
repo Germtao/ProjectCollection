@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B18DF8A2446D95F0068FF1F /* YSGCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18DF892446D95F0068FF1F /* YSGCameraView.swift */; };
+		3B18DF8D2447F3560068FF1F /* YSGCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18DF8C2447F3560068FF1F /* YSGCameraViewController.swift */; };
+		3B18DF8F2447F4BD0068FF1F /* YSGCameraViewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B18DF8E2447F4BD0068FF1F /* YSGCameraViewAssets.xcassets */; };
+		3B18DF912447F5D10068FF1F /* YSGCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18DF902447F5D10068FF1F /* YSGCameraManager.swift */; };
+		3B18DF9A244EC99B0068FF1F /* YSGVolumeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18DF99244EC9980068FF1F /* YSGVolumeControl.swift */; };
 		3B3DDBBA24299EEB00D68D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBB924299EEB00D68D87 /* AppDelegate.swift */; };
 		3B3DDBBC24299EEB00D68D87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBBB24299EEB00D68D87 /* SceneDelegate.swift */; };
 		3B3DDBBE24299EEB00D68D87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3DDBBD24299EEB00D68D87 /* ViewController.swift */; };
@@ -28,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B18DF892446D95F0068FF1F /* YSGCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSGCameraView.swift; sourceTree = "<group>"; };
+		3B18DF8C2447F3560068FF1F /* YSGCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSGCameraViewController.swift; sourceTree = "<group>"; };
+		3B18DF8E2447F4BD0068FF1F /* YSGCameraViewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YSGCameraViewAssets.xcassets; sourceTree = "<group>"; };
+		3B18DF902447F5D10068FF1F /* YSGCameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSGCameraManager.swift; sourceTree = "<group>"; };
+		3B18DF99244EC9980068FF1F /* YSGVolumeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSGVolumeControl.swift; sourceTree = "<group>"; };
 		3B3DDBB624299EEB00D68D87 /* SwiftCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3DDBB924299EEB00D68D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B3DDBBB24299EEB00D68D87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B18DF872446D9130068FF1F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				3B18DF8E2447F4BD0068FF1F /* YSGCameraViewAssets.xcassets */,
+				3B18DF902447F5D10068FF1F /* YSGCameraManager.swift */,
+				3B18DF8B2447F3340068FF1F /* Controller */,
+				3B18DF882446D9420068FF1F /* View */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		3B18DF882446D9420068FF1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B18DF892446D95F0068FF1F /* YSGCameraView.swift */,
+				3B18DF99244EC9980068FF1F /* YSGVolumeControl.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B18DF8B2447F3340068FF1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B18DF8C2447F3560068FF1F /* YSGCameraViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3B3DDBAD24299EEB00D68D87 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +154,7 @@
 		3B3DDBDB2429B5F800D68D87 /* 自定义UI */ = {
 			isa = PBXGroup;
 			children = (
+				3B18DF872446D9130068FF1F /* Camera */,
 				3B3DDBDC2429B60600D68D87 /* IdCardCamera */,
 				3B3DDBCD2429A38700D68D87 /* StarRating */,
 			);
@@ -195,6 +234,7 @@
 			files = (
 				3B3DDC02242B250D00D68D87 /* IdcardImageViewController.xib in Resources */,
 				3B3DDBC624299EEF00D68D87 /* LaunchScreen.storyboard in Resources */,
+				3B18DF8F2447F4BD0068FF1F /* YSGCameraViewAssets.xcassets in Resources */,
 				3B3DDBC324299EEF00D68D87 /* Assets.xcassets in Resources */,
 				3B3DDBC124299EEB00D68D87 /* Main.storyboard in Resources */,
 				3B3DDBDA2429B2E000D68D87 /* CategoryViewController.xib in Resources */,
@@ -210,17 +250,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B18DF912447F5D10068FF1F /* YSGCameraManager.swift in Sources */,
 				3B3DDBBE24299EEB00D68D87 /* ViewController.swift in Sources */,
 				3B3DDBCF2429A3A100D68D87 /* StarRatingView.swift in Sources */,
 				3B3DDBD92429B2E000D68D87 /* CategoryViewController.swift in Sources */,
 				3B3DDBDE2429B64500D68D87 /* IdCardCameraController.swift in Sources */,
 				3B3DDBF4242AF3D200D68D87 /* IdCardFloatingView.swift in Sources */,
+				3B18DF8D2447F3560068FF1F /* YSGCameraViewController.swift in Sources */,
 				3B3DDBBA24299EEB00D68D87 /* AppDelegate.swift in Sources */,
 				3B3DDBD22429A49A00D68D87 /* StarRatingViewController.swift in Sources */,
 				3B3DDC01242B250D00D68D87 /* IdcardImageViewController.swift in Sources */,
 				3B3DDBFE242B207400D68D87 /* UIImage+IdCardCamera.swift in Sources */,
+				3B18DF8A2446D95F0068FF1F /* YSGCameraView.swift in Sources */,
 				3B3DDBBC24299EEB00D68D87 /* SceneDelegate.swift in Sources */,
 				3B3DDBD62429AED100D68D87 /* UIButton.swift in Sources */,
+				3B18DF9A244EC99B0068FF1F /* YSGVolumeControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
