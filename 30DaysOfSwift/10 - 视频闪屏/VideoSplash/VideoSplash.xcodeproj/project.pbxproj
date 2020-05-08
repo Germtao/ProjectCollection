@@ -14,6 +14,8 @@
 		3BD07CE92465684600E32668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD07CE82465684600E32668 /* Assets.xcassets */; };
 		3BD07CEC2465684600E32668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD07CEA2465684600E32668 /* LaunchScreen.storyboard */; };
 		3BD07CF524656A8F00E32668 /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD07CF424656A8F00E32668 /* VideoSplashViewController.swift */; };
+		71119E5E2465847000F28030 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71119E5D2465847000F28030 /* URL+Extension.swift */; };
+		71119E612465914F00F28030 /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 71119E602465914F00F28030 /* moments.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +27,9 @@
 		3BD07CE82465684600E32668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BD07CEB2465684600E32668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BD07CED2465684600E32668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BD07CF32465685800E32668 /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moments.mp4; sourceTree = "<group>"; };
 		3BD07CF424656A8F00E32668 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
+		71119E5D2465847000F28030 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		71119E602465914F00F28030 /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moments.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +62,10 @@
 		3BD07CDE2465684500E32668 /* VideoSplash */ = {
 			isa = PBXGroup;
 			children = (
-				3BD07CF32465685800E32668 /* moments.mp4 */,
+				71119E602465914F00F28030 /* moments.mp4 */,
 				3BD07CDF2465684500E32668 /* AppDelegate.swift */,
 				3BD07CE12465684500E32668 /* SceneDelegate.swift */,
+				71119E5D2465847000F28030 /* URL+Extension.swift */,
 				3BD07CF424656A8F00E32668 /* VideoSplashViewController.swift */,
 				3BD07CE32465684500E32668 /* ViewController.swift */,
 				3BD07CE52465684500E32668 /* Main.storyboard */,
@@ -131,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD07CEC2465684600E32668 /* LaunchScreen.storyboard in Resources */,
+				71119E612465914F00F28030 /* moments.mp4 in Resources */,
 				3BD07CE92465684600E32668 /* Assets.xcassets in Resources */,
 				3BD07CE72465684500E32668 /* Main.storyboard in Resources */,
 			);
@@ -143,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71119E5E2465847000F28030 /* URL+Extension.swift in Sources */,
 				3BD07CE42465684500E32668 /* ViewController.swift in Sources */,
 				3BD07CE02465684500E32668 /* AppDelegate.swift in Sources */,
 				3BD07CE22465684500E32668 /* SceneDelegate.swift in Sources */,
@@ -292,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VideoSplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VideoSplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

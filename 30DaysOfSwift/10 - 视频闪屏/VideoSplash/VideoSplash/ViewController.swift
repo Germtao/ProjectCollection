@@ -8,14 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: VideoSplashViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupVideoBackground()
     }
 
-    @IBOutlet private weak var signInBtn: UIButton!
-    @IBOutlet private weak var signUpBtn: UIButton!
+    @IBOutlet private weak var signInBtn: UIButton! {
+        didSet {
+            signInBtn.layer.cornerRadius = 4
+        }
+    }
+    
+    @IBOutlet private weak var signUpBtn: UIButton! {
+        didSet {
+            signUpBtn.layer.cornerRadius = 4
+        }
+    }
+    
+    private func setupVideoBackground() {
+        
+        guard let path = Bundle.main.path(forResource: "moments", ofType: "mp4") else { return }
+        
+        videoFrame = view.frame
+        fillMode = .resizeAspectFill
+        alwaysRepeat = true
+        sound = true
+        startTime = 2.0
+        alpha = 0.8
+        contentURL = URL(fileURLWithPath: path)
+    }
 }
 
