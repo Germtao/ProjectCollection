@@ -30,6 +30,7 @@
 		3BD07CF424656A8F00E32668 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
 		71119E5D2465847000F28030 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		71119E602465914F00F28030 /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moments.mp4; sourceTree = "<group>"; };
+		71119E622465A77500F28030 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 				3BD07CE12465684500E32668 /* SceneDelegate.swift */,
 				71119E5D2465847000F28030 /* URL+Extension.swift */,
 				3BD07CF424656A8F00E32668 /* VideoSplashViewController.swift */,
+				71119E622465A77500F28030 /* README.md */,
 				3BD07CE32465684500E32668 /* ViewController.swift */,
 				3BD07CE52465684500E32668 /* Main.storyboard */,
 				3BD07CE82465684600E32668 /* Assets.xcassets */,
