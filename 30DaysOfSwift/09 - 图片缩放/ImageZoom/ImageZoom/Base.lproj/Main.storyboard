@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageZoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steve" translatesAutoresizingMaskIntoConstraints="NO" id="Xu5-WT-key">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBY-Qn-SDM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rQa-0q-NNR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsL-LJ-tb7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steve" translatesAutoresizingMaskIntoConstraints="NO" id="ZW2-sO-M54">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZW2-sO-M54" firstAttribute="leading" secondItem="dsL-LJ-tb7" secondAttribute="leading" id="4aK-PY-Y6R"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZW2-sO-M54" secondAttribute="bottom" id="YaW-YL-U1T"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZW2-sO-M54" secondAttribute="trailing" id="Yvy-Sk-BjV"/>
+                                    <constraint firstItem="ZW2-sO-M54" firstAttribute="top" secondItem="dsL-LJ-tb7" secondAttribute="top" id="fVk-zv-pSr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fgj-nn-h0C"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dsL-LJ-tb7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="56s-iY-QNH"/>
+                            <constraint firstAttribute="bottom" secondItem="Xu5-WT-key" secondAttribute="bottom" id="8rR-PB-MhZ"/>
+                            <constraint firstItem="mBY-Qn-SDM" firstAttribute="bottom" secondItem="Xu5-WT-key" secondAttribute="bottom" id="C8p-Xy-z8K"/>
+                            <constraint firstItem="mBY-Qn-SDM" firstAttribute="top" secondItem="Xu5-WT-key" secondAttribute="top" id="GAA-ZN-Vv1"/>
+                            <constraint firstItem="dsL-LJ-tb7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="POn-Gx-0XD"/>
+                            <constraint firstAttribute="trailing" secondItem="Xu5-WT-key" secondAttribute="trailing" id="UcK-vM-V7Y"/>
+                            <constraint firstAttribute="bottom" secondItem="dsL-LJ-tb7" secondAttribute="bottom" id="Vtz-Mg-dDp"/>
+                            <constraint firstItem="mBY-Qn-SDM" firstAttribute="leading" secondItem="Xu5-WT-key" secondAttribute="leading" id="Zi2-If-ySI"/>
+                            <constraint firstAttribute="trailing" secondItem="dsL-LJ-tb7" secondAttribute="trailing" id="eyN-gc-3Ta"/>
+                            <constraint firstItem="Xu5-WT-key" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qia-oh-JMQ"/>
+                            <constraint firstItem="mBY-Qn-SDM" firstAttribute="trailing" secondItem="Xu5-WT-key" secondAttribute="trailing" id="tDG-OU-zKa"/>
+                            <constraint firstItem="Xu5-WT-key" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xsW-Du-xfA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ZW2-sO-M54" id="A16-fn-H8F"/>
+                        <outlet property="imageViewBottomConstraint" destination="YaW-YL-U1T" id="N9J-Zl-a9T"/>
+                        <outlet property="imageViewLeadingConstraint" destination="4aK-PY-Y6R" id="L6t-pX-ehO"/>
+                        <outlet property="imageViewTopConstraint" destination="fVk-zv-pSr" id="rBo-wk-zP7"/>
+                        <outlet property="imageViewTrailingConstraint" destination="Yvy-Sk-BjV" id="xMm-fB-ZJi"/>
+                        <outlet property="scrollView" destination="dsL-LJ-tb7" id="RG5-rD-Rx9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="steve" width="320" height="320"/>
+    </resources>
+</document>
