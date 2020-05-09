@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiSlotMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hyperspace" translatesAutoresizingMaskIntoConstraints="NO" id="LC1-Ab-dQ6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngd-0f-azr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wfE-Qn-3G7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcf-Fn-Ia5">
+                                            <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                        </pickerView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dT-Po-R2d">
+                                            <rect key="frame" x="47" y="596" width="320" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="320" id="7z2-sR-8l7"/>
+                                                <constraint firstAttribute="height" constant="50" id="LKU-m9-y1d"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="GO">
+                                                <color key="titleColor" red="0.12941176469999999" green="0.0" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="VId-ZZ-rIc"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpt-rP-OuY">
+                                            <rect key="frame" x="0.0" y="818" width="414" height="28"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRL-9d-gMe">
+                                            <rect key="frame" x="20" y="815" width="64" height="34"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="常规模式"/>
+                                            <connections>
+                                                <action selector="amazingButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bc-NL-kK1"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6dT-Po-R2d" firstAttribute="top" secondItem="Hcf-Fn-Ia5" secondAttribute="bottom" constant="40" id="11H-Cv-gzu"/>
+                                        <constraint firstItem="6dT-Po-R2d" firstAttribute="centerX" secondItem="wfE-Qn-3G7" secondAttribute="centerX" id="3Ct-QC-9Hf"/>
+                                        <constraint firstItem="Hcf-Fn-Ia5" firstAttribute="centerY" secondItem="wfE-Qn-3G7" secondAttribute="centerY" id="DO7-wm-Jdo"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tpt-rP-OuY" secondAttribute="trailing" id="PEf-mf-r9H"/>
+                                        <constraint firstItem="DRL-9d-gMe" firstAttribute="centerY" secondItem="Tpt-rP-OuY" secondAttribute="centerY" id="Pvy-uL-ahm"/>
+                                        <constraint firstItem="Hcf-Fn-Ia5" firstAttribute="centerX" secondItem="wfE-Qn-3G7" secondAttribute="centerX" id="VfZ-sY-KeQ"/>
+                                        <constraint firstItem="DRL-9d-gMe" firstAttribute="leading" secondItem="wfE-Qn-3G7" secondAttribute="leading" constant="20" id="g8H-gc-rAd"/>
+                                        <constraint firstItem="Tpt-rP-OuY" firstAttribute="leading" secondItem="wfE-Qn-3G7" secondAttribute="leading" id="u7o-FW-QQ6"/>
+                                        <constraint firstAttribute="bottom" secondItem="Tpt-rP-OuY" secondAttribute="bottom" constant="50" id="vcr-jt-NAx"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LC1-Ab-dQ6" secondAttribute="trailing" id="5XC-yB-0Lr"/>
+                            <constraint firstItem="ngd-0f-azr" firstAttribute="top" secondItem="LC1-Ab-dQ6" secondAttribute="top" id="AAt-dk-uvt"/>
+                            <constraint firstItem="ngd-0f-azr" firstAttribute="leading" secondItem="LC1-Ab-dQ6" secondAttribute="leading" id="NEp-MO-ku9"/>
+                            <constraint firstItem="ngd-0f-azr" firstAttribute="trailing" secondItem="LC1-Ab-dQ6" secondAttribute="trailing" id="adc-uT-2fr"/>
+                            <constraint firstAttribute="bottom" secondItem="LC1-Ab-dQ6" secondAttribute="bottom" id="iq2-Ui-LrP"/>
+                            <constraint firstItem="LC1-Ab-dQ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kFU-qe-7uX"/>
+                            <constraint firstItem="ngd-0f-azr" firstAttribute="bottom" secondItem="LC1-Ab-dQ6" secondAttribute="bottom" id="kyB-Yx-pIH"/>
+                            <constraint firstItem="LC1-Ab-dQ6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="z9W-Yg-G7D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="goButton" destination="6dT-Po-R2d" id="BXF-wr-2op"/>
+                        <outlet property="pickerView" destination="Hcf-Fn-Ia5" id="Kr3-d4-Gjn"/>
+                        <outlet property="resultLabel" destination="Tpt-rP-OuY" id="8ae-CK-nK3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hyperspace" width="621" height="1104"/>
+    </resources>
+</document>
