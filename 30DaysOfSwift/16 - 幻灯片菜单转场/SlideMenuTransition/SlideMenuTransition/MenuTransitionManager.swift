@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum MenuTransitionType {
+    case left
+    case up
+}
+
 @objc protocol MenuTransitionManagerDelegate {
     func dismiss()
 }
@@ -17,6 +22,7 @@ class MenuTransitionManager: NSObject {
     var duration = 0.5
     var isPresenting = false
     var delegate: MenuTransitionManagerDelegate?
+    var type: MenuTransitionType = .left
     
     var snapShot: UIView? {
         didSet {
@@ -37,8 +43,6 @@ extension MenuTransitionManager: UIViewControllerAnimatedTransitioning {
         guard let from = transitionContext.viewController(forKey: .from)?.view else { return }
         guard let to = transitionContext.viewController(forKey: .to)?.view else { return }
         let container = transitionContext.containerView
-        let moveLeft = CGAffineTransform(translationX: 250, y: 0)
-        let moveRight = CGAffineTransform(translationX: 0, y: 0)
         
         if isPresenting {
             snapShot = from.snapshotView(afterScreenUpdates: true)
@@ -48,22 +52,52 @@ extension MenuTransitionManager: UIViewControllerAnimatedTransitioning {
             }
         }
         
-        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+        switch type {
+        case .left:
+            let moveLeft = CGAffineTransform(translationX: 250, y: 0)
+            let moveRight = CGAffineTransform(translationX: 0, y: 0)
             
-            if self.isPresenting {
-                self.snapShot?.transform = moveLeft
-                to.transform = .identity
-            } else {
-                self.snapShot?.transform = .identity
-                to.transform = moveRight
+            UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+                
+                if self.isPresenting {
+                    self.snapShot?.transform = moveLeft
+                    to.transform = .identity
+                } else {
+                    self.snapShot?.transform = .identity
+                    to.transform = moveRight
+                }
+                
+            }) { _ in
+                transitionContext.completeTransition(true)
+                if !self.isPresenting {
+                    self.snapShot?.removeFromSuperview()
+                }
             }
             
-        }) { _ in
-            transitionContext.completeTransition(true)
-            if !self.isPresenting {
-                self.snapShot?.removeFromSuperview()
+        case .up:
+            let frame = container.frame
+            let moveDown = CGAffineTransform(translationX: 0, y: frame.height - 300)
+            let moveUp = CGAffineTransform(translationX: 0, y: 0)
+            
+            UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+                
+                if self.isPresenting {
+                    self.snapShot?.transform = moveDown
+                    to.transform = .identity
+                } else {
+                    self.snapShot?.transform = .identity
+                    to.transform = moveUp
+                }
+                
+            }) { _ in
+                transitionContext.completeTransition(true)
+                if !self.isPresenting {
+                    self.snapShot?.removeFromSuperview()
+                }
             }
         }
+        
+        
     }
 }
 

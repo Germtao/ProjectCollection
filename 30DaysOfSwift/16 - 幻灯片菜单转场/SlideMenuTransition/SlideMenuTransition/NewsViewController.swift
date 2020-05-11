@@ -10,7 +10,11 @@ import UIKit
 
 class NewsViewController: BaseViewController {
     
-    private let manager = MenuTransitionManager()
+    private var manager: MenuTransitionManager = {
+        let manager = MenuTransitionManager()
+        manager.type = .up
+        return manager
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,9 @@ class NewsViewController: BaseViewController {
         menuVc.currentItem = self.title ?? ""
         menuVc.modalPresentationStyle = .custom
         menuVc.transitioningDelegate = manager
+        menuVc.handlerClosure = { title in
+            self.title = title
+        }
         manager.delegate = self
     }
 }
