@@ -14,6 +14,10 @@
 		3BD07DBE246905D700E32668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD07DBD246905D700E32668 /* Assets.xcassets */; };
 		3BD07DC1246905D700E32668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD07DBF246905D700E32668 /* LaunchScreen.storyboard */; };
 		3BD07DC9246933B000E32668 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD07DC8246933B000E32668 /* HomeViewController.swift */; };
+		71FBB37324702F8700E21757 /* UIButton+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FBB37224702F8700E21757 /* UIButton+Layout.swift */; };
+		71FBB37524702FF600E21757 /* TopImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FBB37424702FF600E21757 /* TopImageButton.swift */; };
+		71FBB377247039D100E21757 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FBB376247039D100E21757 /* MenuViewController.swift */; };
+		71FBB37924703A6A00E21757 /* TransitionManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FBB37824703A6A00E21757 /* TransitionManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		3BD07DC0246905D700E32668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BD07DC2246905D700E32668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BD07DC8246933B000E32668 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		71FBB37224702F8700E21757 /* UIButton+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Layout.swift"; sourceTree = "<group>"; };
+		71FBB37424702FF600E21757 /* TopImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageButton.swift; sourceTree = "<group>"; };
+		71FBB376247039D100E21757 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		71FBB37824703A6A00E21757 /* TransitionManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +68,12 @@
 			children = (
 				3BD07DB4246905D400E32668 /* AppDelegate.swift */,
 				3BD07DB6246905D400E32668 /* SceneDelegate.swift */,
+				71FBB37824703A6A00E21757 /* TransitionManger.swift */,
 				3BD07DB8246905D400E32668 /* BaseViewController.swift */,
 				3BD07DC8246933B000E32668 /* HomeViewController.swift */,
+				71FBB376247039D100E21757 /* MenuViewController.swift */,
+				71FBB37424702FF600E21757 /* TopImageButton.swift */,
+				71FBB37224702F8700E21757 /* UIButton+Layout.swift */,
 				3BD07DBA246905D400E32668 /* Main.storyboard */,
 				3BD07DBD246905D700E32668 /* Assets.xcassets */,
 				3BD07DBF246905D700E32668 /* LaunchScreen.storyboard */,
@@ -142,8 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD07DB9246905D400E32668 /* BaseViewController.swift in Sources */,
+				71FBB37324702F8700E21757 /* UIButton+Layout.swift in Sources */,
 				3BD07DB5246905D400E32668 /* AppDelegate.swift in Sources */,
+				71FBB377247039D100E21757 /* MenuViewController.swift in Sources */,
+				71FBB37524702FF600E21757 /* TopImageButton.swift in Sources */,
 				3BD07DB7246905D400E32668 /* SceneDelegate.swift in Sources */,
+				71FBB37924703A6A00E21757 /* TransitionManger.swift in Sources */,
 				3BD07DC9246933B000E32668 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

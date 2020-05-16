@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gtg-Uk-5sr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gtg-Uk-5sr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,9 +25,8 @@
                                             <constraint firstAttribute="width" constant="36" id="i7n-tf-CRn"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T AO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myl-bV-MlV">
-                                        <rect key="frame" x="66" y="23" width="34" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T AO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myl-bV-MlV">
+                                        <rect key="frame" x="66" y="24" width="34" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.20895376800000001" green="0.26967185739999999" blue="0.36072558160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -42,7 +41,10 @@
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="c3t-4K-Vea" firstAttribute="leading" secondItem="afz-v1-PsR" secondAttribute="leading" id="9wT-Tq-lQd"/>
+                                    <constraint firstItem="myl-bV-MlV" firstAttribute="centerY" secondItem="wAF-oL-5X7" secondAttribute="centerY" id="NBb-2E-nzD"/>
                                     <constraint firstItem="wAF-oL-5X7" firstAttribute="top" secondItem="afz-v1-PsR" secondAttribute="top" constant="15" id="NE8-lb-qYW"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="myl-bV-MlV" secondAttribute="trailing" constant="15" id="Q0v-F4-P2r"/>
+                                    <constraint firstItem="myl-bV-MlV" firstAttribute="leading" secondItem="wAF-oL-5X7" secondAttribute="trailing" constant="15" id="Q71-fj-lAm"/>
                                     <constraint firstItem="c3t-4K-Vea" firstAttribute="top" secondItem="wAF-oL-5X7" secondAttribute="bottom" constant="15" id="TXg-fy-d2z"/>
                                     <constraint firstItem="wAF-oL-5X7" firstAttribute="leading" secondItem="afz-v1-PsR" secondAttribute="leading" constant="15" id="ksT-6r-Yda"/>
                                     <constraint firstAttribute="trailing" secondItem="c3t-4K-Vea" secondAttribute="trailing" id="twP-6p-pbP"/>
@@ -55,7 +57,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWf-kw-eGW">
-                                <rect key="frame" x="183" y="820" width="48" height="34"/>
+                                <rect key="frame" x="159" y="803" width="96" height="68"/>
                                 <state key="normal" image="newPost"/>
                                 <connections>
                                     <segue destination="P8z-Nd-yHe" kind="presentation" modalPresentationStyle="fullScreen" id="Xgf-6Q-ZTS"/>
@@ -82,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="cs1-5c-u1e">
             <objects>
-                <viewController id="P8z-Nd-yHe" sceneMemberID="viewController">
+                <viewController id="P8z-Nd-yHe" customClass="MenuViewController" customModule="TumblrMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMN-fv-ZcC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +97,112 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S9C-z5-F5A">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E20-J2-xkI">
+                                            <rect key="frame" x="0.0" y="288" width="36.5" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" id="VNJ-6x-FCA"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDA-Rs-h9P" customClass="TopImageButton" customModule="TumblrMenu" customModuleProvider="target">
+                                            <rect key="frame" x="36.5" y="233" width="148" height="110"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="1py-qJ-Ogf"/>
+                                                <constraint firstAttribute="height" constant="110" id="yHM-0U-Z5E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Text" image="Text"/>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulP-UC-ODA">
+                                            <rect key="frame" x="184.5" y="288" width="37" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" id="43w-BD-bfO"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bE-Ch-z9l" customClass="TopImageButton" customModule="TumblrMenu" customModuleProvider="target">
+                                            <rect key="frame" x="221.5" y="233" width="148" height="110"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Photo" image="Photo"/>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWd-kz-j8t">
+                                            <rect key="frame" x="369.5" y="288" width="36.5" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhN-Xx-FOi" customClass="TopImageButton" customModule="TumblrMenu" customModuleProvider="target">
+                                            <rect key="frame" x="36.5" y="393" width="148" height="110"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Quote" image="Quote"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQO-9G-Xum" customClass="TopImageButton" customModule="TumblrMenu" customModuleProvider="target">
+                                            <rect key="frame" x="221.5" y="393" width="148" height="110"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Link" image="Link"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wP-GW-nG0" customClass="TopImageButton" customModule="TumblrMenu" customModuleProvider="target">
+                                            <rect key="frame" x="36.5" y="553" width="148" height="110"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Chat" image="Chat"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlJ-La-a9v" customClass="TopImageButton" customModule="TumblrMenu" customModuleProvider="target">
+                                            <rect key="frame" x="221.5" y="553" width="148" height="110"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Audio" image="Audio"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-MB-xo5">
+                                            <rect key="frame" x="107" y="796" width="200" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="3Gw-4C-gBi"/>
+                                                <constraint firstAttribute="height" constant="50" id="Jwp-dA-eyb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                            <state key="normal" title="Dismiss">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="qQq-jh-YhB" kind="unwind" unwindAction="unwindToMainVc:" id="rhO-De-BX4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ulP-UC-ODA" firstAttribute="leading" secondItem="XDA-Rs-h9P" secondAttribute="trailing" id="1w0-UJ-skp"/>
+                                        <constraint firstItem="cQO-9G-Xum" firstAttribute="top" secondItem="WhN-Xx-FOi" secondAttribute="top" id="2xr-iI-1zN"/>
+                                        <constraint firstItem="9bE-Ch-z9l" firstAttribute="width" secondItem="XDA-Rs-h9P" secondAttribute="width" id="8ey-KG-0ge"/>
+                                        <constraint firstItem="WhN-Xx-FOi" firstAttribute="width" secondItem="XDA-Rs-h9P" secondAttribute="width" id="9Zc-Oy-D8v"/>
+                                        <constraint firstItem="iUd-MB-xo5" firstAttribute="centerX" secondItem="S9C-z5-F5A" secondAttribute="centerX" id="C1T-kE-bu0"/>
+                                        <constraint firstItem="ulP-UC-ODA" firstAttribute="centerY" secondItem="E20-J2-xkI" secondAttribute="centerY" id="FVp-z0-kPz"/>
+                                        <constraint firstItem="4wP-GW-nG0" firstAttribute="height" secondItem="XDA-Rs-h9P" secondAttribute="height" id="Gcm-90-cy1"/>
+                                        <constraint firstItem="hWd-kz-j8t" firstAttribute="width" secondItem="E20-J2-xkI" secondAttribute="width" id="HWk-cM-cGW"/>
+                                        <constraint firstItem="9bE-Ch-z9l" firstAttribute="top" secondItem="XDA-Rs-h9P" secondAttribute="top" id="HYz-oa-9NJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="iUd-MB-xo5" secondAttribute="bottom" constant="50" id="Iu0-mV-pbh"/>
+                                        <constraint firstItem="9bE-Ch-z9l" firstAttribute="height" secondItem="XDA-Rs-h9P" secondAttribute="height" id="JFO-qI-azb"/>
+                                        <constraint firstItem="BlJ-La-a9v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4wP-GW-nG0" secondAttribute="trailing" constant="8" symbolic="YES" id="Jkd-j2-SPC"/>
+                                        <constraint firstItem="WhN-Xx-FOi" firstAttribute="height" secondItem="XDA-Rs-h9P" secondAttribute="height" id="KGT-wb-NSv"/>
+                                        <constraint firstItem="4wP-GW-nG0" firstAttribute="leading" secondItem="XDA-Rs-h9P" secondAttribute="leading" id="PuO-7Z-Ofd"/>
+                                        <constraint firstItem="WhN-Xx-FOi" firstAttribute="centerY" secondItem="S9C-z5-F5A" secondAttribute="centerY" id="RSm-hy-cQE"/>
+                                        <constraint firstItem="cQO-9G-Xum" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WhN-Xx-FOi" secondAttribute="trailing" constant="8" symbolic="YES" id="T3W-Wy-7sI"/>
+                                        <constraint firstItem="4wP-GW-nG0" firstAttribute="top" secondItem="WhN-Xx-FOi" secondAttribute="bottom" constant="50" id="T4u-4e-Oxa"/>
+                                        <constraint firstItem="hWd-kz-j8t" firstAttribute="leading" secondItem="9bE-Ch-z9l" secondAttribute="trailing" id="UKV-cs-3ly"/>
+                                        <constraint firstItem="hWd-kz-j8t" firstAttribute="trailing" secondItem="S9C-z5-F5A" secondAttribute="trailingMargin" id="VIQ-fg-AXU"/>
+                                        <constraint firstItem="WhN-Xx-FOi" firstAttribute="leading" secondItem="XDA-Rs-h9P" secondAttribute="leading" id="Vk1-gf-20v"/>
+                                        <constraint firstItem="hWd-kz-j8t" firstAttribute="height" secondItem="E20-J2-xkI" secondAttribute="height" id="Xzc-nT-rbj"/>
+                                        <constraint firstItem="BlJ-La-a9v" firstAttribute="top" secondItem="4wP-GW-nG0" secondAttribute="top" id="Y3O-IP-PMR"/>
+                                        <constraint firstItem="XDA-Rs-h9P" firstAttribute="leading" secondItem="E20-J2-xkI" secondAttribute="trailing" id="YGO-bC-dMl"/>
+                                        <constraint firstItem="cQO-9G-Xum" firstAttribute="height" secondItem="XDA-Rs-h9P" secondAttribute="height" id="Z2y-70-bMI"/>
+                                        <constraint firstItem="cQO-9G-Xum" firstAttribute="trailing" secondItem="9bE-Ch-z9l" secondAttribute="trailing" id="axU-hr-oWh"/>
+                                        <constraint firstItem="E20-J2-xkI" firstAttribute="leading" secondItem="S9C-z5-F5A" secondAttribute="leading" id="cVY-GY-VVD"/>
+                                        <constraint firstItem="hWd-kz-j8t" firstAttribute="centerY" secondItem="E20-J2-xkI" secondAttribute="centerY" id="cha-Bk-wBw"/>
+                                        <constraint firstItem="9bE-Ch-z9l" firstAttribute="leading" secondItem="ulP-UC-ODA" secondAttribute="trailing" id="di6-Vo-WrY"/>
+                                        <constraint firstItem="XDA-Rs-h9P" firstAttribute="centerY" secondItem="E20-J2-xkI" secondAttribute="centerY" id="eO3-0s-VLO"/>
+                                        <constraint firstItem="4wP-GW-nG0" firstAttribute="width" secondItem="XDA-Rs-h9P" secondAttribute="width" id="lVw-Ss-b6o"/>
+                                        <constraint firstItem="BlJ-La-a9v" firstAttribute="trailing" secondItem="9bE-Ch-z9l" secondAttribute="trailing" id="q7b-kx-KBp"/>
+                                        <constraint firstItem="BlJ-La-a9v" firstAttribute="width" secondItem="XDA-Rs-h9P" secondAttribute="width" id="sRh-8a-Aef"/>
+                                        <constraint firstItem="cQO-9G-Xum" firstAttribute="width" secondItem="XDA-Rs-h9P" secondAttribute="width" id="sz1-Fi-YyV"/>
+                                        <constraint firstItem="BlJ-La-a9v" firstAttribute="height" secondItem="XDA-Rs-h9P" secondAttribute="height" id="vX9-jb-tiz"/>
+                                        <constraint firstItem="WhN-Xx-FOi" firstAttribute="top" secondItem="XDA-Rs-h9P" secondAttribute="bottom" constant="50" id="zTQ-e1-LVI"/>
+                                        <constraint firstItem="ulP-UC-ODA" firstAttribute="width" secondItem="E20-J2-xkI" secondAttribute="width" id="zYq-ZE-dEo"/>
+                                    </constraints>
                                 </view>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.20784313730000001" blue="0.29803921570000003" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <blurEffect style="dark"/>
@@ -109,8 +217,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uDQ-We-bUM"/>
                     </view>
+                    <connections>
+                        <outlet property="audioBtn" destination="BlJ-La-a9v" id="eB2-tV-vXt"/>
+                        <outlet property="chatBtn" destination="4wP-GW-nG0" id="i8D-SU-po5"/>
+                        <outlet property="linkBtn" destination="cQO-9G-Xum" id="TOE-2S-hKb"/>
+                        <outlet property="photoBtn" destination="9bE-Ch-z9l" id="OE7-uI-1uA"/>
+                        <outlet property="quoteBtn" destination="WhN-Xx-FOi" id="oYh-3h-ZKO"/>
+                        <outlet property="textBtn" destination="XDA-Rs-h9P" id="KJu-67-2Io"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9o-XS-yZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qQq-jh-YhB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1873.913043478261" y="137.94642857142856"/>
         </scene>
@@ -135,6 +252,12 @@
     </scenes>
     <resources>
         <image name="1" width="707" height="239.5"/>
+        <image name="Audio" width="100" height="100"/>
+        <image name="Chat" width="100" height="100"/>
+        <image name="Link" width="100" height="100"/>
+        <image name="Photo" width="100" height="100"/>
+        <image name="Quote" width="100" height="100"/>
+        <image name="Text" width="100" height="100"/>
         <image name="hugo" width="256" height="256"/>
         <image name="newPost" width="48" height="34"/>
         <image name="toolbar" width="375" height="50"/>
