@@ -13,6 +13,7 @@
 		71119EC3246C3FE700F28030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71119EC1246C3FE700F28030 /* Main.storyboard */; };
 		71119EC5246C3FE900F28030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71119EC4246C3FE900F28030 /* Assets.xcassets */; };
 		71119EC8246C3FE900F28030 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71119EC6246C3FE900F28030 /* LaunchScreen.storyboard */; };
+		71FBB37B2471031000E21757 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FBB37A2471031000E21757 /* RefreshContents.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		71119EC4246C3FE900F28030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71119EC7246C3FE900F28030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71119EC9246C3FE900F28030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71FBB37A2471031000E21757 /* RefreshContents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				71119EBB246C3FE700F28030 /* AppDelegate.swift */,
 				71119EBD246C3FE700F28030 /* SceneDelegate.swift */,
 				71119EBF246C3FE700F28030 /* ViewController.swift */,
+				71FBB37A2471031000E21757 /* RefreshContents.xib */,
 				71119EC1246C3FE700F28030 /* Main.storyboard */,
 				71119EC4246C3FE900F28030 /* Assets.xcassets */,
 				71119EC6246C3FE900F28030 /* LaunchScreen.storyboard */,
@@ -128,6 +131,7 @@
 				71119EC8246C3FE900F28030 /* LaunchScreen.storyboard in Resources */,
 				71119EC5246C3FE900F28030 /* Assets.xcassets in Resources */,
 				71119EC3246C3FE700F28030 /* Main.storyboard in Resources */,
+				71FBB37B2471031000E21757 /* RefreshContents.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomPullRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CustomPullRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
