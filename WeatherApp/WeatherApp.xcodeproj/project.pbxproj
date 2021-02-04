@@ -19,6 +19,8 @@
 		3B21174825CBCDAC00E685A3 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21174725CBCDAC00E685A3 /* ForecastView.swift */; };
 		3B21174C25CBCDBF00E685A3 /* ForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B21174B25CBCDBF00E685A3 /* ForecastView.xib */; };
 		3B21175325CBE7FC00E685A3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21175225CBE7FC00E685A3 /* Observable.swift */; };
+		3B21175825CBE96500E685A3 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21175725CBE96500E685A3 /* LocationService.swift */; };
+		3B21175B25CBEA0500E685A3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21175A25CBEA0500E685A3 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		3B21174725CBCDAC00E685A3 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		3B21174B25CBCDBF00E685A3 /* ForecastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastView.xib; sourceTree = "<group>"; };
 		3B21175225CBE7FC00E685A3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		3B21175725CBE96500E685A3 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		3B21175A25CBEA0500E685A3 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				3B21175225CBE7FC00E685A3 /* Observable.swift */,
+				3B21175725CBE96500E685A3 /* LocationService.swift */,
+				3B21175A25CBEA0500E685A3 /* Error.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -231,10 +237,12 @@
 			files = (
 				3B21175325CBE7FC00E685A3 /* Observable.swift in Sources */,
 				3B21173B25CBC28900E685A3 /* Forecast.swift in Sources */,
+				3B21175825CBE96500E685A3 /* LocationService.swift in Sources */,
 				3B21171D25CBA8FB00E685A3 /* AppDelegate.swift in Sources */,
 				3B21173625CBC17D00E685A3 /* WeatherViewController.swift in Sources */,
 				3B21171F25CBA8FB00E685A3 /* SceneDelegate.swift in Sources */,
 				3B21174025CBC2F000E685A3 /* Weather.swift in Sources */,
+				3B21175B25CBEA0500E685A3 /* Error.swift in Sources */,
 				3B21174825CBCDAC00E685A3 /* ForecastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
