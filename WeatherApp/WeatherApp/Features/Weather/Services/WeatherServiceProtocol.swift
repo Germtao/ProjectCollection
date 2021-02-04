@@ -10,7 +10,7 @@ import CoreLocation
 
 typealias WeatherCompletionHandler = (Weather?, TTError?) -> Void
 
-protocol WeatherCompletionProtocol {
+protocol WeatherServiceProtocol {
     /// 找回天气信息
     func retrieveWeatherInfo(_ location: CLLocation, completionHandler: @escaping WeatherCompletionHandler)
 }
