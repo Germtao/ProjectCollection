@@ -12,6 +12,12 @@
 		3B21172425CBA8FB00E685A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B21172225CBA8FB00E685A3 /* Main.storyboard */; };
 		3B21172625CBA90300E685A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B21172525CBA90300E685A3 /* Assets.xcassets */; };
 		3B21172925CBA90300E685A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B21172725CBA90300E685A3 /* LaunchScreen.storyboard */; };
+		3B21173625CBC17D00E685A3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21173525CBC17D00E685A3 /* WeatherViewController.swift */; };
+		3B21173B25CBC28900E685A3 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21173A25CBC28900E685A3 /* Forecast.swift */; };
+		3B21174025CBC2F000E685A3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21173F25CBC2F000E685A3 /* Weather.swift */; };
+		3B21174425CBC9AB00E685A3 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B21174325CBC9AB00E685A3 /* weathericons-regular-webfont.ttf */; };
+		3B21174825CBCDAC00E685A3 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21174725CBCDAC00E685A3 /* ForecastView.swift */; };
+		3B21174C25CBCDBF00E685A3 /* ForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B21174B25CBCDBF00E685A3 /* ForecastView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		3B21172525CBA90300E685A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B21172825CBA90300E685A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B21172A25CBA90300E685A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B21173525CBC17D00E685A3 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		3B21173A25CBC28900E685A3 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		3B21173F25CBC2F000E685A3 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		3B21174325CBC9AB00E685A3 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
+		3B21174725CBCDAC00E685A3 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		3B21174B25CBCDBF00E685A3 /* ForecastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,8 @@
 		3B21171B25CBA8FB00E685A3 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				3B21174225CBC98D00E685A3 /* Fonts */,
+				3B21173325CBC14200E685A3 /* Features */,
 				3B21171C25CBA8FB00E685A3 /* AppDelegate.swift */,
 				3B21171E25CBA8FB00E685A3 /* SceneDelegate.swift */,
 				3B21173125CBA91F00E685A3 /* Storyboards */,
@@ -70,6 +84,66 @@
 				3B21172725CBA90300E685A3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3B21173325CBC14200E685A3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3B21173825CBC20500E685A3 /* Forecast */,
+				3B21173425CBC14C00E685A3 /* Weather */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3B21173425CBC14C00E685A3 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3B21173E25CBC2CE00E685A3 /* Models */,
+				3B21173525CBC17D00E685A3 /* WeatherViewController.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		3B21173825CBC20500E685A3 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				3B21174625CBCD8700E685A3 /* Views */,
+				3B21173925CBC27900E685A3 /* Models */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		3B21173925CBC27900E685A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B21173A25CBC28900E685A3 /* Forecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B21173E25CBC2CE00E685A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B21173F25CBC2F000E685A3 /* Weather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B21174225CBC98D00E685A3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3B21174325CBC9AB00E685A3 /* weathericons-regular-webfont.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3B21174625CBCD8700E685A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B21174725CBCDAC00E685A3 /* ForecastView.swift */,
+				3B21174B25CBCDBF00E685A3 /* ForecastView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +205,9 @@
 			files = (
 				3B21172925CBA90300E685A3 /* LaunchScreen.storyboard in Resources */,
 				3B21172625CBA90300E685A3 /* Assets.xcassets in Resources */,
+				3B21174425CBC9AB00E685A3 /* weathericons-regular-webfont.ttf in Resources */,
 				3B21172425CBA8FB00E685A3 /* Main.storyboard in Resources */,
+				3B21174C25CBCDBF00E685A3 /* ForecastView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B21173B25CBC28900E685A3 /* Forecast.swift in Sources */,
 				3B21171D25CBA8FB00E685A3 /* AppDelegate.swift in Sources */,
+				3B21173625CBC17D00E685A3 /* WeatherViewController.swift in Sources */,
 				3B21171F25CBA8FB00E685A3 /* SceneDelegate.swift in Sources */,
+				3B21174025CBC2F000E685A3 /* Weather.swift in Sources */,
+				3B21174825CBCDAC00E685A3 /* ForecastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

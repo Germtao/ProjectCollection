@@ -1,24 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bQb-RT-JyU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="weathericons-regular-webfont.ttf">
+            <string>WeatherIcons-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-Cm-lIE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXP-Cd-FrW" userLabel="Tint View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYU-iB-y6q" userLabel="Forecast Container View">
+                                        <rect key="frame" x="0.0" y="721" width="414" height="115"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yXo-Vx-VSc">
+                                                <rect key="frame" x="-318" y="0.0" width="1050" height="115"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kUS-Hy-MSd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="510" height="115"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHV-SV-cAu" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="115"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="115" id="H8a-UV-srT"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="10"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQC-0k-PX1" userLabel="Forecast View" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
+                                                                <rect key="frame" x="270" y="0.0" width="240" height="115"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="14:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="8"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="TQC-0k-PX1" firstAttribute="height" secondItem="PHV-SV-cAu" secondAttribute="height" id="6KS-0P-Ada"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FUZ-LN-L1c">
+                                                        <rect key="frame" x="540" y="0.0" width="510" height="115"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPE-2J-Lma" userLabel="Forecast View" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="115"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="12"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="17:00"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-Px-DLg" userLabel="Forecast View" customClass="ForecastView" customModule="WeatherApp" customModuleProvider="target">
+                                                                <rect key="frame" x="270" y="0.0" width="240" height="115"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="20:00"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="icon" value=""/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="temperature" value="4"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="NPE-2J-Lma" firstAttribute="height" secondItem="PHV-SV-cAu" secondAttribute="height" id="9aI-5F-YL1"/>
+                                                    <constraint firstItem="fEJ-Px-DLg" firstAttribute="height" secondItem="PHV-SV-cAu" secondAttribute="height" id="e0U-Sg-0d6"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="yXo-Vx-VSc" firstAttribute="centerY" secondItem="uYU-iB-y6q" secondAttribute="centerY" id="AxB-fd-A24"/>
+                                            <constraint firstItem="yXo-Vx-VSc" firstAttribute="centerX" secondItem="uYU-iB-y6q" secondAttribute="centerX" id="tyq-Cr-tzx"/>
+                                            <constraint firstItem="yXo-Vx-VSc" firstAttribute="height" secondItem="uYU-iB-y6q" secondAttribute="height" id="v8S-Xb-PVn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dG2-es-AZX" userLabel="Weather Container View">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="381"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="viV-Gc-vQz">
+                                                <rect key="frame" x="124" y="0.0" width="166" height="381"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melbourne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="yu1-tg-vTG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="43"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpN-hA-yaN">
+                                                        <rect key="frame" x="3.5" y="43" width="159.5" height="208.5"/>
+                                                        <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="144"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-24-aho">
+                                                        <rect key="frame" x="47.5" y="251.5" width="71" height="129.5"/>
+                                                        <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="64"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dG2-es-AZX" secondAttribute="height" multiplier="25:23" id="L5r-rx-XnO"/>
+                                            <constraint firstItem="viV-Gc-vQz" firstAttribute="height" secondItem="dG2-es-AZX" secondAttribute="height" id="PMG-Dm-tCo"/>
+                                            <constraint firstItem="viV-Gc-vQz" firstAttribute="centerX" secondItem="dG2-es-AZX" secondAttribute="centerX" id="iJp-Bp-LKu"/>
+                                            <constraint firstItem="viV-Gc-vQz" firstAttribute="top" secondItem="dG2-es-AZX" secondAttribute="top" id="ozP-ws-G3O"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uYU-iB-y6q" secondAttribute="trailing" id="7Ld-Rw-WP5"/>
+                                    <constraint firstAttribute="bottom" secondItem="uYU-iB-y6q" secondAttribute="bottom" priority="250" constant="60" id="7tX-8j-tB8"/>
+                                    <constraint firstItem="uYU-iB-y6q" firstAttribute="width" secondItem="wXP-Cd-FrW" secondAttribute="width" multiplier="0.5" id="Bwr-XB-ZZq"/>
+                                    <constraint firstAttribute="bottom" secondItem="dG2-es-AZX" secondAttribute="bottom" id="NB5-Jk-GUc"/>
+                                    <constraint firstItem="dG2-es-AZX" firstAttribute="width" secondItem="wXP-Cd-FrW" secondAttribute="width" priority="750" id="UyU-XN-mi7"/>
+                                    <constraint firstItem="dG2-es-AZX" firstAttribute="top" secondItem="wXP-Cd-FrW" secondAttribute="top" priority="750" constant="88" id="ZY0-CM-qfH"/>
+                                    <constraint firstItem="uYU-iB-y6q" firstAttribute="centerY" secondItem="wXP-Cd-FrW" secondAttribute="centerY" id="dS7-Ih-09V"/>
+                                    <constraint firstItem="uYU-iB-y6q" firstAttribute="width" secondItem="wXP-Cd-FrW" secondAttribute="width" priority="750" id="f1h-E5-xDz"/>
+                                    <constraint firstItem="dG2-es-AZX" firstAttribute="centerX" secondItem="wXP-Cd-FrW" secondAttribute="centerX" priority="750" id="js3-MB-81w"/>
+                                    <constraint firstItem="dG2-es-AZX" firstAttribute="top" secondItem="wXP-Cd-FrW" secondAttribute="top" constant="33" id="l5R-eM-4qL"/>
+                                    <constraint firstItem="dG2-es-AZX" firstAttribute="leading" secondItem="wXP-Cd-FrW" secondAttribute="leading" id="lZn-Ut-cbF"/>
+                                    <constraint firstItem="uYU-iB-y6q" firstAttribute="top" secondItem="dG2-es-AZX" secondAttribute="bottom" constant="60" id="rmk-rA-Z7x"/>
+                                    <constraint firstItem="uYU-iB-y6q" firstAttribute="centerX" secondItem="wXP-Cd-FrW" secondAttribute="centerX" priority="750" id="rsq-s9-mHk"/>
+                                    <constraint firstItem="dG2-es-AZX" firstAttribute="width" secondItem="wXP-Cd-FrW" secondAttribute="width" multiplier="0.5" id="tWq-1Q-RbX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NB5-Jk-GUc"/>
+                                        <exclude reference="ZY0-CM-qfH"/>
+                                        <exclude reference="l5R-eM-4qL"/>
+                                        <exclude reference="lZn-Ut-cbF"/>
+                                        <exclude reference="tWq-1Q-RbX"/>
+                                        <exclude reference="7Ld-Rw-WP5"/>
+                                        <exclude reference="Bwr-XB-ZZq"/>
+                                        <exclude reference="dS7-Ih-09V"/>
+                                        <exclude reference="rmk-rA-Z7x"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="NB5-Jk-GUc"/>
+                                        <include reference="l5R-eM-4qL"/>
+                                        <include reference="lZn-Ut-cbF"/>
+                                        <include reference="tWq-1Q-RbX"/>
+                                        <include reference="7Ld-Rw-WP5"/>
+                                        <include reference="Bwr-XB-ZZq"/>
+                                        <include reference="dS7-Ih-09V"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ZY0-CM-qfH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="rmk-rA-Z7x"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bD8-Cm-lIE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2XQ-y7-YJV"/>
+                            <constraint firstItem="wXP-Cd-FrW" firstAttribute="width" secondItem="bD8-Cm-lIE" secondAttribute="width" id="LbE-5d-yAZ"/>
+                            <constraint firstItem="wXP-Cd-FrW" firstAttribute="centerX" secondItem="bD8-Cm-lIE" secondAttribute="centerX" id="Ozt-Fs-shf"/>
+                            <constraint firstItem="bD8-Cm-lIE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wn7-C9-y8G"/>
+                            <constraint firstItem="bD8-Cm-lIE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YBD-hG-0BO"/>
+                            <constraint firstItem="bD8-Cm-lIE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cWo-e0-u0n"/>
+                            <constraint firstItem="wXP-Cd-FrW" firstAttribute="height" secondItem="bD8-Cm-lIE" secondAttribute="height" id="eVQ-BD-CxY"/>
+                            <constraint firstItem="wXP-Cd-FrW" firstAttribute="centerY" secondItem="bD8-Cm-lIE" secondAttribute="centerY" id="yXO-yD-p9V"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Weather" id="LVy-zC-Hyp"/>
+                    <connections>
+                        <outlet property="iconLabel" destination="wpN-hA-yaN" id="ye6-dQ-adb"/>
+                        <outlet property="locationLabel" destination="yu1-tg-vTG" id="LUm-pt-YM8"/>
+                        <outlet property="temperatureLabel" destination="oCg-24-aho" id="7SE-4E-UN2"/>
+                        <outletCollection property="forecastViews" destination="PHV-SV-cAu" collectionClass="NSMutableArray" id="t7N-CO-kJR"/>
+                        <outletCollection property="forecastViews" destination="TQC-0k-PX1" collectionClass="NSMutableArray" id="vyz-7G-UoC"/>
+                        <outletCollection property="forecastViews" destination="NPE-2J-Lma" collectionClass="NSMutableArray" id="frD-sM-igB"/>
+                        <outletCollection property="forecastViews" destination="fEJ-Px-DLg" collectionClass="NSMutableArray" id="peP-gU-BOE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="868.11594202898561" y="-37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nX2-Yj-aLS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQb-RT-JyU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BJ2-Nx-TA9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6hQ-uV-stK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UhS-c6-a4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.028985507246382" y="-37.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1250" height="781"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
