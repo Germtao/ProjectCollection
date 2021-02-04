@@ -18,6 +18,7 @@
 		3B21174425CBC9AB00E685A3 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B21174325CBC9AB00E685A3 /* weathericons-regular-webfont.ttf */; };
 		3B21174825CBCDAC00E685A3 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21174725CBCDAC00E685A3 /* ForecastView.swift */; };
 		3B21174C25CBCDBF00E685A3 /* ForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B21174B25CBCDBF00E685A3 /* ForecastView.xib */; };
+		3B21175325CBE7FC00E685A3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21175225CBE7FC00E685A3 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3B21174325CBC9AB00E685A3 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
 		3B21174725CBCDAC00E685A3 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		3B21174B25CBCDBF00E685A3 /* ForecastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastView.xib; sourceTree = "<group>"; };
+		3B21175225CBE7FC00E685A3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		3B21171B25CBA8FB00E685A3 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				3B21175125CBE7E200E685A3 /* Common */,
 				3B21174225CBC98D00E685A3 /* Fonts */,
 				3B21173325CBC14200E685A3 /* Features */,
 				3B21171C25CBA8FB00E685A3 /* AppDelegate.swift */,
@@ -146,6 +149,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3B21175125CBE7E200E685A3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3B21175225CBE7FC00E685A3 /* Observable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B21175325CBE7FC00E685A3 /* Observable.swift in Sources */,
 				3B21173B25CBC28900E685A3 /* Forecast.swift in Sources */,
 				3B21171D25CBA8FB00E685A3 /* AppDelegate.swift in Sources */,
 				3B21173625CBC17D00E685A3 /* WeatherViewController.swift in Sources */,
