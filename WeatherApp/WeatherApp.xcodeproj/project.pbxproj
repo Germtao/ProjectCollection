@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,8 @@
 		3B21176F25CBF70500E685A3 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21176E25CBF70500E685A3 /* ForecastViewModel.swift */; };
 		3B21177225CBF85000E685A3 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21177125CBF85000E685A3 /* WeatherViewModel.swift */; };
 		3B21177525CBF9F000E685A3 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21177425CBF9F000E685A3 /* OpenWeatherMapService.swift */; };
+		3B21177925CCE01100E685A3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3B21177825CCE01100E685A3 /* SwiftyJSON */; };
+		3B21177C25CCE23600E685A3 /* ForecastDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21177B25CCE23600E685A3 /* ForecastDateTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,7 @@
 		3B21176E25CBF70500E685A3 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		3B21177125CBF85000E685A3 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		3B21177425CBF9F000E685A3 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
+		3B21177B25CCE23600E685A3 /* ForecastDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDateTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B21177925CCE01100E685A3 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,7 @@
 				3B21175225CBE7FC00E685A3 /* Observable.swift */,
 				3B21175725CBE96500E685A3 /* LocationService.swift */,
 				3B21175A25CBEA0500E685A3 /* Error.swift */,
+				3B21177B25CCE23600E685A3 /* ForecastDateTime.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -211,6 +216,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				3B21177825CCE01100E685A3 /* SwiftyJSON */,
+			);
 			productName = WeatherApp;
 			productReference = 3B21171925CBA8FB00E685A3 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 3B21171025CBA8FB00E685A3;
+			packageReferences = (
+				3B21177725CCE01100E685A3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 3B21171A25CBA8FB00E685A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +291,7 @@
 				3B21176F25CBF70500E685A3 /* ForecastViewModel.swift in Sources */,
 				3B21174025CBC2F000E685A3 /* Weather.swift in Sources */,
 				3B21175B25CBEA0500E685A3 /* Error.swift in Sources */,
+				3B21177C25CCE23600E685A3 /* ForecastDateTime.swift in Sources */,
 				3B21175F25CBED3600E685A3 /* WeatherServiceProtocol.swift in Sources */,
 				3B21177225CBF85000E685A3 /* WeatherViewModel.swift in Sources */,
 				3B21174825CBCDAC00E685A3 /* ForecastView.swift in Sources */,
@@ -483,6 +495,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B21177725CCE01100E685A3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B21177825CCE01100E685A3 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B21177725CCE01100E685A3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B21171125CBA8FB00E685A3 /* Project object */;
 }
