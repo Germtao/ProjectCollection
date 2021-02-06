@@ -209,7 +209,13 @@
                             <constraint firstItem="wXP-Cd-FrW" firstAttribute="centerY" secondItem="bD8-Cm-lIE" secondAttribute="centerY" id="yXO-yD-p9V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Weather" id="LVy-zC-Hyp"/>
+                    <navigationItem key="navigationItem" title="Weather" id="LVy-zC-Hyp">
+                        <barButtonItem key="rightBarButtonItem" image="share" id="JGW-hm-tgl">
+                            <connections>
+                                <action selector="shareAction" destination="BYZ-38-t0r" id="Stz-Jn-3iP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="iconLabel" destination="wpN-hA-yaN" id="ye6-dQ-adb"/>
                         <outlet property="locationLabel" destination="yu1-tg-vTG" id="LUm-pt-YM8"/>
@@ -245,6 +251,7 @@
     </scenes>
     <resources>
         <image name="background" width="1250" height="781"/>
+        <image name="share" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

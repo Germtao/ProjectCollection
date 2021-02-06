@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 class WeatherViewModel {
     private let emptyString = ""
@@ -21,9 +22,14 @@ class WeatherViewModel {
     
     private var locationService: LocationService
     private var weatherService: WeatherServiceProtocol
+    private var shareService: ShareService
+    
+    private var bindVc: UIViewController?
     
     // MARK: - init
-    init() {
+    init(bindVc: UIViewController?) {
+        self.bindVc = bindVc
+        
         hasError = Observable(false)
         errorMessage = Observable(nil)
         
@@ -35,6 +41,7 @@ class WeatherViewModel {
         // 可以在这里放依赖注入
         locationService = LocationService()
         weatherService = OpenWeatherMapService()
+        shareService = ShareService()
     }
     
     // MARK: - Public
@@ -42,6 +49,11 @@ class WeatherViewModel {
     func startLocationService() {
         locationService.delegate = self
         locationService.requestLocation()
+    }
+    
+    func startShareService() {
+        shareService.delegate = self
+        shareService.share(bindVc)
     }
 }
 
@@ -103,5 +115,15 @@ extension WeatherViewModel: LocationServiceDelegate {
     
     func locationDidFail(withError error: TTError) {
         update(error)
+    }
+}
+
+extension WeatherViewModel: ShareServiceDelegate {
+    func shareDidSuccess(_ service: ShareService) {
+        print("分享成功")
+    }
+    
+    func shareDidFail(_ service: ShareService, error: Error?) {
+        print("分享失败 error: \(error?.localizedDescription ?? "Unknown Error.")")
     }
 }

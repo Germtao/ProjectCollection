@@ -31,6 +31,7 @@
 		3B21177525CBF9F000E685A3 /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21177425CBF9F000E685A3 /* OpenWeatherMapService.swift */; };
 		3B21177925CCE01100E685A3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3B21177825CCE01100E685A3 /* SwiftyJSON */; };
 		3B21177C25CCE23600E685A3 /* ForecastDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21177B25CCE23600E685A3 /* ForecastDateTime.swift */; };
+		3B21178025CE463E00E685A3 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B21177F25CE463E00E685A3 /* ShareService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		3B21177125CBF85000E685A3 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		3B21177425CBF9F000E685A3 /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
 		3B21177B25CCE23600E685A3 /* ForecastDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDateTime.swift; sourceTree = "<group>"; };
+		3B21177F25CE463E00E685A3 /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 				3B21175725CBE96500E685A3 /* LocationService.swift */,
 				3B21175A25CBEA0500E685A3 /* Error.swift */,
 				3B21177B25CCE23600E685A3 /* ForecastDateTime.swift */,
+				3B21177F25CE463E00E685A3 /* ShareService.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				3B21176325CBEFB800E685A3 /* Temperature.swift in Sources */,
 				3B21176F25CBF70500E685A3 /* ForecastViewModel.swift in Sources */,
 				3B21174025CBC2F000E685A3 /* Weather.swift in Sources */,
+				3B21178025CE463E00E685A3 /* ShareService.swift in Sources */,
 				3B21175B25CBEA0500E685A3 /* Error.swift in Sources */,
 				3B21177C25CCE23600E685A3 /* ForecastDateTime.swift in Sources */,
 				3B21175F25CBED3600E685A3 /* WeatherServiceProtocol.swift in Sources */,

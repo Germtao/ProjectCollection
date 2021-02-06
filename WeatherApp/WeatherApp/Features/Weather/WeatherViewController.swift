@@ -36,7 +36,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = WeatherViewModel()
+        viewModel = WeatherViewModel(bindVc: self)
         viewModel?.startLocationService()
         
         setAccessibilityIdentifiers()
@@ -50,6 +50,10 @@ class WeatherViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         configureLabelsWithAnimation()
+    }
+    
+    @IBAction func shareAction() {
+        viewModel?.startShareService()
     }
 }
 
