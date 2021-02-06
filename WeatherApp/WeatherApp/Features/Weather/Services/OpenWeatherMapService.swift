@@ -23,6 +23,8 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
             return
         }
         
+        print("天气数据 url: \(url)")
+        
         let task = session.dataTask(with: url) { (data, response, error) in
             // 检查网络错误
             guard error == nil else {
@@ -43,6 +45,8 @@ struct OpenWeatherMapService: WeatherServiceProtocol {
                 completionHandler(nil, error)
                 return
             }
+            
+            print("天气数据 json: \(json)")
             
             // 获取温度、位置和图标，并检查解析错误
             guard let temperatureDegrees = json["list"][0]["main"]["temp"].double,
@@ -105,6 +109,8 @@ extension OpenWeatherMapService {
         guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist"),
               let params = NSDictionary(contentsOfFile: filePath),
               let appId = params["OWMAccessToken"] as? String else { return nil }
+        
+        print("appid: \(appId)")
         
         let latitude = String(location.coordinate.latitude)
         let longitude = String(location.coordinate.longitude)

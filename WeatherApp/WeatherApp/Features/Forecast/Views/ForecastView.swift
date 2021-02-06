@@ -16,6 +16,22 @@ import UIKit
     @IBOutlet weak var iconLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
+    var viewModel: ForecastViewModel? {
+        didSet {
+            viewModel?.time.observe { [unowned self] in
+                self.timeLabel.text = $0
+            }
+            
+            viewModel?.iconText.observe { [unowned self] in
+                self.iconLabel.text = $0
+            }
+            
+            viewModel?.temperature.observe { [unowned self] in
+                self.temperatureLabel.text = $0
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         view = loadViewFromNib()
@@ -36,6 +52,10 @@ import UIKit
         addSubview(view)
         
         return view
+    }
+    
+    func loadViewModel(_ viewModel: ForecastViewModel) {
+        self.viewModel = viewModel
     }
     
     // MARK: - IBInspectable
