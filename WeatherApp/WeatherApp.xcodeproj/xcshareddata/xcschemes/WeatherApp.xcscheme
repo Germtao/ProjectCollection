@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B3F25F425E0AA8B00DF759A"
+               BuildableName = "WeatherAppUITests.xctest"
+               BlueprintName = "WeatherAppUITests"
+               ReferencedContainer = "container:WeatherApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B3F260C25E0AAD200DF759A"
+               BuildableName = "WeatherAppTests.xctest"
+               BlueprintName = "WeatherAppTests"
+               ReferencedContainer = "container:WeatherApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
