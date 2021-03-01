@@ -919,7 +919,7 @@
 		3B20FC5C22C34F940026F0C8 /* TTXMLY */ = {
 			isa = PBXGroup;
 			children = (
-				3B20FC7F22C360420026F0C8 /* Classes */,
+				3B20FC7F22C360420026F0C8 /* Modules */,
 				3B20FC7D22C35FFE0026F0C8 /* AppDelegate */,
 				3B20FC8422C363CC0026F0C8 /* Core */,
 				3B20FC7E22C3602A0026F0C8 /* Support File */,
@@ -955,7 +955,7 @@
 			path = "Support File";
 			sourceTree = "<group>";
 		};
-		3B20FC7F22C360420026F0C8 /* Classes */ = {
+		3B20FC7F22C360420026F0C8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				3B14B1C922CA0F9700FD9B28 /* Play(播放) */,
@@ -965,7 +965,7 @@
 				3B14B1AF22C9E92A00FD9B28 /* Home(首页) */,
 				3B20FC8022C3604C0026F0C8 /* Main */,
 			);
-			path = Classes;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		3B20FC8022C3604C0026F0C8 /* Main */ = {
