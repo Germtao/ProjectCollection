@@ -8,6 +8,7 @@ target 'TTXMLY' do
 
   pod 'SnapKit', '~> 5.0.0'
   pod 'Moya', '~> 14.0.0-alpha.1'
+  # TabBar 样式
   pod 'ESTabBarController-swift', '~> 2.7'
   pod 'ESPullToRefresh', '~> 2.9'
   pod 'HandyJSON', '~> 5.0.0'
@@ -15,7 +16,19 @@ target 'TTXMLY' do
   pod 'Kingfisher', '~> 5.6.0'
   # 播放网络音频
   pod 'StreamingKit', '~> 0.1.30'
+  # 消息提示
   pod 'SwiftMessages', '~> 7.0.0'
+  
+  #跑马灯
+  pod 'JXMarqueeView'
+  #滚动页
+  pod 'LTScrollView'
+  # banner滚动图片
+  pod 'FSPagerView'
+  # 分页
+  pod 'DNSPageView'
+  # HUD
+  pod 'SVProgressHUD'
 
   target 'TTXMLYTests' do
     inherit! :search_paths
