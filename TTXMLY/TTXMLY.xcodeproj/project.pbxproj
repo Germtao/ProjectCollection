@@ -992,12 +992,12 @@
 			children = (
 				3B14B19C22C5FC6900FD9B28 /* Common */,
 				3B20FC8C22C379940026F0C8 /* Utils */,
-				3B20FC8522C363DE0026F0C8 /* Category */,
+				3B20FC8522C363DE0026F0C8 /* Extension */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		3B20FC8522C363DE0026F0C8 /* Category */ = {
+		3B20FC8522C363DE0026F0C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				3B20FC8622C363F50026F0C8 /* UIApplication.swift */,
@@ -1008,7 +1008,7 @@
 				3B20FC9522C46E360026F0C8 /* UIButton.swift */,
 				3B14B1FF22CF614000FD9B28 /* String.swift */,
 			);
-			path = Category;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		3B20FC8C22C379940026F0C8 /* Utils */ = {
