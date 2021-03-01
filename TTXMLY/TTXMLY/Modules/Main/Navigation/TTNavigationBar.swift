@@ -128,6 +128,7 @@ protocol TTAwakeProtocol: NSObjectProtocol {
     static func awake()
 }
 
+// MARK: - 1.1 定义 fatherAwakeProtocol
 protocol TTFatherAwakeProtocol: NSObjectProtocol {
     static func fatherAwake()
 }
