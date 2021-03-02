@@ -37,19 +37,21 @@ extension UINavigationController: UINavigationBarDelegate {
     /// 处理返回中断的手势
     private func dealInteractionChanges(_ context: UIViewControllerTransitionCoordinatorContext) {
         let animations: (UITransitionContextViewControllerKey) -> Void = {
-            let currentColor = context.viewController(forKey: $0)?.navBarBarTintColor ?? TTNavigationBar.defaultBarTintColor
+            let currentColor = context.viewController(forKey: $0)?.navBarBarTintColor ?? TTNavigationBar.defaultNavBarBarTintColor
             let currentAlpha = context.viewController(forKey: $0)?.navBarBackgroundAlpha ?? TTNavigationBar.defaultBackgroundAlpha
             
             self.setNeedsNavigationBarUpdate(barTintColor: currentColor)
             self.setNeedsNavigationBarUpdate(barBackgroundAlpha: currentAlpha)
         }
         
+        // 之后，取消返回手势
         if context.isCancelled {
             let cancelDuration: TimeInterval = context.transitionDuration * Double(context.percentComplete)
             UIView.animate(withDuration: cancelDuration) {
                 animations(.from)
             }
         } else {
+            // 之后，完成返回手势
             let finishDuration: TimeInterval = context.transitionDuration * Double(1 - context.percentComplete)
             UIView.animate(withDuration: finishDuration) {
                 animations(.to)
@@ -57,6 +59,7 @@ extension UINavigationController: UINavigationBarDelegate {
         }
     }
     
+    /// swizzling system method: _updateInteractiveTransition
     @objc func tt_updateInteractiveTransition(_ percentComplete: CGFloat) {
         guard let topVc = topViewController,
             let coor = topVc.transitionCoordinator else {
@@ -67,6 +70,7 @@ extension UINavigationController: UINavigationBarDelegate {
         let fromVc = coor.viewController(forKey: .from)
         let toVc = coor.viewController(forKey: .to)
         updateNavigationBar(from: fromVc, to: toVc, progress: percentComplete)
+        
         tt_updateInteractiveTransition(percentComplete)
     }
 }
@@ -108,18 +112,18 @@ extension UINavigationController: TTFatherAwakeProtocol {
     }
     
     private func updateNavigationBar(from fromVc: UIViewController?, to toVc: UIViewController?, progress: CGFloat) {
-        let fromBarTintColor = fromVc?.navBarBarTintColor ?? TTNavigationBar.defaultBarTintColor
-        let toBarTintColor = toVc?.navBarBarTintColor ?? TTNavigationBar.defaultBarTintColor
+        let fromBarTintColor = fromVc?.navBarBarTintColor ?? TTNavigationBar.defaultNavBarBarTintColor
+        let toBarTintColor = toVc?.navBarBarTintColor ?? TTNavigationBar.defaultNavBarBarTintColor
         let newBarTintColor = TTNavigationBar.middleColor(from: fromBarTintColor, to: toBarTintColor, percent: progress)
         setNeedsNavigationBarUpdate(barTintColor: newBarTintColor)
         
-        let fromTintColor = fromVc?.navBarTintColor ?? TTNavigationBar.defaultTintColor
-        let toTintColor = toVc?.navBarTintColor ?? TTNavigationBar.defaultTintColor
+        let fromTintColor = fromVc?.navBarTintColor ?? TTNavigationBar.defaultNavBarTintColor
+        let toTintColor = toVc?.navBarTintColor ?? TTNavigationBar.defaultNavBarTintColor
         let newTintColor = TTNavigationBar.middleColor(from: fromTintColor, to: toTintColor, percent: progress)
         setNeedsNavigationBarUpdate(tintColor: newTintColor)
         
-        let fromTitleColor = fromVc?.navBarTitleColor ?? TTNavigationBar.defaultBarTitleColor
-        let toTitleColor = toVc?.navBarTitleColor ?? TTNavigationBar.defaultBarTitleColor
+        let fromTitleColor = fromVc?.navBarTitleColor ?? TTNavigationBar.defaultNavBarTitleColor
+        let toTitleColor = toVc?.navBarTitleColor ?? TTNavigationBar.defaultNavBarTitleColor
         let newTitleColor = TTNavigationBar.middleColor(from: fromTitleColor, to: toTitleColor, percent: progress)
         setNeedsNavigationBarUpdate(titleColor: newTitleColor)
         
@@ -128,6 +132,8 @@ extension UINavigationController: TTFatherAwakeProtocol {
         let newAlpha = TTNavigationBar.middleAlpha(from: fromAlpha, to: toAlpha, percent: progress)
         setNeedsNavigationBarUpdate(barBackgroundAlpha: newAlpha)
     }
+    
+    // MARK: - call swizzling methods active 主动调用交换方法
     
     private static let onceToken = UUID().uuidString
     static func fatherAwake() {
@@ -150,7 +156,7 @@ extension UINavigationController: TTFatherAwakeProtocol {
     }
     
     // MARK: - swizzling pop & push
-    struct Properties {
+    private struct Properties {
         static let duration = 0.13
         static var displayCount = 0
         static var progress: CGFloat {
@@ -160,10 +166,12 @@ extension UINavigationController: TTFatherAwakeProtocol {
         }
     }
     
+    /// swizzling system method: popToViewController
     @objc func tt_popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         setNeedsNavigationBarUpdate(titleColor: viewController.navBarTitleColor)
         var displayLink: CADisplayLink? = CADisplayLink(target: self, selector: #selector(needDisplay))
         // UITrackingRunLoopMode: 界面跟踪 Mode，用于 ScrollView 追踪触摸滑动，保证界面滑动时不受其他 Mode 影响
+        // NSRunLoopCommonModes contains kCFRunLoopDefaultMode and UITrackingRunLoopMode
         displayLink?.add(to: RunLoop.current, forMode: .common)
         
         CATransaction.setCompletionBlock {
@@ -178,6 +186,7 @@ extension UINavigationController: TTFatherAwakeProtocol {
         return vcs
     }
     
+    /// swizzling system method: popToRootViewControllerAnimated
     @objc func tt_popToRootViewController(animated: Bool) -> [UIViewController]? {
         var displayLink: CADisplayLink? = CADisplayLink(target: self, selector: #selector(needDisplay))
         displayLink?.add(to: RunLoop.current, forMode: .common)
