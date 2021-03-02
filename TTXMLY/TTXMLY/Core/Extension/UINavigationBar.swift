@@ -38,30 +38,33 @@ extension UINavigationBar {
         }
     }
     
+    /// set navigationBar backgroundImage
     func tt_setBackgroundImage(image: UIImage) {
         backgroundView?.removeFromSuperview()
         backgroundView = nil
         if backgroundImageView == nil {
             setBackgroundImage(UIImage(), for: .default)
-            backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: Size.navBarH))
+            backgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: Constants.Sizes.navBarH))
             backgroundImageView?.autoresizingMask = .flexibleWidth
             subviews.first?.insertSubview(backgroundImageView ?? UIImageView(), at: 0)
         }
         backgroundImageView?.image = image
     }
     
+    /// set navigationBar barTintColor
     func tt_setBackgroundColor(color: UIColor) {
         backgroundImageView?.removeFromSuperview()
         backgroundImageView = nil
         if backgroundView == nil {
             setBackgroundImage(UIImage(), for: .default)
-            backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: Size.navBarH))
+            backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: Constants.Sizes.navBarH))
             backgroundView?.autoresizingMask = .flexibleWidth
             subviews.first?.insertSubview(backgroundView ?? UIView(), at: 0)
         }
         backgroundView?.backgroundColor = color
     }
     
+    /// set _UIBarBackground alpha (_UIBarBackground subviews alpha <= _UIBarBackground alpha)
     func tt_setBackgroundAlpha(alpha: CGFloat) {
         if let backgroundView = subviews.first {
             if #available(iOS 11.0, *) {
@@ -75,7 +78,7 @@ extension UINavigationBar {
     }
     
     /// 设置导航栏所有barButtonItem的 alpha
-    func tt_setBarButtonItemAlpha(alpha: CGFloat, hasSystemBackIndicator: Bool) {
+    func tt_setBarButtonItemsAlpha(alpha: CGFloat, hasSystemBackIndicator: Bool) {
         for view in subviews {
             if hasSystemBackIndicator {
                 // UIBarBackground/_UINavigationBarBackground对应的view是系统导航栏，不需要改变其透明度
@@ -112,7 +115,7 @@ extension UINavigationBar {
     
     /// 设置导航栏在垂直方向上平移多少距离
     func tt_setTranslationY(y translationY: CGFloat) {
-        transform = CGAffineTransform.init(translationX: 0, y: translationY)
+        transform = CGAffineTransform(translationX: 0, y: translationY)
     }
     
     func tt_getTranslationY() -> CGFloat {
@@ -138,24 +141,24 @@ extension UINavigationBar: TTAwakeProtocol {
     }
     
     // MARK: - swizzling pop
-    @objc func tt_setTitleTextAttributes(new titleTextAttributes: [String: Any]?) {
-        guard var attributes = titleTextAttributes else { return }
+    @objc func tt_setTitleTextAttributes(_ newTitleTextAttributes: [String: Any]?) {
+        guard var attributes = newTitleTextAttributes else { return }
         
         guard let originTitleAttributes = titleTextAttributes else {
-            tt_setTitleTextAttributes(new: attributes)
+            tt_setTitleTextAttributes(attributes)
             return
         }
         
         var titleColor: UIColor?
         for attribute in originTitleAttributes {
-            if attribute.key == NSAttributedString.Key.foregroundColor.rawValue {
+            if attribute.key == NSAttributedString.Key.foregroundColor {
                 titleColor = attribute.value as? UIColor
                 break
             }
         }
         
         guard let originTitleColor = titleColor else {
-            tt_setTitleTextAttributes(new: attributes)
+            tt_setTitleTextAttributes(attributes)
             return
         }
         
@@ -163,6 +166,6 @@ extension UINavigationBar: TTAwakeProtocol {
             attributes.updateValue(originTitleColor, forKey: NSAttributedString.Key.foregroundColor.rawValue)
         }
         
-        tt_setTitleTextAttributes(new: attributes)
+        tt_setTitleTextAttributes(attributes)
     }
 }
