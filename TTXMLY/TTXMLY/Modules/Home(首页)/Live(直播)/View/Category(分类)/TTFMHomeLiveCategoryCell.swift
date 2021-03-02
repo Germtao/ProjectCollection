@@ -31,7 +31,7 @@ class TTFMHomeLiveCategoryCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: (Size.screenW - 30) / 5, height: 90)
+        layout.itemSize = CGSize(width: (Constants.Sizes.screenW - 30) / 5, height: 90)
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
         view.delegate = self
@@ -48,7 +48,7 @@ extension TTFMHomeLiveCategoryCell {
         contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview()
-            make.width.equalTo(Size.screenW - 30)
+            make.width.equalTo(Constants.Sizes.screenW - 30)
             make.height.equalTo(90)
         }
     }

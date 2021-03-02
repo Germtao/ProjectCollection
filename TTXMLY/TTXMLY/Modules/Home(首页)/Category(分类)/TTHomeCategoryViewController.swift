@@ -26,7 +26,7 @@ class TTHomeCategoryViewController: UIViewController {
         view.delegate = self
         view.dataSource = self
         view.showsVerticalScrollIndicator = false
-        view.backgroundColor = Color.sectionFooter
+        view.backgroundColor = Constants.Colors.sectionFooter
         view.register(TTFMCategoryCell.self, forCellWithReuseIdentifier: TTFMCategoryCell.reuseIdentifier)
         view.register(TTFMCategoryHeaderView.self,
                       forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,

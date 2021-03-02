@@ -30,7 +30,7 @@ class TTFMCategoryCell: UICollectionViewCell {
             switch indexPath.section {
             case 0, 1, 2:
                 if indexPath.item == 0 {
-                    titleLabel.font = TTFont.font(13)
+                    titleLabel.font = Constants.Fonts.font(13)
                 } else {
                     imageView.snp.updateConstraints { (make) in
                         make.left.equalToSuperview()
@@ -60,7 +60,7 @@ class TTFMCategoryCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(15)
+        label.font = Constants.Fonts.font(15)
         return label
     }()
 }
@@ -70,7 +70,7 @@ extension TTFMCategoryCell {
         
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 4
-        contentView.layer.borderColor = Color.categoryCell.cgColor
+        contentView.layer.borderColor = Constants.Colors.categoryCell.cgColor
         contentView.layer.borderWidth = 0.5
         contentView.layer.masksToBounds = true
         

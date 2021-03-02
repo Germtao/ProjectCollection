@@ -35,13 +35,13 @@ class TTFMHomeVipCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(17)
+        label.font = Constants.Fonts.font(17)
         return label
     }()
     
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(15)
+        label.font = Constants.Fonts.font(15)
         label.textColor = UIColor.gray
         return label
     }()
@@ -49,7 +49,7 @@ class TTFMHomeVipCell: UITableViewCell {
     /// 播放量
     private lazy var playCountLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = .gray
         return label
     }()
@@ -57,7 +57,7 @@ class TTFMHomeVipCell: UITableViewCell {
     /// 集数
     private lazy var tracksLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = .gray
         return label
     }()

@@ -21,7 +21,7 @@ class TTFMVipEnjoyCell: UICollectionViewCell {
         let text = NSMutableAttributedString(string: "")
         text.append(NSAttributedString(string: " \(model.displayDiscountedPrice ?? "0") ",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.red,
-                         NSAttributedString.Key.font: TTFont.font(13)]))
+                         NSAttributedString.Key.font: Constants.Fonts.font(13)]))
         happinessLabel.attributedText = text
     }
     
@@ -38,7 +38,7 @@ class TTFMVipEnjoyCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(16)
+        label.font = Constants.Fonts.font(16)
         label.numberOfLines = 0
         return label
     }()
@@ -46,16 +46,16 @@ class TTFMVipEnjoyCell: UICollectionViewCell {
     /// 喜点label
     private lazy var happinessLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(13)
+        label.font = Constants.Fonts.font(13)
         return label
     }()
     
     /// 会员免费
     private lazy var freeLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(12)
+        label.font = Constants.Fonts.font(12)
         label.text = "会员免费"
-        label.backgroundColor = Color.vipFreeBg
+        label.backgroundColor = Constants.Colors.vipFreeBg
         label.textColor = .white
         label.layer.cornerRadius = 2
         label.layer.masksToBounds = true

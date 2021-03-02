@@ -26,7 +26,7 @@ class TTFMCategoryHeaderView: UICollectionReusableView {
     
     private lazy var view: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.button
+        view.backgroundColor = Constants.Colors.button
         return view
     }()
     
@@ -39,7 +39,7 @@ class TTFMCategoryHeaderView: UICollectionReusableView {
 
 extension TTFMCategoryHeaderView {
     private func setupUI() {
-        backgroundColor = Color.sectionFooter
+        backgroundColor = Constants.Colors.sectionFooter
         addSubview(view)
         addSubview(titleLabel)
         

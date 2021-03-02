@@ -13,7 +13,7 @@ class TTFMRecommendFooterView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = Color.sectionFooter
+        backgroundColor = Constants.Colors.sectionFooter
     }
     
     required init?(coder aDecoder: NSCoder) {

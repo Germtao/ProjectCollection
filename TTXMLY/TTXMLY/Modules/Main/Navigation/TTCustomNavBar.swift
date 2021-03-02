@@ -95,7 +95,7 @@ class TTCustomNavBar: UIView {
     // MARK: - UI
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.Colors.defaultTitle
+        label.textColor = Constants.Colors.black
         label.font = Constants.Fonts.defaultFont
         label.textAlignment = .center
         label.isHidden = true
@@ -149,7 +149,7 @@ extension TTCustomNavBar {
         }
     }
     
-    func tt_setLeftButton(title: String, titleColor: UIColor = Constants.Colors.defaultTitle) {
+    func tt_setLeftButton(title: String, titleColor: UIColor = Constants.Colors.black) {
         tt_setupButton(leftButton, title: title, titleColor: titleColor)
     }
     
@@ -163,7 +163,7 @@ extension TTCustomNavBar {
         }
     }
     
-    func tt_setRightButton(title: String, titleColor: UIColor = Constants.Colors.defaultTitle) {
+    func tt_setRightButton(title: String, titleColor: UIColor = Constants.Colors.black) {
         tt_setupButton(rightButton, title: title, titleColor: titleColor)
     }
     

@@ -59,6 +59,6 @@ extension TTFMRecommendForUCell: UICollectionViewDataSource {
 
 extension TTFMRecommendForUCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Size.screenW - 30, height: 100)
+        return CGSize(width: Constants.Sizes.screenW - 30, height: 100)
     }
 }

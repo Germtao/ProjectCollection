@@ -13,7 +13,7 @@ class TTFMVipFooterView: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = Color.sectionFooter
+        contentView.backgroundColor = Constants.Colors.sectionFooter
     }
     
     required init?(coder aDecoder: NSCoder) {

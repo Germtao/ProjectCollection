@@ -106,7 +106,7 @@ extension TTFMHomeLiveViewModel {
     }
     
     func sizeForItem(at indexPath: IndexPath) -> CGSize {
-        let itemW = Size.screenW - 30
+        let itemW = Constants.Sizes.screenW - 30
         switch indexPath.section {
         case TTFMHomeLiveSectionType.category.rawValue:
             return CGSize(width: itemW, height: 90)
@@ -115,14 +115,14 @@ extension TTFMHomeLiveViewModel {
         case TTFMHomeLiveSectionType.rank.rawValue:
             return CGSize(width: itemW, height: 70)
         default:
-            return CGSize(width: (Size.screenW - 40) / 2, height: 230)
+            return CGSize(width: (Constants.Sizes.screenW - 40) / 2, height: 230)
         }
     }
     
     func sizeForHeader(in section: Int) -> CGSize {
         switch section {
         case TTFMHomeLiveSectionType.live.rawValue:
-            return CGSize(width: Size.screenW, height: 40)
+            return CGSize(width: Constants.Sizes.screenW, height: 40)
         default:
             return .zero
         }
@@ -132,7 +132,7 @@ extension TTFMHomeLiveViewModel {
         switch section {
         case TTFMHomeLiveSectionType.banner.rawValue,
              TTFMHomeLiveSectionType.rank.rawValue:
-            return CGSize(width: Size.screenW, height: 10)
+            return CGSize(width: Constants.Sizes.screenW, height: 10)
         default:
             return .zero
         }

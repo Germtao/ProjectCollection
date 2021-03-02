@@ -39,9 +39,9 @@ class TTFMVipCategoryCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: Size.screenW / 5, height: 80)
+        layout.itemSize = CGSize(width: Constants.Sizes.screenW / 5, height: 80)
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.contentSize = CGSize(width: Size.screenW, height: 80)
+        view.contentSize = CGSize(width: Constants.Sizes.screenW, height: 80)
         view.delegate = self
         view.dataSource = self
         view.backgroundColor = .white

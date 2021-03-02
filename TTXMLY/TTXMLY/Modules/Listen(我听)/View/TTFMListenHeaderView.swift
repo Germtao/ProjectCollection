@@ -22,7 +22,7 @@ class TTFMListenHeaderView: UIView {
     
     private lazy var downView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.sectionFooter
+        view.backgroundColor = Constants.Colors.sectionFooter
         return view
     }()
     
@@ -49,14 +49,14 @@ extension TTFMListenHeaderView {
             
             let label = UILabel()
             label.textAlignment = .center
-            label.font = TTFont.font(15)
+            label.font = Constants.Fonts.font(15)
             label.textColor = .gray
             label.text = titleArr[index]
             addSubview(label)
             
             let numLabel = UILabel()
             numLabel.textAlignment = .center
-            numLabel.font = TTFont.font(14)
+            numLabel.font = Constants.Fonts.font(14)
             numLabel.textColor = .gray
             numLabel.text = numArr[index]
             addSubview(numLabel)

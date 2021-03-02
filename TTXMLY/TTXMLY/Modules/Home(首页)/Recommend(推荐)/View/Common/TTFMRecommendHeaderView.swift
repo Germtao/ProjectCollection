@@ -34,13 +34,13 @@ class TTFMRecommendHeaderView: UICollectionReusableView {
     // MARK: - 懒加载
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(20)
+        label.font = Constants.Fonts.font(20)
         return label
     }()
     
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(15)
+        label.font = Constants.Fonts.font(15)
         label.textColor = UIColor.lightGray
         label.textAlignment = .right
         return label
@@ -50,7 +50,7 @@ class TTFMRecommendHeaderView: UICollectionReusableView {
         let button = UIButton(type: .custom)
         button.setTitle("更多 >", for: .normal)
         button.setTitleColor(.gray, for: .normal)
-        button.titleLabel?.font = TTFont.font(15)
+        button.titleLabel?.font = Constants.Fonts.font(15)
         button.addTarget(self, action: #selector(moreButtonClicked), for: .touchUpInside)
         return button
     }()

@@ -49,23 +49,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// MARK: - 私有方法
+// MARK: - 设置 Tab Bar
+
 extension AppDelegate {
     /// 设置tabBar style
     private func setupTabBarStyle(delegate: UITabBarControllerDelegate?) -> ESTabBarController {
         let tabBarController = ESTabBarController()
         tabBarController.delegate = delegate
         tabBarController.title = "Irregularity"
-        tabBarController.tabBar.shadowImage = UIImage(named: "transparent")
-        tabBarController.shouldHijackHandler = {
-            tabBarController, viewController, index in
+        tabBarController.tabBar.shadowImage = #imageLiteral(resourceName: "transparent")
+        tabBarController.shouldHijackHandler = { (tabBarController, viewController, index) in
             if index == 2 {
                 return true
             }
             return false
         }
-        tabBarController.didHijackHandler = {
-            tabBarController, viewController, index in
+        tabBarController.didHijackHandler = { (tabBarController, viewController, index) in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
                 let warning = MessageView.viewFromNib(layout: .cardView)
                 warning.configureTheme(.warning)
@@ -80,23 +79,17 @@ extension AppDelegate {
             })
         }
         
-        let home = TTHomeViewController()
-        let listen = TTListenViewController()
-        let play = TTPlayViewController()
-        let find = TTFindViewController()
-        let mine = TTMineViewController()
+        let homeNav = TTNavigationController(rootViewController: TTHomeViewController())
+        let listenNav = TTNavigationController(rootViewController: TTListenViewController())
+        let playNav = TTNavigationController(rootViewController: TTPlayViewController())
+        let findNav = TTNavigationController(rootViewController: TTFindViewController())
+        let mineNav = TTNavigationController(rootViewController: TTMineViewController())
         
-        home.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "首页", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_s"))
-        listen.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "我听", image: UIImage(named: "listen"), selectedImage: UIImage(named: "listen_s"))
-        play.tabBarItem = ESTabBarItem(TTFMIrregularityContentView(), title: nil, image: UIImage(named: "tab_play"), selectedImage: UIImage(named: "tab_play"))
-        find.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "发现", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_s"))
-        mine.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "我的", image: UIImage(named: "mine"), selectedImage: UIImage(named: "mine_s"))
-        
-        let homeNav = TTNavigationController(rootViewController: home)
-        let listenNav = TTNavigationController(rootViewController: listen)
-        let playNav = TTNavigationController(rootViewController: play)
-        let findNav = TTNavigationController(rootViewController: find)
-        let mineNav = TTNavigationController(rootViewController: mine)
+        homeNav.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "首页", image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "home_s"))
+        listenNav.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "我听", image: #imageLiteral(resourceName: "listen"), selectedImage: #imageLiteral(resourceName: "listen_s"))
+        playNav.tabBarItem = ESTabBarItem(TTFMIrregularityContentView(), title: nil, image: #imageLiteral(resourceName: "tab_play"), selectedImage: #imageLiteral(resourceName: "tab_play"))
+        findNav.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "发现", image: #imageLiteral(resourceName: "find"), selectedImage: #imageLiteral(resourceName: "find_s"))
+        mineNav.tabBarItem = ESTabBarItem(TTFMIrregularityBasicContentView(), title: "我的", image: #imageLiteral(resourceName: "mine"), selectedImage: #imageLiteral(resourceName: "mine_s"))
         
         tabBarController.viewControllers = [homeNav, listenNav, playNav, findNav, mineNav]
         

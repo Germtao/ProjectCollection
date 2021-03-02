@@ -43,8 +43,8 @@ class TTFMRecommendLiveCell: UICollectionViewCell {
     private lazy var changeButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("换一批", for: .normal)
-        button.setTitleColor(Color.button, for: .normal)
-        button.backgroundColor = Color.buttonBg
+        button.setTitleColor(Constants.Colors.button, for: .normal)
+        button.backgroundColor = Constants.Colors.buttonBg
         button.layer.cornerRadius = 5.0
         button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(changeButtonClicked), for: .touchUpInside)
@@ -103,6 +103,6 @@ extension TTFMRecommendLiveCell: UICollectionViewDelegate, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (Size.screenW - 55) / 3, height: 180)
+        return CGSize(width: (Constants.Sizes.screenW - 55) / 3, height: 180)
     }
 }

@@ -10,10 +10,11 @@ import UIKit
 
 struct Constants {
     struct Colors {
-        static let defaultTitle = UIColor.black
+        static let black = UIColor.black
         static let defaultBackground = UIColor.white
-        static let line = UIColor(red: (218.0/255.0), green: (218.0/255.0), blue: (218.0/255.0), alpha: 1.0)
-        static let navBarTint = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
+        static let line = UIColor(red: 218.0/255.0, green: 218.0/255.0, blue: 218.0/255.0, alpha: 1.0)
+        static let navBarBarTint = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
+        static let navBarTint = UIColor(red: 242/255.0, green: 77/255.0, blue: 51/255.0, alpha: 1)
         static let button = UIColor(red: 242/255.0, green: 77/255.0, blue: 51/255.0, alpha: 1)
         static let buttonBg = UIColor(red: 254/255.0, green: 232/255.0, blue: 227/255.0, alpha: 1)
         

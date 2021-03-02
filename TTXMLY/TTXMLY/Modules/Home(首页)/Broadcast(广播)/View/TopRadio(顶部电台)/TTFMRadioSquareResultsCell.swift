@@ -69,7 +69,7 @@ extension TTFMRadioSquareResultsCell: UICollectionViewDataSource {
 
 extension TTFMRadioSquareResultsCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Size.screenW / 5, height: contentView.frame.height)
+        return CGSize(width: Constants.Sizes.screenW / 5, height: contentView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

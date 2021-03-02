@@ -49,8 +49,8 @@ extension TTHomeVIPViewController {
         
         tableView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview()
-            make.width.equalTo(Size.screenW)
-            make.height.equalTo(Size.screenH - Size.navBarH - Size.tabBarH)
+            make.width.equalTo(Constants.Sizes.screenW)
+            make.height.equalTo(Constants.Sizes.screenH - Constants.Sizes.navBarH - Constants.Sizes.tabBarH)
         }
     }
     

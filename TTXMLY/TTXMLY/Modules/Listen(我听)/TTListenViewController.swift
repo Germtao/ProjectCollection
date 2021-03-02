@@ -20,7 +20,7 @@ class TTListenViewController: UIViewController {
     // MARK: - 懒加载
     private lazy var headerView = TTFMListenHeaderView(frame: CGRect(x: 0,
                                                                      y: 0,
-                                                                     width: Size.screenW,
+                                                                     width: Constants.Sizes.screenW,
                                                                      height: 120))
     private lazy var viewControllers = [TTFMListenSubscribeVC(),
                                         TTFMListenChannelVC(),

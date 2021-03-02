@@ -32,7 +32,7 @@ class TTFMVipHotCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(16)
+        label.font = Constants.Fonts.font(16)
         label.numberOfLines = 0
         return label
     }()

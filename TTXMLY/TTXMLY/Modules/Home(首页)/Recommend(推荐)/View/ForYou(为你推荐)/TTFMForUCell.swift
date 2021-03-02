@@ -24,20 +24,20 @@ class TTFMForUCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(17)
+        label.font = Constants.Fonts.font(17)
         return label
     }()
     
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = UIColor.gray
         return label
     }()
     
     private lazy var countLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = UIColor.gray
         return label
     }()

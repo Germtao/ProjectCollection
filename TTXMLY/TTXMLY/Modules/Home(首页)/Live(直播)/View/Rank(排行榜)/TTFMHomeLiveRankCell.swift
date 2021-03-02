@@ -35,10 +35,10 @@ class TTFMHomeLiveRankCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: Size.screenW - 30, height: self.frame.height)
+        layout.itemSize = CGSize(width: Constants.Sizes.screenW - 30, height: self.frame.height)
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = Color.sectionFooter
+        view.backgroundColor = Constants.Colors.sectionFooter
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
         view.isPagingEnabled = true

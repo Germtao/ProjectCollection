@@ -61,9 +61,9 @@ extension TTFMCategoryViewModel {
     func sizeForItem(at indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0, 1, 2:
-            return CGSize(width: (Size.screenW - 10) / 4, height: 40)
+            return CGSize(width: (Constants.Sizes.screenW - 10) / 4, height: 40)
         default:
-            return CGSize(width: (Size.screenW - 7.5) / 3, height: 40)
+            return CGSize(width: (Constants.Sizes.screenW - 7.5) / 3, height: 40)
         }
     }
     
@@ -72,11 +72,11 @@ extension TTFMCategoryViewModel {
         case 0, 1, 2:
             return .zero
         default:
-            return CGSize(width: Size.screenH, height: 30)
+            return CGSize(width: Constants.Sizes.screenH, height: 30)
         }
     }
     
     func sizeForFooter(in section: Int) -> CGSize {
-        return CGSize(width: Size.screenW, height: 8)
+        return CGSize(width: Constants.Sizes.screenW, height: 8)
     }
 }

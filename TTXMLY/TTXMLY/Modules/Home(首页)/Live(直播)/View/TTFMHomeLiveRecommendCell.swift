@@ -21,7 +21,7 @@ class TTFMHomeLiveRecommendCell: UICollectionViewCell {
         categoryLabel.text = model.categoryName
         let w = (model.categoryName! as NSString).boundingRect(with: CGSize(width: Double(MAXFLOAT), height: 20.0),
                                                                options: .usesLineFragmentOrigin,
-                                                               attributes: [NSAttributedString.Key.font: TTFont.font(12)],
+                                                               attributes: [NSAttributedString.Key.font: Constants.Fonts.font(12)],
                                                                context: nil).width
         categoryLabel.snp.updateConstraints { (make) in
             make.width.equalTo(w + 8)
@@ -47,13 +47,13 @@ class TTFMHomeLiveRecommendCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(16)
+        label.font = Constants.Fonts.font(16)
         return label
     }()
     
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = .gray
         label.numberOfLines = 0
         return label
@@ -61,7 +61,7 @@ class TTFMHomeLiveRecommendCell: UICollectionViewCell {
     
     private lazy var categoryLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(12)
+        label.font = Constants.Fonts.font(12)
         label.textColor = .white
         label.backgroundColor = .orange
         label.layer.cornerRadius = 4

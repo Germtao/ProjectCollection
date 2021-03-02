@@ -30,7 +30,7 @@ class TTFMVipCategoryButtonCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(13)
+        label.font = Constants.Fonts.font(13)
         label.textAlignment = .center
         return label
     }()

@@ -38,9 +38,9 @@ class TTHomeViewController: UIViewController {
             self.addChild(vc)
         }
         let pageView = TTPageView(frame: CGRect(x: 0,
-                                                y: Size.navBarH,
-                                                width: Size.screenW,
-                                                height: Size.screenH - Size.navBarH - Size.tabBarH),
+                                                y: Constants.Sizes.navBarH,
+                                                width: Constants.Sizes.screenW,
+                                                height: Constants.Sizes.screenH - Constants.Sizes.navBarH - Constants.Sizes.tabBarH),
                                   style: style,
                                   titles: titles,
                                   childViewControllers: viewControllers)

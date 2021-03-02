@@ -56,7 +56,7 @@ extension TTFMVipBannerCell {
         carouselView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        carouselView.itemSize = CGSize(width: Size.screenW - 60, height: 140)
+        carouselView.itemSize = CGSize(width: Constants.Sizes.screenW - 60, height: 140)
     }
 }
 

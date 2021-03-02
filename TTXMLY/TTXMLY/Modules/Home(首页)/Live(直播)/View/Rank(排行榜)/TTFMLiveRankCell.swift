@@ -42,7 +42,7 @@ class TTFMLiveRankCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(18)
+        label.font = Constants.Fonts.font(18)
         return label
     }()
     

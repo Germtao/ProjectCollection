@@ -17,9 +17,9 @@ class TTNavigationController: UINavigationController {
     }
     
     private func setupNavBar() {
-        TTNavigationBar.defaultBarTintColor = Constants.Colors.navBarTint
-        TTNavigationBar.defaultTintColor = Constants.Colors.defaultBackground
-        TTNavigationBar.defaultBarTitleColor = Constants.Colors.defaultTitle
+        TTNavigationBar.defaultNavBarBarTintColor = Constants.Colors.navBarBarTint
+        TTNavigationBar.defaultNavBarTintColor = Constants.Colors.navBarTint
+        TTNavigationBar.defaultNavBarTitleColor = Constants.Colors.black
         TTNavigationBar.defaultShadowImageHidden = true
     }
     

@@ -33,7 +33,7 @@ class TTFMReCommendOneKeyListenCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: (Size.screenW - 45) / 3, height: 120)
+        layout.itemSize = CGSize(width: (Constants.Sizes.screenW - 45) / 3, height: 120)
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
@@ -48,8 +48,8 @@ class TTFMReCommendOneKeyListenCell: UICollectionViewCell {
     private lazy var changeButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("换一批", for: .normal)
-        button.setTitleColor(Color.button, for: .normal)
-        button.backgroundColor = Color.buttonBg
+        button.setTitleColor(Constants.Colors.button, for: .normal)
+        button.backgroundColor = Constants.Colors.buttonBg
         button.layer.cornerRadius = 5.0
         button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(changeButtonClicked), for: .touchUpInside)

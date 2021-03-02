@@ -32,7 +32,7 @@ class TTFMOneKeyListenCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(15)
+        label.font = Constants.Fonts.font(15)
         label.textAlignment = .center
         return label
     }()

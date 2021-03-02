@@ -49,16 +49,16 @@ class TTFMAudioBookCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(17)
+        label.font = Constants.Fonts.font(17)
         return label
     }()
     
     /// 是否完结label
     private lazy var endLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(13)
+        label.font = Constants.Fonts.font(13)
         label.textColor = .white
-        label.backgroundColor = Color.endLabel
+        label.backgroundColor = Constants.Colors.endLabel
         label.layer.cornerRadius = 3
         label.layer.masksToBounds = true
         label.textAlignment = .center
@@ -68,7 +68,7 @@ class TTFMAudioBookCell: UICollectionViewCell {
     
     private lazy var subLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(15)
+        label.font = Constants.Fonts.font(15)
         label.textColor = .gray
         label.text = "说服力的积分乐"
         return label
@@ -77,7 +77,7 @@ class TTFMAudioBookCell: UICollectionViewCell {
     /// 播放量label
     private lazy var playCountLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = .gray
         label.text = "> 2.5亿 2019集"
         return label
@@ -86,7 +86,7 @@ class TTFMAudioBookCell: UICollectionViewCell {
     /// 集数label
     private lazy var episodeCountLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(14)
+        label.font = Constants.Fonts.font(14)
         label.textColor = .gray
         return label
     }()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let newsCellWidth: CGFloat = Size.screenW - 150.0
+private let newsCellWidth: CGFloat = Constants.Sizes.screenW - 150.0
 private let newsCellHeight: CGFloat = 40.0
 
 class TTFMRecommendNewsCell: UICollectionViewCell {

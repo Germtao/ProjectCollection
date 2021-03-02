@@ -28,7 +28,7 @@ class TTFMVipHeaderView: UITableViewHeaderFooterView {
     // MARK: - lazy load
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = TTFont.font(20)
+        label.font = Constants.Fonts.font(20)
         return label
     }()
     
@@ -36,7 +36,7 @@ class TTFMVipHeaderView: UITableViewHeaderFooterView {
         let button = UIButton(type: .custom)
         button.setTitle("更多 >", for: .normal)
         button.setTitleColor(.gray, for: .normal)
-        button.titleLabel?.font = TTFont.font(15)
+        button.titleLabel?.font = Constants.Fonts.font(15)
         return button
     }()
 }

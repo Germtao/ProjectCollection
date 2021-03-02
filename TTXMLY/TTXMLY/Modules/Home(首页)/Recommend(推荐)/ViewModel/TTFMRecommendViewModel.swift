@@ -123,26 +123,26 @@ extension TTFMRecommendViewModel {
         let itemNums = count / 3
         let moduleType = homeRecommendList?[indexPath.section].moduleType
         if moduleType == "focus" {
-            return CGSize(width: Size.screenW, height: 150)
+            return CGSize(width: Constants.Sizes.screenW, height: 150)
         } else if moduleType == "square" {
-            return CGSize(width: Size.screenW, height: 160)
+            return CGSize(width: Constants.Sizes.screenW, height: 160)
         } else if moduleType == "topBuzz" {
-            return CGSize(width: Size.screenW, height: 50)
+            return CGSize(width: Constants.Sizes.screenW, height: 50)
         } else if moduleType == "guessYouLike" ||
             moduleType == "paidCategory" ||
             moduleType == "categoriesForLong" ||
             moduleType == "cityCategory" ||
             moduleType == "live" {
-            return CGSize(width: Size.screenW, height: headerAndFooterHeight + CGFloat(180 * itemNums))
+            return CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(180 * itemNums))
         } else if moduleType == "categoriesForShort" ||
             moduleType == "playlist" ||
             moduleType == "categoriesForExplore" ||
             moduleType == "microLesson" {
-            return recommendList?.count == 0 ? CGSize.zero : CGSize(width: Size.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
+            return recommendList?.count == 0 ? CGSize.zero : CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
         } else if moduleType == "ad" {
-            return homeRecommendList?[indexPath.section].list?.count == 0 ? CGSize.zero : CGSize(width: Size.screenW, height: 240)
+            return homeRecommendList?[indexPath.section].list?.count == 0 ? CGSize.zero : CGSize(width: Constants.Sizes.screenW, height: 240)
         } else if moduleType == "oneKeyListen" {
-            return CGSize(width: Size.screenW, height: 180)
+            return CGSize(width: Constants.Sizes.screenW, height: 180)
         } else {
             return .zero
         }
@@ -159,7 +159,7 @@ extension TTFMRecommendViewModel {
             return .zero
         }
         
-        return CGSize(width: Size.screenW, height: 40.0)
+        return CGSize(width: Constants.Sizes.screenW, height: 40.0)
     }
     
     /// 分区footer尺寸
@@ -170,6 +170,6 @@ extension TTFMRecommendViewModel {
             return .zero
         }
         
-        return CGSize(width: Size.screenW, height: 10.0)
+        return CGSize(width: Constants.Sizes.screenW, height: 10.0)
     }
 }

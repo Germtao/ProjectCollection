@@ -118,11 +118,11 @@ extension TTFMHomeBroadcastViewModel {
     func sizeForItem(at indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case TTFMHomeBroadcastSectionType.radio.rawValue:
-            return CGSize(width: Size.screenW, height: 90)
+            return CGSize(width: Constants.Sizes.screenW, height: 90)
         case TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
-            return CGSize(width: (Size.screenW - 5) / 4, height: 45)
+            return CGSize(width: (Constants.Sizes.screenW - 5) / 4, height: 45)
         default:
-            return CGSize(width: Size.screenW, height: 120)
+            return CGSize(width: Constants.Sizes.screenW, height: 120)
         }
     }
     
@@ -132,7 +132,7 @@ extension TTFMHomeBroadcastViewModel {
              TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
             return .zero
         default:
-            return CGSize(width: Size.screenW, height: 40)
+            return CGSize(width: Constants.Sizes.screenW, height: 40)
         }
     }
     
@@ -142,7 +142,7 @@ extension TTFMHomeBroadcastViewModel {
              TTFMHomeBroadcastSectionType.expandableRadio.rawValue:
             return .zero
         default:
-            return CGSize(width: Size.screenW, height: 10)
+            return CGSize(width: Constants.Sizes.screenW, height: 10)
         }
     }
 }

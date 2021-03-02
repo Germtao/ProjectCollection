@@ -82,6 +82,6 @@ extension TTFMRecommendCarouselCell {
             make.left.top.right.equalToSuperview()
             make.height.equalTo(150)
         }
-        carouselView.itemSize = CGSize(width: Size.screenW - 60, height: 140)
+        carouselView.itemSize = CGSize(width: Constants.Sizes.screenW - 60, height: 140)
     }
 }

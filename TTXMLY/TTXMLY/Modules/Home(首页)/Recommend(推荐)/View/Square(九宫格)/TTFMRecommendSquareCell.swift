@@ -70,7 +70,7 @@ extension TTFMRecommendSquareCell: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension TTFMRecommendSquareCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (Size.screenW - 5) / 5, height: 80.0)
+        return CGSize(width: (Constants.Sizes.screenW - 5) / 5, height: 80.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
