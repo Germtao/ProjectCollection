@@ -10,57 +10,57 @@ import UIKit
 
 class TTNavigationBar {
     private struct AssociatedKeys {
-        static var defaultBarTintColor: UIColor = UIColor.white
-        static var defaultBarBackgroundImage: UIImage = UIImage()
-        static var defaultTintColor: UIColor = UIColor(red: 0, green: 0, blue: 0.478431, alpha: 1)
-        static var defaultBarTitleColor: UIColor = UIColor.black
+        static var defaultNavBarBarTintColor: UIColor = UIColor.white
+        static var defaultNavBarBackgroundImage: UIImage = UIImage()
+        static var defaultNavBarTintColor: UIColor = UIColor(red: 0, green: 0, blue: 0.478431, alpha: 1)
+        static var defaultNavBarTitleColor: UIColor = UIColor.black
         static var defaultStatusBarStyle: UIStatusBarStyle = .default
         static var defaultShadowImageHidden: Bool = false
     }
     
-    class var defaultBarTintColor: UIColor {
+    class var defaultNavBarBarTintColor: UIColor {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.defaultBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.defaultNavBarBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         get {
-            guard let color = objc_getAssociatedObject(self, &AssociatedKeys.defaultBarTintColor) as? UIColor else {
-                return AssociatedKeys.defaultBarTintColor
+            guard let color = objc_getAssociatedObject(self, &AssociatedKeys.defaultNavBarBarTintColor) as? UIColor else {
+                return AssociatedKeys.defaultNavBarBarTintColor
             }
             return color
         }
     }
     
-    class var defaultBarBackgroundImage: UIImage? {
+    class var defaultNavBarBackgroundImage: UIImage? {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.defaultBarBackgroundImage, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.defaultNavBarBackgroundImage, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         get {
-            guard let image = objc_getAssociatedObject(self, &AssociatedKeys.defaultBarBackgroundImage) as? UIImage else {
+            guard let image = objc_getAssociatedObject(self, &AssociatedKeys.defaultNavBarBackgroundImage) as? UIImage else {
                 return nil
             }
             return image
         }
     }
     
-    class var defaultTintColor: UIColor {
+    class var defaultNavBarTintColor: UIColor {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.defaultTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.defaultNavBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         get {
-            guard let color = objc_getAssociatedObject(self, &AssociatedKeys.defaultTintColor) as? UIColor else {
-                return AssociatedKeys.defaultTintColor
+            guard let color = objc_getAssociatedObject(self, &AssociatedKeys.defaultNavBarTintColor) as? UIColor else {
+                return AssociatedKeys.defaultNavBarTintColor
             }
             return color
         }
     }
     
-    class var defaultBarTitleColor: UIColor {
+    class var defaultNavBarTitleColor: UIColor {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.defaultBarTitleColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.defaultNavBarTitleColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         get {
-            guard let color = objc_getAssociatedObject(self, &AssociatedKeys.defaultBarTitleColor) as? UIColor else {
-                return AssociatedKeys.defaultBarTitleColor
+            guard let color = objc_getAssociatedObject(self, &AssociatedKeys.defaultNavBarTitleColor) as? UIColor else {
+                return AssociatedKeys.defaultNavBarTitleColor
             }
             return color
         }
