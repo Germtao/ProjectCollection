@@ -12,9 +12,10 @@ import Foundation
 extension DispatchQueue {
     private static var onceTracker = [String]()
     
-    // Executes a block of code, associated with a unique token, only once.
-    // The code is thread safe and will only execute the code once even in the presence of multithreaded calls.
+    /// 仅执行一次与唯一 token 关联的代码块
+    /// 该代码是线程安全的，即使存在多线程调用，也只会执行一次代码
     public class func once(token: String, block: () -> Void) {
+        // 保证被 objc_sync_enter 和 objc_sync_exit 包裹的代码可以有序同步地执行
         objc_sync_enter(self)
         // 作用域结束后执行defer中代码
         defer {
