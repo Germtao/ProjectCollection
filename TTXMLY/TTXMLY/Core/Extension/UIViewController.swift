@@ -16,19 +16,20 @@ extension UIViewController: TTAwakeProtocol {
         
         static var navBarBackgroundImage: UIImage = UIImage()
         
-        static var navBarTintColor: UIColor = TTNavigationBar.defaultTintColor
-        static var navBarBarTintColor: UIColor = TTNavigationBar.defaultBarTintColor
-        static var navBarTitleColor: UIColor = TTNavigationBar.defaultBarTitleColor
+        static var navBarTintColor: UIColor = TTNavigationBar.defaultNavBarTintColor
+        static var navBarBarTintColor: UIColor = TTNavigationBar.defaultNavBarBarTintColor
+        static var navBarTitleColor: UIColor = TTNavigationBar.defaultNavBarTitleColor
         static var navBarBackgroundAlpha: CGFloat = TTNavigationBar.defaultBackgroundAlpha
         static var statusBarStyle: UIStatusBarStyle = TTNavigationBar.defaultStatusBarStyle
         static var navBarShadowImageHidden: Bool = false
         
-        static var customNavBar: UINavigationBar = UINavigationBar()
+        static var customNavBar = UINavigationBar()
     }
     
+    /// fromVc 推送到 currentVc 之前，currentVc 无法更改 navigationBar barTintColor
     var pushToCurrentVcFinished: Bool {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.pushToCurrentVcFinished, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.pushToCurrentVcFinished, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
         get {
             guard let finished = objc_getAssociatedObject(self, &AssociatedKeys.pushToCurrentVcFinished) as? Bool else {
@@ -40,7 +41,7 @@ extension UIViewController: TTAwakeProtocol {
     
     private var pushToNextVcFinished: Bool {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.PushToNextVcFinished, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.PushToNextVcFinished, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
         get {
             guard let finished = objc_getAssociatedObject(self, &AssociatedKeys.PushToNextVcFinished) as? Bool else {
@@ -50,9 +51,10 @@ extension UIViewController: TTAwakeProtocol {
         }
     }
     
+    /// set navigationBar backgroundImage
     var navBarBackgroundImage: UIImage? {
         guard let image = objc_getAssociatedObject(self, &AssociatedKeys.navBarBackgroundImage) as? UIImage else {
-            return TTNavigationBar.defaultBarBackgroundImage
+            return TTNavigationBar.defaultNavBarBackgroundImage
         }
         return image
     }
@@ -70,12 +72,13 @@ extension UIViewController: TTAwakeProtocol {
         }
         get {
             guard let color = objc_getAssociatedObject(self, &AssociatedKeys.navBarBarTintColor) as? UIColor else {
-                return TTNavigationBar.defaultBarTintColor
+                return TTNavigationBar.defaultNavBarBarTintColor
             }
             return color
         }
     }
     
+    /// navigationBar _UIBarBackground alpha
     var navBarBackgroundAlpha: CGFloat {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.navBarBackgroundAlpha, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -94,6 +97,7 @@ extension UIViewController: TTAwakeProtocol {
         }
     }
     
+    /// navigationBar tintColor
     var navBarTintColor: UIColor {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.navBarTintColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -106,12 +110,13 @@ extension UIViewController: TTAwakeProtocol {
         }
         get {
             guard let color = objc_getAssociatedObject(self, &AssociatedKeys.navBarTintColor) as? UIColor else {
-                return TTNavigationBar.defaultBarTintColor
+                return TTNavigationBar.defaultNavBarTintColor
             }
             return color
         }
     }
     
+    /// navigationBar titleColor
     var navBarTitleColor: UIColor {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.navBarTitleColor, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -124,12 +129,13 @@ extension UIViewController: TTAwakeProtocol {
         }
         get {
             guard let color = objc_getAssociatedObject(self, &AssociatedKeys.navBarTitleColor) as? UIColor else {
-                return TTNavigationBar.defaultBarTitleColor
+                return TTNavigationBar.defaultNavBarTitleColor
             }
             return color
         }
     }
     
+    /// statusBarStyle
     var statusBarStyle: UIStatusBarStyle {
         set {
             objc_setAssociatedObject(self, &AssociatedKeys.statusBarStyle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -143,9 +149,10 @@ extension UIViewController: TTAwakeProtocol {
         }
     }
     
+    /// 如果要隐藏 shadowImage，可以通过 hideShadowImage = true
     var navBarShadowImageHidden: Bool {
         set {
-            objc_setAssociatedObject(self, &AssociatedKeys.navBarShadowImageHidden, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.navBarShadowImageHidden, newValue, .OBJC_ASSOCIATION_ASSIGN)
             navigationController?.setNeedsNavigationBarUpdate(hideShadowImage: newValue)
         }
         get {
@@ -177,7 +184,8 @@ extension UIViewController: TTAwakeProtocol {
         }
     }
     
-    // swizzling two system methods: viewWillAppear(_:) and viewWillDisappear(_:)
+    // MARK: - swizzling two system methods: viewWillAppear(_:) and viewWillDisappear(_:)
+    
     private static let onceToken = UUID().uuidString
     static func awake() {
         DispatchQueue.once(token: onceToken) {
@@ -235,15 +243,12 @@ extension UIViewController: TTAwakeProtocol {
     private var canUpdateNavBar: Bool {
         let viewFrame = view.frame
         let maxFrame = UIScreen.main.bounds
-        let middleFrame = CGRect(x: 0, y: Size.navBarH, width: Size.screenW, height: Size.screenH - Size.navBarH)
-        let minFrame = CGRect(x: 0, y: Size.navBarH, width: Size.screenW, height: Size.screenH - Size.navBarH - Size.tabBarH)
+        let middleFrame = CGRect(x: 0, y: Constants.Sizes.navBarH, width: Constants.Sizes.screenW, height: Constants.Sizes.screenH - Constants.Sizes.navBarH)
+        let minFrame = CGRect(x: 0, y: Constants.Sizes.navBarH, width: Constants.Sizes.screenW, height: Constants.Sizes.screenH - Constants.Sizes.navBarH - Constants.Sizes.tabBarH)
         // 蝙蝠🦇
         let isBat = viewFrame.equalTo(maxFrame) || viewFrame.equalTo(middleFrame) || viewFrame.equalTo(minFrame)
-        if navigationController != nil && isBat == true {
-            return true
-        } else {
-            return false
-        }
+        
+        return navigationController != nil && isBat
     }
 }
 
