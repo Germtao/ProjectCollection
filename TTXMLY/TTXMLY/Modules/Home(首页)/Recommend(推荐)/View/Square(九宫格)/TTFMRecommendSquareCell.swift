@@ -17,36 +17,38 @@ class TTFMRecommendSquareCell: UICollectionViewCell {
     
     weak var delegate: TTFMRecommendSquareCellDelegate?
     
-    private var squareList: [TTFMRecommendSquareModel]?
+    private var squareList: [TTFMRecommendSquareModel]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     func configure(with squareList: [TTFMRecommendSquareModel]?) {
         guard let list = squareList else { return }
         self.squareList = list
-        collectionView.reloadData()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     // MARK: - 懒加载
     /// 九宫格分类按钮视图
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets.zero
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .white
         view.delegate = self
         view.dataSource = self
-        view.register(TTFMRecommendNewsCell.self, forCellWithReuseIdentifier: TTFMRecommendNewsCell.reuseIdentifier)
         view.register(TTFMRecommendGridCell.self, forCellWithReuseIdentifier: TTFMRecommendGridCell.reuseIdentifier)
         
         return view
@@ -74,23 +76,19 @@ extension TTFMRecommendSquareCell: UICollectionViewDelegate, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let string = squareList?[indexPath.item].properties?.uri else {
-            let categoryId = "0"
-            let title = squareList?[indexPath.item].title ?? ""
-            let url = squareList?[indexPath.item].url ?? ""
-            delegate?.squareCellClicked(categoryId: categoryId, title: title, url: url)
-            return
-        }
-        let categoryId = getUrlCategoryId(url: string)
+        var categoryId = "0"
         let title = squareList?[indexPath.item].title ?? ""
         let url = squareList?[indexPath.item].url ?? ""
+        if let string = squareList?[indexPath.item].properties?.uri {
+            categoryId = getUrlCategoryId(url: string)
+        }
         delegate?.squareCellClicked(categoryId: categoryId, title: title, url: url)
     }
 }
 
 // MARK: - Private Functions
 extension TTFMRecommendSquareCell {
-    private func setupUI() {
+    private func makeUI() {
         addSubview(collectionView)
         
         collectionView.snp.makeConstraints { (make) in

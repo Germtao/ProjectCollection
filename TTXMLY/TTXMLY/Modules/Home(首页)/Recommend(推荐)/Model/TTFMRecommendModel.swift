@@ -9,6 +9,10 @@
 import Foundation
 import HandyJSON
 
+enum TTFMRecommendModuleType: String, HandyJSONEnum {
+    case focus, square, topBuzz, guessYouLike, paidCategory, categoriesForLong, cityCategory, microLesson, categoriesForShort, playlist, categoriesForExplore, ad, oneKeyListen, live, unknown
+}
+
 struct TTHomeRecommendModel: HandyJSON {
     var msg: String = ""
     var ret: Int = 0
@@ -22,7 +26,7 @@ struct TTFMRecommendModel: HandyJSON {
     var list: [TTFMRecommendListModel]?
     var loopCount: Int = 0
     var moduleId: Int = 0
-    var moduleType: String?
+    var moduleType: TTFMRecommendModuleType = .unknown
     var showInterestCard: Bool = false
     var title: String?
     
@@ -35,34 +39,103 @@ struct TTFMRecommendModel: HandyJSON {
 }
 
 struct TTFMRecommendListModel: HandyJSON {
-    var albumId: Int = 0
-    var categoryId: Int = 0
-    var commentsCount: Int = 0
-    var commentScore: CGFloat = 0.0
-    var discountedPrice: CGFloat = 0.0
-    var displayDiscountedPrice: String?
-    var displayPrice: String?
-    var infoType: String?
-    var isDraft: Bool = false
-    var isFinished: Int = 0
+    
+    // MARK: - Common
     var isPaid: Bool = false
-    var isVipFree: Bool = false
-    var lastUptrackAt: Int = 0
-    var materialType: String?
     var nickname: String?
-    var pic: String?
-    var playsCount: Int = 0
-    var price: CGFloat = 0.0
-    var priceTypeEnum: Int = 0
-    var priceUnit: String?
-    var recSrc: String?
-    var recTrack: String?
-    var refundSupportType: Int = 0
+    var albumId: Int = 0
     var subtitle: String?
     var title: String?
+    var pic: String?
+    var isVipFree: Bool = false
+    var lastUptrackAt: Int = 0
     var tracksCount: Int = 0
+    var refundSupportType: Int = 0
+    var categoryId: Int = 0
+    var recSrc: String?
+    var playsCount: Int = 0
+    var infoType: String?
     var vipFreeType: Int = 0
+    var commentsCount: Int = 0
+    var materialType: String?
+    var recTrack: String?
+    var isDraft: Bool = false
+    var priceTypeEnum: Int = 0
+    var isFinished: Int = 0
+    var commentScore: Double = 0.0
+    var discountedPrice: Double = 0.0
+    var subscribeStatus: Bool = false
+    var preferredType: Int = 0
+    var originalStatus: Int = 0
+    var commentsCounts: Int = 0
+    var albumIntro: String?
+    var isSampleAlbumTimeLimited: Bool = false
+    var isFollowing: Bool = false
+    
+    // MARK: - Banner
+    var data: [TTFMBannerModel]?
+    var responseId: Int = 0
+    var ret : Int = 0
+    
+    // MARK: - 听头条数据
+    
+    var beenInListenList: Bool = false
+    var coverLarge: String?
+    var id: Int = 0
+    var sampleDuration: TimeInterval = 0
+    var coverMiddle: String?
+    var isFree: Bool = false
+    var isVideo: Bool = false
+    var isAuthorized: Bool = false
+    var playsCounts: Int = 0
+    var updatedAt: TimeInterval = 0
+    var userSource: Int = 0
+    var playPath32: String?
+    var coverSmall: String?
+    var createdAt: TimeInterval = 0
+    var trackId: Int = 0
+    var albumTitle: String?
+    var customTitle: String?
+    var uid: Int = 0
+    var sharesCounts: Int = 0
+    var priceTypeId: Int = 0
+    var duration: TimeInterval = 0
+    var tags: String?
+    var isSample: Bool = false
+    var favoritesCounts: Int = 0
+    var playPathAacv164: String?
+    var playPathAacv224: String?
+    var playPath64: String?
+    
+    var type: Int = 0
+    var contractStatus: Int = 0
+    
+    var vipPrice: Double = 0.0
+    var displayVipPrice: String?
+    var displayPrice: String?
+    var priceUnit: String?
+    var price: CGFloat = 0.0
+    var sampleAlbumExpireTime: Int = 0
+    var displayDiscountedPrice: String?
+    var albumSubscript: String?
+    
+    var footnote: String?
+    var contentType: String?
     var coverPath: String?
+    var columnType: Int = 0
+    var specialId: Int = 0
+    
+    var endAt: Int = 0
+    var startAt: Int = 0
+    var chatId: Int = 0
+    var status: Int = 0
+    var description: String?
+    var actualStartAt: Int = 0
+    var playCount: Int = 0
+    var name: String?
+    var categoryName: String?
+    var bizType: Int = 0
+    var roomId: Int = 0
 }
 
 struct TTFMTarget: HandyJSON {
@@ -139,36 +212,6 @@ struct TTFMRecommendAdShareModel: HandyJSON {
     var isExternalUrl: Bool = false
 }
 
-// MARK: - 推荐: 听头条数据
-struct TTFMRecommendNewsModel: HandyJSON {
-    var albumId: Int = 0
-    var albumTitle: String?
-    var commentsCounts: Int = 0
-    var coverSmall: String?
-    var createdAt: Int = 0
-    var duration: Int = 0
-    var favoritesCounts: Int = 0
-    var id: Int = 0
-    var isAuthorized: Bool = false
-    var isFree: Bool = false
-    var isPaid: Bool = false
-    var nickname: String?
-    var playPath32: String?
-    var playPath64: String?
-    var playPathAacv164: String?
-    var playPathAacv224: String?
-    var playsCounts: Int = 0
-    var priceTypeId: Int = 0
-    var sampleDuration: Int = 0
-    var sharesCounts: Int = 0
-    var tags: String?
-    var title: String?
-    var trackId: Int = 0
-    var uid: Int = 0
-    var updatedAt: Int = 0
-    var userSource: Int = 0
-}
-
 // MARK: - 推荐: 九宫格数据
 struct TTFMRecommendSquareModel: HandyJSON {
     var bubbleText: String?
@@ -187,12 +230,6 @@ struct TTFMRecommendSquareModel: HandyJSON {
 }
 
 // MARK: - 推荐: 轮播数据
-struct TTFMRecommendFocusModel: HandyJSON {
-    var data: [TTFMBannerModel]?
-    var responseId: Int = 0
-    var ret : Int = 0
-}
-
 struct TTFMBannerModel: HandyJSON {
     var adId: Int = 0
     var adType: Int = 0
@@ -230,27 +267,4 @@ struct TTFMOneKeyListenModel: HandyJSON {
         var recSrc: String?
         var recTrack: String?
     }
-}
-
-// MARK: - 直播
-struct TTFMRecommendLiveModel: HandyJSON {
-    var actualStartAt: Int = 0
-    var categoryId: Int = 0
-    var chatId: Int = 0
-    var categoryName: String?
-    var coverLarge: String?
-    var coverMiddle: String?
-    var coverSmall: String?
-    var description: String?
-    var endAt: Int = 0
-    var id: Int = 0
-    var name: String?
-    var nickname: String?
-    var playCount: Int = 0
-    var recSrc: String?
-    var recTrack: String?
-    var roomId: Int = 0
-    var startAt: Int = 0
-    var status: Int = 0
-    var uid: Int = 0
 }

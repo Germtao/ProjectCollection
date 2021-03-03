@@ -11,14 +11,13 @@ import UIKit
 class TTFMLiveCell: UICollectionViewCell {
     static let reuseIdentifier = "liveCellID"
     
-    func configure(with model: TTFMRecommendLiveModel?) {
-        guard let model = model else { return }
-        if model.coverMiddle != nil {
-            imageView.kf.setImage(with: URL(string: model.coverMiddle!))
+    func configure(with model: TTFMRecommendListModel?) {
+        if model?.coverMiddle != nil {
+            imageView.kf.setImage(with: URL(string: (model?.coverMiddle)!))
         }
-        titleLabel.text = model.nickname
-        subTitleLabel.text = model.name
-        categoryLabel.text = model.categoryName
+        titleLabel.text = model?.nickname
+        subTitleLabel.text = model?.name
+        categoryLabel.text = model?.categoryName
         
     }
     

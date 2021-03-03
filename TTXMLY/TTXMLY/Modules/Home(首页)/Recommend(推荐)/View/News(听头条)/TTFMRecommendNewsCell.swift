@@ -17,35 +17,40 @@ class TTFMRecommendNewsCell: UICollectionViewCell {
     
     var timer: Timer?
     
-    private var newsList: [TTFMRecommendNewsModel]?
+    private var newsList: [TTFMRecommendListModel]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
-    func configure(with news: [TTFMRecommendNewsModel]?) {
+    func configure(with news: [TTFMRecommendListModel]?) {
+        print("头条数据: \(news)")
+        guard let news = news else { return }
         newsList = news
-        collectionView.reloadData()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        makeUI()
         
-        setupUI()
+        startTimer()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
+        
+        startTimer()
     }
     
     // MARK: - 懒加载
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets.zero
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: newsCellWidth, height: newsCellHeight)
         
-        let view = UICollectionView(frame: CGRect(x: 80.0, y: 5.0, width: newsCellWidth, height: newsCellHeight),
-                                    collectionViewLayout: layout)
-        view.contentSize = CGSize(width: newsCellWidth, height: newsCellHeight)
-        view.backgroundColor = UIColor.white
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .red
         view.delegate = self
         view.dataSource = self
         view.showsVerticalScrollIndicator = false
@@ -60,27 +65,36 @@ class TTFMRecommendNewsCell: UICollectionViewCell {
         let button = UIButton(type: .custom)
         button.setTitle("|  更多", for: .normal)
         button.setTitleColor(.gray, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
+        button.titleLabel?.font = Constants.Fonts.font(15.0)
         return button
     }()
     
     private lazy var imageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "news")
+        view.image = #imageLiteral(resourceName: "news")
         return view
     }()
 }
 
 extension TTFMRecommendNewsCell {
-    private func setupUI() {
-        addSubview(imageView)
-        addSubview(moreBtn)
-        addSubview(collectionView)
+    private func makeUI() {
+        contentView.backgroundColor = .blue
+        
+        contentView.addSubview(imageView)
+        contentView.addSubview(moreBtn)
+        contentView.addSubview(collectionView)
         
         imageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
             make.size.equalTo(CGSize(width: 60.0, height: 30.0))
             make.top.equalTo(10)
+        }
+        
+        collectionView.snp.makeConstraints { (make) in
+            make.left.equalTo(imageView.snp.right).offset(10)
+            make.right.equalTo(moreBtn.snp.left).offset(-10)
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().offset(-5)
         }
         
         moreBtn.snp.makeConstraints { (make) in
@@ -131,33 +145,42 @@ extension TTFMRecommendNewsCell: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("TTFMRecommendNewsCell - didSelect: %d", indexPath.item)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: newsCellWidth, height: newsCellHeight)
+    }
 }
 
 class TTFMNewsCell: UICollectionViewCell {
     
     static let reuseIdentifier = "newsCellID"
     
-    func configure(with model: TTFMRecommendNewsModel?) {
-        guard let model = model else { return }
-        titleLabel.text = model.title
+    func configure(with model: TTFMRecommendListModel?) {
+        titleLabel.text = model?.title
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        makeUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
+    }
+    
+    private func makeUI() {
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16.0)
+        label.font = Constants.Fonts.font(16.0)
         return label
     }()
 }

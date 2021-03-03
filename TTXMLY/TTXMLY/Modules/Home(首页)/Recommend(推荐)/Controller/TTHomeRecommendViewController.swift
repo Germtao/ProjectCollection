@@ -16,9 +16,8 @@ class TTHomeRecommendViewController: UIViewController {
 
         view.backgroundColor = UIColor.purple
         
-        setupUI()
+        makeUI()
         loadData()
-        loadRecommendAdData()
     }
     
     // MARK: - 懒加载
@@ -29,7 +28,7 @@ class TTHomeRecommendViewController: UIViewController {
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.delegate = self
         view.dataSource = self
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .white
         
         view.register(TTFMRecommendCarouselCell.self,
                       forCellWithReuseIdentifier: TTFMRecommendCarouselCell.reuseIdentifier)
@@ -63,27 +62,24 @@ class TTHomeRecommendViewController: UIViewController {
 
 // MARK: - 设置UI & 加载数据
 extension TTHomeRecommendViewController {
-    private func setupUI() {
+    private func makeUI() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
-            make.size.equalToSuperview()
-            make.center.equalToSuperview()
+            make.center.size.equalToSuperview()
         }
     }
     
     private func loadData() {
-        viewModel.updateDataHandler = { [unowned self] in
-            self.collectionView.reloadData()
-            print(self.viewModel.numberOfSections)
+        viewModel.updateDataHandler = { [unowned self] (code, message) in
+            switch code {
+            case .failure:
+                print("loadData error: \(message ?? "######")")
+            case .success:
+                self.collectionView.reloadData()
+            }
         }
         viewModel.refreshData()
-    }
-    
-    private func loadRecommendAdData() {
-        viewModel.updateDataHandler = { [unowned self] in
-            self.collectionView.reloadData()
-        }
-        viewModel.refreshAdData()
+//        viewModel.refreshAdData()
     }
 }
 
@@ -97,39 +93,44 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
-        if moduleType == "focus" { // 轮播图
+        let model = viewModel.homeRecommendList?[indexPath.section]
+        print("model = \(model.debugDescription)")
+        let moduleType = model?.moduleType ?? .unknown
+        print("moduleType = \(moduleType.rawValue)")
+        
+        switch moduleType {
+        case .focus: // 轮播图
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendCarouselCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendCarouselCell
-            cell.configure(with: viewModel.recommendFocusModel)
+            cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list?.first)
             return cell
-        } else if moduleType == "square" { // 九宫格
+        case .square: // 九宫格
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendSquareCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendSquareCell
             cell.configure(with: viewModel.recommendSquareList)
             return cell
-        } else if moduleType == "topBuzz" { // 听头条
+        case .topBuzz: // 听头条
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendNewsCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendNewsCell
-            cell.configure(with: viewModel.recommendNewsList)
+            cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list)
             return cell
-        } else if moduleType == "guessYouLike" ||
-            moduleType == "paidCategory" ||
-            moduleType == "categoriesForLong" ||
-            moduleType == "cityCategory" ||
-            moduleType == "microLesson" { // 猜你喜欢、精品、亲子时光、音乐好时光、人文
+        case .guessYouLike,
+             .paidCategory,
+             .categoriesForLong,
+             .cityCategory,
+             .microLesson: // 猜你喜欢、精品、亲子时光、音乐好时光、人文
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendGuessULikeCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendGuessULikeCell
             cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list)
             return cell
-        } else if moduleType == "categoriesForShort" ||
-            moduleType == "playlist" ||
-            moduleType == "categoriesForExplore" { // 最热有声书、相声评书、精品听单
+        case .categoriesForShort,
+             .playlist,
+             .categoriesForExplore: // 最热有声书、相声评书、精品听单
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendAudioBookCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendAudioBookCell
             cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list)
             return cell
-        } else if moduleType == "ad" { // ad
+        case .ad: // ad
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendAdCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendAdCell
             if indexPath.section == 7 {
@@ -138,17 +139,17 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
                 cell.configure(with: viewModel.recommendAdList?[1])
             }
             return cell
-        } else if moduleType == "oneKeyListen"  { // 懒人电台
+        case .oneKeyListen: // 懒人电台
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMReCommendOneKeyListenCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMReCommendOneKeyListenCell
             cell.configure(with: viewModel.oneKeyListenList)
             return cell
-        } else if moduleType == "live" { // 直播
+        case .live: // 直播
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendLiveCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendLiveCell
-            cell.configure(with: viewModel.liveList)
+            cell.configure(with: viewModel.homeRecommendList?[indexPath.section].list)
             return cell
-        } else {
+        default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendForUCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendForUCell
             return cell
@@ -156,7 +157,6 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let moduleType = viewModel.homeRecommendList?[indexPath.section].moduleType
         if kind == UICollectionView.elementKindSectionHeader {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                          withReuseIdentifier: TTFMRecommendHeaderView.reuseIdentifier,

@@ -12,23 +12,14 @@ import SwiftyJSON
 
 class TTFMRecommendViewModel {
     
-    var homeRecommendModel: TTHomeRecommendModel?
     var homeRecommendList: [TTFMRecommendModel]?
-    var recommendList: [TTFMRecommendListModel]?
-    /// 轮播图数据
-    var recommendFocusModel: TTFMRecommendFocusModel?
     /// 九宫格数据
     var recommendSquareList: [TTFMRecommendSquareModel]?
-    /// 听头条数据
-    var recommendNewsList: [TTFMRecommendNewsModel]?
     
     var recommendAdList: [TTFMRecommendAdModel]?
     
     /// 懒人电台
     var oneKeyListenList: [TTFMOneKeyListenModel]?
-    
-    /// 直播
-    var liveList: [TTFMRecommendLiveModel]?
     
     /// 更新数据回调
     var updateDataHandler: ((RequestErrorCode, String?) -> Void)?
@@ -42,31 +33,18 @@ extension TTFMRecommendViewModel {
             case .success(let response):
                 let data = try? response.mapJSON()
                 let json = JSON(data!)
-                if let mappedObject = JSONDeserializer<TTHomeRecommendModel>.deserializeFrom(json: json.description) {
-                    self.homeRecommendModel = mappedObject
-                    self.homeRecommendList = mappedObject.list
-                    if let recommendList = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json["list"].description) {
-                        self.recommendList = recommendList as? [TTFMRecommendListModel]
-                    }
-                    
-                    if let recommendFocus = JSONDeserializer<TTFMRecommendFocusModel>.deserializeFrom(json: json["list"][0]["list"][0].description) {
-                        self.recommendFocusModel = recommendFocus
-                    }
+                
+                print("推荐页面数据 json: \(json)")
+                
+                if let homeRecommendList = JSONDeserializer<TTFMRecommendModel>.deserializeModelArrayFrom(json: json["list"].description) as? [TTFMRecommendModel] {
+                    self.homeRecommendList = homeRecommendList
                     
                     if let recommendSquareList = JSONDeserializer<TTFMRecommendSquareModel>.deserializeModelArrayFrom(json: json["list"][1]["list"].description) {
                         self.recommendSquareList = recommendSquareList as? [TTFMRecommendSquareModel]
                     }
                     
-                    if let recommendNewsList = JSONDeserializer<TTFMRecommendNewsModel>.deserializeModelArrayFrom(json: json["list"][2]["list"].description) {
-                        self.recommendNewsList = recommendNewsList as? [TTFMRecommendNewsModel]
-                    }
-                    
                     if let oneKeyListen = JSONDeserializer<TTFMOneKeyListenModel>.deserializeModelArrayFrom(json: json["list"][9]["list"].description) {
                         self.oneKeyListenList = oneKeyListen as? [TTFMOneKeyListenModel]
-                    }
-                    
-                    if let liveList = JSONDeserializer<TTFMRecommendLiveModel>.deserializeModelArrayFrom(json: json["list"][14]["list"].description) {
-                        self.liveList = liveList as? [TTFMRecommendLiveModel]
                     }
                     
                     // 更新数据回调
@@ -106,6 +84,7 @@ extension TTFMRecommendViewModel {
 extension TTFMRecommendViewModel {
     /// section数量
     var numberOfSections: Int {
+        print(homeRecommendList?.count ?? 0)
         return homeRecommendList?.count ?? 0
     }
     
@@ -131,29 +110,39 @@ extension TTFMRecommendViewModel {
         let headerAndFooterHeight: CGFloat = 90.0
         let count = homeRecommendList?[indexPath.section].list?.count ?? 0
         let itemNums = count / 3
-        let moduleType = homeRecommendList?[indexPath.section].moduleType
-        if moduleType == "focus" {
+        let moduleType = homeRecommendList?[indexPath.section].moduleType ?? .unknown
+        
+        switch moduleType {
+        case .focus:
             return CGSize(width: Constants.Sizes.screenW, height: 150)
-        } else if moduleType == "square" {
-            return CGSize(width: Constants.Sizes.screenW, height: 160)
-        } else if moduleType == "topBuzz" {
-            return CGSize(width: Constants.Sizes.screenW, height: 50)
-        } else if moduleType == "guessYouLike" ||
-            moduleType == "paidCategory" ||
-            moduleType == "categoriesForLong" ||
-            moduleType == "cityCategory" ||
-            moduleType == "live" {
+        case .square:
+            return recommendSquareList?.count == 0
+                ? .zero
+                : CGSize(width: Constants.Sizes.screenW, height: 160)
+        case .topBuzz:
+            return homeRecommendList?[indexPath.section].list?.count == 0
+                ? .zero
+                : CGSize(width: Constants.Sizes.screenW, height: 50)
+        case .guessYouLike,
+             .paidCategory,
+             .categoriesForLong,
+             .cityCategory,
+             .live:
             return CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(180 * itemNums))
-        } else if moduleType == "categoriesForShort" ||
-            moduleType == "playlist" ||
-            moduleType == "categoriesForExplore" ||
-            moduleType == "microLesson" {
-            return recommendList?.count == 0 ? CGSize.zero : CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
-        } else if moduleType == "ad" {
-            return homeRecommendList?[indexPath.section].list?.count == 0 ? CGSize.zero : CGSize(width: Constants.Sizes.screenW, height: 240)
-        } else if moduleType == "oneKeyListen" {
+        case .categoriesForShort,
+             .playlist,
+             .categoriesForExplore,
+             .microLesson:
+            return homeRecommendList?[indexPath.section].list?.count == 0
+                ? .zero
+                : CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
+        case .ad:
+            return homeRecommendList?[indexPath.section].list?.count == 0
+                ? .zero
+                : CGSize(width: Constants.Sizes.screenW, height: 240)
+        case .oneKeyListen:
             return CGSize(width: Constants.Sizes.screenW, height: 180)
-        } else {
+        default:
             return .zero
         }
     }
@@ -161,10 +150,10 @@ extension TTFMRecommendViewModel {
     /// 分区header尺寸
     func sizeForHeader(in section: Int) -> CGSize {
         let moduleType = homeRecommendList?[section].moduleType
-        if moduleType == "focus" ||
-            moduleType == "square" ||
-            moduleType == "topBuzz" ||
-            moduleType == "ad" ||
+        if moduleType == .focus ||
+            moduleType == .square ||
+            moduleType == .topBuzz ||
+            moduleType == .ad ||
             section == 18 {
             return .zero
         }
@@ -175,8 +164,8 @@ extension TTFMRecommendViewModel {
     /// 分区footer尺寸
     func sizeForFooter(in section: Int) -> CGSize {
         let moduleType = homeRecommendList?[section].moduleType
-        if moduleType == "focus" ||
-            moduleType == "square" {
+        if moduleType == .focus ||
+            moduleType == .square {
             return .zero
         }
         

@@ -14,21 +14,24 @@ class TTFMRecommendGridCell: UICollectionViewCell {
     
     func configure(with model: TTFMRecommendSquareModel?) {
         guard let model = model else { return }
-        imageView.kf.setImage(with: URL(string: model.coverPath!))
+        
+        if let urlStr = model.coverPath {
+            imageView.kf.setImage(with: URL(string: urlStr))
+        }
         titleLabel.text = model.title
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
-    private func setupUI() {
+    private func makeUI() {
         addSubview(imageView)
         addSubview(titleLabel)
         
@@ -49,8 +52,8 @@ class TTFMRecommendGridCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 13.0)
-        label.textAlignment = NSTextAlignment.center
+        label.font = Constants.Fonts.font(13.0)
+        label.textAlignment = .center
         return label
     }()
 }

@@ -11,21 +11,25 @@ import UIKit
 class TTFMRecommendLiveCell: UICollectionViewCell {
     static let reuseIdentifier = "recommendLiveCellID"
     
-    private var liveList: [TTFMRecommendLiveModel]?
+    private var liveList: [TTFMRecommendListModel]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
-    func configure(with list: [TTFMRecommendLiveModel]?) {
+    func configure(with list: [TTFMRecommendListModel]?) {
         guard let list = list else { return }
         liveList = list
-        collectionView.reloadData()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     // MARK: - 懒加载
@@ -54,7 +58,7 @@ class TTFMRecommendLiveCell: UICollectionViewCell {
 
 extension TTFMRecommendLiveCell {
     
-    private func setupUI() {
+    private func makeUI() {
         addSubview(collectionView)
         addSubview(changeButton)
         

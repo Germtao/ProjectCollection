@@ -18,11 +18,9 @@ class TTFMRecommendCarouselCell: UICollectionViewCell {
     
     weak var delegate: TTFMRecommendCarouselCellDelegate?
     
-    private var focusModel: TTFMRecommendFocusModel?
+    private var focusModel: TTFMRecommendListModel?
     
-    private var newsList: [TTFMRecommendNewsModel]?
-    
-    func configure(with model: TTFMRecommendFocusModel?) {
+    func configure(with model: TTFMRecommendListModel?) {
         guard let model = model else { return }
         focusModel = model
         carouselView.reloadData()
@@ -31,12 +29,12 @@ class TTFMRecommendCarouselCell: UICollectionViewCell {
     // MARK: - overrid functions
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupUI()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     // MARK: - 懒加载
@@ -62,7 +60,9 @@ extension TTFMRecommendCarouselCell: TTCarouselViewDataSource {
     
     func carouselView(_ carouselView: TTCarouselView, cellForItemAt index: Int) -> TTCarouselViewCell {
         let cell = carouselView.dequeueReusableCell(withReuseIdentifier: "carouselViewCellID", for: index)
-        cell.imageView?.kf.setImage(with: URL(string: (focusModel?.data?[index].cover)!))
+        if let urlStr = focusModel?.data?[index].cover {
+            cell.imageView?.kf.setImage(with: URL(string: urlStr))
+        }
         return cell
     }
 }
@@ -70,13 +70,13 @@ extension TTFMRecommendCarouselCell: TTCarouselViewDataSource {
 // MARK: - TTCarouselViewDelegate
 extension TTFMRecommendCarouselCell: TTCarouselViewDelegate {
     func carouselView(_ carouselView: TTCarouselView, didSelectItemAt index: Int) {
-        let url = focusModel?.data?[index].link ?? ""
+        guard let url = focusModel?.data?[index].link else { return }
         delegate?.carouselCellBannerClicked(url: url)
     }
 }
 
 extension TTFMRecommendCarouselCell {
-    private func setupUI() {
+    private func makeUI() {
         addSubview(carouselView)
         carouselView.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
