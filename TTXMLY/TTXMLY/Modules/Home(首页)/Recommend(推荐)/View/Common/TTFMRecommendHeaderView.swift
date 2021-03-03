@@ -15,7 +15,7 @@ class TTFMRecommendHeaderView: UICollectionReusableView {
     static let reuseIdentifier = "recommendHeaderViewID"
     
     /// 点击更多回调
-    var handler: TTFMRecommendHeaderViewHandler?
+    var tapMoreHandler: TTFMRecommendHeaderViewHandler?
     
     func configure(with model: TTFMRecommendModel?) {
         guard let model = model else { return }
@@ -24,11 +24,12 @@ class TTFMRecommendHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     // MARK: - 懒加载
@@ -58,7 +59,7 @@ class TTFMRecommendHeaderView: UICollectionReusableView {
 
 extension TTFMRecommendHeaderView {
     
-    private func setupUI() {
+    private func makeUI() {
         addSubview(titleLabel)
         addSubview(subTitleLabel)
         addSubview(moreButton)
@@ -85,7 +86,6 @@ extension TTFMRecommendHeaderView {
     }
     
     @objc private func moreButtonClicked() {
-        guard let handler = handler else { return }
-        handler()
+        tapMoreHandler?()
     }
 }
