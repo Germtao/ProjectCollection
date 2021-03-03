@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 
 target 'TTXMLY' do
@@ -6,27 +6,27 @@ target 'TTXMLY' do
   use_frameworks!
   inhibit_all_warnings!
 
-  pod 'SnapKit', '~> 5.0.0'
+  pod 'SnapKit'
   pod 'Moya', '~> 14.0.0-alpha.1'
   # TabBar 样式
-  pod 'ESTabBarController-swift', '~> 2.7'
-  pod 'ESPullToRefresh', '~> 2.9'
-  pod 'HandyJSON', '~> 5.0.0'
-  pod 'SwiftyJSON', '~> 5.0.0'
-  pod 'Kingfisher', '~> 5.6.0'
+  pod 'ESTabBarController-swift'
+  pod 'ESPullToRefresh'
+  pod 'HandyJSON'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher'
   # 播放网络音频
-  pod 'StreamingKit', '~> 0.1.30'
+  pod 'StreamingKit'
   # 消息提示
-  pod 'SwiftMessages', '~> 7.0.0'
+  pod 'SwiftMessages'
   
-  #跑马灯
+  # 跑马灯
   pod 'JXMarqueeView'
-  #滚动页
+  # 滚动页
   pod 'LTScrollView'
   # banner滚动图片
   pod 'FSPagerView'
   # 分页
-  pod 'DNSPageView'
+  pod 'DNSPageView', '2.1.0'
   # HUD
   pod 'SVProgressHUD'
 

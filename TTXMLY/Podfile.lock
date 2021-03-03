@@ -1,9 +1,13 @@
 PODS:
   - Alamofire (4.8.2)
+  - DNSPageView (2.1.0)
   - ESPullToRefresh (2.9)
   - ESTabBarController-swift (2.7)
+  - FSPagerView (0.8.3)
   - HandyJSON (5.0.0)
+  - JXMarqueeView (0.0.9)
   - Kingfisher (5.6.0)
+  - LTScrollView (0.3.0)
   - Moya (14.0.0-alpha.1):
     - Moya/Core (= 14.0.0-alpha.1)
   - Moya/Core (14.0.0-alpha.1):
@@ -12,49 +16,65 @@ PODS:
   - Result (4.1.0)
   - SnapKit (5.0.0)
   - StreamingKit (0.1.30)
+  - SVProgressHUD (2.2.5)
   - SwiftMessages (7.0.0):
     - SwiftMessages/App (= 7.0.0)
   - SwiftMessages/App (7.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - ESPullToRefresh (~> 2.9)
-  - ESTabBarController-swift (~> 2.7)
-  - HandyJSON (~> 5.0.0)
-  - Kingfisher (~> 5.6.0)
+  - DNSPageView (= 2.1.0)
+  - ESPullToRefresh
+  - ESTabBarController-swift
+  - FSPagerView
+  - HandyJSON
+  - JXMarqueeView
+  - Kingfisher
+  - LTScrollView
   - Moya (~> 14.0.0-alpha.1)
-  - SnapKit (~> 5.0.0)
-  - StreamingKit (~> 0.1.30)
-  - SwiftMessages (~> 7.0.0)
-  - SwiftyJSON (~> 5.0.0)
+  - SnapKit
+  - StreamingKit
+  - SVProgressHUD
+  - SwiftMessages
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - DNSPageView
     - ESPullToRefresh
     - ESTabBarController-swift
+    - FSPagerView
     - HandyJSON
+    - JXMarqueeView
     - Kingfisher
+    - LTScrollView
     - Moya
     - Result
     - SnapKit
     - StreamingKit
+    - SVProgressHUD
     - SwiftMessages
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  DNSPageView: 4d77a61f49a5668ec330fb7bd620d81354371ea7
   ESPullToRefresh: ce058a36454a5032519cc9d8b45da217728cf104
   ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  JXMarqueeView: 0058108f80f149b25ff3bc3705c1af348fe7be8f
   Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+  LTScrollView: 46029b501f34d31e33e33392935cb240eb1d1ed0
   Moya: 65485239114b3b327a17dc2e839f6c8b7143aae9
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6c3167fa81197ca7281e0edeb1d1347aaed23fdd
+PODFILE CHECKSUM: 65e2a771cdc9ee572d801e70b44c1da6935cbb72
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
