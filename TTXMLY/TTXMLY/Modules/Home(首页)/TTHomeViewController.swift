@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DNSPageView
 
 class TTHomeViewController: UIViewController {
 
@@ -19,32 +20,34 @@ class TTHomeViewController: UIViewController {
     }
     
     private func setupPageStyle() {
-        var style = TTPageStyle()
+        let style = PageStyle()
         style.isTitleViewScrollEnabled = false
         style.isTitleScaleEnabled = true
-        style.isShowUnderline = true
+        style.isShowBottomLine = true
         style.titleSelectedColor = .black
-        style.titleNormalColor = .gray
-        style.underlineColor = .black
-        style.isContentViewScrollEnabled = true
+        style.titleColor = .gray
+        style.bottomLineColor = .black
+        style.bottomLineHeight = 2
         
         let titles = ["推荐", "分类", "VIP", "直播", "广播"]
-        let viewControllers = [TTHomeRecommendViewController(),
-                               TTHomeCategoryViewController(),
-                               TTHomeVIPViewController(),
-                               TTHomeLiveViewController(),
-                               TTHomeBroadcastViewController()]
+        let viewControllers = [
+            TTHomeRecommendViewController(),
+            TTHomeCategoryViewController(),
+            TTHomeVIPViewController(),
+            TTHomeLiveViewController(),
+            TTHomeBroadcastViewController()
+        ]
         for vc in viewControllers {
             self.addChild(vc)
         }
-        let pageView = TTPageView(frame: CGRect(x: 0,
-                                                y: Constants.Sizes.navBarH,
-                                                width: Constants.Sizes.screenW,
-                                                height: Constants.Sizes.screenH - Constants.Sizes.navBarH - Constants.Sizes.tabBarH),
-                                  style: style,
-                                  titles: titles,
-                                  childViewControllers: viewControllers)
-        pageView.contentView.backgroundColor = .red
+        let pageView = PageView(frame: CGRect(x: 0,
+                                              y: Constants.Sizes.navBarH,
+                                              width: Constants.Sizes.screenW,
+                                              height: Constants.Sizes.screenH - Constants.Sizes.navBarH - Constants.Sizes.tabBarH),
+                                style: style,
+                                titles: titles,
+                                childViewControllers: viewControllers)
+        pageView.contentView.backgroundColor = .white
         view.addSubview(pageView)
     }
 }
