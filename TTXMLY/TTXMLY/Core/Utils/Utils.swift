@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum RequestErrorCode {
+    case success, failure
+}
+
 struct Constants {
     struct Colors {
         static let black = UIColor.black
@@ -49,6 +53,10 @@ struct Constants {
     struct Bools {
         /// 是否为刘海屏
         static let specialScreen: Bool = Sizes.screenH >= 812.0 ? true : false
+    }
+    
+    struct Strings {
+        static let resolveDataError = "数据解析发生错误，请重试！"
     }
 }
 
