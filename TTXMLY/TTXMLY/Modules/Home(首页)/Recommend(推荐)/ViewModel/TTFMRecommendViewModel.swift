@@ -10,7 +10,7 @@ import Foundation
 import HandyJSON
 import SwiftyJSON
 
-class TTFMRecommendViewModel: NSObject {
+class TTFMRecommendViewModel {
     
     var homeRecommendModel: TTHomeRecommendModel?
     var homeRecommendList: [TTFMRecommendModel]?
@@ -31,14 +31,15 @@ class TTFMRecommendViewModel: NSObject {
     var liveList: [TTFMRecommendLiveModel]?
     
     /// 更新数据回调
-    var updateDataHandler: (() -> Void)?
+    var updateDataHandler: ((RequestErrorCode, String?) -> Void)?
 }
 
 extension TTFMRecommendViewModel {
     /// 刷新推荐页面数据
     func refreshData() {
         TTFMRecommendProvider.request(.recommendList) { (result) in
-            if case let .success(response) = result {
+            switch result {
+            case .success(let response):
                 let data = try? response.mapJSON()
                 let json = JSON(data!)
                 if let mappedObject = JSONDeserializer<TTHomeRecommendModel>.deserializeFrom(json: json.description) {
@@ -69,24 +70,33 @@ extension TTFMRecommendViewModel {
                     }
                     
                     // 更新数据回调
-                    self.updateDataHandler?()
+                    self.updateDataHandler?(.success, nil)
+                } else {
+                    self.updateDataHandler?(.failure, Constants.Strings.resolveDataError)
                 }
-            }
+            case .failure(let error):
+                self.updateDataHandler?(.failure, error.errorDescription)
+        }
         }
     }
     
     /// 刷新推荐页面ad数据
     func refreshAdData() {
         TTFMRecommendProvider.request(.recommendListWithAd) { (result) in
-            if case let .success(response) = result {
+            switch result {
+            case .success(let response):
                 let data = try? response.mapJSON()
                 let json = JSON(data!)
                 if let adList = JSONDeserializer<TTFMRecommendAdModel>.deserializeModelArrayFrom(json: json["data"].description) {
                     self.recommendAdList = adList as? [TTFMRecommendAdModel]
                     
                     // 广告数据更新
-                    self.updateDataHandler?()
+                    self.updateDataHandler?(.success, nil)
+                } else {
+                    self.updateDataHandler?(.failure, Constants.Strings.resolveDataError)
                 }
+            case .failure(let error):
+                self.updateDataHandler?(.failure, error.errorDescription)
             }
         }
     }
