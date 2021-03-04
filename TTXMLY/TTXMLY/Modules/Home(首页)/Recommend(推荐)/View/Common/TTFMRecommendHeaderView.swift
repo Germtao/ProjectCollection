@@ -18,8 +18,7 @@ class TTFMRecommendHeaderView: UICollectionReusableView {
     var tapMoreHandler: TTFMRecommendHeaderViewHandler?
     
     func configure(with model: TTFMRecommendModel?) {
-        guard let model = model else { return }
-        titleLabel.text = model.title != nil ? model.title : "猜你喜欢"
+        titleLabel.text = model?.title != nil ? model?.title : "猜你喜欢"
     }
     
     override init(frame: CGRect) {
@@ -69,8 +68,10 @@ extension TTFMRecommendHeaderView {
     
     private func setupUILayout() {
         titleLabel.snp.makeConstraints { (make) in
-            make.left.top.equalTo(15)
-            make.size.equalTo(CGSize(width: 150, height: 30))
+            make.left.equalToSuperview().offset(8)
+            make.centerY.equalToSuperview()
+            make.width.equalTo(150)
+            make.height.equalTo(30)
         }
         
         subTitleLabel.snp.makeConstraints { (make) in
@@ -80,8 +81,9 @@ extension TTFMRecommendHeaderView {
         }
         
         moreButton.snp.makeConstraints { (make) in
-            make.right.top.equalTo(15)
-            make.size.equalTo(CGSize(width: 100, height: 30))
+            make.centerY.height.equalTo(titleLabel)
+            make.right.equalToSuperview().offset(-8)
+            make.width.equalTo(100)
         }
     }
     
