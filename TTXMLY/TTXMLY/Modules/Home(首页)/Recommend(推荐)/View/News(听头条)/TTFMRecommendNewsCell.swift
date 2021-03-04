@@ -10,6 +10,7 @@ import UIKit
 
 private let newsCellWidth: CGFloat = Constants.Sizes.screenW - 150.0
 private let newsCellHeight: CGFloat = 40.0
+private let newsCellSection = 100
 
 class TTFMRecommendNewsCell: UICollectionViewCell {
     
@@ -24,7 +25,6 @@ class TTFMRecommendNewsCell: UICollectionViewCell {
     }
     
     func configure(with news: [TTFMRecommendListModel]?) {
-        print("头条数据: \(news)")
         guard let news = news else { return }
         newsList = news
     }
@@ -48,15 +48,15 @@ class TTFMRecommendNewsCell: UICollectionViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: newsCellWidth, height: newsCellHeight)
         
-        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = .red
+        let view = UICollectionView(frame: CGRect(x: 80, y: 5, width: newsCellWidth, height: newsCellHeight),
+                                    collectionViewLayout: layout)
+        view.backgroundColor = .white
         view.delegate = self
         view.dataSource = self
         view.showsVerticalScrollIndicator = false
-        view.showsHorizontalScrollIndicator = false
         view.isPagingEnabled = true
-        view.isScrollEnabled = false
         view.register(TTFMNewsCell.self, forCellWithReuseIdentifier: TTFMNewsCell.reuseIdentifier)
         return view
     }()
@@ -78,8 +78,6 @@ class TTFMRecommendNewsCell: UICollectionViewCell {
 
 extension TTFMRecommendNewsCell {
     private func makeUI() {
-        contentView.backgroundColor = .blue
-        
         contentView.addSubview(imageView)
         contentView.addSubview(moreBtn)
         contentView.addSubview(collectionView)
@@ -111,9 +109,19 @@ extension TTFMRecommendNewsCell {
         self.timer = timer
     }
     
+    private func removeTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
     @objc private func nextPage() {
         // 1. 获取collectionView的y轴滚动的偏移量
-        let offsetY = collectionView.contentOffset.y + bounds.height
+        var offsetY = collectionView.contentOffset.y + collectionView.bounds.height
+        
+        if offsetY >= collectionView.contentSize.height * CGFloat(newsList?.count ?? 0) {
+            offsetY = 0
+        }
+        
         // 2. 滚动至该位置
         collectionView.setContentOffset(CGPoint(x: 0.0, y: offsetY), animated: true)
     }
@@ -122,8 +130,7 @@ extension TTFMRecommendNewsCell {
 extension TTFMRecommendNewsCell: UICollectionViewDataSource, UICollectionViewDelegate {
     /// 当collectionView开始拖拽时, 取消timer
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        timer?.invalidate()
-        timer = nil
+        removeTimer()
     }
     
     /// 当collectionView将结束拖拽时, 开启timer
@@ -131,8 +138,12 @@ extension TTFMRecommendNewsCell: UICollectionViewDataSource, UICollectionViewDel
         startTimer()
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return newsCellSection
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (newsList?.count ?? 0) * 100
+        return newsList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -146,9 +157,9 @@ extension TTFMRecommendNewsCell: UICollectionViewDataSource, UICollectionViewDel
         print("TTFMRecommendNewsCell - didSelect: %d", indexPath.item)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: newsCellWidth, height: newsCellHeight)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: newsCellWidth, height: newsCellHeight)
+//    }
 }
 
 class TTFMNewsCell: UICollectionViewCell {
@@ -170,17 +181,17 @@ class TTFMNewsCell: UICollectionViewCell {
     }
     
     private func makeUI() {
-        backgroundColor = .clear
-        contentView.backgroundColor = .clear
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.right.bottom.equalToSuperview()
+            make.left.equalTo(2)
         }
     }
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = Constants.Fonts.font(16.0)
+        label.textAlignment = .center
         return label
     }()
 }

@@ -92,8 +92,7 @@ extension TTFMRecommendSquareCell {
         addSubview(collectionView)
         
         collectionView.snp.makeConstraints { (make) in
-            make.left.right.top.equalToSuperview()
-            make.height.equalTo(160)
+            make.edges.equalToSuperview()
         }
     }
     
