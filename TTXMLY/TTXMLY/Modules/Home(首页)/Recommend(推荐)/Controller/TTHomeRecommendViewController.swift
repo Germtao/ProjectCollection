@@ -121,14 +121,16 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
              .microLesson: // 猜你喜欢、精品、亲子时光、音乐好时光、人文
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendGuessULikeCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendGuessULikeCell
-            cell.configure(with: viewModel.homeRecommendList[indexPath.section].list)
+            cell.delegate = self
+            cell.configure(with: viewModel.homeRecommendList[indexPath.section])
             return cell
         case .categoriesForShort,
              .playlist,
              .categoriesForExplore: // 最热有声书、相声评书、精品听单
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendAudioBookCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendAudioBookCell
-            cell.configure(with: viewModel.homeRecommendList[indexPath.section].list)
+            cell.delegate = self
+            cell.configure(with: viewModel.homeRecommendList[indexPath.section])
             return cell
         case .ad: // ad
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendAdCell.reuseIdentifier,
@@ -199,5 +201,27 @@ extension TTHomeRecommendViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return viewModel.minimumInteritemSpacingForSections
+    }
+}
+
+extension TTHomeRecommendViewController: TTFMRecommendViewCellDelegate {
+    func changeButtonClicked(_ cell: UICollectionViewCell, model: TTFMRecommendModel) {
+        guard let indexPath = collectionView.indexPath(for: cell) else { return }
+        
+        viewModel.changeABatch(model) { (models, message, code) in
+            switch code {
+            case .failure:
+                print("error: \(message?.debugDescription ?? "Unknown Error.")")
+            case .success:
+                if let models = models {
+                    self.viewModel.homeRecommendList[indexPath.section].list = models
+                    self.collectionView.reloadItems(at: [indexPath])
+                }
+            }
+        }
+    }
+    
+    func recommendGuessULikeCellClicked(model: TTFMRecommendListModel) {
+        print("猜你喜欢 cell 点击")
     }
 }
