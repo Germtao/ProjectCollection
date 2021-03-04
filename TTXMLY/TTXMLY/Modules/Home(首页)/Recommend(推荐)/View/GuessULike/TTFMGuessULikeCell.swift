@@ -23,12 +23,12 @@ class TTFMGuessULikeCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     // MARK: - 懒加载
@@ -36,13 +36,13 @@ class TTFMGuessULikeCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16.0)
+        label.font = Constants.Fonts.font(16.0)
         return label
     }()
     
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.font = Constants.Fonts.font(14.0)
         label.textColor = UIColor.gray
         label.numberOfLines = 0
         return label
@@ -50,7 +50,7 @@ class TTFMGuessULikeCell: UICollectionViewCell {
 }
 
 extension TTFMGuessULikeCell {
-    private func setupUI() {
+    private func makeUI() {
         addSubview(imageView)
         addSubview(titleLabel)
         addSubview(subTitleLabel)

@@ -10,34 +10,33 @@ import UIKit
 import SwiftyJSON
 import HandyJSON
 
-protocol TTFMRecommendGuessULikeCellDelegate: NSObjectProtocol {
-    func recommendGuessULikeCellClicked(model: TTFMRecommendListModel)
-}
-
 class TTFMRecommendGuessULikeCell: UICollectionViewCell {
     
     static let reuseIdentifier = "recommendGuessULikeCellID"
     
-    weak var delegate: TTFMRecommendGuessULikeCellDelegate?
+    weak var delegate: TTFMRecommendViewCellDelegate?
     
-    private var recommendList: [TTFMRecommendListModel]?
+    private var model = TTFMRecommendModel() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
-    func configure(with list: [TTFMRecommendListModel]?) {
-        recommendList = list
-        collectionView.reloadData()
+    func configure(with model: TTFMRecommendModel?) {
+        guard let model = model else { return }
+        self.model = model
+        changeButton.isHidden = model.list?.isEmpty == true
     }
     
     // MARK: - override functions
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        setupUI()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     // MARK: - 懒加载
@@ -55,6 +54,10 @@ class TTFMRecommendGuessULikeCell: UICollectionViewCell {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        layout.minimumLineSpacing = 5
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize(width: (Constants.Sizes.screenW - 55) / 3, height: 180)
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
         view.alwaysBounceVertical = true
@@ -67,47 +70,29 @@ class TTFMRecommendGuessULikeCell: UICollectionViewCell {
 
 extension TTFMRecommendGuessULikeCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recommendList?.count ?? 0
+        return model.list?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMGuessULikeCell.reuseIdentifier,
                                                       for: indexPath) as! TTFMGuessULikeCell
-        cell.configure(with: recommendList?[indexPath.item])
+        cell.configure(with: model.list?[indexPath.item])
         return cell
     }
 }
 
-extension TTFMRecommendGuessULikeCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TTFMRecommendGuessULikeCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.recommendGuessULikeCellClicked(model: (recommendList?[indexPath.item])!)
-    }
-    
-    /// 每个分区的内边距
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-    }
-    
-    /// 最小 item 间距
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    /// 最小行间距
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    /// item 尺寸
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (Constants.Sizes.screenW - 55) / 3, height: 180)
+        guard let model = model.list?[indexPath.item] else { return }
+        
+        delegate?.recommendGuessULikeCellClicked(model: model)
     }
 }
 
 extension TTFMRecommendGuessULikeCell {
     
     /// 设置UI和布局
-    private func setupUI() {
+    private func makeUI() {
         addSubview(changeButton)
         addSubview(collectionView)
         
@@ -125,15 +110,6 @@ extension TTFMRecommendGuessULikeCell {
     }
     
     @objc private func changeButtonClicked() {
-        TTFMRecommendProvider.request(.changeGuessULikeList) { (result) in
-            if case let .success(response) = result {
-                let data = try? response.mapJSON()
-                let json = JSON(data!)
-                if let mappedObject = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json["list"].description) {
-                    self.recommendList = mappedObject as? [TTFMRecommendListModel]
-                    self.collectionView.reloadData()
-                }
-            }
-        }
+        delegate?.changeButtonClicked(self, model: model)
     }
 }
