@@ -11,15 +11,17 @@ import UIKit
 class TTFMRecommendLiveCell: UICollectionViewCell {
     static let reuseIdentifier = "recommendLiveCellID"
     
-    private var liveList: [TTFMRecommendListModel]? {
+    weak var delegate: TTFMRecommendViewCellDelegate?
+    
+    private var model = TTFMRecommendModel() {
         didSet {
             collectionView.reloadData()
         }
     }
     
-    func configure(with list: [TTFMRecommendListModel]?) {
-        guard let list = list else { return }
-        liveList = list
+    func configure(with model: TTFMRecommendModel?) {
+        guard let model = model else { return }
+        self.model = model
     }
     
     override init(frame: CGRect) {
@@ -35,6 +37,9 @@ class TTFMRecommendLiveCell: UICollectionViewCell {
     // MARK: - 懒加载
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 5
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize(width: (Constants.Sizes.screenW - 55) / 3, height: 180)
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
         view.alwaysBounceVertical = true
@@ -76,37 +81,25 @@ extension TTFMRecommendLiveCell {
     }
     
     @objc private func changeButtonClicked() {
-        print("TTFMRecommendLiveCell - 换一批")
+        delegate?.changeButtonClicked(self, model: model)
     }
 }
 
 extension TTFMRecommendLiveCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return liveList?.count ?? 0
+        return model.list?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMLiveCell.reuseIdentifier,
                                                       for: indexPath) as! TTFMLiveCell
-        cell.configure(with: liveList?[indexPath.item])
+        cell.configure(with: model.list?[indexPath.item])
         return cell
     }
 }
 
-extension TTFMRecommendLiveCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TTFMRecommendLiveCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (Constants.Sizes.screenW - 55) / 3, height: 180)
     }
 }

@@ -90,7 +90,7 @@ extension TTFMRecommendViewModel {
             }
         case .live:
             TTFMNetworkManager.shared.request(target: TTFMRecommendAPI.changeLiveList) { (json, message, code) in
-                let models = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json?["list"].description) as? [TTFMRecommendListModel]
+                let models = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json?["data"]["list"].description) as? [TTFMRecommendListModel]
                 finished(models, json?["message"].description, code)
             }
         default:

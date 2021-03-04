@@ -94,9 +94,8 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("cellForItemAt - \(indexPath.section)")
         let moduleType = viewModel.homeRecommendList[indexPath.section].moduleType
-        print("moduleType = \(moduleType.rawValue)")
+        print("cellForItemAt - moduleType = \(moduleType.rawValue)")
         
         switch moduleType {
         case .focus: // 轮播图
@@ -149,7 +148,8 @@ extension TTHomeRecommendViewController: UICollectionViewDataSource {
         case .live: // 直播
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendLiveCell.reuseIdentifier,
                                                           for: indexPath) as! TTFMRecommendLiveCell
-            cell.configure(with: viewModel.homeRecommendList[indexPath.section].list)
+            cell.delegate = self
+            cell.configure(with: viewModel.homeRecommendList[indexPath.section])
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMRecommendForUCell.reuseIdentifier,
