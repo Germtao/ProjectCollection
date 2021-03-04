@@ -10,9 +10,9 @@ import Foundation
 import HandyJSON
 import SwiftyJSON
 
-class TTFMRecommendViewModel {
+class TTFMRecommendViewModel: NSObject {
     
-    var homeRecommendList: [TTFMRecommendModel]?
+    var homeRecommendList: [TTFMRecommendModel] = []
     /// 九宫格数据
     var recommendSquareList: [TTFMRecommendSquareModel]?
     
@@ -38,10 +38,6 @@ extension TTFMRecommendViewModel {
                 
                 if let homeRecommendList = JSONDeserializer<TTFMRecommendModel>.deserializeModelArrayFrom(json: json["list"].description) as? [TTFMRecommendModel] {
                     self.homeRecommendList = homeRecommendList
-                    
-                    if let recommendSquareList = JSONDeserializer<TTFMRecommendSquareModel>.deserializeModelArrayFrom(json: json["list"][1]["list"].description) {
-                        self.recommendSquareList = recommendSquareList as? [TTFMRecommendSquareModel]
-                    }
                     
                     if let oneKeyListen = JSONDeserializer<TTFMOneKeyListenModel>.deserializeModelArrayFrom(json: json["list"][9]["list"].description) {
                         self.oneKeyListenList = oneKeyListen as? [TTFMOneKeyListenModel]
@@ -84,8 +80,8 @@ extension TTFMRecommendViewModel {
 extension TTFMRecommendViewModel {
     /// section数量
     var numberOfSections: Int {
-        print(homeRecommendList?.count ?? 0)
-        return homeRecommendList?.count ?? 0
+        print(homeRecommendList.count)
+        return homeRecommendList.count
     }
     
     var numberOfItems: Int {
@@ -108,19 +104,24 @@ extension TTFMRecommendViewModel {
     /// item尺寸
     func sizeForItem(at indexPath: IndexPath) -> CGSize {
         let headerAndFooterHeight: CGFloat = 90.0
-        let count = homeRecommendList?[indexPath.section].list?.count ?? 0
+        let count = homeRecommendList[indexPath.section].list?.count ?? 0
         let itemNums = count / 3
-        let moduleType = homeRecommendList?[indexPath.section].moduleType ?? .unknown
+        let moduleType = homeRecommendList[indexPath.section].moduleType
+        
+        print("\(moduleType.rawValue) - \(count)")
         
         switch moduleType {
         case .focus:
-            return CGSize(width: Constants.Sizes.screenW, height: 150)
-        case .square:
-            return recommendSquareList?.count == 0
+            return homeRecommendList[indexPath.section].list?.first?.data?.count == 0
                 ? .zero
-                : CGSize(width: Constants.Sizes.screenW, height: 160)
+                : CGSize(width: Constants.Sizes.screenW, height: 150)
+        case .square:
+//            return count == 0
+//                ? .zero
+//                : CGSize(width: Constants.Sizes.screenW, height: 160)
+            return CGSize(width: Constants.Sizes.screenW, height: 160)
         case .topBuzz:
-            return homeRecommendList?[indexPath.section].list?.count == 0
+            return count == 0
                 ? .zero
                 : CGSize(width: Constants.Sizes.screenW, height: 50)
         case .guessYouLike,
@@ -128,16 +129,18 @@ extension TTFMRecommendViewModel {
              .categoriesForLong,
              .cityCategory,
              .live:
-            return CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(180 * itemNums))
+            return count == 0
+                ? .zero
+                : CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(180 * itemNums))
         case .categoriesForShort,
              .playlist,
              .categoriesForExplore,
              .microLesson:
-            return homeRecommendList?[indexPath.section].list?.count == 0
+            return count == 0
                 ? .zero
                 : CGSize(width: Constants.Sizes.screenW, height: headerAndFooterHeight + CGFloat(120 * count))
         case .ad:
-            return homeRecommendList?[indexPath.section].list?.count == 0
+            return count == 0
                 ? .zero
                 : CGSize(width: Constants.Sizes.screenW, height: 240)
         case .oneKeyListen:
@@ -149,26 +152,27 @@ extension TTFMRecommendViewModel {
     
     /// 分区header尺寸
     func sizeForHeader(in section: Int) -> CGSize {
-        let moduleType = homeRecommendList?[section].moduleType
-        if moduleType == .focus ||
-            moduleType == .square ||
-            moduleType == .topBuzz ||
-            moduleType == .ad ||
-            section == 18 {
-            return .zero
-        }
+        let moduleType = homeRecommendList[section].moduleType
         
-        return CGSize(width: Constants.Sizes.screenW, height: 40.0)
+        if section == 18 { return .zero }
+        
+        switch moduleType {
+        case .focus, .square, .topBuzz:
+            return .zero
+        default:
+            return CGSize(width: Constants.Sizes.screenW, height: 40.0)
+        }
     }
     
     /// 分区footer尺寸
     func sizeForFooter(in section: Int) -> CGSize {
-        let moduleType = homeRecommendList?[section].moduleType
-        if moduleType == .focus ||
-            moduleType == .square {
-            return .zero
-        }
+        let moduleType = homeRecommendList[section].moduleType
         
-        return CGSize(width: Constants.Sizes.screenW, height: 10.0)
+        switch moduleType {
+        case .focus, .square:
+            return .zero
+        default:
+            return CGSize(width: Constants.Sizes.screenW, height: 10.0)
+        }
     }
 }
