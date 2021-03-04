@@ -74,6 +74,32 @@ extension TTFMRecommendViewModel {
             }
         }
     }
+    
+    /// 换一批
+    func changeABatch(_ model: TTFMRecommendModel, finished: @escaping ([TTFMRecommendListModel]?, String?, RequestErrorCode) -> Void) {
+        switch model.moduleType {
+        case .guessYouLike:
+            TTFMNetworkManager.shared.request(target: TTFMRecommendAPI.changeGuessULikeList) { (json, message, code) in
+                let models = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json?["list"].description) as? [TTFMRecommendListModel]
+                finished(models, json?["message"].description, code)
+            }
+        case .paidCategory:
+            TTFMNetworkManager.shared.request(target: TTFMRecommendAPI.changePaidCategoryList) { (json, message, code) in
+                let models = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json?["list"].description) as? [TTFMRecommendListModel]
+                finished(models, json?["message"].description, code)
+            }
+        case .live:
+            TTFMNetworkManager.shared.request(target: TTFMRecommendAPI.changeLiveList) { (json, message, code) in
+                let models = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json?["list"].description) as? [TTFMRecommendListModel]
+                finished(models, json?["message"].description, code)
+            }
+        default:
+            TTFMNetworkManager.shared.request(target: TTFMRecommendAPI.changeOtherCategoryList(categoryId: model.categoryId)) { (json, message, code) in
+                let models = JSONDeserializer<TTFMRecommendListModel>.deserializeModelArrayFrom(json: json?["list"].description) as? [TTFMRecommendListModel]
+                finished(models, json?["message"].description, code)
+            }
+        }
+    }
 }
 
 // MARK: - collectionView 设置属性

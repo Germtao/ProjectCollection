@@ -160,8 +160,46 @@ extension TTFMRecommendAPI: TargetType {
                  "xt": Int32(Date().timeIntervalSince1970),
                  "deviceId": UIDevice.current.identifierForVendor!.uuidString
             ]
-        default:
-            return [:]
+        case .changePaidCategoryList:
+            return [
+                "device":"iPhone",
+                "appid":0,
+                "excludedAdAlbumIds":13616258,
+                "excludedOffset":18,
+                "network":"WIFI",
+                "operator":3,
+                "pageId":1,
+                "pageSize":3,
+                "scale":3,
+                "uid":0,
+                "version":"6.5.3",
+                "xt": Int32(Date().timeIntervalSince1970),
+                "deviceId": UIDevice.current.identifierForVendor!.uuidString
+            ]
+        case .changeLiveList:
+            return [
+                "currentRecordIds":"1655918%2C1671613%2C1673030%2C1670774%2C1673082%2C1672407",
+                "pageId":1,
+                "pageSize":6,
+                "device":"iPhone"
+            ]
+        case .changeOtherCategoryList(let categoryId):
+            return [
+                "categoryId": categoryId,
+                "appid":0,
+                "excludedAlbumIds":"7024810%2C8424399%2C8125936",
+                "excludedAdAlbumIds":"13616258",
+                "excludedOffset":3,
+                "network":"WIFI",
+                "operator":3,
+                "pageId":1,
+                "pageSize":3,
+                "scale":3,
+                "uid":0,
+                "version":"6.5.3",
+                "xt": Int32(Date().timeIntervalSince1970),
+                "deviceId": UIDevice.current.identifierForVendor!.uuidString
+            ]
         }
     }
 }
