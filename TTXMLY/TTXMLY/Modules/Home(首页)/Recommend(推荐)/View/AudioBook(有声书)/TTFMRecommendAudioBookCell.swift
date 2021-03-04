@@ -13,20 +13,28 @@ class TTFMRecommendAudioBookCell: UICollectionViewCell {
     
     static let reuseIdentifier = "recommendAudioBookCellID"
     
-    private var recommendList: [TTFMRecommendListModel]?
+    weak var delegate: TTFMRecommendViewCellDelegate?
     
-    func configure(with list: [TTFMRecommendListModel]?) {
-        recommendList = list
-        collectionView.reloadData()
+    private var model = TTFMRecommendModel() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    func configure(with model: TTFMRecommendModel?) {
+        guard let model = model else { return }
+        self.model = model
+        changeButton.isHidden = model.list?.isEmpty == true
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     private lazy var changeButton: UIButton = {
@@ -36,14 +44,15 @@ class TTFMRecommendAudioBookCell: UICollectionViewCell {
         button.backgroundColor = Constants.Colors.buttonBg
         button.layer.cornerRadius = 5.0
         button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(changeButtonClicked), for: .touchUpInside)
         return button
     }()
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets.zero
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: Constants.Sizes.screenW - 30, height: 120)
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
         view.alwaysBounceVertical = true
@@ -56,14 +65,10 @@ class TTFMRecommendAudioBookCell: UICollectionViewCell {
 }
 
 extension TTFMRecommendAudioBookCell {
-    private func setupUI() {
+    private func makeUI() {
         addSubview(collectionView)
         addSubview(changeButton)
         
-        setupUILayout()
-    }
-    
-    private func setupUILayout() {
         collectionView.snp.makeConstraints { (make) in
             make.left.top.equalTo(15)
             make.bottom.equalToSuperview().offset(-50)
@@ -75,27 +80,27 @@ extension TTFMRecommendAudioBookCell {
             make.bottom.equalToSuperview().offset(-15)
         }
     }
+    
+    @objc private func changeButtonClicked() {
+        delegate?.changeButtonClicked(self, model: model)
+    }
 }
 
 extension TTFMRecommendAudioBookCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recommendList?.count ?? 0
+        return model.list?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TTFMAudioBookCell.reuseIdentifier,
                                                       for: indexPath) as! TTFMAudioBookCell
-        cell.configure(with: recommendList?[indexPath.item])
+        cell.configure(with: model.list?[indexPath.item])
         return cell
     }
 }
 
-extension TTFMRecommendAudioBookCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TTFMRecommendAudioBookCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.Sizes.screenW - 30, height: 120)
     }
 }
