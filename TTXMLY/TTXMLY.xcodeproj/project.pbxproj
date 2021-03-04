@@ -119,6 +119,8 @@
 		3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC9122C380F70026F0C8 /* UINavigationBar.swift */; };
 		3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC9322C46C4D0026F0C8 /* TTCustomNavBar.swift */; };
 		3B20FC9622C46E360026F0C8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC9522C46E360026F0C8 /* UIButton.swift */; };
+		3B7D67F925F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D67F825F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift */; };
+		3B7D680825F0BF4F00F93EF7 /* TTFMNetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D680725F0BF4F00F93EF7 /* TTFMNetworkManger.swift */; };
 		C7047EA6CA7202593720AD26 /* Pods_TTXMLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10AE901FB3A2A4747D2F0959 /* Pods_TTXMLY.framework */; };
 		F03BDD1DAB37361FD671F15F /* Pods_TTXMLYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE126CF8AC4EEA7CA656E633 /* Pods_TTXMLYTests.framework */; };
 /* End PBXBuildFile section */
@@ -251,6 +253,8 @@
 		3B20FC9122C380F70026F0C8 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		3B20FC9322C46C4D0026F0C8 /* TTCustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCustomNavBar.swift; sourceTree = "<group>"; };
 		3B20FC9522C46E360026F0C8 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		3B7D67F825F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendViewCellDelegate.swift; sourceTree = "<group>"; };
+		3B7D680725F0BF4F00F93EF7 /* TTFMNetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMNetworkManger.swift; sourceTree = "<group>"; };
 		A231BEACAF01636B86277F6F /* Pods-TTXMLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY/Pods-TTXMLY.release.xcconfig"; sourceTree = "<group>"; };
 		BEE95CC105A213190B898C28 /* Pods-TTXMLYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLYTests.release.xcconfig"; path = "Target Support Files/Pods-TTXMLYTests/Pods-TTXMLYTests.release.xcconfig"; sourceTree = "<group>"; };
 		C287025B3B9DF91ED78D2B04 /* Pods-TTXMLYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLYTests.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLYTests/Pods-TTXMLYTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 		3B14B1B622C9EBE300FD9B28 /* Recommend(推荐) */ = {
 			isa = PBXGroup;
 			children = (
+				3B7D67F725F0B64D00F93EF7 /* Protocol */,
 				3B14B1B222C9E94A00FD9B28 /* Model */,
 				3B14B1B122C9E94300FD9B28 /* View */,
 				3B14B1B522C9EA8200FD9B28 /* Controller */,
@@ -990,6 +995,7 @@
 		3B20FC8422C363CC0026F0C8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3B7D67FE25F0BEC200F93EF7 /* Net */,
 				3B14B19C22C5FC6900FD9B28 /* Common */,
 				3B20FC8C22C379940026F0C8 /* Utils */,
 				3B20FC8522C363DE0026F0C8 /* Extension */,
@@ -1024,6 +1030,22 @@
 			children = (
 			);
 			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		3B7D67F725F0B64D00F93EF7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D67F825F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3B7D67FE25F0BEC200F93EF7 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D680725F0BF4F00F93EF7 /* TTFMNetworkManger.swift */,
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 		73A726CB65912867194D9934 /* Pods */ = {
@@ -1248,6 +1270,7 @@
 				3B14B20322D2D6E600FD9B28 /* TTFMReCommendOneKeyListenCell.swift in Sources */,
 				3B14B20822D2ED0B00FD9B28 /* TTFMRecommendLiveCell.swift in Sources */,
 				3B14B25822D5EB4700FD9B28 /* TTFMHomeLiveBannerCell.swift in Sources */,
+				3B7D67F925F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift in Sources */,
 				3B14B1BD22C9FC6900FD9B28 /* TTFMBouncesContentView.swift in Sources */,
 				3B1B9DC422EAF6D30053627E /* TTFMListenChannelVC.swift in Sources */,
 				3B20FC8922C364230026F0C8 /* UIViewController.swift in Sources */,
@@ -1256,6 +1279,7 @@
 				3B14B22522D43FE900FD9B28 /* TTFMCategoryFooterView.swift in Sources */,
 				3B1B9DBE22EAF65A0053627E /* TTFMListenSubscribeVC.swift in Sources */,
 				3B14B25222D5C6A200FD9B28 /* TTHomeLiveModel.swift in Sources */,
+				3B7D680825F0BF4F00F93EF7 /* TTFMNetworkManger.swift in Sources */,
 				3B20FC9222C380F70026F0C8 /* UINavigationBar.swift in Sources */,
 				3B20FC9422C46C4D0026F0C8 /* TTCustomNavBar.swift in Sources */,
 				3B14B20022CF614000FD9B28 /* String.swift in Sources */,
