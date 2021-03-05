@@ -14,22 +14,18 @@ class TTFMCategoryViewModel: NSObject {
     var categoryModels: [TTFMCategoryModel]?
     
     /// 更新数据回调
-    var updateDataHandler: (() -> Void)?
+    var updateDataHandler: ((RequestErrorCode, String?) -> Void)?
 }
 
 extension TTFMCategoryViewModel {
     /// 刷新数据
     func refreshData() {
-        TTFMCategoryProvider.request(.categoryList) { (result) in
-            if case let .success(response) = result {
-                let data = try? response.mapJSON()
-                let json = JSON(data!)
-                if let mappedObject = JSONDeserializer<TTFMHomeCategoryModel>.deserializeFrom(json: json.description) {
-                    self.categoryModels = mappedObject.list
-                }
-                
-                self.updateDataHandler?()
+        TTFMNetworkManager.shared.request(target: TTFMCategoryAPI.categoryList) { (json, message, code) in
+            print("首页分类 json = \(json)")
+            if let model = TTFMHomeCategoryModel.deserialize(from: json?.description) {
+                self.categoryModels = model.list
             }
+            self.updateDataHandler?(code, message)
         }
     }
 }
