@@ -22,6 +22,8 @@ struct Constants {
         static let button = UIColor(red: 242/255.0, green: 77/255.0, blue: 51/255.0, alpha: 1)
         static let buttonBg = UIColor(red: 254/255.0, green: 232/255.0, blue: 227/255.0, alpha: 1)
         
+        static let viewBackground = UIColor(red: 240/255.0, green: 241/255.0, blue: 244/255.0, alpha: 1)
+        
         static let sectionFooter = UIColor(red: 240/255.0, green: 241/255.0, blue: 244/255.0, alpha: 1)
         
         static let endLabel = UIColor(red: 248, green: 210, blue: 74, alpha: 1)
