@@ -121,6 +121,11 @@
 		3B20FC9622C46E360026F0C8 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20FC9522C46E360026F0C8 /* UIButton.swift */; };
 		3B7D67F925F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D67F825F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift */; };
 		3B7D680825F0BF4F00F93EF7 /* TTFMNetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D680725F0BF4F00F93EF7 /* TTFMNetworkManger.swift */; };
+		3B7D680F25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D680D25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.swift */; };
+		3B7D681025F1E25500F93EF7 /* TTFMSubCategoryHorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7D680E25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.xib */; };
+		3B7D681725F1E5B500F93EF7 /* TTFMSubCategoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D681625F1E5B500F93EF7 /* TTFMSubCategoryApi.swift */; };
+		3B7D681E25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D681D25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift */; };
+		3B7D682425F216F300F93EF7 /* TTFMSubCategoryMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D682325F216F300F93EF7 /* TTFMSubCategoryMainController.swift */; };
 		C7047EA6CA7202593720AD26 /* Pods_TTXMLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10AE901FB3A2A4747D2F0959 /* Pods_TTXMLY.framework */; };
 		F03BDD1DAB37361FD671F15F /* Pods_TTXMLYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE126CF8AC4EEA7CA656E633 /* Pods_TTXMLYTests.framework */; };
 /* End PBXBuildFile section */
@@ -255,6 +260,11 @@
 		3B20FC9522C46E360026F0C8 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3B7D67F825F0B67B00F93EF7 /* TTFMRecommendViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMRecommendViewCellDelegate.swift; sourceTree = "<group>"; };
 		3B7D680725F0BF4F00F93EF7 /* TTFMNetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMNetworkManger.swift; sourceTree = "<group>"; };
+		3B7D680D25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryHorizontalCell.swift; sourceTree = "<group>"; };
+		3B7D680E25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFMSubCategoryHorizontalCell.xib; sourceTree = "<group>"; };
+		3B7D681625F1E5B500F93EF7 /* TTFMSubCategoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryApi.swift; sourceTree = "<group>"; };
+		3B7D681D25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryViewModel.swift; sourceTree = "<group>"; };
+		3B7D682325F216F300F93EF7 /* TTFMSubCategoryMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryMainController.swift; sourceTree = "<group>"; };
 		A231BEACAF01636B86277F6F /* Pods-TTXMLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY/Pods-TTXMLY.release.xcconfig"; sourceTree = "<group>"; };
 		BEE95CC105A213190B898C28 /* Pods-TTXMLYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLYTests.release.xcconfig"; path = "Target Support Files/Pods-TTXMLYTests/Pods-TTXMLYTests.release.xcconfig"; sourceTree = "<group>"; };
 		C287025B3B9DF91ED78D2B04 /* Pods-TTXMLYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLYTests.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLYTests/Pods-TTXMLYTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -523,6 +533,7 @@
 		3B14B21322D3326200FD9B28 /* Category(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				3B7D680B25F1DDFF00F93EF7 /* SubCategory(二级分类) */,
 				3B14B21822D3331500FD9B28 /* TTHomeCategoryViewController.swift */,
 				3B14B21622D332B700FD9B28 /* Model */,
 				3B14B21522D332A900FD9B28 /* View */,
@@ -1048,6 +1059,50 @@
 			path = Net;
 			sourceTree = "<group>";
 		};
+		3B7D680B25F1DDFF00F93EF7 /* SubCategory(二级分类) */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D680C25F1E17C00F93EF7 /* Views */,
+				3B7D681C25F2148E00F93EF7 /* ViewModel */,
+				3B7D681525F1E58D00F93EF7 /* Api */,
+				3B7D682925F216FE00F93EF7 /* Controllers */,
+			);
+			path = "SubCategory(二级分类)";
+			sourceTree = "<group>";
+		};
+		3B7D680C25F1E17C00F93EF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D680D25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.swift */,
+				3B7D680E25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B7D681525F1E58D00F93EF7 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D681625F1E5B500F93EF7 /* TTFMSubCategoryApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		3B7D681C25F2148E00F93EF7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D681D25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3B7D682925F216FE00F93EF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D682325F216F300F93EF7 /* TTFMSubCategoryMainController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		73A726CB65912867194D9934 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1153,6 +1208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B20FC6822C34F980026F0C8 /* LaunchScreen.storyboard in Resources */,
+				3B7D681025F1E25500F93EF7 /* TTFMSubCategoryHorizontalCell.xib in Resources */,
 				3B1B9DB322EAD95E0053627E /* listenRecommend.json in Resources */,
 				3B1B9DAF22EAD9500053627E /* listenMoreChannel.json in Resources */,
 				3B20FC6522C34F980026F0C8 /* Assets.xcassets in Resources */,
@@ -1245,6 +1301,7 @@
 				3B14B1CF22CAFEBA00FD9B28 /* TTFMRecommendModel.swift in Sources */,
 				3B14B1A622C60C1600FD9B28 /* TTPageViewProtocol.swift in Sources */,
 				3B14B20522D2DE5000FD9B28 /* TTFMOneKeyListenCell.swift in Sources */,
+				3B7D681725F1E5B500F93EF7 /* TTFMSubCategoryApi.swift in Sources */,
 				3B14B23C22D5835200FD9B28 /* TTFMVipCategoryButtonCell.swift in Sources */,
 				3B14B34022DC4C2700FD9B28 /* TTFMRadioSquareCell.swift in Sources */,
 				3B14B26422D6D57400FD9B28 /* TTFMHomeLiveRankCell.swift in Sources */,
@@ -1286,6 +1343,7 @@
 				3B14B1BB22C9FB0900FD9B28 /* TTFMBasicContentView.swift in Sources */,
 				3B14B1E722CC8B1500FD9B28 /* TTCarouselViewTransformer.swift in Sources */,
 				3B20FC9622C46E360026F0C8 /* UIButton.swift in Sources */,
+				3B7D680F25F1E25400F93EF7 /* TTFMSubCategoryHorizontalCell.swift in Sources */,
 				3B14B1E122CC7BAA00FD9B28 /* TTCarouselCollectionView.swift in Sources */,
 				3B14B1C422CA0F4400FD9B28 /* TTListenViewController.swift in Sources */,
 				3B14B25022D5C35800FD9B28 /* TTHomeLiveViewController.swift in Sources */,
@@ -1293,6 +1351,7 @@
 				3B14B1DC22CC402F00FD9B28 /* TTFMRecommendGridCell.swift in Sources */,
 				3B14B1DF22CC4AB300FD9B28 /* TTCarouselViewCell.swift in Sources */,
 				3B14B1EB22CCA51000FD9B28 /* TTCarouselViewLayout.swift in Sources */,
+				3B7D682425F216F300F93EF7 /* TTFMSubCategoryMainController.swift in Sources */,
 				3B14B20A22D2EE3C00FD9B28 /* TTFMLiveCell.swift in Sources */,
 				3B14B22322D43EAA00FD9B28 /* TTFMCategoryHeaderView.swift in Sources */,
 				3B14B1AC22C9DD9700FD9B28 /* TTPageViewUntils.swift in Sources */,
@@ -1337,6 +1396,7 @@
 				3B14B1F522CF1EEC00FD9B28 /* TTFMRecommendFooterView.swift in Sources */,
 				3B1B9DAD22EACEA20053627E /* TTListenApi.swift in Sources */,
 				3B14B26122D6D18E00FD9B28 /* TTFMHomeLiveCategoryCell.swift in Sources */,
+				3B7D681E25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift in Sources */,
 				3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */,
 				3B14B26A22D7017A00FD9B28 /* TTFMHomeLiveRecommendCell.swift in Sources */,
 				3B14B23922D581B700FD9B28 /* TTFMVipCategoryCell.swift in Sources */,

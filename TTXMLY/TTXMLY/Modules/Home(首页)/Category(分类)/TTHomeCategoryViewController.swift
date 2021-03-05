@@ -40,6 +40,8 @@ class TTHomeCategoryViewController: UIViewController {
 
 extension TTHomeCategoryViewController {
     private func makeUI() {
+        view.backgroundColor = Constants.Colors.defaultBackground
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -94,6 +96,15 @@ extension TTHomeCategoryViewController: UICollectionViewDataSource {
 }
 
 extension TTHomeCategoryViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = viewModel.categoryModels?[indexPath.section].itemList?[indexPath.item].itemDetail
+        let categoryId = model?.categoryId ?? 0
+        
+        let subcategoryVc = TTFMSubCategoryMainController(categoryId: categoryId)
+        subcategoryVc.title = model?.title
+        navigationController?.pushViewController(subcategoryVc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return viewModel.insetForSection
     }
