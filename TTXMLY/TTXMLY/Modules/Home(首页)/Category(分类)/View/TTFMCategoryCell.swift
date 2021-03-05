@@ -49,11 +49,12 @@ class TTFMCategoryCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     private lazy var imageView = UIImageView()
@@ -66,7 +67,7 @@ class TTFMCategoryCell: UICollectionViewCell {
 }
 
 extension TTFMCategoryCell {
-    private func setupUI() {
+    private func makeUI() {
         
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 4

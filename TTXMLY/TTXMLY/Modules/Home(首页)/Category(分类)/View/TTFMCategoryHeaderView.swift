@@ -17,11 +17,12 @@ class TTFMCategoryHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
     }
     
     private lazy var view: UIView = {
@@ -38,7 +39,7 @@ class TTFMCategoryHeaderView: UICollectionReusableView {
 }
 
 extension TTFMCategoryHeaderView {
-    private func setupUI() {
+    private func makeUI() {
         backgroundColor = Constants.Colors.sectionFooter
         addSubview(view)
         addSubview(titleLabel)

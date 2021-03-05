@@ -13,10 +13,15 @@ class TTFMCategoryFooterView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = Constants.Colors.sectionFooter
+        makeUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        makeUI()
+    }
+    
+    private func makeUI() {
+        backgroundColor = Constants.Colors.sectionFooter
     }
 }
