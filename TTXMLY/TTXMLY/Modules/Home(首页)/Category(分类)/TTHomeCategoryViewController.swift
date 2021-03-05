@@ -13,7 +13,7 @@ class TTHomeCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupUI()
+        makeUI()
         loadData()
     }
     
@@ -39,7 +39,7 @@ class TTHomeCategoryViewController: UIViewController {
 }
 
 extension TTHomeCategoryViewController {
-    private func setupUI() {
+    private func makeUI() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -47,8 +47,13 @@ extension TTHomeCategoryViewController {
     }
     
     private func loadData() {
-        viewModel.updateDataHandler = { [unowned self] in
-            self.collectionView.reloadData()
+        viewModel.updateDataHandler = { [unowned self] (code, message) in
+            switch code {
+            case .failure:
+                print(message ?? "Unknown Error.")
+            case .success:
+                self.collectionView.reloadData()
+            }
         }
         viewModel.refreshData()
     }
