@@ -126,6 +126,7 @@
 		3B7D681725F1E5B500F93EF7 /* TTFMSubCategoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D681625F1E5B500F93EF7 /* TTFMSubCategoryApi.swift */; };
 		3B7D681E25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D681D25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift */; };
 		3B7D682425F216F300F93EF7 /* TTFMSubCategoryMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D682325F216F300F93EF7 /* TTFMSubCategoryMainController.swift */; };
+		3B7D682E25F234DC00F93EF7 /* TTFMSubCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7D682D25F234DC00F93EF7 /* TTFMSubCategoryModel.swift */; };
 		C7047EA6CA7202593720AD26 /* Pods_TTXMLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10AE901FB3A2A4747D2F0959 /* Pods_TTXMLY.framework */; };
 		F03BDD1DAB37361FD671F15F /* Pods_TTXMLYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE126CF8AC4EEA7CA656E633 /* Pods_TTXMLYTests.framework */; };
 /* End PBXBuildFile section */
@@ -265,6 +266,7 @@
 		3B7D681625F1E5B500F93EF7 /* TTFMSubCategoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryApi.swift; sourceTree = "<group>"; };
 		3B7D681D25F214B100F93EF7 /* TTFMSubCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryViewModel.swift; sourceTree = "<group>"; };
 		3B7D682325F216F300F93EF7 /* TTFMSubCategoryMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryMainController.swift; sourceTree = "<group>"; };
+		3B7D682D25F234DC00F93EF7 /* TTFMSubCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFMSubCategoryModel.swift; sourceTree = "<group>"; };
 		A231BEACAF01636B86277F6F /* Pods-TTXMLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY/Pods-TTXMLY.release.xcconfig"; sourceTree = "<group>"; };
 		BEE95CC105A213190B898C28 /* Pods-TTXMLYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLYTests.release.xcconfig"; path = "Target Support Files/Pods-TTXMLYTests/Pods-TTXMLYTests.release.xcconfig"; sourceTree = "<group>"; };
 		C287025B3B9DF91ED78D2B04 /* Pods-TTXMLYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLYTests.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLYTests/Pods-TTXMLYTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1062,6 +1064,7 @@
 		3B7D680B25F1DDFF00F93EF7 /* SubCategory(二级分类) */ = {
 			isa = PBXGroup;
 			children = (
+				3B7D682C25F234C100F93EF7 /* Models */,
 				3B7D680C25F1E17C00F93EF7 /* Views */,
 				3B7D681C25F2148E00F93EF7 /* ViewModel */,
 				3B7D681525F1E58D00F93EF7 /* Api */,
@@ -1101,6 +1104,14 @@
 				3B7D682325F216F300F93EF7 /* TTFMSubCategoryMainController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B7D682C25F234C100F93EF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B7D682D25F234DC00F93EF7 /* TTFMSubCategoryModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		73A726CB65912867194D9934 /* Pods */ = {
@@ -1400,6 +1411,7 @@
 				3B14B1E522CC802D00FD9B28 /* TTCarouselViewProtocol.swift in Sources */,
 				3B14B26A22D7017A00FD9B28 /* TTFMHomeLiveRecommendCell.swift in Sources */,
 				3B14B23922D581B700FD9B28 /* TTFMVipCategoryCell.swift in Sources */,
+				3B7D682E25F234DC00F93EF7 /* TTFMSubCategoryModel.swift in Sources */,
 				3B14B27422D70ECA00FD9B28 /* TTFMHomeBroadcastViewModel.swift in Sources */,
 				3B14B1BF22C9FD5200FD9B28 /* TTFMIrregularityBasicContentView.swift in Sources */,
 				3B14B33922DC1D5B00FD9B28 /* TTFMHomeBroadcastFooterView.swift in Sources */,
