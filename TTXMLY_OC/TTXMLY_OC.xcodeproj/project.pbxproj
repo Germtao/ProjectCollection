@@ -19,6 +19,7 @@
 		3B9CFF1225F5D94200E1E8BD /* TTFindApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF1125F5D94200E1E8BD /* TTFindApi.m */; };
 		3B9CFF1B25F5F44600E1E8BD /* TTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF1A25F5F44600E1E8BD /* TTBaseNavigationController.m */; };
 		3B9CFF2125F5F52400E1E8BD /* TTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF2025F5F52400E1E8BD /* TTConstants.m */; };
+		3B9CFF2925F5FB2900E1E8BD /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF2825F5FB2900E1E8BD /* TTBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		3B9CFF1F25F5F52400E1E8BD /* TTConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTConstants.h; sourceTree = "<group>"; };
 		3B9CFF2025F5F52400E1E8BD /* TTConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTConstants.m; sourceTree = "<group>"; };
 		3B9CFF2525F5F7BD00E1E8BD /* TTXMLY_OC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTXMLY_OC-Prefix.pch"; sourceTree = "<group>"; };
+		3B9CFF2725F5FB2900E1E8BD /* TTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseViewController.h; sourceTree = "<group>"; };
+		3B9CFF2825F5FB2900E1E8BD /* TTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 		3B9CFF1725F5F40200E1E8BD /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF2725F5FB2900E1E8BD /* TTBaseViewController.h */,
+				3B9CFF2825F5FB2900E1E8BD /* TTBaseViewController.m */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				3B9CFF1225F5D94200E1E8BD /* TTFindApi.m in Sources */,
 				3B9CFF0625F5CEAB00E1E8BD /* TTBaseRequest.m in Sources */,
 				3B9CFF2125F5F52400E1E8BD /* TTConstants.m in Sources */,
+				3B9CFF2925F5FB2900E1E8BD /* TTBaseViewController.m in Sources */,
 				3B9CFF1B25F5F44600E1E8BD /* TTBaseNavigationController.m in Sources */,
 				3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */,
 			);
