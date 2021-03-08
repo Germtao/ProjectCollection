@@ -30,6 +30,12 @@
 		3B9CFF5625F6166700E1E8BD /* TTFindRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF5525F6166700E1E8BD /* TTFindRadioViewController.m */; };
 		3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF5B25F6167D00E1E8BD /* TTFindRankViewController.m */; };
 		3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF6125F6168F00E1E8BD /* TTFindAnchorViewController.m */; };
+		3B9CFF6D25F61D9F00E1E8BD /* TTSubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF6C25F61D9F00E1E8BD /* TTSubscriptionViewController.m */; };
+		3B9CFF7225F61E0B00E1E8BD /* TTSubscriptionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF7125F61E0B00E1E8BD /* TTSubscriptionFactory.m */; };
+		3B9CFF7825F61FE200E1E8BD /* TTSubscriptionRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF7725F61FE200E1E8BD /* TTSubscriptionRecommendController.m */; };
+		3B9CFF7E25F6203000E1E8BD /* TTSubscriptionSubscriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF7D25F6203000E1E8BD /* TTSubscriptionSubscriptionController.m */; };
+		3B9CFF8425F6204D00E1E8BD /* TTSubscriptionHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF8325F6204D00E1E8BD /* TTSubscriptionHistoryController.m */; };
+		3B9CFF8925F6213300E1E8BD /* TTSubscriptionNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF8825F6213300E1E8BD /* TTSubscriptionNavView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +81,18 @@
 		3B9CFF5B25F6167D00E1E8BD /* TTFindRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindRankViewController.m; sourceTree = "<group>"; };
 		3B9CFF6025F6168F00E1E8BD /* TTFindAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindAnchorViewController.h; sourceTree = "<group>"; };
 		3B9CFF6125F6168F00E1E8BD /* TTFindAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindAnchorViewController.m; sourceTree = "<group>"; };
+		3B9CFF6B25F61D9F00E1E8BD /* TTSubscriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSubscriptionViewController.h; sourceTree = "<group>"; };
+		3B9CFF6C25F61D9F00E1E8BD /* TTSubscriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionViewController.m; sourceTree = "<group>"; };
+		3B9CFF7025F61E0B00E1E8BD /* TTSubscriptionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSubscriptionFactory.h; sourceTree = "<group>"; };
+		3B9CFF7125F61E0B00E1E8BD /* TTSubscriptionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionFactory.m; sourceTree = "<group>"; };
+		3B9CFF7625F61FE200E1E8BD /* TTSubscriptionRecommendController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSubscriptionRecommendController.h; sourceTree = "<group>"; };
+		3B9CFF7725F61FE200E1E8BD /* TTSubscriptionRecommendController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionRecommendController.m; sourceTree = "<group>"; };
+		3B9CFF7C25F6203000E1E8BD /* TTSubscriptionSubscriptionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSubscriptionSubscriptionController.h; sourceTree = "<group>"; };
+		3B9CFF7D25F6203000E1E8BD /* TTSubscriptionSubscriptionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionSubscriptionController.m; sourceTree = "<group>"; };
+		3B9CFF8225F6204D00E1E8BD /* TTSubscriptionHistoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSubscriptionHistoryController.h; sourceTree = "<group>"; };
+		3B9CFF8325F6204D00E1E8BD /* TTSubscriptionHistoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionHistoryController.m; sourceTree = "<group>"; };
+		3B9CFF8725F6213300E1E8BD /* TTSubscriptionNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSubscriptionNavView.h; sourceTree = "<group>"; };
+		3B9CFF8825F6213300E1E8BD /* TTSubscriptionNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionNavView.m; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -354,6 +372,7 @@
 		3B9CFF6525F61AF200E1E8BD /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF6F25F61DE600E1E8BD /* Factory */,
 				3B9CFF6825F61B4600E1E8BD /* Models */,
 				3B9CFF6725F61B4000E1E8BD /* Views */,
 				3B9CFF6625F61B3900E1E8BD /* Controllers */,
@@ -364,6 +383,11 @@
 		3B9CFF6625F61B3900E1E8BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF8125F6203900E1E8BD /* History */,
+				3B9CFF7B25F6201400E1E8BD /* Subscription */,
+				3B9CFF7525F61FB700E1E8BD /* Recommend */,
+				3B9CFF6B25F61D9F00E1E8BD /* TTSubscriptionViewController.h */,
+				3B9CFF6C25F61D9F00E1E8BD /* TTSubscriptionViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +395,8 @@
 		3B9CFF6725F61B4000E1E8BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF8725F6213300E1E8BD /* TTSubscriptionNavView.h */,
+				3B9CFF8825F6213300E1E8BD /* TTSubscriptionNavView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,6 +406,42 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3B9CFF6F25F61DE600E1E8BD /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF7025F61E0B00E1E8BD /* TTSubscriptionFactory.h */,
+				3B9CFF7125F61E0B00E1E8BD /* TTSubscriptionFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3B9CFF7525F61FB700E1E8BD /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF7625F61FE200E1E8BD /* TTSubscriptionRecommendController.h */,
+				3B9CFF7725F61FE200E1E8BD /* TTSubscriptionRecommendController.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		3B9CFF7B25F6201400E1E8BD /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF7C25F6203000E1E8BD /* TTSubscriptionSubscriptionController.h */,
+				3B9CFF7D25F6203000E1E8BD /* TTSubscriptionSubscriptionController.m */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		3B9CFF8125F6203900E1E8BD /* History */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF8225F6204D00E1E8BD /* TTSubscriptionHistoryController.h */,
+				3B9CFF8325F6204D00E1E8BD /* TTSubscriptionHistoryController.m */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		77B713C97F517CCA9E5C486A /* Pods */ = {
@@ -520,13 +582,19 @@
 				3B9CFEE725F5C81D00E1E8BD /* main.m in Sources */,
 				3B9CFF1225F5D94200E1E8BD /* TTFindApi.m in Sources */,
 				3B9CFF0625F5CEAB00E1E8BD /* TTBaseRequest.m in Sources */,
+				3B9CFF8925F6213300E1E8BD /* TTSubscriptionNavView.m in Sources */,
 				3B9CFF2125F5F52400E1E8BD /* TTConstants.m in Sources */,
 				3B9CFF5125F6165600E1E8BD /* TTFindCategoryViewController.m in Sources */,
+				3B9CFF7E25F6203000E1E8BD /* TTSubscriptionSubscriptionController.m in Sources */,
 				3B9CFF2925F5FB2900E1E8BD /* TTBaseViewController.m in Sources */,
 				3B9CFF4B25F6163200E1E8BD /* TTFindRecommendViewController.m in Sources */,
+				3B9CFF7225F61E0B00E1E8BD /* TTSubscriptionFactory.m in Sources */,
 				3B9CFF4025F6130A00E1E8BD /* TTBaseChildViewController.m in Sources */,
 				3B9CFF4525F6137100E1E8BD /* TTFindSubFactory.m in Sources */,
 				3B9CFF1B25F5F44600E1E8BD /* TTBaseNavigationController.m in Sources */,
+				3B9CFF8425F6204D00E1E8BD /* TTSubscriptionHistoryController.m in Sources */,
+				3B9CFF7825F61FE200E1E8BD /* TTSubscriptionRecommendController.m in Sources */,
+				3B9CFF6D25F61D9F00E1E8BD /* TTSubscriptionViewController.m in Sources */,
 				3B9CFF5625F6166700E1E8BD /* TTFindRadioViewController.m in Sources */,
 				3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */,
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
