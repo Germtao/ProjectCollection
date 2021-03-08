@@ -84,6 +84,7 @@
 		3B9CFED325F5C81000E1E8BD /* TTXMLY_OC */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF2C25F6017C00E1E8BD /* Resources */,
 				3B9CFF1525F5F3E800E1E8BD /* Common */,
 				3B9CFF0225F5CE5A00E1E8BD /* Net */,
 				3B9CFEEE25F5C82F00E1E8BD /* AppDelegate */,
@@ -117,7 +118,6 @@
 		3B9CFEF225F5C89100E1E8BD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B9CFEE025F5C81D00E1E8BD /* Assets.xcassets */,
 				3B9CFEE525F5C81D00E1E8BD /* Info.plist */,
 				3B9CFF2525F5F7BD00E1E8BD /* TTXMLY_OC-Prefix.pch */,
 			);
@@ -204,6 +204,14 @@
 				3B9CFF2025F5F52400E1E8BD /* TTConstants.m */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		3B9CFF2C25F6017C00E1E8BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFEE025F5C81D00E1E8BD /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		77B713C97F517CCA9E5C486A /* Pods */ = {
@@ -495,6 +503,54 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"DZNEmptyDataSet\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYImage\"",
+					"-framework",
+					"\"YYText\"",
+					"-framework",
+					"\"YYWebImage\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.tTao.TTXMLY-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -513,6 +569,54 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"DZNEmptyDataSet\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYImage\"",
+					"-framework",
+					"\"YYText\"",
+					"-framework",
+					"\"YYWebImage\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.tTao.TTXMLY-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
