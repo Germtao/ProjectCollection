@@ -50,7 +50,7 @@
     if (index == 0 || index == NSNotFound) {
         return nil;
     }
-    return [self.subControllers objectAtIndex:index];
+    return [self.subControllers objectAtIndex:index - 1];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
@@ -58,7 +58,7 @@
     if (index == self.subControllers.count - 1 || index == NSNotFound) {
         return nil;
     }
-    return [self.subControllers objectAtIndex:index];
+    return [self.subControllers objectAtIndex:index + 1];
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
