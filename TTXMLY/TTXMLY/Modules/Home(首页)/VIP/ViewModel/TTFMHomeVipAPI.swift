@@ -24,21 +24,22 @@ extension TTFMHomeVipAPI: TargetType {
     var sampleData: Data { return "".data(using: .utf8)! }
     
     var task: Task {
-        let paras: [String: Any] = ["appid": 0,
-                                    "categoryId": 33,
-                                    "contentType": "album",
-                                    "inreview": false,
-                                    "network": "WIFI",
-                                    "operator": 3,
-                                    "scale": 3,
-                                    "uid": 0,
-                                    "device": "iPhone", "version": "6.5.3",
-                                    "xt": Int32(Date().timeIntervalSince1970),
-                                    "deviceId": UIDevice.current.identifierForVendor!.uuidString]
-        return .requestParameters(parameters: paras, encoding: URLEncoding.default)
+        return .requestParameters(parameters: params, encoding: URLEncoding.default)
     }
     
     var headers: [String : String]? { return nil }
     
-    
+    private var params: [String: Any] {
+        return ["appid": 0,
+                "categoryId": 33,
+                "contentType": "album",
+                "inreview": false,
+                "network": "WIFI",
+                "operator": 3,
+                "scale": 3,
+                "uid": 0,
+                "device": "iPhone", "version": "6.5.3",
+                "xt": Int32(Date().timeIntervalSince1970),
+                "deviceId": UIDevice.current.identifierForVendor!.uuidString]
+    }
 }

@@ -12,7 +12,7 @@ class TTHomeVIPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        makeUI()
         loadData()
     }
     
@@ -44,7 +44,7 @@ class TTHomeVIPViewController: UIViewController {
 }
 
 extension TTHomeVIPViewController {
-    private func setupUI() {
+    private func makeUI() {
         view.addSubview(tableView)
         
         tableView.snp.makeConstraints { (make) in
@@ -55,8 +55,13 @@ extension TTHomeVIPViewController {
     }
     
     private func loadData() {
-        viewModel.updateDataHandler = { [unowned self] in
-            self.tableView.reloadData()
+        viewModel.updateDataHandler = { [unowned self] (message, code) in
+            switch code {
+            case .failure:
+                print("vip 数据请求 error: \(message ?? "Unknown Error.")")
+            case .success:
+                self.tableView.reloadData()
+            }
         }
         viewModel.refreshData()
     }
