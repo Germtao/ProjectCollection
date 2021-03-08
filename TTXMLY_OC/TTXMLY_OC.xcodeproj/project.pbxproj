@@ -15,6 +15,7 @@
 		3B9CFEE425F5C81D00E1E8BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFEE225F5C81D00E1E8BD /* LaunchScreen.storyboard */; };
 		3B9CFEE725F5C81D00E1E8BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFEE625F5C81D00E1E8BD /* main.m */; };
 		3B9CFF0625F5CEAB00E1E8BD /* TTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF0525F5CEAB00E1E8BD /* TTBaseRequest.m */; };
+		3B9CFF0C25F5D7E700E1E8BD /* TTBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF0B25F5D7E700E1E8BD /* TTBaseApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		3B9CFEE625F5C81D00E1E8BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B9CFF0425F5CEAB00E1E8BD /* TTBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseRequest.h; sourceTree = "<group>"; };
 		3B9CFF0525F5CEAB00E1E8BD /* TTBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseRequest.m; sourceTree = "<group>"; };
+		3B9CFF0A25F5D7E700E1E8BD /* TTBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseApi.h; sourceTree = "<group>"; };
+		3B9CFF0B25F5D7E700E1E8BD /* TTBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseApi.m; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 			children = (
 				3B9CFF0425F5CEAB00E1E8BD /* TTBaseRequest.h */,
 				3B9CFF0525F5CEAB00E1E8BD /* TTBaseRequest.m */,
+				3B9CFF0A25F5D7E700E1E8BD /* TTBaseApi.h */,
+				3B9CFF0B25F5D7E700E1E8BD /* TTBaseApi.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */,
+				3B9CFF0C25F5D7E700E1E8BD /* TTBaseApi.m in Sources */,
 				3B9CFEE725F5C81D00E1E8BD /* main.m in Sources */,
 				3B9CFF0625F5CEAB00E1E8BD /* TTBaseRequest.m in Sources */,
 				3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */,
