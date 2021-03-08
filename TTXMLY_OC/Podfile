@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+target 'TTXMLY_OC' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  inhibit_all_warnings!
+
+  # Pods for TTXMLY_OC
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'YYWebImage'
+  pod 'ReactiveCocoa','2.5'
+  pod 'MJExtension'
+  pod 'DZNEmptyDataSet'
+  pod 'YYText'
+  pod 'FMDB'
+  pod 'FDFullscreenPopGesture'
+
+end
