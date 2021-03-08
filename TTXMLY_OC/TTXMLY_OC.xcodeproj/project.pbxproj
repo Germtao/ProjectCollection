@@ -20,6 +20,16 @@
 		3B9CFF1B25F5F44600E1E8BD /* TTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF1A25F5F44600E1E8BD /* TTBaseNavigationController.m */; };
 		3B9CFF2125F5F52400E1E8BD /* TTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF2025F5F52400E1E8BD /* TTConstants.m */; };
 		3B9CFF2925F5FB2900E1E8BD /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF2825F5FB2900E1E8BD /* TTBaseViewController.m */; };
+		3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF3325F6036B00E1E8BD /* TTFindSubTitleView.m */; };
+		3B9CFF3925F60AF700E1E8BD /* TTFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF3825F60AF700E1E8BD /* TTFindViewController.m */; };
+		3B9CFF3C25F60B1E00E1E8BD /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFF3B25F60B1E00E1E8BD /* Find.storyboard */; };
+		3B9CFF4025F6130A00E1E8BD /* TTFindBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF3F25F6130A00E1E8BD /* TTFindBaseViewController.m */; };
+		3B9CFF4525F6137100E1E8BD /* TTFindSubFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF4425F6137100E1E8BD /* TTFindSubFactory.m */; };
+		3B9CFF4B25F6163200E1E8BD /* TTFindRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF4A25F6163200E1E8BD /* TTFindRecommendViewController.m */; };
+		3B9CFF5125F6165600E1E8BD /* TTFindCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF5025F6165600E1E8BD /* TTFindCategoryViewController.m */; };
+		3B9CFF5625F6166700E1E8BD /* TTFindRadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF5525F6166700E1E8BD /* TTFindRadioViewController.m */; };
+		3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF5B25F6167D00E1E8BD /* TTFindRankViewController.m */; };
+		3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF6125F6168F00E1E8BD /* TTFindAnchorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +56,25 @@
 		3B9CFF2525F5F7BD00E1E8BD /* TTXMLY_OC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTXMLY_OC-Prefix.pch"; sourceTree = "<group>"; };
 		3B9CFF2725F5FB2900E1E8BD /* TTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseViewController.h; sourceTree = "<group>"; };
 		3B9CFF2825F5FB2900E1E8BD /* TTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
+		3B9CFF3225F6036B00E1E8BD /* TTFindSubTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindSubTitleView.h; sourceTree = "<group>"; };
+		3B9CFF3325F6036B00E1E8BD /* TTFindSubTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindSubTitleView.m; sourceTree = "<group>"; };
+		3B9CFF3725F60AF700E1E8BD /* TTFindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindViewController.h; sourceTree = "<group>"; };
+		3B9CFF3825F60AF700E1E8BD /* TTFindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindViewController.m; sourceTree = "<group>"; };
+		3B9CFF3B25F60B1E00E1E8BD /* Find.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		3B9CFF3E25F6130A00E1E8BD /* TTFindBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindBaseViewController.h; sourceTree = "<group>"; };
+		3B9CFF3F25F6130A00E1E8BD /* TTFindBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindBaseViewController.m; sourceTree = "<group>"; };
+		3B9CFF4325F6137100E1E8BD /* TTFindSubFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindSubFactory.h; sourceTree = "<group>"; };
+		3B9CFF4425F6137100E1E8BD /* TTFindSubFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindSubFactory.m; sourceTree = "<group>"; };
+		3B9CFF4925F6163200E1E8BD /* TTFindRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindRecommendViewController.h; sourceTree = "<group>"; };
+		3B9CFF4A25F6163200E1E8BD /* TTFindRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindRecommendViewController.m; sourceTree = "<group>"; };
+		3B9CFF4F25F6165600E1E8BD /* TTFindCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindCategoryViewController.h; sourceTree = "<group>"; };
+		3B9CFF5025F6165600E1E8BD /* TTFindCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindCategoryViewController.m; sourceTree = "<group>"; };
+		3B9CFF5425F6166700E1E8BD /* TTFindRadioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindRadioViewController.h; sourceTree = "<group>"; };
+		3B9CFF5525F6166700E1E8BD /* TTFindRadioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindRadioViewController.m; sourceTree = "<group>"; };
+		3B9CFF5A25F6167D00E1E8BD /* TTFindRankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindRankViewController.h; sourceTree = "<group>"; };
+		3B9CFF5B25F6167D00E1E8BD /* TTFindRankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindRankViewController.m; sourceTree = "<group>"; };
+		3B9CFF6025F6168F00E1E8BD /* TTFindAnchorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindAnchorViewController.h; sourceTree = "<group>"; };
+		3B9CFF6125F6168F00E1E8BD /* TTFindAnchorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindAnchorViewController.m; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +113,7 @@
 		3B9CFED325F5C81000E1E8BD /* TTXMLY_OC */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF2D25F601CC00E1E8BD /* Modules */,
 				3B9CFF2C25F6017C00E1E8BD /* Resources */,
 				3B9CFF1525F5F3E800E1E8BD /* Common */,
 				3B9CFF0225F5CE5A00E1E8BD /* Net */,
@@ -109,6 +139,7 @@
 		3B9CFEF125F5C87600E1E8BD /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFF3B25F60B1E00E1E8BD /* Find.storyboard */,
 				3B9CFEDD25F5C81000E1E8BD /* Main.storyboard */,
 				3B9CFEE225F5C81D00E1E8BD /* LaunchScreen.storyboard */,
 			);
@@ -214,6 +245,111 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3B9CFF2D25F601CC00E1E8BD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF2E25F601DF00E1E8BD /* Find */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3B9CFF2E25F601DF00E1E8BD /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF4225F6134B00E1E8BD /* Factory */,
+				3B9CFF3125F6034300E1E8BD /* Models */,
+				3B9CFF3025F6033900E1E8BD /* Views */,
+				3B9CFF2F25F6032B00E1E8BD /* Controllers */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		3B9CFF2F25F6032B00E1E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF5F25F6168000E1E8BD /* Anchor */,
+				3B9CFF5925F6167100E1E8BD /* Rank */,
+				3B9CFF5325F6165A00E1E8BD /* Radio */,
+				3B9CFF4E25F6164400E1E8BD /* Category */,
+				3B9CFF4825F6161A00E1E8BD /* Recommend */,
+				3B9CFF3725F60AF700E1E8BD /* TTFindViewController.h */,
+				3B9CFF3825F60AF700E1E8BD /* TTFindViewController.m */,
+				3B9CFF3E25F6130A00E1E8BD /* TTFindBaseViewController.h */,
+				3B9CFF3F25F6130A00E1E8BD /* TTFindBaseViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B9CFF3025F6033900E1E8BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF3225F6036B00E1E8BD /* TTFindSubTitleView.h */,
+				3B9CFF3325F6036B00E1E8BD /* TTFindSubTitleView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B9CFF3125F6034300E1E8BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B9CFF4225F6134B00E1E8BD /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF4325F6137100E1E8BD /* TTFindSubFactory.h */,
+				3B9CFF4425F6137100E1E8BD /* TTFindSubFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		3B9CFF4825F6161A00E1E8BD /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF4925F6163200E1E8BD /* TTFindRecommendViewController.h */,
+				3B9CFF4A25F6163200E1E8BD /* TTFindRecommendViewController.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		3B9CFF4E25F6164400E1E8BD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF4F25F6165600E1E8BD /* TTFindCategoryViewController.h */,
+				3B9CFF5025F6165600E1E8BD /* TTFindCategoryViewController.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3B9CFF5325F6165A00E1E8BD /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF5425F6166700E1E8BD /* TTFindRadioViewController.h */,
+				3B9CFF5525F6166700E1E8BD /* TTFindRadioViewController.m */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		3B9CFF5925F6167100E1E8BD /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF5A25F6167D00E1E8BD /* TTFindRankViewController.h */,
+				3B9CFF5B25F6167D00E1E8BD /* TTFindRankViewController.m */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		3B9CFF5F25F6168000E1E8BD /* Anchor */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFF6025F6168F00E1E8BD /* TTFindAnchorViewController.h */,
+				3B9CFF6125F6168F00E1E8BD /* TTFindAnchorViewController.m */,
+			);
+			path = Anchor;
+			sourceTree = "<group>";
+		};
 		77B713C97F517CCA9E5C486A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +428,7 @@
 				3B9CFEE425F5C81D00E1E8BD /* LaunchScreen.storyboard in Resources */,
 				3B9CFEE125F5C81D00E1E8BD /* Assets.xcassets in Resources */,
 				3B9CFEDF25F5C81000E1E8BD /* Main.storyboard in Resources */,
+				3B9CFF3C25F60B1E00E1E8BD /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,13 +483,22 @@
 			files = (
 				3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */,
 				3B9CFF0C25F5D7E700E1E8BD /* TTBaseApi.m in Sources */,
+				3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */,
+				3B9CFF3925F60AF700E1E8BD /* TTFindViewController.m in Sources */,
 				3B9CFEE725F5C81D00E1E8BD /* main.m in Sources */,
 				3B9CFF1225F5D94200E1E8BD /* TTFindApi.m in Sources */,
 				3B9CFF0625F5CEAB00E1E8BD /* TTBaseRequest.m in Sources */,
 				3B9CFF2125F5F52400E1E8BD /* TTConstants.m in Sources */,
+				3B9CFF5125F6165600E1E8BD /* TTFindCategoryViewController.m in Sources */,
 				3B9CFF2925F5FB2900E1E8BD /* TTBaseViewController.m in Sources */,
+				3B9CFF4B25F6163200E1E8BD /* TTFindRecommendViewController.m in Sources */,
+				3B9CFF4025F6130A00E1E8BD /* TTFindBaseViewController.m in Sources */,
+				3B9CFF4525F6137100E1E8BD /* TTFindSubFactory.m in Sources */,
 				3B9CFF1B25F5F44600E1E8BD /* TTBaseNavigationController.m in Sources */,
+				3B9CFF5625F6166700E1E8BD /* TTFindRadioViewController.m in Sources */,
 				3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */,
+				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
+				3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

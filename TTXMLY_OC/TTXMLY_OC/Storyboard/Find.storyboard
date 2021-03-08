@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5iy-6u-oAZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="PCl-ZG-4iH">
+            <objects>
+                <navigationController id="5iy-6u-oAZ" customClass="TTBaseNavigationController" customModule="TTXMLY_OC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RcK-qg-h58">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FNa-DO-QCB" kind="relationship" relationship="rootViewController" id="53t-hu-btn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9o-ro-gm4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="217"/>
+        </scene>
+        <!--Find View Controller-->
+        <scene sceneID="reN-6X-MXN">
+            <objects>
+                <viewController id="FNa-DO-QCB" customClass="TTFindViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPe-7v-RMF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw3-9x-gig" customClass="TTFindSubTitleView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rBc-Fc-9rs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RR5-BX-5eh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sw3-9x-gig" firstAttribute="leading" secondItem="RR5-BX-5eh" secondAttribute="leading" id="9Ol-Fa-Pnb"/>
+                            <constraint firstItem="RR5-BX-5eh" firstAttribute="trailing" secondItem="sw3-9x-gig" secondAttribute="trailing" id="ISZ-fc-L8l"/>
+                            <constraint firstItem="sw3-9x-gig" firstAttribute="top" secondItem="RR5-BX-5eh" secondAttribute="top" id="UJe-mD-DOW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FCA-bY-0qL"/>
+                    <connections>
+                        <outlet property="subTitleView" destination="sw3-9x-gig" id="XTg-If-Omq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7w-Gt-ijv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="217"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
