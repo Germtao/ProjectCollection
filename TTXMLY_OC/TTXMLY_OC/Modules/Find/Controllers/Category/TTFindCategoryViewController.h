@@ -5,11 +5,11 @@
 //  Created by QDSG on 2021/3/8.
 //
 
-#import "TTFindBaseViewController.h"
+#import "TTBaseChildViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TTFindCategoryViewController : TTFindBaseViewController
+@interface TTFindCategoryViewController : TTBaseChildViewController
 
 @end
 

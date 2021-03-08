@@ -1,5 +1,5 @@
 //
-//  TTFindBaseViewController.h
+//  TTBaseChildViewController.h
 //  TTXMLY_OC
 //
 //  Created by QDSG on 2021/3/8.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TTFindBaseViewController : TTBaseViewController
+@interface TTBaseChildViewController : TTBaseViewController
 
 @end
 

@@ -113,7 +113,7 @@
     if (!_subControllers) {
         _subControllers = [NSMutableArray array];
         for (NSString *title in self.subTitleArray) {
-            TTFindBaseViewController *subVc = [TTFindSubFactory subControllerWithIdentifier:title];
+            TTBaseChildViewController *subVc = [TTFindSubFactory subControllerWithIdentifier:title];
             [_subControllers addObject:subVc];
         }
     }

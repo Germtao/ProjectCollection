@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TTFindBaseViewController.h"
+#import "TTBaseChildViewController.h"
 
 typedef NS_ENUM(NSInteger, TTFindSubVCType) {
     TTFindSubVCType_Recommend = 0, // 推荐
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 生成自控制器
 /// @param identifier 控制器唯一标识
-+ (TTFindBaseViewController *)subControllerWithIdentifier:(NSString *)identifier;
++ (TTBaseChildViewController *)subControllerWithIdentifier:(NSString *)identifier;
 
 @end
 

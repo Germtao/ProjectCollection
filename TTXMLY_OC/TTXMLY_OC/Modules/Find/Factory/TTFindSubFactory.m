@@ -14,10 +14,10 @@
 
 @implementation TTFindSubFactory
 
-+ (TTFindBaseViewController *)subControllerWithIdentifier:(NSString *)identifier {
++ (TTBaseChildViewController *)subControllerWithIdentifier:(NSString *)identifier {
     TTFindSubVCType vcType = [self typeFromTitle:identifier];
     
-    TTFindBaseViewController *controller = nil;
+    TTBaseChildViewController *controller = nil;
     
     switch (vcType) {
         case TTFindSubVCType_Recommend:
@@ -36,7 +36,7 @@
             controller = [[TTFindAnchorViewController alloc] init];
             break;
         default:
-            controller = [[TTFindBaseViewController alloc] init];
+            controller = [[TTBaseChildViewController alloc] init];
             break;
     }
     return controller;
