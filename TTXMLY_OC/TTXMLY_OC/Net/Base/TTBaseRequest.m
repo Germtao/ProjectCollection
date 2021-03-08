@@ -27,7 +27,7 @@
 }
 
 - (NSURLSessionDataTask *)startWithMethod:(TTHttpType)methodType
-                                   params:(id)params
+                                   params:(nullable id)params
                                completion:(TTHttpRequestCompletion)completion {
     NSURLSessionDataTask *task = nil;
     self.completionBlock = completion;

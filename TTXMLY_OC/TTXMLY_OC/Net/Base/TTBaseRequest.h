@@ -26,7 +26,7 @@ typedef void(^TTHttpRequestCompletion)(id _Nullable responseObject,NSString * _N
 /// @param params     请求参数
 /// @param completion 请求完成回调
 - (NSURLSessionDataTask *)startWithMethod:(TTHttpType)methodType
-                                   params:(id)params
+                                   params:(nullable id)params
                                completion:(TTHttpRequestCompletion)completion;
 
 @end
