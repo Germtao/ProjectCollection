@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0EB6C0839F3A3F05F3B60EC4 /* Pods_TTXMLY_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */; };
+		3B9C000225F758AE00E1E8BD /* TTFindHotGuessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C000125F758AE00E1E8BD /* TTFindHotGuessModel.m */; };
 		3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED525F5C81000E1E8BD /* AppDelegate.m */; };
 		3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED825F5C81000E1E8BD /* SceneDelegate.m */; };
 		3B9CFEDF25F5C81000E1E8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFEDD25F5C81000E1E8BD /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B9C000025F758AE00E1E8BD /* TTFindHotGuessModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindHotGuessModel.h; sourceTree = "<group>"; };
+		3B9C000125F758AE00E1E8BD /* TTFindHotGuessModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindHotGuessModel.m; sourceTree = "<group>"; };
 		3B9CFED125F5C81000E1E8BD /* TTXMLY_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9CFED425F5C81000E1E8BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B9CFED525F5C81000E1E8BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				3B9CFFF925F74E9B00E1E8BD /* TTFindRecommendModel.m */,
 				3B9CFFFC25F756E600E1E8BD /* TTFindLiveModel.h */,
 				3B9CFFFD25F756E600E1E8BD /* TTFindLiveModel.m */,
+				3B9C000025F758AE00E1E8BD /* TTFindHotGuessModel.h */,
+				3B9C000125F758AE00E1E8BD /* TTFindHotGuessModel.m */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 			files = (
 				3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */,
 				3B9CFFCF25F7255900E1E8BD /* TTDownloadViewController.m in Sources */,
+				3B9C000225F758AE00E1E8BD /* TTFindHotGuessModel.m in Sources */,
 				3B9CFF0C25F5D7E700E1E8BD /* TTBaseApi.m in Sources */,
 				3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */,
 				3B9CFF3925F60AF700E1E8BD /* TTFindViewController.m in Sources */,
