@@ -128,7 +128,7 @@
 
 // MARK: - Public
 - (void)transform2ShowAtIndex:(NSInteger)index {
-    if (index <= 0 || index > _subTitleBtnArray.count) {
+    if (index < 0 || index >= _subTitleBtnArray.count) {
         return;
     }
     
