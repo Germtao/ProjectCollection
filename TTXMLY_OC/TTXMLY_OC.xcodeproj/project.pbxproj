@@ -44,6 +44,8 @@
 		3B9CFFD225F7256900E1E8BD /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFD125F7256900E1E8BD /* Download.storyboard */; };
 		3B9CFFD825F7259F00E1E8BD /* TTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFD725F7259F00E1E8BD /* TTMineViewController.m */; };
 		3B9CFFDC25F725AD00E1E8BD /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFDB25F725AD00E1E8BD /* Mine.storyboard */; };
+		3B9CFFF125F74A8B00E1E8BD /* TTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFF025F74A8B00E1E8BD /* TTBaseModel.m */; };
+		3B9CFFF625F74DC800E1E8BD /* TTBaseAudioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFF525F74DC800E1E8BD /* TTBaseAudioModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,10 @@
 		3B9CFFD625F7259F00E1E8BD /* TTMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMineViewController.h; sourceTree = "<group>"; };
 		3B9CFFD725F7259F00E1E8BD /* TTMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMineViewController.m; sourceTree = "<group>"; };
 		3B9CFFDB25F725AD00E1E8BD /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		3B9CFFEF25F74A8B00E1E8BD /* TTBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseModel.h; sourceTree = "<group>"; };
+		3B9CFFF025F74A8B00E1E8BD /* TTBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseModel.m; sourceTree = "<group>"; };
+		3B9CFFF425F74DC800E1E8BD /* TTBaseAudioModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseAudioModel.h; sourceTree = "<group>"; };
+		3B9CFFF525F74DC800E1E8BD /* TTBaseAudioModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseAudioModel.m; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +243,7 @@
 		3B9CFF1525F5F3E800E1E8BD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFFEE25F74A6800E1E8BD /* Model */,
 				3B9CFF1E25F5F4DC00E1E8BD /* Constants */,
 				3B9CFF1625F5F3FA00E1E8BD /* UI */,
 			);
@@ -339,6 +346,7 @@
 		3B9CFF3125F6034300E1E8BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFFDE25F7489600E1E8BD /* Recommend */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -532,6 +540,24 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3B9CFFDE25F7489600E1E8BD /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		3B9CFFEE25F74A6800E1E8BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFEF25F74A8B00E1E8BD /* TTBaseModel.h */,
+				3B9CFFF025F74A8B00E1E8BD /* TTBaseModel.m */,
+				3B9CFFF425F74DC800E1E8BD /* TTBaseAudioModel.h */,
+				3B9CFFF525F74DC800E1E8BD /* TTBaseAudioModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		77B713C97F517CCA9E5C486A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +719,8 @@
 				3B9CFF5625F6166700E1E8BD /* TTFindRadioViewController.m in Sources */,
 				3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */,
 				3B9CFFD825F7259F00E1E8BD /* TTMineViewController.m in Sources */,
+				3B9CFFF125F74A8B00E1E8BD /* TTBaseModel.m in Sources */,
+				3B9CFFF625F74DC800E1E8BD /* TTBaseAudioModel.m in Sources */,
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
 				3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */,
 			);

@@ -18,5 +18,6 @@ target 'TTXMLY_OC' do
   pod 'YYText'
   pod 'FMDB'
   pod 'FDFullscreenPopGesture'
+  pod 'YYModel'
 
 end
