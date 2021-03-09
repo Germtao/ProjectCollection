@@ -46,6 +46,7 @@
 		3B9CFFDC25F725AD00E1E8BD /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFDB25F725AD00E1E8BD /* Mine.storyboard */; };
 		3B9CFFF125F74A8B00E1E8BD /* TTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFF025F74A8B00E1E8BD /* TTBaseModel.m */; };
 		3B9CFFF625F74DC800E1E8BD /* TTBaseAudioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFF525F74DC800E1E8BD /* TTBaseAudioModel.m */; };
+		3B9CFFFA25F74E9B00E1E8BD /* TTFindRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFF925F74E9B00E1E8BD /* TTFindRecommendModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,8 @@
 		3B9CFFF025F74A8B00E1E8BD /* TTBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseModel.m; sourceTree = "<group>"; };
 		3B9CFFF425F74DC800E1E8BD /* TTBaseAudioModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBaseAudioModel.h; sourceTree = "<group>"; };
 		3B9CFFF525F74DC800E1E8BD /* TTBaseAudioModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBaseAudioModel.m; sourceTree = "<group>"; };
+		3B9CFFF825F74E9B00E1E8BD /* TTFindRecommendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindRecommendModel.h; sourceTree = "<group>"; };
+		3B9CFFF925F74E9B00E1E8BD /* TTFindRecommendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindRecommendModel.m; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -543,6 +546,8 @@
 		3B9CFFDE25F7489600E1E8BD /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFFF825F74E9B00E1E8BD /* TTFindRecommendModel.h */,
+				3B9CFFF925F74E9B00E1E8BD /* TTFindRecommendModel.m */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				3B9CFFF125F74A8B00E1E8BD /* TTBaseModel.m in Sources */,
 				3B9CFFF625F74DC800E1E8BD /* TTBaseAudioModel.m in Sources */,
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
+				3B9CFFFA25F74E9B00E1E8BD /* TTFindRecommendModel.m in Sources */,
 				3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
