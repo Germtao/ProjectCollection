@@ -11,7 +11,7 @@
 #define kStoryBoardFind         @"Find"
 #define kStoryBoardSubScribe    @"SubScribe"
 #define kStoryBoardPlay         @"Play"
-#define kStoryBoardDownLoad     @"DownLoad"
+#define kStoryBoardDownLoad     @"Download"
 #define kStoryBoardMine         @"Mine"
 
 @interface TTRootViewController () <UITabBarControllerDelegate, UINavigationControllerDelegate>

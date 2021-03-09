@@ -37,6 +37,13 @@
 		3B9CFF8425F6204D00E1E8BD /* TTSubscriptionHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF8325F6204D00E1E8BD /* TTSubscriptionHistoryController.m */; };
 		3B9CFF8925F6213300E1E8BD /* TTSubscriptionNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF8825F6213300E1E8BD /* TTSubscriptionNavView.m */; };
 		3B9CFF8E25F62C7F00E1E8BD /* TTRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFF8D25F62C7F00E1E8BD /* TTRootViewController.m */; };
+		3B9CFFBE25F723E600E1E8BD /* SubScribe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFBD25F723E500E1E8BD /* SubScribe.storyboard */; };
+		3B9CFFC525F724BD00E1E8BD /* TTPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFC425F724BD00E1E8BD /* TTPlayViewController.m */; };
+		3B9CFFC825F724CD00E1E8BD /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFC725F724CD00E1E8BD /* Play.storyboard */; };
+		3B9CFFCF25F7255900E1E8BD /* TTDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFCE25F7255900E1E8BD /* TTDownloadViewController.m */; };
+		3B9CFFD225F7256900E1E8BD /* Download.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFD125F7256900E1E8BD /* Download.storyboard */; };
+		3B9CFFD825F7259F00E1E8BD /* TTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFFD725F7259F00E1E8BD /* TTMineViewController.m */; };
+		3B9CFFDC25F725AD00E1E8BD /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFFDB25F725AD00E1E8BD /* Mine.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +103,16 @@
 		3B9CFF8825F6213300E1E8BD /* TTSubscriptionNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSubscriptionNavView.m; sourceTree = "<group>"; };
 		3B9CFF8C25F62C7F00E1E8BD /* TTRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTRootViewController.h; sourceTree = "<group>"; };
 		3B9CFF8D25F62C7F00E1E8BD /* TTRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTRootViewController.m; sourceTree = "<group>"; };
+		3B9CFFBD25F723E500E1E8BD /* SubScribe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubScribe.storyboard; sourceTree = "<group>"; };
+		3B9CFFC325F724BD00E1E8BD /* TTPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTPlayViewController.h; sourceTree = "<group>"; };
+		3B9CFFC425F724BD00E1E8BD /* TTPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPlayViewController.m; sourceTree = "<group>"; };
+		3B9CFFC725F724CD00E1E8BD /* Play.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
+		3B9CFFCD25F7255900E1E8BD /* TTDownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTDownloadViewController.h; sourceTree = "<group>"; };
+		3B9CFFCE25F7255900E1E8BD /* TTDownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTDownloadViewController.m; sourceTree = "<group>"; };
+		3B9CFFD125F7256900E1E8BD /* Download.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Download.storyboard; sourceTree = "<group>"; };
+		3B9CFFD625F7259F00E1E8BD /* TTMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMineViewController.h; sourceTree = "<group>"; };
+		3B9CFFD725F7259F00E1E8BD /* TTMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMineViewController.m; sourceTree = "<group>"; };
+		3B9CFFDB25F725AD00E1E8BD /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTXMLY_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C7C70490494139E95CEE3 /* Pods-TTXMLY_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.release.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.release.xcconfig"; sourceTree = "<group>"; };
 		A4D070405A6161717BDFE754 /* Pods-TTXMLY_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTXMLY_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTXMLY_OC/Pods-TTXMLY_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				3B9CFF3B25F60B1E00E1E8BD /* Find.storyboard */,
+				3B9CFFBD25F723E500E1E8BD /* SubScribe.storyboard */,
+				3B9CFFC725F724CD00E1E8BD /* Play.storyboard */,
+				3B9CFFD125F7256900E1E8BD /* Download.storyboard */,
+				3B9CFFDB25F725AD00E1E8BD /* Mine.storyboard */,
 				3B9CFEDD25F5C81000E1E8BD /* Main.storyboard */,
 				3B9CFEE225F5C81D00E1E8BD /* LaunchScreen.storyboard */,
 			);
@@ -271,6 +292,9 @@
 		3B9CFF2D25F601CC00E1E8BD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3B9CFFD425F7258A00E1E8BD /* Mine */,
+				3B9CFFCA25F7252800E1E8BD /* Download */,
+				3B9CFFC125F7249900E1E8BD /* Play */,
 				3B9CFF8B25F62C6200E1E8BD /* Root */,
 				3B9CFF6525F61AF200E1E8BD /* Subscription */,
 				3B9CFF2E25F601DF00E1E8BD /* Find */,
@@ -457,6 +481,57 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		3B9CFFC125F7249900E1E8BD /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFC225F724A100E1E8BD /* Controllers */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		3B9CFFC225F724A100E1E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFC325F724BD00E1E8BD /* TTPlayViewController.h */,
+				3B9CFFC425F724BD00E1E8BD /* TTPlayViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B9CFFCA25F7252800E1E8BD /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFCC25F7253D00E1E8BD /* Controllers */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		3B9CFFCC25F7253D00E1E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFCD25F7255900E1E8BD /* TTDownloadViewController.h */,
+				3B9CFFCE25F7255900E1E8BD /* TTDownloadViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B9CFFD425F7258A00E1E8BD /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFD525F7259100E1E8BD /* Controllers */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		3B9CFFD525F7259100E1E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CFFD625F7259F00E1E8BD /* TTMineViewController.h */,
+				3B9CFFD725F7259F00E1E8BD /* TTMineViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		77B713C97F517CCA9E5C486A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,10 +607,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9CFFD225F7256900E1E8BD /* Download.storyboard in Resources */,
 				3B9CFEE425F5C81D00E1E8BD /* LaunchScreen.storyboard in Resources */,
+				3B9CFFBE25F723E600E1E8BD /* SubScribe.storyboard in Resources */,
 				3B9CFEE125F5C81D00E1E8BD /* Assets.xcassets in Resources */,
 				3B9CFEDF25F5C81000E1E8BD /* Main.storyboard in Resources */,
+				3B9CFFC825F724CD00E1E8BD /* Play.storyboard in Resources */,
 				3B9CFF3C25F60B1E00E1E8BD /* Find.storyboard in Resources */,
+				3B9CFFDC25F725AD00E1E8BD /* Mine.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */,
+				3B9CFFCF25F7255900E1E8BD /* TTDownloadViewController.m in Sources */,
 				3B9CFF0C25F5D7E700E1E8BD /* TTBaseApi.m in Sources */,
 				3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */,
 				3B9CFF3925F60AF700E1E8BD /* TTFindViewController.m in Sources */,
@@ -604,6 +684,7 @@
 				3B9CFF4B25F6163200E1E8BD /* TTFindRecommendViewController.m in Sources */,
 				3B9CFF7225F61E0B00E1E8BD /* TTSubscriptionFactory.m in Sources */,
 				3B9CFF4025F6130A00E1E8BD /* TTBaseChildViewController.m in Sources */,
+				3B9CFFC525F724BD00E1E8BD /* TTPlayViewController.m in Sources */,
 				3B9CFF4525F6137100E1E8BD /* TTFindSubFactory.m in Sources */,
 				3B9CFF1B25F5F44600E1E8BD /* TTBaseNavigationController.m in Sources */,
 				3B9CFF8425F6204D00E1E8BD /* TTSubscriptionHistoryController.m in Sources */,
@@ -611,6 +692,7 @@
 				3B9CFF6D25F61D9F00E1E8BD /* TTSubscriptionViewController.m in Sources */,
 				3B9CFF5625F6166700E1E8BD /* TTFindRadioViewController.m in Sources */,
 				3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */,
+				3B9CFFD825F7259F00E1E8BD /* TTMineViewController.m in Sources */,
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
 				3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */,
 			);
