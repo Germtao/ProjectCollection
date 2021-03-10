@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-149" y="217"/>
         </scene>
-        <!--Find View Controller-->
+        <!--发现-->
         <scene sceneID="reN-6X-MXN">
             <objects>
                 <viewController id="FNa-DO-QCB" customClass="TTFindViewController" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <constraint firstItem="sw3-9x-gig" firstAttribute="top" secondItem="RR5-BX-5eh" secondAttribute="top" id="UJe-mD-DOW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FCA-bY-0qL"/>
+                    <navigationItem key="navigationItem" title="发现" id="FCA-bY-0qL"/>
                     <connections>
                         <outlet property="subTitleView" destination="sw3-9x-gig" id="XTg-If-Omq"/>
                     </connections>
