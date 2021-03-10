@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, strong) NSMutableArray<TTFindFocusImageDetailModel *> *list;
+@property (nonatomic, strong) NSMutableArray *list;
 
 @end
 

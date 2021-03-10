@@ -10,3 +10,31 @@
 @implementation TTFindHotGuessModel
 
 @end
+
+@implementation TTFindDiscoverColumnsModel
+
+@end
+
+@implementation TTFindDiscoverDetailModel
+
+@end
+
+@implementation TTFindDiscoverProperityModel
+
+@end
+
+@implementation TTFindGuessULikeModel
+
+@end
+
+@implementation TTCityColumnModel
+
+@end
+
+@implementation TTFindHotRecommendModel
+
+@end
+
+@implementation TTFindHotRecommendItemModel
+
+@end

@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, strong) NSMutableArray *list;
+@property (nonatomic, strong) NSMutableArray<TTFindEditorRecommendDetailModel *> *list;
 
 @end
 

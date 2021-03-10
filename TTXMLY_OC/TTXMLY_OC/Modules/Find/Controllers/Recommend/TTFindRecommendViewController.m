@@ -6,26 +6,104 @@
 //
 
 #import "TTFindRecommendViewController.h"
+#import "TTFindRecommendViewModel.h"
+#import "TTFindRecommendHeader.h"
+#import <Masonry/Masonry.h>
+#import "TTFindRecommendHelper.h"
 
-@interface TTFindRecommendViewController ()
+@interface TTFindRecommendViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, weak) UITableView *tableView;
+
+@property (nonatomic, strong) TTFindRecommendViewModel *viewModel;
+
+@property (nonatomic, strong) TTFindRecommendHeader *headerView;
+
+@property (nonatomic, strong) UIView *header;
 
 @end
 
 @implementation TTFindRecommendViewController
 
+- (void)dealloc {
+    [[TTFindRecommendHelper sharedInstance] stopAllTimer];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self bindViewModel];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)bindViewModel {
+    @weakify(self);
+    [self.viewModel.updateContentSignal subscribeNext:^(id x) {
+        @strongify(self);
+        [self.tableView reloadData];
+        
+        self.headerView.focusImages = self.viewModel.recommendModel.focusImages;
+        self.headerView.discoveryColumns = self.viewModel.hotGuessModel.discoveryColumns;
+        
+        [[TTFindRecommendHelper sharedInstance] startTimer:TTFindRecommendTimer_Banner];
+        
+    }];
+    
+    [self.viewModel refreshDataSource];
 }
-*/
+
+// MARK: - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [self.viewModel numberOfSections];
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.viewModel numberOfRowsInSection:section];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [[UITableViewCell alloc] init];
+}
+
+
+#pragma mark - Getter
+
+- (TTFindRecommendViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[TTFindRecommendViewModel alloc] initWithRACSubjectName:kFindRecommendUpdateSignalName];
+    }
+    return _viewModel;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        UITableView *table = [[UITableView alloc] init];
+        table.delegate = self;
+        table.dataSource = self;
+        table.separatorStyle = UITableViewCellSeparatorStyleNone;
+        table.tableHeaderView = [self header];
+        [self.view addSubview:table];
+        [table mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view);
+        }];
+        _tableView = table;
+    }
+    return _tableView;
+}
+
+- (UIView *)header {
+    if (!_header) {
+        _header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 250)];
+        [_header addSubview:self.headerView];
+    }
+    return _header;
+}
+
+- (TTFindRecommendHeader *)headerView {
+    if (!_headerView) {
+        _headerView = [TTFindRecommendHeader findRecommendHeader];
+        _headerView.frame = CGRectMake(0, 0, kScreenWidth, 250);
+    }
+    return _headerView;
+}
 
 @end

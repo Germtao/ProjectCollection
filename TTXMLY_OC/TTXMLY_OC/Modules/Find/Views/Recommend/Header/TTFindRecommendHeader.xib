@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TTFindRecommendHeader">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-DH-ueN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJK-J8-iFU">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="erD-x7-uzg"/>
+                            </connections>
+                        </scrollView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJq-uP-lv7">
+                            <rect key="frame" x="0.0" y="150" width="414" height="100"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FJq-uP-lv7" secondAttribute="bottom" id="4KH-no-5th"/>
+                        <constraint firstItem="WJK-J8-iFU" firstAttribute="height" secondItem="FJq-uP-lv7" secondAttribute="height" multiplier="1.5" id="5QZ-LM-bbQ"/>
+                        <constraint firstAttribute="trailing" secondItem="WJK-J8-iFU" secondAttribute="trailing" id="FiG-Kc-152"/>
+                        <constraint firstItem="WJK-J8-iFU" firstAttribute="top" secondItem="DNg-DH-ueN" secondAttribute="top" id="ORw-Qy-g3v"/>
+                        <constraint firstItem="WJK-J8-iFU" firstAttribute="leading" secondItem="DNg-DH-ueN" secondAttribute="leading" id="TcG-wd-a4I"/>
+                        <constraint firstAttribute="trailing" secondItem="FJq-uP-lv7" secondAttribute="trailing" id="ZYK-tH-wHU"/>
+                        <constraint firstItem="FJq-uP-lv7" firstAttribute="top" secondItem="WJK-J8-iFU" secondAttribute="bottom" id="nq4-ax-sxQ"/>
+                        <constraint firstItem="FJq-uP-lv7" firstAttribute="leading" secondItem="DNg-DH-ueN" secondAttribute="leading" id="p6z-AP-jWO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DNg-DH-ueN" secondAttribute="bottom" id="dIw-xF-g6c"/>
+                <constraint firstAttribute="trailing" secondItem="DNg-DH-ueN" secondAttribute="trailing" id="fAA-8z-2gz"/>
+                <constraint firstItem="DNg-DH-ueN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xx1-Er-KAl"/>
+                <constraint firstItem="DNg-DH-ueN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yzA-Rx-bxd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bannerView" destination="WJK-J8-iFU" id="gzp-U8-WAd"/>
+                <outlet property="categoryView" destination="FJq-uP-lv7" id="Y2Q-rI-okz"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
