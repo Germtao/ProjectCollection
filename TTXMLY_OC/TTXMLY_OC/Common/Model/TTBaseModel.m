@@ -9,6 +9,10 @@
 
 @implementation TTBaseModel
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"cid": @"id"};
+}
+
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper {
     return @{@"cid": @"id"};
 }
