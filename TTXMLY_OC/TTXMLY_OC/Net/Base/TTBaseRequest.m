@@ -32,10 +32,12 @@
     NSURLSessionDataTask *task = nil;
     self.completionBlock = completion;
     self.sessionManager = [self sessionManagerWithParams:params];
-    NSString *urlString = [self.urlString stringByAddingPercentEncodingWithAllowedCharacters:[[NSCharacterSet characterSetWithCharactersInString:@"?!@#$^&%*+,:;='\"`<>()[]{}/\\| "] invertedSet]];
+//    NSString *charactersToEscape = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
+//    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+//    NSString *urlString = [self.urlString stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
     
     if (methodType == TTHttpType_GET) {
-        task = [self.sessionManager GET:urlString
+        task = [self.sessionManager GET:self.urlString
                              parameters:params
                                 headers:nil
                                progress:nil
@@ -49,7 +51,7 @@
             }
         }];
     } else if (methodType == TTHttpType_POST) {
-        task = [self.sessionManager POST:urlString
+        task = [self.sessionManager POST:self.urlString
                               parameters:params
                                  headers:nil
                                 progress:nil
