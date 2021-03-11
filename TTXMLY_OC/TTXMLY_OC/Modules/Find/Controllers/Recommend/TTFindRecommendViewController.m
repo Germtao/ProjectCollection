@@ -67,27 +67,30 @@
         TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
         cell.recommendAlbum = self.viewModel.recommendModel.editorRecommendAlbums;
         return cell;
+    } else if (indexPath.section == TTFindRecommendSection_GuessULike) {
+        TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.guessULike = self.viewModel.hotGuessModel.guess;
+        return cell;
+    } else if (indexPath.section == TTFindRecommendSection_CityColumn) {
+        TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.cityColumn = self.viewModel.hotGuessModel.cityColumn;
+        return cell;
+    } else if (indexPath.section == TTFindRecommendSection_Hot) {
+        TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.hotRecommendItem = [self.viewModel.hotGuessModel.hotRecommends.list objectAtIndex:indexPath.row];
+        return cell;
     } else if (indexPath.section == TTFindRecommendSection_Live) {
-        if (self.viewModel.liveModel.data.count != 0) {
-            TTFindLiveCell *cell = (TTFindLiveCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Live];
-            cell.liveModel = self.viewModel.liveModel;
-            return cell;
-        } else {
-            return [TTFindBaseCell findCell:tableView];;
-        }
+        TTFindLiveCell *cell = (TTFindLiveCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Live];
+        cell.liveModel = self.viewModel.liveModel;
+        return cell;
     } else if (indexPath.section == TTFindRecommendSection_Special) {
-        if (self.viewModel.recommendModel.specialColumn.list.count != 0) {
-            TTFindSpecialCell *cell = (TTFindSpecialCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Special];
-            cell.specialColumn = self.viewModel.recommendModel.specialColumn;
-            return cell;
-        } else {
-            return [TTFindBaseCell findCell:tableView];
-        }
+        TTFindSpecialCell *cell = (TTFindSpecialCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Special];
+        cell.specialColumn = self.viewModel.recommendModel.specialColumn;
+        return cell;
     } else if (indexPath.section == TTFindRecommendSection_More) {
         TTFindMoreCell *cell = (TTFindMoreCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_More];
         return cell;
-    }
-    else {
+    } else {
         return [TTFindBaseCell findCell:tableView];
     }
 }

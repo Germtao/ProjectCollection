@@ -52,6 +52,14 @@
     [self setSubDetailsWithDetails:hotRecommendItem.list];
 }
 
+- (void)setGuessULike:(TTFindGuessULikeModel *)guessULike {
+    _guessULike = guessULike;
+    
+    self.titleLabel.text = guessULike.title;
+    
+    [self setSubDetailsWithDetails:guessULike.list];
+}
+
 // MARK: - private
 
 - (void)setSubDetailsWithDetails:(NSMutableArray<TTFindEditorRecommendDetailModel *> *)details {

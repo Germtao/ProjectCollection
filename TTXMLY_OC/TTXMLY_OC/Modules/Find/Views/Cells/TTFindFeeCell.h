@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) TTFindHotRecommendItemModel *hotRecommendItem;
 
+@property (nonatomic, strong) TTFindGuessULikeModel *guessULike;
+
 + (instancetype)findCellStyleFee:(UITableView *)tableView;
 
 @end

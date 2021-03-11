@@ -55,7 +55,12 @@
         case TTFindRecommendSection_Advertise:
             return 0;
         case TTFindRecommendSection_Hot:
-            return 230.0;
+            if (self.hotGuessModel.hotRecommends.list.count == 0) {
+                return 0;
+            } else {
+                NSMutableArray *list = [self.hotGuessModel.hotRecommends.list objectAtIndex:indexPath.row].list;
+                return list.count == 0 ? 0 : UITableViewAutomaticDimension;
+            }
         case TTFindRecommendSection_More:
             return UITableViewAutomaticDimension;
         default:
