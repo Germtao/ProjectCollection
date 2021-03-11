@@ -132,6 +132,7 @@
                             <constraint firstItem="o7v-cx-oa3" firstAttribute="centerY" secondItem="qsb-4m-Dn6" secondAttribute="centerY" id="h9Q-9K-Kqy"/>
                             <constraint firstItem="o7v-cx-oa3" firstAttribute="leading" secondItem="07W-w7-dXX" secondAttribute="leading" constant="10" id="i6m-OD-f9J"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qsb-4m-Dn6" secondAttribute="trailing" constant="100" id="le2-aZ-LAv"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="08f-QM-myq" secondAttribute="bottom" constant="10" id="mKK-FM-B4J"/>
                         </constraints>
                     </view>
                 </subviews>

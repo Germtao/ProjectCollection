@@ -6,8 +6,6 @@
 //
 
 #import "TTFindCellFactory.h"
-#import "TTFindFeeCell.h"
-#import "TTFindLiveCell.h"
 
 @implementation TTFindCellFactory
 
@@ -19,6 +17,9 @@
             break;
         case TTFindCellStyle_Live:
             cell = [TTFindLiveCell findCell:tableView];
+            break;
+        case TTFindCellStyle_Special:
+            cell = [TTFindSpecialCell findCell:tableView];
             break;
         default:
             cell = [TTFindBaseCell findCell:tableView];
