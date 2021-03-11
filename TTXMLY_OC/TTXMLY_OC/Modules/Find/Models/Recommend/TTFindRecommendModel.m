@@ -23,6 +23,10 @@
 
 @implementation TTFindSpecialColumnModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{@"list" : [TTFindSpecialColumnDetailModel class]};
+}
+
 @end
 
 @implementation TTFindFocusImagesModel
