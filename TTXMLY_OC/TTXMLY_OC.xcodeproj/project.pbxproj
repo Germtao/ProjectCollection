@@ -25,6 +25,8 @@
 		3B9C004325F8C1EE00E1E8BD /* TTFindLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C004125F8C1EE00E1E8BD /* TTFindLiveCell.xib */; };
 		3B9C005725F9C84E00E1E8BD /* TTFindSpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C005525F9C84E00E1E8BD /* TTFindSpecialCell.m */; };
 		3B9C005825F9C84E00E1E8BD /* TTFindSpecialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C005625F9C84E00E1E8BD /* TTFindSpecialCell.xib */; };
+		3B9C005D25F9F2C300E1E8BD /* TTFindMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C005B25F9F2C200E1E8BD /* TTFindMoreCell.m */; };
+		3B9C005E25F9F2C300E1E8BD /* TTFindMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C005C25F9F2C200E1E8BD /* TTFindMoreCell.xib */; };
 		3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED525F5C81000E1E8BD /* AppDelegate.m */; };
 		3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED825F5C81000E1E8BD /* SceneDelegate.m */; };
 		3B9CFEDF25F5C81000E1E8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFEDD25F5C81000E1E8BD /* Main.storyboard */; };
@@ -97,6 +99,9 @@
 		3B9C005425F9C84E00E1E8BD /* TTFindSpecialCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindSpecialCell.h; sourceTree = "<group>"; };
 		3B9C005525F9C84E00E1E8BD /* TTFindSpecialCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindSpecialCell.m; sourceTree = "<group>"; };
 		3B9C005625F9C84E00E1E8BD /* TTFindSpecialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFindSpecialCell.xib; sourceTree = "<group>"; };
+		3B9C005A25F9F2C200E1E8BD /* TTFindMoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindMoreCell.h; sourceTree = "<group>"; };
+		3B9C005B25F9F2C200E1E8BD /* TTFindMoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindMoreCell.m; sourceTree = "<group>"; };
+		3B9C005C25F9F2C200E1E8BD /* TTFindMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFindMoreCell.xib; sourceTree = "<group>"; };
 		3B9CFED125F5C81000E1E8BD /* TTXMLY_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9CFED425F5C81000E1E8BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B9CFED525F5C81000E1E8BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -268,6 +273,9 @@
 				3B9C005425F9C84E00E1E8BD /* TTFindSpecialCell.h */,
 				3B9C005525F9C84E00E1E8BD /* TTFindSpecialCell.m */,
 				3B9C005625F9C84E00E1E8BD /* TTFindSpecialCell.xib */,
+				3B9C005A25F9F2C200E1E8BD /* TTFindMoreCell.h */,
+				3B9C005B25F9F2C200E1E8BD /* TTFindMoreCell.m */,
+				3B9C005C25F9F2C200E1E8BD /* TTFindMoreCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -783,6 +791,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9CFFD225F7256900E1E8BD /* Download.storyboard in Resources */,
+				3B9C005E25F9F2C300E1E8BD /* TTFindMoreCell.xib in Resources */,
 				3B9CFEE425F5C81D00E1E8BD /* LaunchScreen.storyboard in Resources */,
 				3B9CFFBE25F723E600E1E8BD /* SubScribe.storyboard in Resources */,
 				3B9C003C25F8A5C300E1E8BD /* TTFindFeeCell.xib in Resources */,
@@ -888,6 +897,7 @@
 				3B9CFFD825F7259F00E1E8BD /* TTMineViewController.m in Sources */,
 				3B9CFFF125F74A8B00E1E8BD /* TTBaseModel.m in Sources */,
 				3B9CFFF625F74DC800E1E8BD /* TTBaseAudioModel.m in Sources */,
+				3B9C005D25F9F2C300E1E8BD /* TTFindMoreCell.m in Sources */,
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
 				3B9CFFFA25F74E9B00E1E8BD /* TTFindRecommendModel.m in Sources */,
 				3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */,

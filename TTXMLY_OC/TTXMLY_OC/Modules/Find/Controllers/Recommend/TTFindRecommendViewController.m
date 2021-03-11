@@ -83,6 +83,9 @@
         } else {
             return [TTFindBaseCell findCell:tableView];
         }
+    } else if (indexPath.section == TTFindRecommendSection_More) {
+        TTFindMoreCell *cell = (TTFindMoreCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_More];
+        return cell;
     }
     else {
         return [TTFindBaseCell findCell:tableView];

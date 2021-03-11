@@ -57,7 +57,7 @@
         case TTFindRecommendSection_Hot:
             return 230.0;
         case TTFindRecommendSection_More:
-            return 60.0;
+            return UITableViewAutomaticDimension;
         default:
             return 0;
     }

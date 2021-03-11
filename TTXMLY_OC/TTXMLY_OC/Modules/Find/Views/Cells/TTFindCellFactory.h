@@ -10,6 +10,7 @@
 #import "TTFindFeeCell.h"
 #import "TTFindLiveCell.h"
 #import "TTFindSpecialCell.h"
+#import "TTFindMoreCell.h"
 
 typedef NS_ENUM(NSInteger, TTFindCellStyle) {
     TTFindCellStyle_Fee     = 0, // 类似付费精品

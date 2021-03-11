@@ -21,8 +21,8 @@
         case TTFindCellStyle_Special:
             cell = [TTFindSpecialCell findCell:tableView];
             break;
-        default:
-            cell = [TTFindBaseCell findCell:tableView];
+        case TTFindCellStyle_More:
+            cell = [TTFindMoreCell findCell:tableView];
             break;
     }
     return cell;
