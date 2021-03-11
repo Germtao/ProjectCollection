@@ -12,8 +12,6 @@
 #import "TTFindRecommendHelper.h"
 
 #import "TTFindCellFactory.h"
-#import "TTFindFeeCell.h"
-#import "TTFindLiveCell.h"
 
 @interface TTFindRecommendViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -77,7 +75,16 @@
         } else {
             return [TTFindBaseCell findCell:tableView];;
         }
-    } else {
+    } else if (indexPath.section == TTFindRecommendSection_Special) {
+        if (self.viewModel.recommendModel.specialColumn.list.count != 0) {
+            TTFindSpecialCell *cell = (TTFindSpecialCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Special];
+            cell.specialColumn = self.viewModel.recommendModel.specialColumn;
+            return cell;
+        } else {
+            return [TTFindBaseCell findCell:tableView];
+        }
+    }
+    else {
         return [TTFindBaseCell findCell:tableView];
     }
 }
