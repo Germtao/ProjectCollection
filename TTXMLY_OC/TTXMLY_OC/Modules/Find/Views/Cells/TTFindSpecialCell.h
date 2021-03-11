@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTFindSpecialCell : TTFindBaseCell
 
+@property (nonatomic, weak) id <TTFindBaseCellDelegate> delegate;
+
 @property (nonatomic, strong) TTFindSpecialColumnModel *specialColumn;
 
 + (instancetype)findCellStyleSpecial:(UITableView *)tableView;

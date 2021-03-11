@@ -67,7 +67,9 @@
 #pragma mark - action
 
 - (IBAction)moreButtonAction:(UIButton *)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(findCellStyleSpecial:didMoreClickedWithModel:)]) {
+        [self.delegate findCellStyleSpecial:self didMoreClickedWithModel:self.specialColumn];
+    }
 }
 
 @end

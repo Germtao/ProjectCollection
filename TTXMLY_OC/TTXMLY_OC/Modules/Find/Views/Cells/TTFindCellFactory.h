@@ -12,13 +12,6 @@
 #import "TTFindSpecialCell.h"
 #import "TTFindMoreCell.h"
 
-typedef NS_ENUM(NSInteger, TTFindCellStyle) {
-    TTFindCellStyle_Fee     = 0, // 类似付费精品
-    TTFindCellStyle_Live    = 1, // 直播
-    TTFindCellStyle_Special = 2, // 精品听单
-    TTFindCellStyle_More    = 3, // 更多
-};
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TTFindCellFactory : NSObject

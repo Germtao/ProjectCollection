@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTFindFeeCell : TTFindBaseCell
 
+@property (nonatomic, weak) id <TTFindBaseCellDelegate> delegate;
+
 @property (nonatomic, strong) TTFindEditorRecommendAlbumModel *recommendAlbum;
 
 @property (nonatomic, strong) TTCityColumnModel *cityColumn;

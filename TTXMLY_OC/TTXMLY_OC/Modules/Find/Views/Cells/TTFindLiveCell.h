@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTFindLiveCell : TTFindBaseCell
 
+@property (nonatomic, weak) id <TTFindBaseCellDelegate> delegate;
+
 @property (nonatomic, strong) TTFindLiveModel *liveModel;
 
 + (instancetype)findCellStyleLive:(UITableView *)tableView;

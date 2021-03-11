@@ -86,6 +86,14 @@
     }
 }
 
+#pragma mark - action
+
+- (IBAction)moreButtonClicked:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(findCellStyleFeeDidMoreClicked:)]) {
+        [self.delegate findCellStyleFeeDidMoreClicked:self];
+    }
+}
+
 #pragma mark - init
 
 + (instancetype)findCell:(UITableView *)tableView {

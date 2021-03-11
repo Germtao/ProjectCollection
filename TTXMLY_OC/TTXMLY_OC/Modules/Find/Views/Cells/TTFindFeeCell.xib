@@ -114,6 +114,9 @@
                                     <constraint firstAttribute="height" constant="25" id="lUn-Tp-pC9"/>
                                 </constraints>
                                 <state key="normal" image="live_radio_section_more_n"/>
+                                <connections>
+                                    <action selector="moreButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ycs-kj-m3k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor"/>

@@ -13,7 +13,7 @@
 
 #import "TTFindCellFactory.h"
 
-@interface TTFindRecommendViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TTFindRecommendViewController () <UITableViewDelegate, UITableViewDataSource, TTFindBaseCellDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
 
@@ -65,27 +65,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == TTFindRecommendSection_Recommend) {
         TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.delegate = self;
         cell.recommendAlbum = self.viewModel.recommendModel.editorRecommendAlbums;
         return cell;
     } else if (indexPath.section == TTFindRecommendSection_GuessULike) {
         TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.delegate = self;
         cell.guessULike = self.viewModel.hotGuessModel.guess;
         return cell;
     } else if (indexPath.section == TTFindRecommendSection_CityColumn) {
         TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.delegate = self;
         cell.cityColumn = self.viewModel.hotGuessModel.cityColumn;
         return cell;
     } else if (indexPath.section == TTFindRecommendSection_Hot) {
         TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
         cell.hotRecommendItem = [self.viewModel.hotGuessModel.hotRecommends.list objectAtIndex:indexPath.row];
+        cell.delegate = self;
         return cell;
     } else if (indexPath.section == TTFindRecommendSection_Live) {
         TTFindLiveCell *cell = (TTFindLiveCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Live];
         cell.liveModel = self.viewModel.liveModel;
+        cell.delegate = self;
         return cell;
     } else if (indexPath.section == TTFindRecommendSection_Special) {
         TTFindSpecialCell *cell = (TTFindSpecialCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Special];
         cell.specialColumn = self.viewModel.recommendModel.specialColumn;
+        cell.delegate = self;
         return cell;
     } else if (indexPath.section == TTFindRecommendSection_More) {
         TTFindMoreCell *cell = (TTFindMoreCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_More];
@@ -99,6 +105,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.viewModel heightForRowAtIndexPath:indexPath];
+}
+
+#pragma mark - TTFindBaseCellDelegate
+- (void)findCellStyleFeeDidMoreClicked:(TTFindFeeCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    switch (indexPath.section) {
+        case TTFindRecommendSection_Recommend:
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)findCellStyleLive:(TTFindLiveCell *)cell didMoreClickedWithModel:(TTFindLiveModel *)model {
+    
+}
+
+- (void)findCellStyleSpecial:(TTFindSpecialCell *)cell didMoreClickedWithModel:(TTFindSpecialColumnModel *)model {
+    
 }
 
 

@@ -84,7 +84,9 @@
 #pragma mark - private
 
 - (IBAction)moreButtonClicked:(UIButton *)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(findCellStyleLive:didMoreClickedWithModel:)]) {
+        [self.delegate findCellStyleLive:self didMoreClickedWithModel:self.liveModel];
+    }
 }
 
 - (void)changeStatus {
