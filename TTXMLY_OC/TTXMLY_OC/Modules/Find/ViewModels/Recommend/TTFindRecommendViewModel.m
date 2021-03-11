@@ -43,15 +43,15 @@
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case TTFindRecommendSection_Recommend:
-            return 230.0;
+            return UITableViewAutomaticDimension;
         case TTFindRecommendSection_Live:
-            return self.liveModel.data.count == 0 ? 0 : 227.0;
+            return self.liveModel.data.count == 0 ? 0 : UITableViewAutomaticDimension;
         case TTFindRecommendSection_GuessULike:
-            return self.hotGuessModel.guess.list.count == 0 ? 0 : 230.0;
+            return self.hotGuessModel.guess.list.count == 0 ? 0 : UITableViewAutomaticDimension;
         case TTFindRecommendSection_CityColumn:
-            return self.hotGuessModel.cityColumn.list.count == 0 ? 0 : 230.0;
+            return self.hotGuessModel.cityColumn.list.count == 0 ? 0 : UITableViewAutomaticDimension;
         case TTFindRecommendSection_Special:
-            return self.recommendModel.specialColumn.list.count == 0 ? 0 : 219.0;
+            return self.recommendModel.specialColumn.list.count == 0 ? 0 : UITableViewAutomaticDimension;
         case TTFindRecommendSection_Advertise:
             return 0;
         case TTFindRecommendSection_Hot:
