@@ -6,10 +6,20 @@
 //
 
 #import "TTFindBaseCell.h"
+#import "TTFindRecommendModel.h"
+#import "TTFindHotGuessModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TTFindFeeCell : TTFindBaseCell
+
+@property (nonatomic, strong) TTFindEditorRecommendAlbumModel *recommendAlbum;
+
+@property (nonatomic, strong) TTCityColumnModel *cityColumn;
+
+@property (nonatomic, strong) TTFindHotRecommendItemModel *hotRecommendItem;
+
++ (instancetype)findCellStyleFee:(UITableView *)tableView;
 
 @end
 
