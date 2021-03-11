@@ -11,6 +11,10 @@
 #import <Masonry/Masonry.h>
 #import "TTFindRecommendHelper.h"
 
+#import "TTFindCellFactory.h"
+#import "TTFindFeeCell.h"
+#import "TTFindLiveCell.h"
+
 @interface TTFindRecommendViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
@@ -44,7 +48,7 @@
         self.headerView.discoveryColumns = self.viewModel.hotGuessModel.discoveryColumns;
         
         [[TTFindRecommendHelper sharedInstance] startTimer:TTFindRecommendTimer_Banner];
-        
+        [[TTFindRecommendHelper sharedInstance] startTimer:TTFindRecommendTimer_Live];
     }];
     
     [self.viewModel refreshDataSource];
@@ -61,7 +65,27 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[UITableViewCell alloc] init];
+    if (indexPath.section == TTFindRecommendSection_Recommend) {
+        TTFindFeeCell *cell = (TTFindFeeCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Fee];
+        cell.recommendAlbum = self.viewModel.recommendModel.editorRecommendAlbums;
+        return cell;
+    } else if (indexPath.section == TTFindRecommendSection_Live) {
+        if (self.viewModel.liveModel.data.count != 0) {
+            TTFindLiveCell *cell = (TTFindLiveCell *)[TTFindCellFactory createCell:tableView style:TTFindCellStyle_Live];
+            cell.liveModel = self.viewModel.liveModel;
+            return cell;
+        } else {
+            return [TTFindBaseCell findCell:tableView];;
+        }
+    } else {
+        return [TTFindBaseCell findCell:tableView];
+    }
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.viewModel heightForRowAtIndexPath:indexPath];
 }
 
 
