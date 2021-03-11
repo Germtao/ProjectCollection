@@ -13,6 +13,12 @@
 
 @implementation TTFindEditorRecommendAlbumModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+        @"list" : [TTFindEditorRecommendDetailModel class]
+    };
+}
+
 @end
 
 @implementation TTFindSpecialColumnModel

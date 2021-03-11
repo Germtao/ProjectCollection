@@ -9,6 +9,12 @@
 
 @implementation TTFindLiveModel
 
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+        @"data" : [TTFindLiveDetailModel class]
+    };
+}
+
 @end
 
 @implementation TTFindLiveDetailModel

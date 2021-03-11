@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger ret;
 
-@property (nonatomic, strong) NSMutableArray<TTFindLiveDetailModel *> *data;
+@property (nonatomic, strong) NSMutableArray *data;
 
 @end
 
@@ -37,9 +37,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 在线数量
 @property (nonatomic, assign) NSInteger onlineCount;
-
-/// 播放量
-@property (nonatomic, assign) NSInteger playCount;
 
 @property (nonatomic, assign) NSInteger scheduleId;
 
