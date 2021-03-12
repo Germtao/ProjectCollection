@@ -27,6 +27,8 @@
 		3B9C005825F9C84E00E1E8BD /* TTFindSpecialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C005625F9C84E00E1E8BD /* TTFindSpecialCell.xib */; };
 		3B9C005D25F9F2C300E1E8BD /* TTFindMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C005B25F9F2C200E1E8BD /* TTFindMoreCell.m */; };
 		3B9C005E25F9F2C300E1E8BD /* TTFindMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C005C25F9F2C200E1E8BD /* TTFindMoreCell.xib */; };
+		3B9C006325FA210700E1E8BD /* TTBasePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C006225FA210700E1E8BD /* TTBasePlayView.m */; };
+		3B9C006825FB019500E1E8BD /* TTBasePlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C006725FB019500E1E8BD /* TTBasePlayController.m */; };
 		3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED525F5C81000E1E8BD /* AppDelegate.m */; };
 		3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED825F5C81000E1E8BD /* SceneDelegate.m */; };
 		3B9CFEDF25F5C81000E1E8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFEDD25F5C81000E1E8BD /* Main.storyboard */; };
@@ -102,6 +104,10 @@
 		3B9C005A25F9F2C200E1E8BD /* TTFindMoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindMoreCell.h; sourceTree = "<group>"; };
 		3B9C005B25F9F2C200E1E8BD /* TTFindMoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindMoreCell.m; sourceTree = "<group>"; };
 		3B9C005C25F9F2C200E1E8BD /* TTFindMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFindMoreCell.xib; sourceTree = "<group>"; };
+		3B9C006125FA210700E1E8BD /* TTBasePlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBasePlayView.h; sourceTree = "<group>"; };
+		3B9C006225FA210700E1E8BD /* TTBasePlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBasePlayView.m; sourceTree = "<group>"; };
+		3B9C006625FB019500E1E8BD /* TTBasePlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBasePlayController.h; sourceTree = "<group>"; };
+		3B9C006725FB019500E1E8BD /* TTBasePlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBasePlayController.m; sourceTree = "<group>"; };
 		3B9CFED125F5C81000E1E8BD /* TTXMLY_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9CFED425F5C81000E1E8BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B9CFED525F5C81000E1E8BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -280,6 +286,17 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3B9C006025FA20E400E1E8BD /* BasePlay */ = {
+			isa = PBXGroup;
+			children = (
+				3B9C006125FA210700E1E8BD /* TTBasePlayView.h */,
+				3B9C006225FA210700E1E8BD /* TTBasePlayView.m */,
+				3B9C006625FB019500E1E8BD /* TTBasePlayController.h */,
+				3B9C006725FB019500E1E8BD /* TTBasePlayController.m */,
+			);
+			path = BasePlay;
+			sourceTree = "<group>";
+		};
 		3B9CFEC825F5C81000E1E8BD = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +417,7 @@
 		3B9CFF1625F5F3FA00E1E8BD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C006025FA20E400E1E8BD /* BasePlay */,
 				3B9CFF1825F5F41000E1E8BD /* BaseNav */,
 				3B9CFF1725F5F40200E1E8BD /* BaseVC */,
 			);
@@ -857,8 +875,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */,
+				3B9C006825FB019500E1E8BD /* TTBasePlayController.m in Sources */,
 				3B9CFFCF25F7255900E1E8BD /* TTDownloadViewController.m in Sources */,
 				3B9C000225F758AE00E1E8BD /* TTFindHotGuessModel.m in Sources */,
+				3B9C006325FA210700E1E8BD /* TTBasePlayView.m in Sources */,
 				3B9CFF0C25F5D7E700E1E8BD /* TTBaseApi.m in Sources */,
 				3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */,
 				3B9C003B25F8A5C300E1E8BD /* TTFindFeeCell.m in Sources */,
