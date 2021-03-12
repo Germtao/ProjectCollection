@@ -29,6 +29,8 @@
 		3B9C005E25F9F2C300E1E8BD /* TTFindMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C005C25F9F2C200E1E8BD /* TTFindMoreCell.xib */; };
 		3B9C006325FA210700E1E8BD /* TTBasePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C006225FA210700E1E8BD /* TTBasePlayView.m */; };
 		3B9C006825FB019500E1E8BD /* TTBasePlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C006725FB019500E1E8BD /* TTBasePlayController.m */; };
+		3B9C006F25FB607700E1E8BD /* TTStopWatchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C006E25FB607700E1E8BD /* TTStopWatchTool.m */; };
+		3B9C007525FB69C300E1E8BD /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C007325FB69C300E1E8BD /* BSBacktraceLogger.m */; };
 		3B9CFED625F5C81000E1E8BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED525F5C81000E1E8BD /* AppDelegate.m */; };
 		3B9CFED925F5C81000E1E8BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9CFED825F5C81000E1E8BD /* SceneDelegate.m */; };
 		3B9CFEDF25F5C81000E1E8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9CFEDD25F5C81000E1E8BD /* Main.storyboard */; };
@@ -108,6 +110,10 @@
 		3B9C006225FA210700E1E8BD /* TTBasePlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBasePlayView.m; sourceTree = "<group>"; };
 		3B9C006625FB019500E1E8BD /* TTBasePlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBasePlayController.h; sourceTree = "<group>"; };
 		3B9C006725FB019500E1E8BD /* TTBasePlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTBasePlayController.m; sourceTree = "<group>"; };
+		3B9C006D25FB607700E1E8BD /* TTStopWatchTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTStopWatchTool.h; sourceTree = "<group>"; };
+		3B9C006E25FB607700E1E8BD /* TTStopWatchTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTStopWatchTool.m; sourceTree = "<group>"; };
+		3B9C007325FB69C300E1E8BD /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		3B9C007425FB69C300E1E8BD /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		3B9CFED125F5C81000E1E8BD /* TTXMLY_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTXMLY_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9CFED425F5C81000E1E8BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B9CFED525F5C81000E1E8BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -297,6 +303,33 @@
 			path = BasePlay;
 			sourceTree = "<group>";
 		};
+		3B9C006B25FB5B0C00E1E8BD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				3B9C006C25FB5F8A00E1E8BD /* StopWatch(打点工具) */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		3B9C006C25FB5F8A00E1E8BD /* StopWatch(打点工具) */ = {
+			isa = PBXGroup;
+			children = (
+				3B9C007225FB697E00E1E8BD /* BSBacktraceLogger */,
+				3B9C006D25FB607700E1E8BD /* TTStopWatchTool.h */,
+				3B9C006E25FB607700E1E8BD /* TTStopWatchTool.m */,
+			);
+			path = "StopWatch(打点工具)";
+			sourceTree = "<group>";
+		};
+		3B9C007225FB697E00E1E8BD /* BSBacktraceLogger */ = {
+			isa = PBXGroup;
+			children = (
+				3B9C007425FB69C300E1E8BD /* BSBacktraceLogger.h */,
+				3B9C007325FB69C300E1E8BD /* BSBacktraceLogger.m */,
+			);
+			path = BSBacktraceLogger;
+			sourceTree = "<group>";
+		};
 		3B9CFEC825F5C81000E1E8BD = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +439,7 @@
 		3B9CFF1525F5F3E800E1E8BD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C006B25FB5B0C00E1E8BD /* Tools */,
 				3B9C000B25F75E4A00E1E8BD /* ViewModel */,
 				3B9CFFEE25F74A6800E1E8BD /* Model */,
 				3B9CFF1E25F5F4DC00E1E8BD /* Constants */,
@@ -883,6 +917,7 @@
 				3B9CFF6225F6168F00E1E8BD /* TTFindAnchorViewController.m in Sources */,
 				3B9C003B25F8A5C300E1E8BD /* TTFindFeeCell.m in Sources */,
 				3B9CFF3925F60AF700E1E8BD /* TTFindViewController.m in Sources */,
+				3B9C007525FB69C300E1E8BD /* BSBacktraceLogger.m in Sources */,
 				3B9C001525F7758D00E1E8BD /* TTFindRecommendHeader.m in Sources */,
 				3B9C003125F8A44700E1E8BD /* TTFindCellFactory.m in Sources */,
 				3B9CFEE725F5C81D00E1E8BD /* main.m in Sources */,
@@ -921,6 +956,7 @@
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
 				3B9CFFFA25F74E9B00E1E8BD /* TTFindRecommendModel.m in Sources */,
 				3B9CFF3425F6036B00E1E8BD /* TTFindSubTitleView.m in Sources */,
+				3B9C006F25FB607700E1E8BD /* TTStopWatchTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1065,6 +1101,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UW8B3X7J9;
 				GCC_PREFIX_HEADER = "/Users/qdsg/Documents/Github/iOSCollection/TTXMLY_OC/TTXMLY_OC/Support Files/TTXMLY_OC-Prefix.pch";
 				INFOPLIST_FILE = "TTXMLY_OC/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1132,6 +1169,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UW8B3X7J9;
 				GCC_PREFIX_HEADER = "/Users/qdsg/Documents/Github/iOSCollection/TTXMLY_OC/TTXMLY_OC/Support Files/TTXMLY_OC-Prefix.pch";
 				INFOPLIST_FILE = "TTXMLY_OC/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
