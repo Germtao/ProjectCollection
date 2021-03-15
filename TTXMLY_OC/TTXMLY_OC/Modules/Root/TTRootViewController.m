@@ -30,8 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Log(@"root view did load.");
     [self customTabBar];
     [self configChildControllers];
+    
+    [[TTStopWatchTool sharedInstance] splitWithDescription:@"root view did appear."];
 }
 
 #pragma mark - Private

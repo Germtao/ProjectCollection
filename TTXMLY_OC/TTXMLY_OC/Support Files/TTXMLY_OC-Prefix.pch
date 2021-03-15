@@ -13,5 +13,6 @@
 
 #import "TTConstants.h"
 #import "UIView+Extension.h"
+#import "TTStopWatchTool.h"
 
 #endif /* TTXMLY_OC_Prefix_pch */

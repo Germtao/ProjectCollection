@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
+    [[TTStopWatchTool sharedInstance] start];
+    [[TTStopWatchTool sharedInstance] splitWithDescription:@"main()执行."];
+    
     NSString * appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
