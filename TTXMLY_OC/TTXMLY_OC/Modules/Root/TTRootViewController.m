@@ -34,7 +34,19 @@
     [self customTabBar];
     [self configChildControllers];
     
-    [[TTStopWatchTool sharedInstance] splitWithDescription:@"root view did appear."];
+//    [[TTStopWatchTool sharedInstance] splitWithDescription:@"root view did appear."];
+    [self testAAAAAAAAAAA];
+}
+
+- (void)testAAAAAAAAAAA{
+    [self testBBBBBBBBBB];
+}
+
+- (void)testBBBBBBBBBB{
+    while (true) {
+        sleep(3);
+        break;
+    }
 }
 
 #pragma mark - Private

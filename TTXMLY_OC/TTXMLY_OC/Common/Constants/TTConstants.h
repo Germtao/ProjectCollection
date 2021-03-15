@@ -35,6 +35,7 @@
 
 #define iOS11 @available(iOS 11.0, *)
 
+#define kStatusBarHeight (iPhoneX ? 44.f : 20.f)
 #define kTopBarHeight (iPhoneX ? 88.0f : 64.0f)
 #define kTabBarHeight (iPhoneX ? 83.0f : 49.0f)
 

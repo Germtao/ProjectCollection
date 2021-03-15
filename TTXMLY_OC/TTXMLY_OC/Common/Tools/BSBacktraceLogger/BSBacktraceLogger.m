@@ -417,4 +417,83 @@ uintptr_t bs_segmentBaseOfImageIndex(const uint32_t idx) {
     return 0;
 }
 
++ (NSDictionary *)bs_backtraceMapOfMainThread {
+    return _bs_backtraceMapOfThread(bs_machThreadFromNSThread([NSThread mainThread]));
+}
+
+#pragma -mark Get call backtrace of a mach_thread
+NSDictionary *_bs_backtraceMapOfThread(thread_t thread) {
+    uintptr_t backtraceBuffer[50];
+    int i = 0;
+    NSMutableDictionary * resultDict = [NSMutableDictionary dictionary];
+    
+    _STRUCT_MCONTEXT machineContext;
+    if(!bs_fillThreadStateIntoMachineContext(thread, &machineContext)) {
+        return nil;
+    }
+    
+    const uintptr_t instructionAddress = bs_mach_instructionAddress(&machineContext);
+    backtraceBuffer[i] = instructionAddress;
+    ++i;
+    
+    uintptr_t linkRegister = bs_mach_linkRegister(&machineContext);
+    if (linkRegister) {
+        backtraceBuffer[i] = linkRegister;
+        i++;
+    }
+    
+    if(instructionAddress == 0) {
+        return nil;
+    }
+    
+    BSStackFrameEntry frame = {0};
+    const uintptr_t framePtr = bs_mach_framePointer(&machineContext);
+    if(framePtr == 0 ||
+       bs_mach_copyMem((void *)framePtr, &frame, sizeof(frame)) != KERN_SUCCESS) {
+        return nil;
+    }
+    
+    for(; i < 50; i++) {
+        backtraceBuffer[i] = frame.return_address;
+        if(backtraceBuffer[i] == 0 ||
+           frame.previous == 0 ||
+           bs_mach_copyMem(frame.previous, &frame, sizeof(frame)) != KERN_SUCCESS) {
+            break;
+        }
+    }
+    
+    int backtraceLength = i;
+    Dl_info symbolicated[backtraceLength];
+    bs_symbolicate(backtraceBuffer, symbolicated, backtraceLength, 0);
+    
+    for (int i = 0; i < backtraceLength; ++i) {
+//        [resultString appendFormat:@"%@", bs_logBacktraceEntry(i, backtraceBuffer[i], &symbolicated[i])];
+        NSString * functionName = bs_logBacktraceFunctionName(&symbolicated[i]);
+        NSString * functionAddress = [NSString stringWithFormat:@"0x%08lx",(uintptr_t)backtraceBuffer[i]];
+        [resultDict setObject:functionName forKey:functionAddress];
+    }
+    return [resultDict copy];
+}
+
+#pragma -mark GenerateBacbsrackEnrty
+NSString* bs_logBacktraceFunctionName(const Dl_info* const dlInfo) {
+    //    char faddrBuff[20];
+    char saddrBuff[20];
+    
+    //    const char* fname = bs_lastPathEntry(dlInfo->dli_fname);
+    //    if(fname == NULL) {
+    //        sprintf(faddrBuff, POINTER_FMT, (uintptr_t)dlInfo->dli_fbase);
+    //        fname = faddrBuff;
+    //    }
+    
+    //    uintptr_t offset = address - (uintptr_t)dlInfo->dli_saddr;
+    const char* sname = dlInfo->dli_sname;
+    if(sname == NULL) {
+        sprintf(saddrBuff, POINTER_SHORT_FMT, (uintptr_t)dlInfo->dli_fbase);
+        sname = saddrBuff;
+        //        offset = address - (uintptr_t)dlInfo->dli_fbase;
+    }
+    return [NSString stringWithFormat:@"%s",sname];
+}
+
 @end

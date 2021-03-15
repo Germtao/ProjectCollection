@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0EB6C0839F3A3F05F3B60EC4 /* Pods_TTXMLY_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43034612D20DAE06DC7E0A48 /* Pods_TTXMLY_OC.framework */; };
+		3B04329525FF10BB003E5995 /* TTMonitorTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04329425FF10BB003E5995 /* TTMonitorTimeTool.m */; };
+		3B04329A25FF116F003E5995 /* TTMonitorTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04329925FF116F003E5995 /* TTMonitorTimeModel.m */; };
+		3B04329E25FF11DC003E5995 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04329D25FF11DC003E5995 /* UIViewController+Common.m */; };
 		3B9C000225F758AE00E1E8BD /* TTFindHotGuessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C000125F758AE00E1E8BD /* TTFindHotGuessModel.m */; };
 		3B9C000825F75D6000E1E8BD /* TTFindRecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C000725F75D6000E1E8BD /* TTFindRecommendViewModel.m */; };
 		3B9C000E25F75E5B00E1E8BD /* TTBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C000D25F75E5B00E1E8BD /* TTBaseViewModel.m */; };
@@ -74,6 +77,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B04329325FF10BB003E5995 /* TTMonitorTimeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMonitorTimeTool.h; sourceTree = "<group>"; };
+		3B04329425FF10BB003E5995 /* TTMonitorTimeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMonitorTimeTool.m; sourceTree = "<group>"; };
+		3B04329825FF116F003E5995 /* TTMonitorTimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMonitorTimeModel.h; sourceTree = "<group>"; };
+		3B04329925FF116F003E5995 /* TTMonitorTimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMonitorTimeModel.m; sourceTree = "<group>"; };
+		3B04329C25FF11DC003E5995 /* UIViewController+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
+		3B04329D25FF11DC003E5995 /* UIViewController+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
 		3B9C000025F758AE00E1E8BD /* TTFindHotGuessModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindHotGuessModel.h; sourceTree = "<group>"; };
 		3B9C000125F758AE00E1E8BD /* TTFindHotGuessModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFindHotGuessModel.m; sourceTree = "<group>"; };
 		3B9C000625F75D6000E1E8BD /* TTFindRecommendViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFindRecommendViewModel.h; sourceTree = "<group>"; };
@@ -205,6 +214,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B04329225FF1099003E5995 /* MonitorTime(监控时间) */ = {
+			isa = PBXGroup;
+			children = (
+				3B04329325FF10BB003E5995 /* TTMonitorTimeTool.h */,
+				3B04329425FF10BB003E5995 /* TTMonitorTimeTool.m */,
+				3B04329825FF116F003E5995 /* TTMonitorTimeModel.h */,
+				3B04329925FF116F003E5995 /* TTMonitorTimeModel.m */,
+				3B04329C25FF11DC003E5995 /* UIViewController+Common.h */,
+				3B04329D25FF11DC003E5995 /* UIViewController+Common.m */,
+			);
+			path = "MonitorTime(监控时间)";
+			sourceTree = "<group>";
+		};
 		3B9C000425F75D2D00E1E8BD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +328,8 @@
 		3B9C006B25FB5B0C00E1E8BD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3B04329225FF1099003E5995 /* MonitorTime(监控时间) */,
+				3B9C007225FB697E00E1E8BD /* BSBacktraceLogger */,
 				3B9C006C25FB5F8A00E1E8BD /* StopWatch(打点工具) */,
 			);
 			path = Tools;
@@ -314,7 +338,6 @@
 		3B9C006C25FB5F8A00E1E8BD /* StopWatch(打点工具) */ = {
 			isa = PBXGroup;
 			children = (
-				3B9C007225FB697E00E1E8BD /* BSBacktraceLogger */,
 				3B9C006D25FB607700E1E8BD /* TTStopWatchTool.h */,
 				3B9C006E25FB607700E1E8BD /* TTStopWatchTool.m */,
 			);
@@ -927,11 +950,13 @@
 				3B9CFF8925F6213300E1E8BD /* TTSubscriptionNavView.m in Sources */,
 				3B9CFF2125F5F52400E1E8BD /* TTConstants.m in Sources */,
 				3B9CFF5125F6165600E1E8BD /* TTFindCategoryViewController.m in Sources */,
+				3B04329525FF10BB003E5995 /* TTMonitorTimeTool.m in Sources */,
 				3B9CFF7E25F6203000E1E8BD /* TTSubscriptionSubscriptionController.m in Sources */,
 				3B9C002525F85E7F00E1E8BD /* TTIconButtonView.m in Sources */,
 				3B9CFF2925F5FB2900E1E8BD /* TTBaseViewController.m in Sources */,
 				3B9CFF8E25F62C7F00E1E8BD /* TTRootViewController.m in Sources */,
 				3B9CFF4B25F6163200E1E8BD /* TTFindRecommendViewController.m in Sources */,
+				3B04329E25FF11DC003E5995 /* UIViewController+Common.m in Sources */,
 				3B9CFF7225F61E0B00E1E8BD /* TTSubscriptionFactory.m in Sources */,
 				3B9C000E25F75E5B00E1E8BD /* TTBaseViewModel.m in Sources */,
 				3B9CFF4025F6130A00E1E8BD /* TTBaseChildViewController.m in Sources */,
@@ -952,6 +977,7 @@
 				3B9CFFD825F7259F00E1E8BD /* TTMineViewController.m in Sources */,
 				3B9CFFF125F74A8B00E1E8BD /* TTBaseModel.m in Sources */,
 				3B9CFFF625F74DC800E1E8BD /* TTBaseAudioModel.m in Sources */,
+				3B04329A25FF116F003E5995 /* TTMonitorTimeModel.m in Sources */,
 				3B9C005D25F9F2C300E1E8BD /* TTFindMoreCell.m in Sources */,
 				3B9CFF5C25F6167D00E1E8BD /* TTFindRankViewController.m in Sources */,
 				3B9CFFFA25F74E9B00E1E8BD /* TTFindRecommendModel.m in Sources */,

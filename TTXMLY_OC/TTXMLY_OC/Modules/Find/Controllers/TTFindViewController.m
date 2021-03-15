@@ -30,7 +30,7 @@
     [super viewDidLoad];
     Log(@"find view did load.");
     [self makeUI];
-    [[TTStopWatchTool sharedInstance] splitWithDescription:@"find view did appear."];
+//    [[TTStopWatchTool sharedInstance] splitWithDescription:@"find view did appear."];
 }
 
 - (void)makeUI {

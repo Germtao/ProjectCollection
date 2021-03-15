@@ -40,8 +40,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [[TTStopWatchTool sharedInstance] splitWithDescription:@"第一个页面渲染耗时"];
-    [[TTStopWatchTool sharedInstance] stopAndPresentResultsThenReset:self];
+//    [[TTStopWatchTool sharedInstance] splitWithDescription:@"第一个页面渲染耗时"];
+//    [[TTStopWatchTool sharedInstance] stopAndPresentResultsThenReset:self];
 }
 
 - (void)bindViewModel {

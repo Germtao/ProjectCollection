@@ -17,7 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     Log(@"did Finish Launching With Options. 开始执行");
-    [[TTStopWatchTool sharedInstance] splitWithDescription:@"did finish launch."];
+//    [[TTStopWatchTool sharedInstance] splitWithDescription:@"did finish launch."];
+    [[TTMonitorTimeTool sharedInstance] startMonitoringTimer];
+    [[TTMonitorTimeTool sharedInstance] manualShowLog];
     Log(@"did Finish Launching With Options. 执行完毕");
     return YES;
 }
