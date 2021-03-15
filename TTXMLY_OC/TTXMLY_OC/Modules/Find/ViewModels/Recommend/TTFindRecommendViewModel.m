@@ -106,7 +106,7 @@
 /// @param completion 完成回调
 - (void)requestRecommendList:(void(^)(void))completion {
     [TTFindApi requestRecommends:^(id  _Nullable response, NSString * _Nullable message, BOOL success) {
-        Log(@"%@", response);
+//        Log(@"%@", response);
         if (success) {
             self.recommendModel = [TTFindRecommendModel mj_objectWithKeyValues:response];
         }
@@ -121,7 +121,7 @@
 /// @param completion 回调
 - (void)requestHotGuessList:(void(^)(void))completion {
     [TTFindApi requestHotAndGuess:^(id  _Nullable response, NSString * _Nullable message, BOOL success) {
-        Log(@"%@", response);
+//        Log(@"%@", response);
         if (success) {
             self.hotGuessModel = [TTFindHotGuessModel mj_objectWithKeyValues:response];
         }
@@ -131,7 +131,7 @@
 
 - (void)requestLiveList:(void(^)(void))completion {
     [TTFindApi requestLiveRecommend:^(id  _Nullable response, NSString * _Nullable message, BOOL success) {
-        Log(@"%@", response);
+//        Log(@"%@", response);
         if (success) {
             self.liveModel = [TTFindLiveModel mj_objectWithKeyValues:response];
         }

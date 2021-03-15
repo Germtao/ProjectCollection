@@ -63,12 +63,9 @@
 // MARK: - private
 
 - (void)setSubDetailsWithDetails:(NSMutableArray<TTFindEditorRecommendDetailModel *> *)details {
-    Log(@"%ld", details.count);
     for (NSInteger i = 0; i < details.count; i++) {
         TTFindEditorRecommendDetailModel *detail = [details objectAtIndex:i];
         NSURL *url = [NSURL URLWithString:detail.coverMiddle];
-        
-        Log(@"coverMiddle = %@, url = %@", detail.coverMiddle, url);
         
         if (i == 0) {
             [self.leftImageView yy_setImageWithURL:url options:YYWebImageOptionSetImageWithFadeAnimation];
