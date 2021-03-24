@@ -7,12 +7,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class TTListItem;
+
+typedef void(^TTListLoaderFinishBlock)(BOOL success, NSArray<TTListItem *> *dataArray);
+
 NS_ASSUME_NONNULL_BEGIN
 
 /// 列表数据请求
 @interface TTListLoader : NSObject
 
-- (void)loadListData;
+- (void)loadListDataWithFinishBlock:(TTListLoaderFinishBlock)finishBlock;
 
 @end
 

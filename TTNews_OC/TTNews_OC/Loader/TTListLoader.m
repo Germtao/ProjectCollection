@@ -11,7 +11,7 @@
 
 @implementation TTListLoader
 
-- (void)loadListData {
+- (void)loadListDataWithFinishBlock:(TTListLoaderFinishBlock)finishBlock {
     
     // 使用 AFNetworking 加载数据
 //    [[AFHTTPSessionManager manager] GET:@"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json" parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -40,6 +40,12 @@
             [item configWithDictionary:info];
             [listItemArray addObject:item];
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (finishBlock) {
+                finishBlock(error == nil, listItemArray);
+            }
+        });
 
         NSLog(@"...");
     }];
