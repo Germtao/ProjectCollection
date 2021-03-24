@@ -1,0 +1,6 @@
+framework module Pods_TTNews_OC {
+  umbrella header "Pods-TTNews_OC-umbrella.h"
+
+  export *
+  module * { export * }
+}
