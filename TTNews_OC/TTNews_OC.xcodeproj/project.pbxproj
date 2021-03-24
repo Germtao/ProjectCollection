@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,12 @@
 		3B0434F2260B1048003E5995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0434F0260B1048003E5995 /* LaunchScreen.storyboard */; };
 		3B0434F5260B1048003E5995 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0434F4260B1048003E5995 /* main.m */; };
 		3B0434FF260B106F003E5995 /* TTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0434FE260B106F003E5995 /* TTListLoader.m */; };
+		3B04350D260B296E003E5995 /* TTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04350C260B296E003E5995 /* TTListItem.m */; };
+		AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39926C1440B1F2EAAB7F8B55 /* Pods-TTNews_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		3B0434DF260B1042003E5995 /* TTNews_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTNews_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0434E2260B1042003E5995 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B0434E3260B1042003E5995 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +35,10 @@
 		3B0434F4260B1048003E5995 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B0434FD260B106F003E5995 /* TTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTListLoader.h; sourceTree = "<group>"; };
 		3B0434FE260B106F003E5995 /* TTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTListLoader.m; sourceTree = "<group>"; };
+		3B04350B260B296E003E5995 /* TTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTListItem.h; sourceTree = "<group>"; };
+		3B04350C260B296E003E5995 /* TTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTListItem.m; sourceTree = "<group>"; };
+		61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.release.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.release.xcconfig"; sourceTree = "<group>"; };
+		952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTNews_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +46,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321E4CCE78EE0DF4F2289078 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B0434D6260B1042003E5995 = {
 			isa = PBXGroup;
 			children = (
 				3B0434E1260B1042003E5995 /* TTNews_OC */,
 				3B0434E0260B1042003E5995 /* Products */,
+				479B148722B8C31F3260DC17 /* Pods */,
+				321E4CCE78EE0DF4F2289078 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +82,7 @@
 		3B0434E1260B1042003E5995 /* TTNews_OC */ = {
 			isa = PBXGroup;
 			children = (
+				3B043505260B28FD003E5995 /* Module */,
 				3B0434FC260B1050003E5995 /* Loader */,
 				3B0434E2260B1042003E5995 /* AppDelegate.h */,
 				3B0434E3260B1042003E5995 /* AppDelegate.m */,
@@ -89,6 +108,64 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		3B043505260B28FD003E5995 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				3B043506260B2919003E5995 /* News */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		3B043506260B2919003E5995 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				3B043509260B293B003E5995 /* Model */,
+				3B04350A260B2940003E5995 /* View */,
+				3B043508260B2933003E5995 /* Controller */,
+				3B043507260B2929003E5995 /* Detail */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		3B043507260B2929003E5995 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3B043508260B2933003E5995 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B043509260B293B003E5995 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B04350B260B296E003E5995 /* TTListItem.h */,
+				3B04350C260B296E003E5995 /* TTListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B04350A260B2940003E5995 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		479B148722B8C31F3260DC17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39926C1440B1F2EAAB7F8B55 /* Pods-TTNews_OC.debug.xcconfig */,
+				61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B0434F8260B1048003E5995 /* Build configuration list for PBXNativeTarget "TTNews_OC" */;
 			buildPhases = (
+				19A79FCDE750F4336F219E6C /* [CP] Check Pods Manifest.lock */,
 				3B0434DB260B1042003E5995 /* Sources */,
 				3B0434DC260B1042003E5995 /* Frameworks */,
 				3B0434DD260B1042003E5995 /* Resources */,
+				AE5FB648AC3974ADD8FCA112 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +232,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19A79FCDE750F4336F219E6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TTNews_OC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5FB648AC3974ADD8FCA112 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B0434DB260B1042003E5995 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -160,6 +281,7 @@
 			files = (
 				3B0434EA260B1042003E5995 /* ViewController.m in Sources */,
 				3B0434FF260B106F003E5995 /* TTListLoader.m in Sources */,
+				3B04350D260B296E003E5995 /* TTListItem.m in Sources */,
 				3B0434E4260B1042003E5995 /* AppDelegate.m in Sources */,
 				3B0434F5260B1048003E5995 /* main.m in Sources */,
 				3B0434E7260B1042003E5995 /* SceneDelegate.m in Sources */,
@@ -302,6 +424,7 @@
 		};
 		3B0434F9260B1048003E5995 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39926C1440B1F2EAAB7F8B55 /* Pods-TTNews_OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,6 +442,7 @@
 		};
 		3B0434FA260B1048003E5995 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
