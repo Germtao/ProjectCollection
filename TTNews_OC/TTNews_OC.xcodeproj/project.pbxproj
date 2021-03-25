@@ -82,14 +82,8 @@
 			children = (
 				3B043505260B28FD003E5995 /* Module */,
 				3B0434FC260B1050003E5995 /* Loader */,
-				3B0434E2260B1042003E5995 /* AppDelegate.h */,
-				3B0434E3260B1042003E5995 /* AppDelegate.m */,
-				3B0434E5260B1042003E5995 /* SceneDelegate.h */,
-				3B0434E6260B1042003E5995 /* SceneDelegate.m */,
-				3B0434EE260B1048003E5995 /* Assets.xcassets */,
-				3B0434F0260B1048003E5995 /* LaunchScreen.storyboard */,
-				3B0434F3260B1048003E5995 /* Info.plist */,
-				3B0434F4260B1048003E5995 /* main.m */,
+				3B04351B260C21A5003E5995 /* App */,
+				3B04351D260C21D6003E5995 /* Support Files */,
 			);
 			path = TTNews_OC;
 			sourceTree = "<group>";
@@ -160,6 +154,28 @@
 			children = (
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		3B04351B260C21A5003E5995 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3B0434F4260B1048003E5995 /* main.m */,
+				3B0434E2260B1042003E5995 /* AppDelegate.h */,
+				3B0434E3260B1042003E5995 /* AppDelegate.m */,
+				3B0434E5260B1042003E5995 /* SceneDelegate.h */,
+				3B0434E6260B1042003E5995 /* SceneDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3B04351D260C21D6003E5995 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B0434F0260B1048003E5995 /* LaunchScreen.storyboard */,
+				3B0434EE260B1048003E5995 /* Assets.xcassets */,
+				3B0434F3260B1048003E5995 /* Info.plist */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		479B148722B8C31F3260DC17 /* Pods */ = {
@@ -425,7 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TTNews_OC/Info.plist;
+				INFOPLIST_FILE = "TTNews_OC/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TTNews_OC/Info.plist;
+				INFOPLIST_FILE = "TTNews_OC/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
