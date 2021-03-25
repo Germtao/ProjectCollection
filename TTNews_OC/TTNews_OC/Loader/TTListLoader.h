@@ -9,7 +9,7 @@
 
 @class TTListItem;
 
-typedef void(^TTListLoaderFinishBlock)(BOOL success, NSArray<TTListItem *> *dataArray);
+typedef void(^TTListLoaderFinishBlock)(BOOL success, NSArray<TTListItem *> * _Nonnull dataArray);
 
 NS_ASSUME_NONNULL_BEGIN
 
