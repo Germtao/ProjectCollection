@@ -9,6 +9,8 @@
 #import "TTListLoader.h"
 #import "TTNewsNormalCell.h"
 #import "TTDeleteCellView.h"
+#import "TTNewsDetailViewController.h"
+#import "TTListItem.h"
 
 @interface TTNewsViewController () <UITableViewDataSource, UITableViewDelegate, TTNewsNormalCellDelegate>
 
@@ -72,6 +74,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TTListItem *item = [self.dataArray objectAtIndex:indexPath.row];
+    
+    TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] init];
+    detailVc.title = item.title;
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
 
 #pragma mark - TTNewsNormalCellDelegate

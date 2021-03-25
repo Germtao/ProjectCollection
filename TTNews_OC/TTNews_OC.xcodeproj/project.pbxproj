@@ -17,6 +17,7 @@
 		3B04350D260B296E003E5995 /* TTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04350C260B296E003E5995 /* TTListItem.m */; };
 		3B043522260C28F0003E5995 /* TTNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043521260C28F0003E5995 /* TTNewsNormalCell.m */; };
 		3B04352A260C734D003E5995 /* TTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043529260C734D003E5995 /* TTDeleteCellView.m */; };
+		3B04352E260C813E003E5995 /* TTNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04352D260C813E003E5995 /* TTNewsDetailViewController.m */; };
 		AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		3B043521260C28F0003E5995 /* TTNewsNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTNewsNormalCell.m; sourceTree = "<group>"; };
 		3B043528260C734D003E5995 /* TTDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTDeleteCellView.h; sourceTree = "<group>"; };
 		3B043529260C734D003E5995 /* TTDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTDeleteCellView.m; sourceTree = "<group>"; };
+		3B04352C260C813E003E5995 /* TTNewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTNewsDetailViewController.h; sourceTree = "<group>"; };
+		3B04352D260C813E003E5995 /* TTNewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTNewsDetailViewController.m; sourceTree = "<group>"; };
 		61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.release.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.release.xcconfig"; sourceTree = "<group>"; };
 		952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTNews_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +129,8 @@
 		3B043507260B2929003E5995 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				3B04352C260C813E003E5995 /* TTNewsDetailViewController.h */,
+				3B04352D260C813E003E5995 /* TTNewsDetailViewController.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				3B04350D260B296E003E5995 /* TTListItem.m in Sources */,
 				3B04352A260C734D003E5995 /* TTDeleteCellView.m in Sources */,
 				3B0434E4260B1042003E5995 /* AppDelegate.m in Sources */,
+				3B04352E260C813E003E5995 /* TTNewsDetailViewController.m in Sources */,
 				3B0434F5260B1048003E5995 /* main.m in Sources */,
 				3B043522260C28F0003E5995 /* TTNewsNormalCell.m in Sources */,
 				3B0434E7260B1042003E5995 /* SceneDelegate.m in Sources */,
