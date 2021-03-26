@@ -74,13 +74,17 @@
                                          self.deleteButton.frame.size.width,
                                          self.deleteButton.frame.size.height);
     
-    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
-        //
-    }];
-    
-    downloadImageThread.name = @"downloadImageThread";
-    [downloadImageThread start];
-    
+    #pragma mark - 多线程
+    // NSThread
+//    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        self.rightImageView.image = image;
+//    }];
+//    
+//    downloadImageThread.name = @"downloadImageThread";
+//    [downloadImageThread start];
+        
+    // GCD
     dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
     
