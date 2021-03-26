@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 列表结构化数据
-@interface TTListItem : NSObject
+@interface TTListItem : NSObject <NSSecureCoding>
 
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *title;

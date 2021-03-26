@@ -22,4 +22,38 @@
     self.articleUrl = [dictionary objectForKey:@"url"];
 }
 
+#pragma mark - 序列化和反序列化 NSSecureCoding
+
+- (void)encodeWithCoder:(nonnull NSCoder *)coder {
+    [coder encodeObject:self.category forKey:@"category"];
+    [coder encodeObject:self.title forKey:@"title"];
+    [coder encodeObject:self.picUrl forKey:@"picUrl"];
+    [coder encodeObject:self.picUrl1 forKey:@"picUrl1"];
+    [coder encodeObject:self.picUrl2 forKey:@"picUrl2"];
+    [coder encodeObject:self.date forKey:@"date"];
+    [coder encodeObject:self.uniqueKey forKey:@"uniqueKey"];
+    [coder encodeObject:self.authorName forKey:@"authorName"];
+    [coder encodeObject:self.articleUrl forKey:@"articleUrl"];
+}
+
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder {
+    self = [super init];
+    if (self) {
+        self.category = [coder decodeObjectForKey:@"category"];
+        self.title = [coder decodeObjectForKey:@"title"];
+        self.picUrl = [coder decodeObjectForKey:@"picUrl"];
+        self.picUrl1 = [coder decodeObjectForKey:@"picUrl1"];
+        self.picUrl2 = [coder decodeObjectForKey:@"picUrl2"];
+        self.date = [coder decodeObjectForKey:@"date"];
+        self.uniqueKey = [coder decodeObjectForKey:@"uniqueKey"];
+        self.authorName = [coder decodeObjectForKey:@"authorName"];
+        self.articleUrl = [coder decodeObjectForKey:@"articleUrl"];
+    }
+    return self;
+}
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 @end

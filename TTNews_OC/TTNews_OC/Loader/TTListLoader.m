@@ -27,7 +27,9 @@
 
     NSURLSession *session = [NSURLSession sharedSession];
 
+    __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:listURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
 
         NSError *jsonError;
         id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
@@ -41,6 +43,8 @@
             [listItemArray addObject:item];
         }
         
+        [strongSelf _archiveListDataWithArray:listItemArray.copy];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (finishBlock) {
                 finishBlock(error == nil, listItemArray);
@@ -51,10 +55,39 @@
     }];
 
     [dataTask resume];
-    
-    [self _getSanBoxPath];
 }
 
+#pragma mark - 缓存数据
+
+- (void)_archiveListDataWithArray:(NSArray<TTListItem *> *)array {
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    // 创建文件夹
+    NSError *createError;
+    NSString *dataPath = [cachePath stringByAppendingPathComponent:@"TTData"];
+    [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&createError];
+    
+    // 创建文件
+    NSString *listDataPath = [cachePath stringByAppendingPathComponent:@"ListData"];
+    
+    NSData *listData = [NSKeyedArchiver archivedDataWithRootObject:array requiringSecureCoding:YES error:nil];
+    
+    [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
+    
+    
+    // 读取数据
+    NSData *readListData = [fileManager contentsAtPath:listDataPath];
+    
+//    id unarchiveObj = [NSKeyedUnarchiver unarchiveObjectWithData:readListData];
+    __unused id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [TTListItem class], nil] fromData:readListData error:nil];
+    
+    NSLog(@"");
+}
+
+/// 沙盒机制、文件操作
 - (void)_getSanBoxPath {
     NSArray *array = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [array firstObject];
