@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTNewsDetailViewController : UIViewController
 
+- (instancetype)initWithUrlString:(NSString *)urlString;
+
 @end
 
 NS_ASSUME_NONNULL_END

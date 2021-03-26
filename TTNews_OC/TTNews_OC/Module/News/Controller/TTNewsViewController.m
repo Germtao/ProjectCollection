@@ -77,7 +77,7 @@
     
     TTListItem *item = [self.dataArray objectAtIndex:indexPath.row];
     
-    TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] init];
+    TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] initWithUrlString:item.articleUrl];
     detailVc.title = item.title;
     [self.navigationController pushViewController:detailVc animated:YES];
 }

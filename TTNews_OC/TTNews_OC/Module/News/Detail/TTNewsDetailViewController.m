@@ -14,9 +14,21 @@
 
 @property (nonatomic, strong) UIProgressView *progressView;
 
+@property (nonatomic, copy) NSString *articleUrl;
+
 @end
 
 @implementation TTNewsDetailViewController
+
+#pragma mark - life cycle
+
+- (instancetype)initWithUrlString:(NSString *)urlString {
+    self = [super init];
+    if (self) {
+        self.articleUrl = urlString;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,10 +41,11 @@
 - (void)makeUI {
     [self.view addSubview:self.webView];
     [self.view addSubview:self.progressView];
+    [self.view bringSubviewToFront:self.progressView];
 }
 
 - (void)loadRequest {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://time.geekbang.org/"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.articleUrl]];
     
     [self.webView loadRequest:request];
 }
@@ -64,6 +77,8 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     self.progressView.progress = 0.0;
     NSLog(@"");
+    // Webview加载完成
+    // 此时并不代表整个Web页面已经渲染结束
 }
 
 #pragma mark - getter
@@ -78,8 +93,8 @@
 
 - (UIProgressView *)progressView {
     if (!_progressView) {
-        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 20)];
-        _progressView.progressTintColor = [UIColor orangeColor];
+        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 10)];
+        _progressView.progressTintColor = [UIColor blueColor];
     }
     return _progressView;
 }
