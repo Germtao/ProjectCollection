@@ -51,6 +51,14 @@
     }];
 
     [dataTask resume];
+    
+    [self _getSanBoxPath];
+}
+
+- (void)_getSanBoxPath {
+    NSArray *array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSLog(@"");
 }
 
 @end
