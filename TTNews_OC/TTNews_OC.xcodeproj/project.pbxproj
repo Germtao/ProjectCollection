@@ -18,6 +18,10 @@
 		3B043522260C28F0003E5995 /* TTNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043521260C28F0003E5995 /* TTNewsNormalCell.m */; };
 		3B04352A260C734D003E5995 /* TTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043529260C734D003E5995 /* TTDeleteCellView.m */; };
 		3B04352E260C813E003E5995 /* TTNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04352D260C813E003E5995 /* TTNewsDetailViewController.m */; };
+		3B043534260DC229003E5995 /* TTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043533260DC229003E5995 /* TTVideoViewController.m */; };
+		3B04353A260DC4B8003E5995 /* TTVideoCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043539260DC4B8003E5995 /* TTVideoCoverCell.m */; };
+		3B04353F260DC664003E5995 /* TTVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04353E260DC664003E5995 /* TTVideoToolBar.m */; };
+		3B043544260DD6C6003E5995 /* TTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043543260DD6C6003E5995 /* TTVideoPlayer.m */; };
 		AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +48,14 @@
 		3B043529260C734D003E5995 /* TTDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTDeleteCellView.m; sourceTree = "<group>"; };
 		3B04352C260C813E003E5995 /* TTNewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTNewsDetailViewController.h; sourceTree = "<group>"; };
 		3B04352D260C813E003E5995 /* TTNewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTNewsDetailViewController.m; sourceTree = "<group>"; };
+		3B043532260DC228003E5995 /* TTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVideoViewController.h; sourceTree = "<group>"; };
+		3B043533260DC229003E5995 /* TTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVideoViewController.m; sourceTree = "<group>"; };
+		3B043538260DC4B8003E5995 /* TTVideoCoverCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVideoCoverCell.h; sourceTree = "<group>"; };
+		3B043539260DC4B8003E5995 /* TTVideoCoverCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVideoCoverCell.m; sourceTree = "<group>"; };
+		3B04353D260DC664003E5995 /* TTVideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVideoToolBar.h; sourceTree = "<group>"; };
+		3B04353E260DC664003E5995 /* TTVideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVideoToolBar.m; sourceTree = "<group>"; };
+		3B043542260DD6C6003E5995 /* TTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTVideoPlayer.h; sourceTree = "<group>"; };
+		3B043543260DD6C6003E5995 /* TTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVideoPlayer.m; sourceTree = "<group>"; };
 		61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.release.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.release.xcconfig"; sourceTree = "<group>"; };
 		952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTNews_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3B043510260B373C003E5995 /* Main */,
+				3B043530260DC202003E5995 /* Video */,
 				3B043506260B2919003E5995 /* News */,
 			);
 			path = Module;
@@ -191,6 +204,45 @@
 				3B0434F3260B1048003E5995 /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		3B043530260DC202003E5995 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				3B043537260DC492003E5995 /* View */,
+				3B043531260DC211003E5995 /* Controller */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		3B043531260DC211003E5995 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B043532260DC228003E5995 /* TTVideoViewController.h */,
+				3B043533260DC229003E5995 /* TTVideoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B043537260DC492003E5995 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B043538260DC4B8003E5995 /* TTVideoCoverCell.h */,
+				3B043539260DC4B8003E5995 /* TTVideoCoverCell.m */,
+				3B04353D260DC664003E5995 /* TTVideoToolBar.h */,
+				3B04353E260DC664003E5995 /* TTVideoToolBar.m */,
+				3B043541260DD6AD003E5995 /* VideoPlayer */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B043541260DD6AD003E5995 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3B043542260DD6C6003E5995 /* TTVideoPlayer.h */,
+				3B043543260DD6C6003E5995 /* TTVideoPlayer.m */,
+			);
+			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
 		479B148722B8C31F3260DC17 /* Pods */ = {
@@ -318,11 +370,15 @@
 				3B0434FF260B106F003E5995 /* TTListLoader.m in Sources */,
 				3B04350D260B296E003E5995 /* TTListItem.m in Sources */,
 				3B04352A260C734D003E5995 /* TTDeleteCellView.m in Sources */,
+				3B043534260DC229003E5995 /* TTVideoViewController.m in Sources */,
+				3B043544260DD6C6003E5995 /* TTVideoPlayer.m in Sources */,
+				3B04353F260DC664003E5995 /* TTVideoToolBar.m in Sources */,
 				3B0434E4260B1042003E5995 /* AppDelegate.m in Sources */,
 				3B04352E260C813E003E5995 /* TTNewsDetailViewController.m in Sources */,
 				3B0434F5260B1048003E5995 /* main.m in Sources */,
 				3B043522260C28F0003E5995 /* TTNewsNormalCell.m in Sources */,
 				3B0434E7260B1042003E5995 /* SceneDelegate.m in Sources */,
+				3B04353A260DC4B8003E5995 /* TTVideoCoverCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
