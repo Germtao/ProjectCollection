@@ -80,24 +80,26 @@
 //        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
 //        self.rightImageView.image = image;
 //    }];
-//    
+//
 //    downloadImageThread.name = @"downloadImageThread";
 //    [downloadImageThread start];
         
     // GCD
-    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//
+//    dispatch_async(downloadQueue, ^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        dispatch_async(mainQueue, ^{
+//            self.rightImageView.image = image;
+//        });
+//    });
     
-    dispatch_async(downloadQueue, ^{
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
-        dispatch_async(mainQueue, ^{
-            self.rightImageView.image = image;
-        });
-    });
-    
-//    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-//        // TODO: 处理业务逻辑，通过 cacheType 判断图片是否命中缓存
-//    }];
+    // SDWebImage
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        // TODO: 处理业务逻辑，通过 cacheType 判断图片是否命中缓存
+        NSLog(@"");
+    }];
 }
 
 - (void)deleteButtonClicked {
