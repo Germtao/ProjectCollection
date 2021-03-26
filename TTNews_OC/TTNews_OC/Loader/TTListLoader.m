@@ -22,6 +22,11 @@
 //        NSLog(@"");
 //    }];
     
+    NSArray<TTListItem *> *localListDataArray = [self _readListDataFromLocal];
+    if (localListDataArray) {
+        finishBlock(YES, localListDataArray);
+    }
+    
     NSString *urlString = @"https://static001.geekbang.org/univer/classes/ios_dev/lession/45/toutiao.json";
     NSURL *listURL = [NSURL URLWithString:urlString];
 
@@ -57,7 +62,25 @@
     [dataTask resume];
 }
 
-#pragma mark - 缓存数据
+#pragma mark - 缓存数据 & 读取数据
+
+- (NSArray<TTListItem *> *)_readListDataFromLocal {
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    NSString *listDataPath = [cachePath stringByAppendingPathComponent:@"TTData/ListData"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    // 读取数据
+    NSData *readListData = [fileManager contentsAtPath:listDataPath];
+    
+    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [TTListItem class], nil] fromData:readListData error:nil];
+    
+    if ([unarchiveObj isKindOfClass:[NSArray class]] && [unarchiveObj count] > 0) {
+        return (NSArray<TTListItem *> *)unarchiveObj;
+    }
+    return nil;
+}
 
 - (void)_archiveListDataWithArray:(NSArray<TTListItem *> *)array {
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
@@ -71,20 +94,11 @@
     [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&createError];
     
     // 创建文件
-    NSString *listDataPath = [cachePath stringByAppendingPathComponent:@"ListData"];
+    NSString *listDataPath = [dataPath stringByAppendingPathComponent:@"ListData"];
     
     NSData *listData = [NSKeyedArchiver archivedDataWithRootObject:array requiringSecureCoding:YES error:nil];
     
     [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
-    
-    
-    // 读取数据
-    NSData *readListData = [fileManager contentsAtPath:listDataPath];
-    
-//    id unarchiveObj = [NSKeyedUnarchiver unarchiveObjectWithData:readListData];
-    __unused id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [TTListItem class], nil] fromData:readListData error:nil];
-    
-    NSLog(@"");
 }
 
 /// 沙盒机制、文件操作
