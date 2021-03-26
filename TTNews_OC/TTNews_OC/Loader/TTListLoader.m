@@ -56,9 +56,38 @@
 }
 
 - (void)_getSanBoxPath {
-    NSArray *array = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *array = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [array firstObject];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    // 创建文件夹
+    NSError *createError;
+    NSString *dataPath = [cachePath stringByAppendingPathComponent:@"TTData"];
+    [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&createError];
+    
+    // 创建文件
+    NSString *listDataPath = [cachePath stringByAppendingPathComponent:@"ListData"];
+    NSData *listData = [@"abc" dataUsingEncoding:NSUTF8StringEncoding];
+    [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
+    
+    // 查询文件
+    __unused BOOL fileExist = [fileManager fileExistsAtPath:listDataPath];
+    
+    // 删除文件
+//    if (fileExist) {
+//        [fileManager removeItemAtPath:listDataPath error:nil];
+//    }
     
     NSLog(@"");
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:listDataPath];
+    
+    [fileHandle seekToEndOfFile];
+    [fileHandle writeData:[@"def" dataUsingEncoding:NSUTF8StringEncoding]];
+    [fileHandle synchronizeFile];
+    
+    [fileHandle closeFile];
 }
 
 @end
