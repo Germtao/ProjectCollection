@@ -126,8 +126,6 @@
 //        [fileManager removeItemAtPath:listDataPath error:nil];
 //    }
     
-    NSLog(@"");
-    
     NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:listDataPath];
     
     [fileHandle seekToEndOfFile];

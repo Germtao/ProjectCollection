@@ -6,6 +6,7 @@
 //
 
 #import "TTDeleteCellView.h"
+#import "TTScreen.h"
 
 @interface TTDeleteCellView ()
 
@@ -76,7 +77,7 @@
         _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _deleteButton.backgroundColor = [UIColor lightGrayColor];
         [_deleteButton setTitle:@"确认删除" forState:UIControlStateNormal];
-        _deleteButton.layer.cornerRadius = 25;
+        _deleteButton.layer.cornerRadius = UI(25);
         [_deleteButton addTarget:self action:@selector(deleteButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     }
     return _deleteButton;

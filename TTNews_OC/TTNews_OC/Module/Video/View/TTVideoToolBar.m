@@ -112,7 +112,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     // 观察下View的frame
-    NSLog(@"");
 }
 
 - (void)makeUI {

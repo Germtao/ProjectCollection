@@ -60,7 +60,7 @@
 
 - (UIImageView *)playButton {
     if (!_playButton) {
-        _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - 50) / 2, (self.contentView.frame.size.height - TTVideoToolBarHeight - 50) / 2, 50, 50)];
+        _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - UI(50)) / 2, (self.contentView.frame.size.height - TTVideoToolBarHeight - UI(50)) / 2, UI(50), UI(50))];
         _playButton.image = [UIImage imageNamed:@"videoPlay"];
     }
     return _playButton;

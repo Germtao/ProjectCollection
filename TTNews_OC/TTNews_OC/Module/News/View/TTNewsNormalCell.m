@@ -8,6 +8,7 @@
 #import "TTNewsNormalCell.h"
 #import "TTListItem.h"
 #import <UIImageView+WebCache.h>
+#import "TTScreen.h"
 
 @interface TTNewsNormalCell ()
 
@@ -57,19 +58,19 @@
     
     self.commentLabel.text = item.category;
     [self.commentLabel sizeToFit];
-    self.commentLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 15,
+    self.commentLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + UI(15),
                                          self.commentLabel.frame.origin.y,
                                          self.commentLabel.frame.size.width,
                                          self.commentLabel.frame.size.height);
     
     self.timeLabel.text = item.date;
     [self.timeLabel sizeToFit];
-    self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15,
+    self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + UI(15),
                                       self.timeLabel.frame.origin.y,
                                       self.timeLabel.frame.size.width,
                                       self.timeLabel.frame.size.height);
     
-    self.deleteButton.frame = CGRectMake(self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + 15,
+    self.deleteButton.frame = CGRectMake(self.timeLabel.frame.origin.x + self.timeLabel.frame.size.width + UI(15),
                                          self.deleteButton.frame.origin.y,
                                          self.deleteButton.frame.size.width,
                                          self.deleteButton.frame.size.height);
@@ -98,7 +99,6 @@
     // SDWebImage
     [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         // TODO: 处理业务逻辑，通过 cacheType 判断图片是否命中缓存
-        NSLog(@"");
     }];
 }
 
@@ -112,7 +112,7 @@
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 270, 50)];
+        _titleLabel = [[UILabel alloc] initWithFrame:UIRect(20, 15, 270, 50)];
         _titleLabel.font = [UIFont systemFontOfSize:16];
         _titleLabel.textColor = [UIColor blackColor];
         _titleLabel.numberOfLines = 2;
@@ -122,7 +122,7 @@
 
 - (UILabel *)sourceLabel {
     if (!_sourceLabel) {
-        _sourceLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 50, 20)];
+        _sourceLabel = [[UILabel alloc] initWithFrame:UIRect(20, 70, 50, 20)];
         _sourceLabel.font = [UIFont systemFontOfSize:12];
         _sourceLabel.textColor = [UIColor grayColor];
     }
@@ -131,7 +131,7 @@
 
 - (UILabel *)commentLabel {
     if (!_commentLabel) {
-        _commentLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 70, 50, 20)];
+        _commentLabel = [[UILabel alloc] initWithFrame:UIRect(90, 70, 50, 20)];
         _commentLabel.font = [UIFont systemFontOfSize:12];
         _commentLabel.textColor = [UIColor grayColor];
     }
@@ -140,7 +140,7 @@
 
 - (UILabel *)timeLabel {
     if (!_timeLabel) {
-        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 70, 50, 20)];
+        _timeLabel = [[UILabel alloc] initWithFrame:UIRect(150, 70, 50, 20)];
         _timeLabel.font = [UIFont systemFontOfSize:12];
         _timeLabel.textColor = [UIColor grayColor];
     }
@@ -149,14 +149,15 @@
 
 - (UIImageView *)rightImageView {
     if (!_rightImageView) {
-        _rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width - 100 - 15, 15, 100, 70)];
+        _rightImageView = [[UIImageView alloc] initWithFrame:UIRect(300, 15, 100, 70)];
+        _rightImageView.backgroundColor = [UIColor redColor];
     }
     return _rightImageView;
 }
 
 - (UIButton *)deleteButton {
     if (!_deleteButton) {
-        _deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width - 100 - 15 - 10 - 10, 70, 10, 10)];
+        _deleteButton = [[UIButton alloc] initWithFrame:UIRect(280, 70, 10, 10)];
         [_deleteButton setTitle:@"X" forState:UIControlStateNormal];
         [_deleteButton setTitle:@"V" forState:UIControlStateHighlighted];
         [_deleteButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];

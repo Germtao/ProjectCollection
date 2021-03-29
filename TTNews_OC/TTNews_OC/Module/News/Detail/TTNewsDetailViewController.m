@@ -60,7 +60,6 @@
 /// 监听方法
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     [self.progressView setProgress:self.webView.estimatedProgress animated:YES];
-    NSLog(@"");
 }
 
 /// 移除监听
@@ -76,7 +75,6 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     self.progressView.progress = 0.0;
-    NSLog(@"");
     // Webview加载完成
     // 此时并不代表整个Web页面已经渲染结束
 }

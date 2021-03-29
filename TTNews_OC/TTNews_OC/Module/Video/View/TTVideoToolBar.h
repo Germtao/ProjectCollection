@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTScreen.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define TTVideoToolBarHeight 60
+#define TTVideoToolBarHeight UI(60)
 
 @interface TTVideoToolBar : UIView
 
