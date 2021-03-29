@@ -42,6 +42,7 @@
     self.shareImageView.image = [UIImage imageNamed:@"share"];
     self.shareLabel.text = @"分享";
     
+    #pragma mark - 系统原生 AutoLayout
     [NSLayoutConstraint activateConstraints:@[
         [NSLayoutConstraint constraintWithItem:self.avatarImageView
                                      attribute:NSLayoutAttributeCenterY
@@ -92,7 +93,7 @@
                                       constant:0]
     ]];
     
-    // VFL 布局
+    #pragma mark - VFL 布局
     NSString *vflString = @"H:|-15-[_avatarImageView]-0-[_nicknameLabel]-(>=0)-[_commentImageView(==_avatarImageView)]-0-[_commentLabel]-15-[_likeImageView(==_avatarImageView)]-0-[_likeLabel]-15-[_shareImageView(==_avatarImageView)]-0-[_shareLabel]-15-|";
     
     [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:vflString options:NSLayoutFormatAlignAllCenterY metrics:nil views:NSDictionaryOfVariableBindings(_avatarImageView, _nicknameLabel, _commentImageView, _commentLabel, _likeImageView, _likeLabel, _shareImageView, _shareLabel)]];

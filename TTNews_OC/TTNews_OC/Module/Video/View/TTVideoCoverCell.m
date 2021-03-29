@@ -6,7 +6,6 @@
 //
 
 #import "TTVideoCoverCell.h"
-#import "TTVideoToolBar.h"
 #import "TTVideoPlayer.h"
 
 @interface TTVideoCoverCell ()
@@ -54,14 +53,14 @@
 
 - (TTVideoToolBar *)toolBar {
     if (!_toolBar) {
-        _toolBar = [[TTVideoToolBar alloc] initWithFrame:CGRectMake(0, self.coverImageView.frame.size.height, self.contentView.frame.size.width, 60)];
+        _toolBar = [[TTVideoToolBar alloc] initWithFrame:CGRectMake(0, self.coverImageView.frame.size.height, self.contentView.frame.size.width, TTVideoToolBarHeight)];
     }
     return _toolBar;
 }
 
 - (UIImageView *)playButton {
     if (!_playButton) {
-        _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - 50) / 2, (self.contentView.frame.size.height - 60 - 50) / 2, 50, 50)];
+        _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((self.contentView.frame.size.width - 50) / 2, (self.contentView.frame.size.height - TTVideoToolBarHeight - 50) / 2, 50, 50)];
         _playButton.image = [UIImage imageNamed:@"videoPlay"];
     }
     return _playButton;
@@ -69,7 +68,7 @@
 
 - (UIImageView *)coverImageView {
     if (!_coverImageView) {
-        _coverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height - 60)];
+        _coverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height - TTVideoToolBarHeight)];
         _coverImageView.userInteractionEnabled = YES;
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_tapToPlayVideo)];

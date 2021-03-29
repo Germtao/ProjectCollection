@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define TTVideoToolBarHeight 60
+
 @interface TTVideoToolBar : UIView
 
 /// 根据数据布局 ToolBar
