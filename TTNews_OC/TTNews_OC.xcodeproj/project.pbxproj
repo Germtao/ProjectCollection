@@ -23,6 +23,7 @@
 		3B04353F260DC664003E5995 /* TTVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B04353E260DC664003E5995 /* TTVideoToolBar.m */; };
 		3B043544260DD6C6003E5995 /* TTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B043543260DD6C6003E5995 /* TTVideoPlayer.m */; };
 		3B210CAF2611B62C0093253C /* TTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CAE2611B62C0093253C /* TTScreen.m */; };
+		3B210CB32612C73D0093253C /* TTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CB22612C73D0093253C /* TTSplashView.m */; };
 		AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		3B043543260DD6C6003E5995 /* TTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTVideoPlayer.m; sourceTree = "<group>"; };
 		3B210CAD2611B62C0093253C /* TTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTScreen.h; sourceTree = "<group>"; };
 		3B210CAE2611B62C0093253C /* TTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTScreen.m; sourceTree = "<group>"; };
+		3B210CB12612C73D0093253C /* TTSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSplashView.h; sourceTree = "<group>"; };
+		3B210CB22612C73D0093253C /* TTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSplashView.m; sourceTree = "<group>"; };
 		61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.release.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.release.xcconfig"; sourceTree = "<group>"; };
 		952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTNews_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -254,6 +257,8 @@
 			children = (
 				3B210CAD2611B62C0093253C /* TTScreen.h */,
 				3B210CAE2611B62C0093253C /* TTScreen.m */,
+				3B210CB12612C73D0093253C /* TTSplashView.h */,
+				3B210CB22612C73D0093253C /* TTSplashView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 				3B04350D260B296E003E5995 /* TTListItem.m in Sources */,
 				3B04352A260C734D003E5995 /* TTDeleteCellView.m in Sources */,
 				3B043534260DC229003E5995 /* TTVideoViewController.m in Sources */,
+				3B210CB32612C73D0093253C /* TTSplashView.m in Sources */,
 				3B043544260DD6C6003E5995 /* TTVideoPlayer.m in Sources */,
 				3B04353F260DC664003E5995 /* TTVideoToolBar.m in Sources */,
 				3B0434E4260B1042003E5995 /* AppDelegate.m in Sources */,

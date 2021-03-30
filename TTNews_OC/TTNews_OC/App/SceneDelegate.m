@@ -8,8 +8,11 @@
 #import "SceneDelegate.h"
 #import "TTNewsViewController.h"
 #import "TTVideoViewController.h"
+#import "TTSplashView.h"
 
 @interface SceneDelegate ()
+
+@property (nonatomic, strong) TTSplashView *splashView;
 
 @end
 
@@ -32,6 +35,9 @@
         UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
         self.window.rootViewController = rootVC;
         [self.window makeKeyAndVisible];
+        
+        [self.window addSubview:self.splashView];
+        
     } else {
         // Fallback on earlier versions
     }
@@ -75,5 +81,11 @@
     NSLog(@"已经从前台进入后台");
 }
 
+- (TTSplashView *)splashView {
+    if (!_splashView) {
+        _splashView = [[TTSplashView alloc] initWithFrame:self.window.bounds];
+    }
+    return _splashView;
+}
 
 @end

@@ -8,8 +8,11 @@
 #import "AppDelegate.h"
 #import "TTNewsViewController.h"
 #import "TTVideoViewController.h"
+#import "TTSplashView.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) TTSplashView *splashView;
 
 @end
 
@@ -32,6 +35,8 @@
         UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
         self.window.rootViewController = rootVC;
         [self.window makeKeyAndVisible];
+        
+        [self.window addSubview:self.splashView];
     }
     
     return YES;
@@ -56,5 +61,11 @@
     NSLog(@"1");
 }
 
+- (TTSplashView *)splashView {
+    if (!_splashView) {
+        _splashView = [[TTSplashView alloc] initWithFrame:self.window.bounds];
+    }
+    return _splashView;
+}
 
 @end
