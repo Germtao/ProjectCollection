@@ -77,10 +77,17 @@
     
     TTListItem *item = [self.dataArray objectAtIndex:indexPath.row];
     
+    #pragma mark - Target - Action
+    
     // __kindof:表示当前类或者它子类
-    __kindof UIViewController *detailVc = [TTMediator detailViewControllerWithUrl:item.articleUrl];
-    detailVc.title = item.title;
-    [self.navigationController pushViewController:detailVc animated:YES];
+//    __kindof UIViewController *detailVc = [TTMediator detailViewControllerWithUrl:item.articleUrl];
+//    detailVc.title = item.title;
+//    [self.navigationController pushViewController:detailVc animated:YES];
+    
+    #pragma mark - URL Scheme
+    
+    [TTMediator openUrl:@"detail://"
+             parameters:@{@"url": item.articleUrl, @"controller": self.navigationController, @"title": item.title}];
 }
 
 #pragma mark - TTNewsNormalCellDelegate

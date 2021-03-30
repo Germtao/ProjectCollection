@@ -8,6 +8,7 @@
 #import "TTNewsDetailViewController.h"
 #import <WebKit/WebKit.h>
 #import "TTScreen.h"
+#import "TTMediator.h"
 
 @interface TTNewsDetailViewController () <WKNavigationDelegate>
 
@@ -22,6 +23,17 @@
 @implementation TTNewsDetailViewController
 
 #pragma mark - life cycle
+
++ (void)load {
+    [TTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+        NSString *url = (NSString *)[params objectForKey:@"url"];
+        UINavigationController *navController = (UINavigationController *)[params objectForKey:@"controller"];
+        NSString *title = (NSString *)[params objectForKey:@"title"];
+        TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] initWithUrlString:url];
+        detailVc.title = title;
+        [navController pushViewController:detailVc animated:YES];
+    }];
+}
 
 - (instancetype)initWithUrlString:(NSString *)urlString {
     self = [super init];
