@@ -9,7 +9,7 @@
 #import "TTListLoader.h"
 #import "TTNewsNormalCell.h"
 #import "TTDeleteCellView.h"
-#import "TTNewsDetailViewController.h"
+#import "TTMediator.h"
 #import "TTListItem.h"
 
 @interface TTNewsViewController () <UITableViewDataSource, UITableViewDelegate, TTNewsNormalCellDelegate>
@@ -77,7 +77,8 @@
     
     TTListItem *item = [self.dataArray objectAtIndex:indexPath.row];
     
-    TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] initWithUrlString:item.articleUrl];
+    // __kindof:表示当前类或者它子类
+    __kindof UIViewController *detailVc = [TTMediator detailViewControllerWithUrl:item.articleUrl];
     detailVc.title = item.title;
     [self.navigationController pushViewController:detailVc animated:YES];
 }
