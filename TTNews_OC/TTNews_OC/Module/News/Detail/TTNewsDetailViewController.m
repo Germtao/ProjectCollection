@@ -8,7 +8,6 @@
 #import "TTNewsDetailViewController.h"
 #import <WebKit/WebKit.h>
 #import "TTScreen.h"
-#import "TTMediator.h"
 
 @interface TTNewsDetailViewController () <WKNavigationDelegate>
 
@@ -22,17 +21,25 @@
 
 @implementation TTNewsDetailViewController
 
+#pragma mark - TTDetailViewControllerProtocol
+
+- (__kindof UIViewController *)detailViewControllerWithUrl:(NSString *)detailUrl {
+    return [[[self class] alloc] initWithUrlString:detailUrl];
+}
+
 #pragma mark - life cycle
 
 + (void)load {
-    [TTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
-        NSString *url = (NSString *)[params objectForKey:@"url"];
-        UINavigationController *navController = (UINavigationController *)[params objectForKey:@"controller"];
-        NSString *title = (NSString *)[params objectForKey:@"title"];
-        TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] initWithUrlString:url];
-        detailVc.title = title;
-        [navController pushViewController:detailVc animated:YES];
-    }];
+//    [TTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+//        NSString *url = (NSString *)[params objectForKey:@"url"];
+//        UINavigationController *navController = (UINavigationController *)[params objectForKey:@"controller"];
+//        NSString *title = (NSString *)[params objectForKey:@"title"];
+//        TTNewsDetailViewController *detailVc = [[TTNewsDetailViewController alloc] initWithUrlString:url];
+//        detailVc.title = title;
+//        [navController pushViewController:detailVc animated:YES];
+//    }];
+    
+    [TTMediator registerProtocol:@protocol(TTDetailViewControllerProtocol) withClass:[self class]];
 }
 
 - (instancetype)initWithUrlString:(NSString *)urlString {
@@ -52,7 +59,11 @@
 }
 
 - (void)makeUI {
-    [self.view addSubview:self.webView];
+    [self.view addSubview:({
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, TOP_BAR_HEIGHT, self.view.frame.size.width, self.view.frame.size.height - TOP_BAR_HEIGHT)];
+        _webView.navigationDelegate = self;
+        _webView;
+    })];
     [self.view addSubview:self.progressView];
 }
 
@@ -92,14 +103,6 @@
 }
 
 #pragma mark - getter
-
-- (WKWebView *)webView {
-    if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, TOP_BAR_HEIGHT, self.view.frame.size.width, self.view.frame.size.height - TOP_BAR_HEIGHT)];
-        _webView.navigationDelegate = self;
-    }
-    return _webView;
-}
 
 - (UIProgressView *)progressView {
     if (!_progressView) {

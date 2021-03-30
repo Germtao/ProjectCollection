@@ -86,8 +86,15 @@
     
     #pragma mark - URL Scheme
     
-    [TTMediator openUrl:@"detail://"
-             parameters:@{@"url": item.articleUrl, @"controller": self.navigationController, @"title": item.title}];
+//    [TTMediator openUrl:@"detail://"
+//             parameters:@{@"url": item.articleUrl, @"controller": self.navigationController, @"title": item.title}];
+    
+    #pragma mark - Protocol - Class
+    
+    Class cls = [TTMediator classForProtocol:@protocol(TTDetailViewControllerProtocol)];
+    __kindof UIViewController *detailVc = [[cls alloc] detailViewControllerWithUrl:item.articleUrl];
+    detailVc.title = item.title;
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
 
 #pragma mark - TTNewsNormalCellDelegate

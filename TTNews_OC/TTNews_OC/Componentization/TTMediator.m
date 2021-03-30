@@ -25,7 +25,7 @@
     return detailVc;
 }
 
-#pragma mark - URL Scheme
+#pragma mark - 注册表
 
 + (NSMutableDictionary *)mediatorCache {
     static NSMutableDictionary *cache;
@@ -35,6 +35,8 @@
     });
     return cache;
 }
+
+#pragma mark - URL Scheme
 
 /// 使用 URL 处理本地跳转
 /// 通过中间层进行注册 & 调用
@@ -51,6 +53,21 @@
     if (processBlock) {
         processBlock(params);
     }
+}
+
+#pragma mark - Protocol - Class
+
+/// 增加 Protocol Wrapper 层
+/// 中间件返回 Protocol 对应的 Class
+/// 解决硬编码的问题
++ (void)registerProtocol:(Protocol *)protocol withClass:(Class)withClass {
+    if (protocol && withClass) {
+        [[[self class] mediatorCache] setObject:withClass forKey:NSStringFromProtocol(protocol)];
+    }
+}
+
++ (Class)classForProtocol:(Protocol *)protocol {
+    return [[[self class] mediatorCache] objectForKey:NSStringFromProtocol(protocol)];
 }
 
 @end

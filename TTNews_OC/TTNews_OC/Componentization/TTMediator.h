@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^TTMediatorProcessBlock)(NSDictionary *params);
 
+@protocol TTDetailViewControllerProtocol <NSObject>
+
+- (__kindof UIViewController *)detailViewControllerWithUrl:(NSString *)detailUrl;
+
+@end
+
 /// 常用的三种组件化方案
 @interface TTMediator : NSObject
 
@@ -31,6 +37,14 @@ typedef void(^TTMediatorProcessBlock)(NSDictionary *params);
 /// 非懒加载 / 注册表的维护 / 参数
 + (void)registerScheme:(NSString *)scheme processBlock:(TTMediatorProcessBlock)processBlock;
 + (void)openUrl:(NSString *)url parameters:(NSDictionary *)params;
+
+#pragma mark - Protocol - Class
+
+/// 增加 Protocol Wrapper 层
+/// 中间件返回 Protocol 对应的 Class
+/// 解决硬编码的问题
++ (void)registerProtocol:(Protocol *)protocol withClass:(Class)withClass;
++ (Class)classForProtocol:(Protocol *)protocol;
 
 @end
 

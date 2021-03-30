@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTMediator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TTNewsDetailViewController : UIViewController
+@interface TTNewsDetailViewController : UIViewController <TTDetailViewControllerProtocol>
 
 - (instancetype)initWithUrlString:(NSString *)urlString;
 
