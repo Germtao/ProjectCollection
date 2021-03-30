@@ -7,6 +7,7 @@
 
 #import "TTNewsDetailViewController.h"
 #import <WebKit/WebKit.h>
+#import "TTScreen.h"
 
 @interface TTNewsDetailViewController () <WKNavigationDelegate>
 
@@ -41,7 +42,6 @@
 - (void)makeUI {
     [self.view addSubview:self.webView];
     [self.view addSubview:self.progressView];
-    [self.view bringSubviewToFront:self.progressView];
 }
 
 - (void)loadRequest {
@@ -83,7 +83,7 @@
 
 - (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88)];
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, TOP_BAR_HEIGHT, self.view.frame.size.width, self.view.frame.size.height - TOP_BAR_HEIGHT)];
         _webView.navigationDelegate = self;
     }
     return _webView;
@@ -91,7 +91,8 @@
 
 - (UIProgressView *)progressView {
     if (!_progressView) {
-        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 10)];
+        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, TOP_BAR_HEIGHT, self.view.frame.size.width, 20)];
+        _progressView.trackTintColor = [UIColor whiteColor];
         _progressView.progressTintColor = [UIColor blueColor];
     }
     return _progressView;

@@ -16,13 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 #define SCREEN_WIDTH  (IS_LANDSCAPE ? [UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT (IS_LANDSCAPE ? [UIScreen mainScreen].bounds.size.width : [UIScreen mainScreen].bounds.size.height)
 
-#define IS_IPHONE_X_XR_MAX (IS_IPHONE_X || IS_IPHONE_XR || IS_IPHONE_XMAX)
+#define IS_SPECIAL_SCREEN (SCREEN_HEIGHT >= 812 && ([UIScreen mainScreen].scale == 2 || [UIScreen mainScreen].scale == 3))
 
-#define IS_IPHONE_X (SCREEN_WIDTH == [TTScreen sizeFor58Inch].width && SCREEN_HEIGHT == [TTScreen sizeFor58Inch].height)
-#define IS_IPHONE_XR (SCREEN_WIDTH == [TTScreen sizeFor61Inch].width && SCREEN_HEIGHT == [TTScreen sizeFor61Inch].height && [UIScreen mainScreen].scale == 2)
-#define IS_IPHONE_XMAX (SCREEN_WIDTH == [TTScreen sizeFor65Inch].width && SCREEN_HEIGHT == [TTScreen sizeFor65Inch].height && [UIScreen mainScreen].scale == 3)
-
-#define STATUS_BAR_HEIGHT (IS_IPHONE_X_XR_MAX ? 44 : 20)
+#define STATUS_BAR_HEIGHT (IS_SPECIAL_SCREEN ? 44 : 20)
+#define TOP_BAR_HEIGHT    (IS_SPECIAL_SCREEN ? 88 : 64)
 
 #define UI(x) UIAdapter(x)
 #define UIRect(x, y, width, height) UIRectAdapter(x, y, width, height)
@@ -42,17 +39,6 @@ static inline CGRect UIRectAdapter (x, y, width, height) {
 }
 
 @interface TTScreen : NSObject
-
-/// iPhone xs max、12pro max
-+ (CGSize)sizeFor65Inch;
-
-/// iPhone xr、12、12pro
-+ (CGSize)sizeFor61Inch;
-
-/// iPhone x
-+ (CGSize)sizeFor58Inch;
-
-#pragma mark - TODO: 其他机型
 
 @end
 
