@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import "TTNewsViewController.h"
 #import "TTVideoViewController.h"
+#import "TTMineViewController.h"
 #import "TTSplashView.h"
 
 @interface SceneDelegate ()
@@ -29,8 +30,9 @@
         
         TTNewsViewController *newsVC = [[TTNewsViewController alloc] init];
         TTVideoViewController *videoVC = [[TTVideoViewController alloc] init];
+        TTMineViewController *mineVC = [[TTMineViewController alloc] init];
         
-        tabBarVC.viewControllers = @[newsVC, videoVC];
+        tabBarVC.viewControllers = @[newsVC, videoVC, mineVC];
         
         UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
         self.window.rootViewController = rootVC;

@@ -25,8 +25,26 @@
 		3B210CAF2611B62C0093253C /* TTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CAE2611B62C0093253C /* TTScreen.m */; };
 		3B210CB32612C73D0093253C /* TTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CB22612C73D0093253C /* TTSplashView.m */; };
 		3B210CBA2612D5860093253C /* TTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CB92612D5860093253C /* TTMediator.m */; };
+		3B210CC1261324EA0093253C /* TTMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CC0261324EA0093253C /* TTMineViewController.m */; };
+		3B210CC726132B0E0093253C /* TTLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B210CC626132B0E0093253C /* TTLogin.m */; };
+		3B210CD126132CED0093253C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B210CD026132CED0093253C /* SystemConfiguration.framework */; };
+		3B210CEF26142C970093253C /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B210CED26142C970093253C /* TencentOpenApi_IOS_Bundle.bundle */; };
+		3B210CF026142C970093253C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B210CEE26142C970093253C /* TencentOpenAPI.framework */; };
 		AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B210CEC26142C4C0093253C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		39926C1440B1F2EAAB7F8B55 /* Pods-TTNews_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.debug.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +83,13 @@
 		3B210CB22612C73D0093253C /* TTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSplashView.m; sourceTree = "<group>"; };
 		3B210CB82612D5860093253C /* TTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMediator.h; sourceTree = "<group>"; };
 		3B210CB92612D5860093253C /* TTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMediator.m; sourceTree = "<group>"; };
+		3B210CBF261324EA0093253C /* TTMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMineViewController.h; sourceTree = "<group>"; };
+		3B210CC0261324EA0093253C /* TTMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMineViewController.m; sourceTree = "<group>"; };
+		3B210CC526132B0E0093253C /* TTLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTLogin.h; sourceTree = "<group>"; };
+		3B210CC626132B0E0093253C /* TTLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTLogin.m; sourceTree = "<group>"; };
+		3B210CD026132CED0093253C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3B210CED26142C970093253C /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		3B210CEE26142C970093253C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		61DFFAEF50D2B9452D403A09 /* Pods-TTNews_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTNews_OC.release.xcconfig"; path = "Target Support Files/Pods-TTNews_OC/Pods-TTNews_OC.release.xcconfig"; sourceTree = "<group>"; };
 		952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TTNews_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +100,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2B0EE05D6BDD05A5A9DC6F /* Pods_TTNews_OC.framework in Frameworks */,
+				3B210CF026142C970093253C /* TencentOpenAPI.framework in Frameworks */,
+				3B210CD126132CED0093253C /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +111,7 @@
 		321E4CCE78EE0DF4F2289078 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B210CD026132CED0093253C /* SystemConfiguration.framework */,
 				952459A10E3B98D7CE887E75 /* Pods_TTNews_OC.framework */,
 			);
 			name = Frameworks;
@@ -110,6 +138,7 @@
 		3B0434E1260B1042003E5995 /* TTNews_OC */ = {
 			isa = PBXGroup;
 			children = (
+				3B210CCA26132C750093253C /* TTFrameworks */,
 				3B210CB62612D4B30093253C /* Componentization */,
 				3B210CAC2611B5CC0093253C /* Utils */,
 				3B043505260B28FD003E5995 /* Module */,
@@ -135,6 +164,7 @@
 				3B043510260B373C003E5995 /* Main */,
 				3B043530260DC202003E5995 /* Video */,
 				3B043506260B2919003E5995 /* News */,
+				3B210CBD2613245F0093253C /* Mine */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -276,6 +306,42 @@
 			path = Componentization;
 			sourceTree = "<group>";
 		};
+		3B210CBD2613245F0093253C /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				3B210CC426132AFD0093253C /* Model */,
+				3B210CBE2613246D0093253C /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		3B210CBE2613246D0093253C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B210CBF261324EA0093253C /* TTMineViewController.h */,
+				3B210CC0261324EA0093253C /* TTMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B210CC426132AFD0093253C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B210CC526132B0E0093253C /* TTLogin.h */,
+				3B210CC626132B0E0093253C /* TTLogin.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B210CCA26132C750093253C /* TTFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B210CED26142C970093253C /* TencentOpenApi_IOS_Bundle.bundle */,
+				3B210CEE26142C970093253C /* TencentOpenAPI.framework */,
+			);
+			path = TTFrameworks;
+			sourceTree = "<group>";
+		};
 		479B148722B8C31F3260DC17 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +363,7 @@
 				3B0434DC260B1042003E5995 /* Frameworks */,
 				3B0434DD260B1042003E5995 /* Resources */,
 				AE5FB648AC3974ADD8FCA112 /* [CP] Embed Pods Frameworks */,
+				3B210CEC26142C4C0093253C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B210CEF26142C970093253C /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				3B0434F2260B1048003E5995 /* LaunchScreen.storyboard in Resources */,
 				3B0434EF260B1048003E5995 /* Assets.xcassets in Resources */,
 			);
@@ -410,6 +478,8 @@
 				3B0434E4260B1042003E5995 /* AppDelegate.m in Sources */,
 				3B04352E260C813E003E5995 /* TTNewsDetailViewController.m in Sources */,
 				3B0434F5260B1048003E5995 /* main.m in Sources */,
+				3B210CC726132B0E0093253C /* TTLogin.m in Sources */,
+				3B210CC1261324EA0093253C /* TTMineViewController.m in Sources */,
 				3B043522260C28F0003E5995 /* TTNewsNormalCell.m in Sources */,
 				3B0434E7260B1042003E5995 /* SceneDelegate.m in Sources */,
 				3B04353A260DC4B8003E5995 /* TTVideoCoverCell.m in Sources */,
@@ -549,6 +619,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"$(PROJECT_DIR)/TTNews_OC/TTFrameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"$(SRCROOT)/TTNews_OC/TTFrameworks/TencentOpenAPI.framework/Headers\"",
+				);
 				INFOPLIST_FILE = "TTNews_OC/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,6 +649,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"$(PROJECT_DIR)/TTNews_OC/TTFrameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"$(SRCROOT)/TTNews_OC/TTFrameworks/TencentOpenAPI.framework/Headers\"",
+				);
 				INFOPLIST_FILE = "TTNews_OC/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
